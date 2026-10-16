@@ -1,0 +1,56 @@
+{
+  "id": "equ8-session-device",
+  "kind": "component",
+  "title": "EQU8 session-derived device interface",
+  "summary": "In the 2021 EQU8 driver teardown, a registry SessionId supplies names for the kernel device and DOS symbolic link. The researcher describes privileged create and selected device-control paths, not a present-day public API.",
+  "vendor": "EQU8",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel",
+    "User mode"
+  ],
+  "historical": false,
+  "updated": "2026-10-16",
+  "tags": [
+    "EQU8",
+    "IOCTL",
+    "device interface"
+  ],
+  "relatedIds": [
+    "equ8-helper-36",
+    "equ8-handle-callbacks"
+  ],
+  "sourceIds": [
+    "src-exp-equ8-analysis"
+  ],
+  "buildIds": [],
+  "mechanismIds": [],
+  "sections": [
+    {
+      "title": "The DriverEntry",
+      "claimIds": [
+        "claim-exp-equ8-session-device-01"
+      ]
+    },
+    {
+      "title": "IRP_MJ_CREATE",
+      "claimIds": [
+        "claim-exp-equ8-session-device-02"
+      ]
+    },
+    {
+      "title": "IRP_MJ_DEVICE_CONTROL",
+      "claimIds": [
+        "claim-exp-equ8-session-device-03"
+      ]
+    },
+    {
+      "title": "IRP_MJ_CLOSE",
+      "claimIds": [
+        "claim-exp-equ8-session-device-04"
+      ]
+    }
+  ]
+}

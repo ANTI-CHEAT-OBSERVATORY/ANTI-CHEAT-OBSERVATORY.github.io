@@ -1,0 +1,48 @@
+{
+  "id": "driver-attack-surface",
+  "kind": "technique",
+  "title": "Kernel driver attack surface",
+  "summary": "An anti-cheat driver can observe or constrain activity beyond the reach of a user-mode client, but its kernel privileges also magnify flaws in its own interfaces. Evaluating its device access, request handling and update policy is separate from evaluating whether it detects cheating.",
+  "vendor": "Cross-vendor",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode",
+    "Kernel"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "driver security",
+    "access control",
+    "IOCTL",
+    "least privilege"
+  ],
+  "relatedIds": [
+    "byovd",
+    "ace-base-vulnerability",
+    "mhyprot2-abuse",
+    "process-integrity"
+  ],
+  "sections": [
+    {
+      "title": "Why the privileged layer exists",
+      "claimIds": [
+        "claim-driver-attack-surface-01"
+      ]
+    },
+    {
+      "title": "Entry points across the boundary",
+      "claimIds": [
+        "claim-driver-attack-surface-02"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-006",
+    "src-013"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

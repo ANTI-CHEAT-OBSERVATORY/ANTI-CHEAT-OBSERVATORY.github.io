@@ -1,0 +1,56 @@
+{
+  "id": "dma",
+  "kind": "technique",
+  "title": "DMA and the device-memory boundary",
+  "summary": "Direct memory access lets peripherals exchange data with host memory without an ordinary game-process read path, making some client-side information vulnerable to observation outside process controls. IOMMU isolation and correct firmware handoff matter as much as anti-cheat process monitoring.",
+  "vendor": "Cross-vendor",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Hardware",
+    "Firmware",
+    "Kernel"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "DMA",
+    "IOMMU",
+    "firmware",
+    "memory isolation"
+  ],
+  "relatedIds": [
+    "boot-trust",
+    "process-integrity",
+    "server-authority",
+    "vanguard"
+  ],
+  "sections": [
+    {
+      "title": "Surface and prerequisite",
+      "claimIds": [
+        "claim-dma-01"
+      ]
+    },
+    {
+      "title": "Isolation spans firmware and operating system",
+      "claimIds": [
+        "claim-dma-02"
+      ]
+    },
+    {
+      "title": "Failure mode documented by Riot",
+      "claimIds": [
+        "claim-dma-03"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-020",
+    "src-014",
+    "src-013"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

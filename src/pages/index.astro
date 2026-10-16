@@ -1,0 +1,8 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CatalogTable from "../components/CatalogTable.astro";
+import { withBase } from "../lib/paths";
+---
+<Layout active="catalog" description="Search public-source anti-cheat records, claims, cited sources and scoped research in the Anti-Cheat Observatory.">
+  <div class="page-container stack"><CatalogTable /><nav class="panel secondary-navigation" aria-label="Continue exploring"><a href={withBase("/systems")}>System dossiers →</a><a href={withBase("/research")}>Research notes →</a><a href={withBase("/updates")}>Updates and discovery →</a><a href={withBase("/methodology")}>Evidence methodology →</a></nav></div>
+</Layout>

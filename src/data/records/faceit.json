@@ -1,0 +1,61 @@
+{
+  "id": "faceit",
+  "kind": "product",
+  "title": "FACEIT Anti-Cheat",
+  "summary": "FACEIT documents a protected Counter-Strike 2 app, boot-loaded kernel driver and server-side SDK that verifies client/server match state. Supported PCs are Windows-only and hardware trust requirements are rolling out by configuration rather than instant universal enforcement.",
+  "vendor": "FACEIT",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode",
+    "Kernel",
+    "Hardware",
+    "Server"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "Counter-Strike 2",
+    "boot driver",
+    "attestation",
+    "IOMMU"
+  ],
+  "relatedIds": [
+    "faceit-client",
+    "faceit-driver",
+    "boot-trust",
+    "dma",
+    "server-authority"
+  ],
+  "games": [
+    "Counter-Strike 2"
+  ],
+  "sections": [
+    {
+      "title": "Three-part protected match architecture",
+      "claimIds": [
+        "claim-faceit-01",
+        "claim-faceit-02"
+      ]
+    },
+    {
+      "title": "Windows deployment and platform limit",
+      "claimIds": [
+        "claim-faceit-03"
+      ]
+    },
+    {
+      "title": "Hardware-backed trust rollout",
+      "claimIds": [
+        "claim-faceit-04"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-036",
+    "src-037"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

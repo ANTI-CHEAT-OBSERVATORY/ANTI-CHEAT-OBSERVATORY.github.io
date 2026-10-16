@@ -1,0 +1,50 @@
+{
+  "id": "ace-boot-driver",
+  "kind": "component",
+  "title": "ACE-BOOT.sys — research artifact",
+  "summary": "ACE-BOOT.sys is a kernel-driver artifact in Aftermath Labs' July 2026 Tencent VM analysis. Its name is documented, but a boot-start lifecycle is not established merely by the word BOOT in that name.",
+  "vendor": "Tencent Cloud",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel",
+    "Research"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "ACE-BOOT.sys",
+    "Tencent VM",
+    "lifecycle uncertainty",
+    "anti-cheat-driver"
+  ],
+  "filenames": [
+    "ACE-BOOT.sys"
+  ],
+  "affectedVersions": "Artifact in the July 31, 2026 study; exact file version, hash and service start configuration are not established here.",
+  "relatedIds": [
+    "anti-cheat-expert",
+    "code-devirtualization",
+    "boot-trust"
+  ],
+  "sections": [
+    {
+      "title": "Documented artifact",
+      "claimIds": [
+        "claim-ace-boot-driver-01"
+      ]
+    },
+    {
+      "title": "Coverage is not load order",
+      "claimIds": [
+        "claim-ace-boot-driver-02"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-001"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

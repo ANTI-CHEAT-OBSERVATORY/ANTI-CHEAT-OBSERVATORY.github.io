@@ -1,0 +1,101 @@
+{
+  "id": "native-api-contracts",
+  "title": "Native interfaces in anti-cheat research: memory, protection and return callbacks",
+  "summary": "A technical reference connecting Windows query contracts and PHNT selectors to concrete 2019 BattlEye observations. Separates documented subsets, undocumented classes and platform context from unverified product-specific claims.",
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "category": "Kernel research",
+  "author": "Observatory editorial",
+  "productIds": [
+    "battleye"
+  ],
+  "relatedIds": [
+    "ntquerysysteminformation",
+    "extended-handle-inventory",
+    "ntqueryinformationprocess",
+    "ntqueryvirtualmemory",
+    "ntreadvirtualmemory",
+    "process-instrumentation-callback",
+    "thread-hide-from-debugger"
+  ],
+  "tags": [
+    "Native API",
+    "undocumented interfaces",
+    "memory inspection",
+    "historical BattlEye"
+  ],
+  "takeaways": [
+    "NtQueryVirtualMemory has a WDK-documented basic class; its larger PHNT selector family has separate contracts.",
+    "A process-protection query, process debugger state and handle metadata describe different observations.",
+    "Process instrumentation callbacks concern kernel-to-user transitions, not kernel ownership of an entire syscall.",
+    "The BattlEye examples are historical researcher reconstructions, not evidence of a current bypass."
+  ],
+  "sourceIds": [
+    "src-ref-ntqsi",
+    "src-ref-phnt-handles",
+    "src-ref-ntqip",
+    "src-ref-phnt-processclass",
+    "src-008",
+    "src-ref-ntqvm",
+    "src-ref-phnt-vm",
+    "src-ref-phnt-read",
+    "src-ref-phnt-instrumentation",
+    "src-ref-phnt-thread",
+    "src-ref-antidebug"
+  ],
+  "sections": [
+    {
+      "title": "NtQuerySystemInformation: documented queries and internal selectors",
+      "claimIds": [
+        "claim-ref-ntquerysysteminformation-01",
+        "claim-ref-ntquerysysteminformation-02",
+        "claim-ref-ntquerysysteminformation-03"
+      ]
+    },
+    {
+      "title": "Extended handle inventory: SYSTEM_HANDLE_INFORMATION_EX",
+      "claimIds": [
+        "claim-ref-extended-handle-inventory-01",
+        "claim-ref-extended-handle-inventory-02"
+      ]
+    },
+    {
+      "title": "NtQueryInformationProcess: process and protection queries",
+      "claimIds": [
+        "claim-ref-ntqueryinformationprocess-01",
+        "claim-ref-ntqueryinformationprocess-02",
+        "claim-ref-ntqueryinformationprocess-03"
+      ]
+    },
+    {
+      "title": "NtQueryVirtualMemory: region inventory and extended classes",
+      "claimIds": [
+        "claim-ref-ntqueryvirtualmemory-01",
+        "claim-ref-ntqueryvirtualmemory-02",
+        "claim-ref-ntqueryvirtualmemory-03"
+      ]
+    },
+    {
+      "title": "NtReadVirtualMemory: process-memory read interface",
+      "claimIds": [
+        "claim-ref-ntreadvirtualmemory-01",
+        "claim-ref-ntreadvirtualmemory-02"
+      ]
+    },
+    {
+      "title": "ProcessInstrumentationCallback: kernel-to-user return observation",
+      "claimIds": [
+        "claim-ref-process-instrumentation-callback-01",
+        "claim-ref-process-instrumentation-callback-02",
+        "claim-ref-process-instrumentation-callback-03"
+      ]
+    },
+    {
+      "title": "NtSetInformationThread: ThreadHideFromDebugger selector",
+      "claimIds": [
+        "claim-ref-thread-hide-from-debugger-01",
+        "claim-ref-thread-hide-from-debugger-02"
+      ]
+    }
+  ]
+}

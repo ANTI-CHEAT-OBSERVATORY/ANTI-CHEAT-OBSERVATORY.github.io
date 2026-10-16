@@ -1,0 +1,53 @@
+{
+  "id": "ea-javelin-service",
+  "kind": "component",
+  "title": "EA Javelin Anticheat service",
+  "summary": "EA Help explicitly identifies an EA Javelin anticheat Service in launch and configuration errors. Its exact binary identity and whether the documented label maps to a particular Windows service registration are not established by the cited support material.",
+  "vendor": "Electronic Arts",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "EA",
+    "service",
+    "game launch",
+    "installation"
+  ],
+  "relatedIds": [
+    "ea-javelin"
+  ],
+  "sections": [
+    {
+      "title": "Service named by support",
+      "claimIds": [
+        "claim-ea-javelin-service-01"
+      ]
+    },
+    {
+      "title": "Install and removal context",
+      "claimIds": [
+        "claim-ea-javelin-service-02"
+      ]
+    },
+    {
+      "title": "Runtime boundary",
+      "claimIds": [
+        "claim-ea-javelin-service-03"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-024",
+    "src-025",
+    "src-026"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": [
+    "javelin-service"
+  ]
+}

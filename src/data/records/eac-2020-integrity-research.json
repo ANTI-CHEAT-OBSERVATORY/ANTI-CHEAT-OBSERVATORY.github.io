@@ -1,0 +1,49 @@
+{
+  "id": "eac-2020-integrity-research",
+  "kind": "finding",
+  "title": "CVEAC-2020 integrity research disclosure",
+  "summary": "The original 2020 CVEAC-2020 research disclosure reports debugger-assisted reconstruction of EAC driver self-integrity and describes a proof of concept. Its CVEAC name is not an assigned CVE, and no subsequent release applicability is established.",
+  "vendor": "Independent research (iPower)",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Research",
+    "Kernel"
+  ],
+  "historical": true,
+  "updated": "2026-10-16",
+  "tags": [
+    "Easy Anti-Cheat",
+    "historical research"
+  ],
+  "relatedIds": [
+    "eac-2020-driver-copy-integrity"
+  ],
+  "sourceIds": [
+    "src-exp-eac-integrity"
+  ],
+  "buildIds": [],
+  "mechanismIds": [],
+  "sections": [
+    {
+      "title": "Reversing process",
+      "claimIds": [
+        "claim-exp-eac-2020-integrity-research-01"
+      ]
+    },
+    {
+      "title": "CVEAC-2020: Bypassing EasyAntiCheat integrity checks",
+      "claimIds": [
+        "claim-exp-eac-2020-integrity-research-02"
+      ]
+    },
+    {
+      "title": "Proof of Concept",
+      "claimIds": [
+        "claim-exp-eac-2020-integrity-research-03",
+        "claim-exp-eac-2020-integrity-research-04"
+      ]
+    }
+  ]
+}

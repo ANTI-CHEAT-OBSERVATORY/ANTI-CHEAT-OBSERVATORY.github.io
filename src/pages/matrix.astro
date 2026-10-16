@@ -1,0 +1,71 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { records } from "../lib/catalog";
+import { claimsForRecord } from "../lib/knowledge";
+import { withBase } from "../lib/paths";
+
+const techniques = records.filter((record) => record.kind === "technique");
+const preferred = ["User mode", "Kernel", "Hardware", "Firmware", "Hypervisor", "Server", "Research"];
+const tagged = new Set(techniques.flatMap((record) => record.layers));
+const layers = [...preferred.filter((layer) => tagged.has(layer)), ...[...tagged].filter((layer) => !preferred.includes(layer)).sort()];
+const layerNotes: Record<string, string> = {
+  "User mode": "Applications, game processes and user-space client code.",
+  Kernel: "Operating-system privileges, drivers and kernel interfaces.",
+  Hardware: "Device and hardware interaction; not automatically a firmware claim.",
+  Firmware: "Device or platform firmware and its execution context.",
+  Hypervisor: "Virtual machine monitors and guest/host boundaries; distinct from code virtualization.",
+  Server: "Game or service backend authority over client-provided actions.",
+  Research: "Cross-cutting analysis tag, not an execution privilege level.",
+};
+---
+
+<Layout title="Trust boundary map" active="research" description="Editorial layer tags for technique studies, with linked claim and source counts; not detection, efficacy or bypass ratings.">
+  <div class="page-container matrix-page" data-pagefind-body>
+    <header class="page-header">
+      <p class="muted">Technique studies / editorial layer tags</p>
+      <h1>Trust boundary map</h1>
+      <p>A reading map for what each technique record examines. Open a study for scoped claims, citations, applicability and limits. A mark is a topic tag, not a tested path across that boundary.</p>
+    </header>
+
+    <section aria-labelledby="layer-map">
+      <h2 id="layer-map">{techniques.length} technique studies × {layers.length} tagged layers</h2>
+      <p class="muted">● In study scope · — Not tagged in the record. Counts are navigation aids, not strength-of-evidence scores.</p>
+      <div class="table-wrap" role="region" tabindex="0" aria-label="Scrollable technique and trust boundary table">
+        <table class="data-table trust-table">
+          <caption class="sr-only">Technique records by editorial layer tags, with listed sources and linked claims. Marks do not establish product capabilities or bypasses.</caption>
+          <thead><tr><th scope="col">Technique</th>{layers.map((layer) => <th scope="col">{layer}</th>)}<th scope="col">Claims</th><th scope="col">Sources</th></tr></thead>
+          <tbody>
+            {techniques.map((record) => <tr>
+              <th scope="row"><a href={withBase(`/records/${record.id}`)}>{record.title}</a></th>
+              {layers.map((layer) => <td class="matrix-cell">{record.layers.includes(layer)
+                ? <span aria-label={`${layer} in study scope`} class="tagged">●</span>
+                : <span aria-label={`${layer} not tagged`} class="muted">—</span>}</td>)}
+              <td>{claimsForRecord(record.id).length}</td><td>{record.sourceIds.length}</td>
+            </tr>)}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="boundaries">
+      <h2 id="boundaries">What the columns mean</h2>
+      <dl class="layer-guide">
+        {layers.map((layer) => <div><dt>{layer}</dt><dd>{layerNotes[layer] ?? "Layer label as used by the catalog record; read the record for its specific scope."}</dd></div>)}
+      </dl>
+      <p><strong>Trust boundaries are not capability scores.</strong> Layer tags do not say a product monitors that layer, a technique defeats a protection, or a project reproduced the behavior. No mark can be inferred from a repository's stars, commits or activity. Absence of a mark is not evidence that the layer is absent from an implementation.</p>
+      <a class="button" href={withBase("/methodology#evidence")}>How claims are evaluated</a>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .matrix-page { display: grid; gap: 1.5rem; }
+  .page-header { display: block; margin-bottom: 0; }
+  .trust-table { white-space: nowrap; }
+  .trust-table th:first-child { min-width: 14rem; text-align: left; white-space: normal; }
+  .matrix-cell { text-align: center; }
+  .tagged { color: var(--accent); font-size: 1.15rem; }
+  .layer-guide { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); gap: .75rem 1.5rem; margin-bottom: 1rem; }
+  .layer-guide dt { font-weight: 700; }
+  .layer-guide dd { margin: .15rem 0 0; }
+</style>

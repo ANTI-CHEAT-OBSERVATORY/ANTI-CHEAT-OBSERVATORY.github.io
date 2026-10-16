@@ -1,0 +1,63 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { records } from "../lib/catalog";
+import { posts } from "../lib/research";
+import { sources, claims } from "../lib/knowledge";
+import { withBase } from "../lib/paths";
+
+const downloads = [
+  { path: "/api/v2/knowledge.json", title: "Knowledge dataset", format: "JSON", description: "Complete normalized 2.0.0 dataset: records, posts, global sources, claims, builds, mechanisms, validations, relationships, corrections and system dossiers." },
+  { path: "/api/v2/catalog.json", title: "Catalog", format: "JSON", description: "Browseable record index; use the knowledge dataset for the referenced claims and source objects." },
+  { path: "/api/v2/catalog.csv", title: "Catalog index", format: "CSV", description: "One row per record for spreadsheets; reference IDs and abbreviated fields are not substitutes for full citations." },
+  { path: "/api/v2/research.json", title: "Research", format: "JSON", description: "Editorial posts with their linked normalized sources and claims." },
+  { path: "/api/v2/schema.json", title: "Dataset schema", format: "JSON Schema", description: "The full 2.0.0 dataset contract and its record, post, source, claim and other object definitions." },
+  { path: "/api/v2/discovery.json", title: "Discovery snapshot", format: "JSON", description: "Last collected external metadata: source retrieval/backfill status, items, upstream changes, tracked repositories and digest." },
+] as const;
+---
+
+<Layout title="Data & API" active="research" description="Static version 2 downloads for normalized anti-cheat knowledge, schema, catalog CSV, and discovery metadata.">
+  <div class="page-container data-page" data-pagefind-body>
+    <header class="page-header">
+      <p class="muted">Static exports / schema version 2.0.0</p>
+      <h1>Download the research data</h1>
+      <p>The pages and downloads share a build of the same local dataset. No account, API key or live query service is involved.</p>
+    </header>
+
+    <section aria-labelledby="exports">
+      <h2 id="exports">Versioned files</h2>
+      <p class="muted">This build indexes {records.length} records, {posts.length} research posts, {sources.length} global sources and {claims.length} claims. These are selected coverage, not an exhaustive product or vulnerability inventory.</p>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr><th scope="col">Export</th><th scope="col">Contents &amp; limits</th><th scope="col">Format</th></tr></thead>
+          <tbody>
+            {downloads.map((item) => <tr>
+              <th scope="row"><a href={withBase(item.path)}>{item.title}</a><small class="mono muted">{withBase(item.path)}</small></th>
+              <td>{item.description}</td><td><span class="badge">{item.format}</span></td>
+            </tr>)}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="using-data">
+      <h2 id="using-data">Working with the dataset</h2>
+      <div class="data-grid">
+        <div><h3>Follow the references</h3><p>A record section names claim IDs; a claim links to global source IDs through citations with locators and evidence text. Build samples, mechanisms, validation records and corrections remain separate objects. Use the full knowledge export to resolve those links.</p></div>
+        <div><h3>Keep dimensions separate</h3><p>Source provenance identifies where material came from. Review activity identifies what was inspected or reproduced. Claim state records whether an assertion is corroborated, disputed, refuted or superseded. A citation, source retrieval or repository star count cannot substitute for verification.</p></div>
+        <div><h3>Read discovery as metadata</h3><p>Discovery reports collected links, source access/backfill and changes against reviewed commits. Unreviewed items and upstream drift are leads, not catalog findings or automatic changes to a reviewed claim. A blocked source can retain previously collected metadata.</p></div>
+        <div><h3>Respect rights &amp; scope</h3><p>Exports are static snapshots generated at build time, not a live vulnerability feed. URLs and summaries do not grant rights to linked publications, binaries or other third-party material. Preserve date, revision, transport, attribution and limitations when reusing a citation.</p></div>
+      </div>
+      <p><a class="button" href={withBase("/methodology#rights")}>Read provenance &amp; rights</a> <a class="button" href={withBase("/publishing")}>Contribute through the publishing workflow</a></p>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .data-page { display: grid; gap: 1.5rem; }
+  .page-header { display: block; margin-bottom: 0; }
+  .data-table small { display: block; font-size: .8rem; overflow-wrap: anywhere; }
+  .data-table td { min-width: 8rem; }
+  .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: 1rem 1.5rem; }
+  .data-grid h3 { margin-bottom: .25rem; }
+  .data-grid p { margin-bottom: 0; }
+</style>

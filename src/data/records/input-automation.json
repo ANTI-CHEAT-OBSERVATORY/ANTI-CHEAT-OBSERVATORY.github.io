@@ -1,0 +1,43 @@
+{
+  "id": "input-automation",
+  "kind": "technique",
+  "title": "Input automation and vision-based play",
+  "summary": "Automation can turn information visible on screen into player-like mouse or keyboard events without changing the game process. It challenges the assumption that valid protocol inputs were produced by an unassisted human, even if memory protections work as designed.",
+  "vendor": "Cross-vendor",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode",
+    "Hardware",
+    "Server"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "input automation",
+    "computer vision",
+    "behavioral analysis",
+    "pixelbot"
+  ],
+  "relatedIds": [
+    "server-authority",
+    "process-integrity",
+    "vanguard"
+  ],
+  "sections": [
+    {
+      "title": "Objective and trust boundary",
+      "claimIds": [
+        "claim-input-automation-01"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-013",
+    "src-019",
+    "src-041"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

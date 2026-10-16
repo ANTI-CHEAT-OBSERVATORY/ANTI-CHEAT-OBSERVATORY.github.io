@@ -1,0 +1,46 @@
+---
+import { componentsForProduct } from "../lib/catalog";
+import type { CatalogRecord } from "../lib/knowledge-types";
+import { withBase } from "../lib/paths";
+
+interface Props {
+  product: CatalogRecord;
+  compact?: boolean;
+}
+const { product, compact = false } = Astro.props;
+const components = componentsForProduct(product.id);
+const layers = [...new Set(components.flatMap((component) => component.layers))];
+---
+
+<section class="panel component-inventory" aria-label={`${product.title} documented components`}>
+  <div class="inventory-heading"><h3>Documented component inventory</h3><span class="muted">{components.length} catalog records</span></div>
+  {layers.length > 0 ? layers.map((layer) => (
+    <div class="layer-group">
+      <h4>{layer}</h4>
+      <ul>
+        {components.filter((component) => component.layers.includes(layer)).map((component) => (
+          <li>
+            <a href={withBase(`/records/${component.id}`)}>{component.title}</a>
+            {component.filenames?.length ? <span class="mono">{component.filenames.join(", ")}</span> : <span class="muted">Local filename not established</span>}
+            {!compact && <p>{component.summary}</p>}
+          </li>
+        ))}
+      </ul>
+    </div>
+  )) : <p class="muted">No component records are linked to this product in the catalog.</p>}
+  <p class="muted inventory-note">Catalog membership is not an observed communication path. Unlisted components are not assumed absent.</p>
+</section>
+
+<style>
+  .component-inventory { min-width: 0; }
+  .inventory-heading { display: flex; gap: .5rem 1rem; flex-wrap: wrap; align-items: baseline; justify-content: space-between; }
+  .inventory-heading h3 { margin: 0; }
+  .layer-group { margin-top: 1rem; }
+  .layer-group h4 { margin: 0 0 .35rem; font-size: .9rem; }
+  .layer-group ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .5rem; }
+  .layer-group li { display: grid; grid-template-columns: minmax(9rem,1fr) minmax(9rem,1.3fr); gap: .3rem 1rem; border-top: 1px solid var(--border, #3b464d); padding-top: .45rem; min-width: 0; }
+  .layer-group li p { grid-column: 1 / -1; margin: 0; }
+  .layer-group a, .layer-group span { overflow-wrap: anywhere; }
+  .inventory-note { margin-bottom: 0; font-size: .9rem; }
+  @media (max-width: 600px) { .layer-group li { grid-template-columns: 1fr; } }
+</style>

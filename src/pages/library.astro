@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { withBase } from "../lib/paths";
+---
+<Layout title="Local research library" description="Saved records, claims, source revisions, mechanisms, queries and evidence change watches stored only in this browser.">
+  <div class="page-container library-page"><header class="page-header"><h1>Your local library</h1><p>Bookmarks, saved queries and watches live only in this browser. No account or synchronization is provided. Export a JSON backup before clearing site data.</p></header>
+    <p id="library-status" role="status" aria-live="polite">Checking local storage…</p>
+    <section class="panel"><h2>Saved research</h2><div id="library-bookmarks"></div></section>
+    <section class="panel"><h2>Saved queries</h2><p>Save a search from <a href={withBase("/catalog")}>the catalog</a>, or name the current library query below. Renaming changes only your local label, not the underlying URL.</p><form id="library-add-query"><label>Query name <input name="name" required maxlength="120" /></label><label>Local URL (including filters) <input name="url" required value={withBase("/catalog")} /></label><button type="submit" class="button">Save query</button></form><div id="library-queries"></div></section>
+    <section class="panel"><h2>Watchlist and matched events</h2><div id="library-watches"></div></section>
+    <section class="panel"><h2>Backup / restore</h2><p>The backup includes only local references and labels, never original evidence content. Imports check schema version, ID references and local URLs; importing replaces this browser's library.</p><button id="library-export" type="button" class="button">Download JSON backup</button><label>Import JSON backup <input id="library-import" type="file" accept="application/json,.json" /></label></section>
+    <noscript>JavaScript and available browser storage are required for saving. Research pages remain readable without them.</noscript>
+  </div>
+</Layout>
+<style>.library-page{padding-block:2rem 5rem}.library-page .panel{margin:1rem 0;padding:1rem 1.25rem}.library-page form{display:flex;flex-wrap:wrap;gap:.8rem;align-items:end}.library-page label{display:grid;gap:.3rem}.library-page input{padding:.5rem;max-width:100%;color:inherit;background:transparent;border:1px solid currentColor}.library-page li{padding:.5rem 0}.library-page li button{margin-left:.6rem}.library-page a{overflow-wrap:anywhere}.library-page ul{padding-left:1.3rem}</style>

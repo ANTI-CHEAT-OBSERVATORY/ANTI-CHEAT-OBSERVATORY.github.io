@@ -1,0 +1,66 @@
+{
+  "id": "dbk-kernel-driver",
+  "kind": "component",
+  "title": "Cheat Engine DBK64: source, dispatch and caller checks",
+  "summary": "A dual-use debugging/research driver with publicly maintained source. The inspected code and package identify its dispatch and privilege checks; they do not establish a vulnerable signed sample or successful use against a named anti-cheat.",
+  "vendor": "Cheat Engine",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel"
+  ],
+  "historical": false,
+  "updated": "2026-10-16",
+  "tags": [
+    "dual-use-driver",
+    "platform-reference",
+    "driver source",
+    "Cheat Engine"
+  ],
+  "relatedIds": [
+    "ksysteminformer-driver",
+    "x64dbg-debugger"
+  ],
+  "sourceIds": [
+    "src-ref-dbk-package",
+    "src-ref-dbk",
+    "src-ref-dbk-dispatch"
+  ],
+  "buildIds": [],
+  "mechanismIds": [],
+  "sections": [
+    {
+      "title": "Package provenance",
+      "claimIds": [
+        "claim-ref-dbk-kernel-driver-01"
+      ]
+    },
+    {
+      "title": "Driver entry and dispatch",
+      "claimIds": [
+        "claim-ref-dbk-kernel-driver-02"
+      ]
+    },
+    {
+      "title": "Caller trust boundary",
+      "claimIds": [
+        "claim-ref-dbk-kernel-driver-03"
+      ]
+    },
+    {
+      "title": "Memory capabilities and per-request checks",
+      "claimIds": [
+        "claim-ref-dbk-kernel-driver-04",
+        "claim-ref-dbk-kernel-driver-05"
+      ]
+    }
+  ],
+  "filenames": [
+    "DBK64.sys"
+  ],
+  "aliases": [
+    "DBK",
+    "DBK64"
+  ]
+}

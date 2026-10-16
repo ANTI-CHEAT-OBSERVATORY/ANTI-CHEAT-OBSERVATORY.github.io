@@ -1,0 +1,49 @@
+{
+  "id": "battleye-client-detection-2019",
+  "title": "BattlEye in 2019: four components, one moving detection surface",
+  "summary": "A reading of vmcall's 2019 BattlEye investigation, separating the in-game detection module from the service, driver and backend. The observed shellcode and reports are a dated sample, not a current inventory of BattlEye.",
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "category": "Reverse engineering",
+  "author": "Observatory editorial",
+  "productIds": [
+    "battleye"
+  ],
+  "relatedIds": [
+    "battleye-service",
+    "battleye-driver",
+    "process-integrity"
+  ],
+  "tags": [
+    "BattlEye",
+    "BEClient",
+    "BEDaisy",
+    "process memory",
+    "historical analysis"
+  ],
+  "takeaways": [
+    "Distinguish the service, kernel driver, game-resident client and server before assigning a detection to a component.",
+    "The published 2019 shellcode snapshot shows local memory inspection and reports; it does not reveal present-day enforcement logic.",
+    "An executable-memory anomaly is a signal requiring context, not proof that a player cheated."
+  ],
+  "sections": [
+    {
+      "title": "Component boundaries in the original account",
+      "claimIds": [
+        "claim-battleye-client-detection-2019-01",
+        "claim-battleye-client-detection-2019-02"
+      ]
+    },
+    {
+      "title": "What the captured checks actually imply",
+      "claimIds": [
+        "claim-battleye-client-detection-2019-03",
+        "claim-battleye-client-detection-2019-03-s01",
+        "claim-battleye-client-detection-2019-03-s02"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-008"
+  ]
+}

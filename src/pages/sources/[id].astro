@@ -1,0 +1,20 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { sources, claims, corrections } from "../../lib/knowledge";
+import { withBase } from "../../lib/paths";
+import type { KnowledgeSource } from "../../lib/knowledge-types";
+export function getStaticPaths() { return sources.map((source) => ({ params: { id: source.id }, props: { source } })); }
+const { source } = Astro.props as { source: KnowledgeSource };
+const linked = claims.filter((claim) => claim.citations.some((citation) => citation.sourceId === source.id));
+const events = corrections.filter((event) => event.sourceIds.includes(source.id));
+---
+<Layout title={`Source · ${source.title}`} description={`Source revision, access and linked claims: ${source.title}`}>
+  <div class="page-container source-detail" data-pagefind-body>
+    <p><a href={withBase("/catalog")}>Catalog</a> / Source <code>{source.id}</code></p>
+    <header class="page-header"><h1>{source.title}</h1><p class="mono">{source.id}</p><button type="button" data-bookmark-id={source.id} data-bookmark-type="source" data-bookmark-title={source.title} data-bookmark-url={withBase(`/sources/${source.id}`)} aria-pressed="false">Save source</button><button type="button" data-watch-id={source.id} data-watch-title={source.title} aria-pressed="false">Watch source</button></header>
+    <section class="panel"><h2>Original and revision</h2><dl><dt>Original URL</dt><dd><a href={source.url} rel="noopener noreferrer">{source.url}</a></dd><dt>Publisher / author</dt><dd>{source.publisher}{source.author && ` · ${source.author}`}</dd><dt>Published</dt><dd>{source.published ?? "Unknown"}</dd><dt>Accessed</dt><dd>{source.accessed}</dd><dt>Provenance</dt><dd>{source.provenance}</dd><dt>Revision</dt><dd>{source.revision.kind} · {source.revision.value ?? "No immutable revision available"}</dd><dt>Access status</dt><dd>{source.access}</dd><dt>Transport</dt><dd>{source.transport}{source.retrievalUrl && <> · <a href={source.retrievalUrl} rel="noopener noreferrer">Retrieval URL</a></>}</dd><dt>Original origin ID</dt><dd><code>{source.originId}</code> (mirrors do not establish independence)</dd><dt>Rights</dt><dd>{source.rights}</dd></dl><h3>Limitations</h3>{source.limitations.length ? <ul>{source.limitations.map((limit) => <li>{limit}</li>)}</ul> : <p>None documented.</p>}</section>
+    <section class="panel"><h2>Claims citing this revision</h2>{linked.length ? <ul>{linked.map((claim) => <li><a href={withBase(`/claims/${claim.id}`)}>{claim.statement}</a> · {claim.state} / {claim.review}<ul>{claim.citations.filter((citation) => citation.sourceId === source.id).map((citation) => <li>{citation.relation} · {citation.locator.kind}: <code>{citation.locator.value}</code>{citation.locator.url && <> · <a href={citation.locator.url} rel="noopener noreferrer">Open exact locator</a></>}<p>{citation.evidence}</p></li>)}</ul></li>)}</ul> : <p>No claim linked to this revision.</p>}</section>
+    <section class="panel"><h2>Related corrections</h2>{events.length ? <ul>{events.map((event) => <li><time datetime={event.date}>{event.date}</time> · {event.kind}: {event.title} ({event.status})</li>)}</ul> : <p>No correction linked to this source.</p>}</section>
+  </div>
+</Layout>
+<style>.source-detail{padding-block:2rem 5rem}.source-detail .panel{margin:1rem 0;padding:1rem 1.25rem}.source-detail dl{display:grid;grid-template-columns:minmax(9rem,14rem) minmax(0,1fr);gap:.6rem}.source-detail dd{margin:0;overflow-wrap:anywhere}.source-detail li{margin:.7rem 0}@media(max-width:600px){.source-detail dl{grid-template-columns:1fr}.source-detail dt{font-weight:bold}}</style>

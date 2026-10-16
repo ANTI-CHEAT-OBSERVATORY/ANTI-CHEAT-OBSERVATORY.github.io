@@ -1,0 +1,54 @@
+{
+  "id": "byovd",
+  "kind": "technique",
+  "title": "Bring your own vulnerable driver",
+  "summary": "BYOVD abuses the difference between a driver's valid signature and the safety of the privileged operations it exposes. An attacker who can introduce a vulnerable signed driver may seek kernel capabilities without obtaining a new trusted driver signature.",
+  "vendor": "Cross-vendor",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel",
+    "Research"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "BYOVD",
+    "driver signing",
+    "vulnerable driver blocklist"
+  ],
+  "relatedIds": [
+    "driver-attack-surface",
+    "mhyprot2-abuse",
+    "ace-base-vulnerability",
+    "boot-trust"
+  ],
+  "sections": [
+    {
+      "title": "Objective and crossing",
+      "claimIds": [
+        "claim-byovd-01"
+      ]
+    },
+    {
+      "title": "Preventive boundaries",
+      "claimIds": [
+        "claim-byovd-02"
+      ]
+    },
+    {
+      "title": "Dated deployment context",
+      "claimIds": [
+        "claim-byovd-04"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-015",
+    "src-006",
+    "src-013"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

@@ -1,0 +1,64 @@
+{
+  "id": "battleye",
+  "kind": "product",
+  "title": "BattlEye",
+  "summary": "BattlEye markets kernel-based protection, dynamic client scanning and server administration for online games. Its own FAQ identifies Windows service and driver components, game-launch updating and compatibility boundaries without establishing independent detection effectiveness.",
+  "vendor": "BattlEye Innovations",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode",
+    "Kernel",
+    "Server"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "game service",
+    "driver",
+    "dynamic scanning",
+    "server administration"
+  ],
+  "relatedIds": [
+    "battleye-service",
+    "battleye-driver",
+    "driver-attack-surface",
+    "process-integrity"
+  ],
+  "games": [
+    "Arma 3",
+    "DayZ",
+    "Fortnite",
+    "Destiny 2"
+  ],
+  "sections": [
+    {
+      "title": "Protection and administration",
+      "claimIds": [
+        "claim-battleye-01"
+      ]
+    },
+    {
+      "title": "Installation and runtime",
+      "claimIds": [
+        "claim-battleye-03",
+        "claim-battleye-04"
+      ]
+    },
+    {
+      "title": "Compatibility and data boundary",
+      "claimIds": [
+        "claim-battleye-05",
+        "claim-battleye-06"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-010",
+    "src-009",
+    "src-011"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

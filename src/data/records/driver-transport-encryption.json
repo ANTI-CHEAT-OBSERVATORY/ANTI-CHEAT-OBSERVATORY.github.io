@@ -1,0 +1,44 @@
+{
+  "id": "driver-transport-encryption",
+  "kind": "technique",
+  "title": "Encrypting the client-to-driver transport",
+  "summary": "Anti-cheat drivers frequently encrypt the request payloads exchanged with their user-mode client. It raises the cost of casual observation and of naive replay tooling, but a key that ships in the binary, or that is derivable from a devirtualized routine, provides no authentication of the caller.",
+  "vendor": "Cross-vendor",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel",
+    "User mode"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "LEA cipher",
+    "IOCTL payload",
+    "obfuscation",
+    "transport security"
+  ],
+  "relatedIds": [
+    "ioctl-authorization",
+    "driver-client-authentication",
+    "kernel-symbol-resolution",
+    "ironshield-tvk-driver",
+    "code-devirtualization"
+  ],
+  "sections": [
+    {
+      "title": "A documented implementation",
+      "claimIds": [
+        "claim-driver-transport-encryption-01",
+        "claim-driver-transport-encryption-02"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-023",
+    "src-006"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

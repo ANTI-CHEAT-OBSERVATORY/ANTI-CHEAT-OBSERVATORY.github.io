@@ -1,0 +1,49 @@
+{
+  "id": "ioctl-authorization",
+  "kind": "technique",
+  "title": "IOCTL authorization in kernel anti-cheat drivers",
+  "summary": "Kernel anti-cheat drivers expose privileged operations to a user-mode client through IOCTL requests. The security boundary is not the driver's presence but how it identifies the caller, what privileges it grants, and how it validates the buffers carrying each request.",
+  "vendor": "Cross-vendor",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel",
+    "User mode"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "IOCTL",
+    "access control",
+    "device objects",
+    "kernel authorization"
+  ],
+  "relatedIds": [
+    "driver-attack-surface",
+    "driver-client-authentication",
+    "ironshield-tvk-ioctl-authorization",
+    "kernel-symbol-resolution"
+  ],
+  "sections": [
+    {
+      "title": "The boundary being protected",
+      "claimIds": [
+        "claim-ioctl-authorization-02"
+      ]
+    },
+    {
+      "title": "Buffer handling is part of authorization",
+      "claimIds": [
+        "claim-ioctl-authorization-03"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-006",
+    "src-015",
+    "src-023"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

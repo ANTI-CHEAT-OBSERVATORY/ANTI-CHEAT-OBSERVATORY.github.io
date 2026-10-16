@@ -1,0 +1,89 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PostCard from "../../components/PostCard.astro";
+import { posts } from "../../lib/research";
+import { records } from "../../lib/catalog";
+import { sourcesForPost } from "../../lib/knowledge";
+import { postCategories, provenanceKinds } from "../../lib/knowledge-types";
+import { withBase } from "../../lib/paths";
+
+const products = records.filter((record) => record.kind === "product" && posts.some((post) => post.productIds.includes(record.id)));
+const noteSources = [...new Map(posts.flatMap((post) => sourcesForPost(post.id)).map((source) => [source.id, source])).values()];
+const provenanceOptions = provenanceKinds.filter((kind) => noteSources.some((source) => source.provenance === kind));
+---
+
+<Layout title="Research notes" active="research" description="Attributed reading notes on public anti-cheat research, with cited claims and explicit evidence limits.">
+  <div class="page-container notes-page">
+    <header class="page-header">
+      <p class="badge">Research / {posts.length} notes</p>
+      <h1>Research notes</h1>
+      <p>Editorial reading notes on public reverse engineering, driver research, and community methods. Each claim links to its sources, scope, and evidence limits.</p>
+      <p><a href={withBase("/publishing")}>Contribute a research note →</a></p>
+    </header>
+    <section aria-label="Research notes">
+      <div class="panel notes-controls">
+        <label class="field">Search note text and claims
+          <input type="search" id="post-search" name="q" placeholder="Title, claim, researcher, or topic" autocomplete="off" />
+        </label>
+        <label class="field">System
+          <select id="post-product" name="product">
+            <option value="">All systems</option>
+            {products.map((product) => <option value={product.id}>{product.title}</option>)}
+          </select>
+        </label>
+        <label class="field">Source provenance
+          <select id="post-provenance" name="provenance">
+            <option value="">All provenance</option>
+            {provenanceOptions.map((kind) => <option value={kind}>{kind}</option>)}
+          </select>
+        </label>
+      </div>
+      <div class="category-controls" role="group" aria-label="Filter research notes by category">
+        <button type="button" class="button" data-post-category="" aria-pressed="true">All notes ({posts.length})</button>
+        {postCategories.map((category) => <button type="button" class="button" data-post-category={category} aria-pressed="false">{category}</button>)}
+      </div>
+      <div class="notes-results">
+        <p id="post-count" role="status" aria-live="polite" aria-atomic="true">{posts.length} research notes</p>
+        <button type="button" class="button" id="post-reset" hidden>Clear filters</button>
+      </div>
+      <div class="grid notes-grid" data-pagefind-body>
+        {posts.map((post) => <PostCard post={post} />)}
+      </div>
+      <div class="panel" id="post-empty" hidden>
+        <h2>No matching notes</h2>
+        <p>Try another system, provenance, category, or search term.</p>
+        <button type="button" class="button" id="post-empty-reset">Reset filters</button>
+      </div>
+      <noscript><p>All notes are listed. Interactive filters require JavaScript.</p></noscript>
+    </section>
+    <section id="sources" class="notes-sources">
+      <h2>Sources cited by these notes</h2>
+      <p class="muted">An indexed source is not an endorsement or an independent reproduction. Read the cited claim and its source access limits before relying on a conclusion.</p>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr><th scope="col">Source</th><th scope="col">Publisher</th><th scope="col">Provenance</th><th scope="col">Access</th></tr></thead>
+          <tbody>{noteSources.map((source) => <tr>
+            <th scope="row"><a href={withBase(`/sources/${source.id}`)}>{source.title}</a></th>
+            <td>{source.publisher}</td><td>{source.provenance}</td><td>{source.access}</td>
+          </tr>)}</tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+  <script>import "../../scripts/blog";</script>
+</Layout>
+
+<style>
+  .notes-page { padding-block: 2rem 5rem; }
+  .page-header { display: block; max-width: 75ch; }
+  .notes-controls { display: grid; grid-template-columns: minmax(12rem, 2fr) repeat(2, minmax(10rem, 1fr)); gap: .8rem; margin: 1.8rem 0 1rem; }
+  .notes-controls input, .notes-controls select { width: 100%; min-width: 0; }
+  .category-controls { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1rem; }
+  .category-controls [aria-pressed="true"] { border-color: var(--accent, #39b9d1); color: var(--accent, #39b9d1); }
+  .notes-results { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .notes-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); }
+  .notes-sources { margin-top: 3rem; }
+  .notes-sources p { max-width: 75ch; }
+  [hidden] { display: none !important; }
+  @media (max-width: 700px) { .notes-controls { grid-template-columns: 1fr; } }
+</style>

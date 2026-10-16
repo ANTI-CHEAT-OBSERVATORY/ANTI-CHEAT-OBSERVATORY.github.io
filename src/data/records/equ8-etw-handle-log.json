@@ -1,0 +1,46 @@
+{
+  "id": "equ8-etw-handle-log",
+  "kind": "component",
+  "title": "EQU8 handle-event collection and ETW interface",
+  "summary": "The 2021 EQU8 analysis identifies a driver-control route returning a bounded batch of handle callback events and a separate trace-enabling route; it does not show server-side interpretation of those events.",
+  "vendor": "EQU8",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel",
+    "User mode"
+  ],
+  "historical": false,
+  "updated": "2026-10-16",
+  "tags": [
+    "EQU8",
+    "ETW",
+    "handle telemetry"
+  ],
+  "relatedIds": [
+    "equ8-session-device",
+    "equ8-handle-callbacks"
+  ],
+  "sourceIds": [
+    "src-exp-equ8-analysis"
+  ],
+  "buildIds": [],
+  "mechanismIds": [],
+  "sections": [
+    {
+      "title": "IRP_MJ_DEVICE_CONTROL",
+      "claimIds": [
+        "claim-exp-equ8-etw-handle-log-01",
+        "claim-exp-equ8-etw-handle-log-02",
+        "claim-exp-equ8-etw-handle-log-03"
+      ]
+    },
+    {
+      "title": "Function name encryption",
+      "claimIds": [
+        "claim-exp-equ8-etw-handle-log-04"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "research-driver-trust-models",
+  "title": "DBK and KSystemInformer: two published caller-trust boundaries",
+  "summary": "A source-level comparison of Cheat Engine privilege checks and System Informer verified-client policy, with package identities and x64dbg’s separate user-mode role. No driver is declared vulnerable simply because it exposes powerful research features.",
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "category": "Kernel research",
+  "author": "Observatory editorial",
+  "productIds": [],
+  "relatedIds": [
+    "dbk-kernel-driver",
+    "ksysteminformer-driver",
+    "x64dbg-debugger"
+  ],
+  "tags": [
+    "driver provenance",
+    "client authentication",
+    "research tooling"
+  ],
+  "takeaways": [
+    "DBK’s visible CREATE path requires SeDebugPrivilege and has additional compile-time-gated checks.",
+    "KSystemInformer documents signing and client-state restrictions, including consequences of unsigned modules and tampering.",
+    "An INF’s file names and service settings are packaging evidence—not proof of a release signature or matching binary hash.",
+    "x64dbg is a separate user-mode debugger, not a substitute name for a kernel driver."
+  ],
+  "sourceIds": [
+    "src-ref-dbk-package",
+    "src-ref-dbk",
+    "src-ref-ksi-package",
+    "src-ref-ksi-trust",
+    "src-ref-x64dbg",
+    "src-ref-dbk-dispatch",
+    "src-ref-ksi-handlers"
+  ],
+  "sections": [
+    {
+      "title": "Cheat Engine DBK64: source, dispatch and caller checks",
+      "claimIds": [
+        "claim-ref-dbk-kernel-driver-01",
+        "claim-ref-dbk-kernel-driver-02",
+        "claim-ref-dbk-kernel-driver-03",
+        "claim-ref-dbk-kernel-driver-04",
+        "claim-ref-dbk-kernel-driver-05"
+      ]
+    },
+    {
+      "title": "KSystemInformer: verified-client driver model",
+      "claimIds": [
+        "claim-ref-ksysteminformer-driver-01",
+        "claim-ref-ksysteminformer-driver-02",
+        "claim-ref-ksysteminformer-driver-03",
+        "claim-ref-ksysteminformer-driver-04",
+        "claim-ref-ksysteminformer-driver-05",
+        "claim-ref-ksysteminformer-driver-06"
+      ]
+    },
+    {
+      "title": "x64dbg: user-mode debugger and plugin host",
+      "claimIds": [
+        "claim-ref-x64dbg-debugger-01",
+        "claim-ref-x64dbg-debugger-02"
+      ]
+    }
+  ]
+}

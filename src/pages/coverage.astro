@@ -1,0 +1,104 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { products } from "../lib/catalog";
+import { dossierForSystem } from "../lib/knowledge";
+import { dossierAspects } from "../lib/knowledge-types";
+import { withBase } from "../lib/paths";
+
+const labels: Record<(typeof dossierAspects)[number], string> = {
+  deployment: "Deployment",
+  components: "Components",
+  interfaces: "Interfaces",
+  mechanisms: "Mechanisms",
+  protection: "Protection",
+  findings: "Findings",
+  research: "Research",
+  history: "History",
+};
+const systems = products().map((record) => ({ record, dossier: dossierForSystem(record.id) }));
+const count = (status: "documented" | "partial" | "unknown") =>
+  systems.reduce(
+    (total, { dossier }) => total + (dossier?.aspects.filter((aspect) => aspect.status === status).length ?? 0),
+    0,
+  );
+const unmapped = systems.reduce(
+  (total, { dossier }) => total + dossierAspects.length - (dossier?.aspects.length ?? 0),
+  0,
+);
+---
+
+<Layout title="Coverage map" active="systems" description="Eight-aspect research dossier coverage for each cataloged system, including explicit unknown and unassessed gaps.">
+  <div class="page-container coverage-page" data-pagefind-body>
+    <header class="page-header">
+      <p class="muted">Research coverage / not a product rating</p>
+      <h1>Coverage &amp; open questions</h1>
+      <p>Each cell reports the editorial state of one aspect of a system dossier. A gap means the available catalog has not established an answer; it never establishes the absence of a feature, flaw, or defense.</p>
+    </header>
+
+    <section class="panel" aria-label="Coverage totals">
+      <div class="coverage-summary">
+        <span><strong>{systems.length}</strong> systems</span>
+        <span><strong>{count("documented")}</strong> documented aspects</span>
+        <span><strong>{count("partial")}</strong> partial aspects</span>
+        <span><strong>{count("unknown")}</strong> unknown aspects</span>
+        {unmapped > 0 && <span><strong>{unmapped}</strong> unassessed aspects</span>}
+      </div>
+    </section>
+
+    <section aria-labelledby="dossier-map">
+      <h2 id="dossier-map">Eight-aspect dossier map</h2>
+      <p class="muted">Open a system to read its underlying claims, citations, limitations and unresolved questions. Counts in documented and partial cells are linked claim counts, not evidence-quality scores.</p>
+      <div class="table-wrap" role="region" tabindex="0" aria-label="Scrollable system coverage table">
+        <table class="data-table">
+          <caption class="sr-only">Editorial dossier status for eight aspects of each system; statuses do not measure security or effectiveness.</caption>
+          <thead><tr><th scope="col">System</th>{dossierAspects.map((aspect) => <th scope="col">{labels[aspect]}</th>)}</tr></thead>
+          <tbody>
+            {systems.map(({ record, dossier }) => (
+              <tr>
+                <th scope="row"><a href={withBase(`/records/${record.id}`)}>{record.title}</a><small class="muted">{record.vendor}</small></th>
+                {dossierAspects.map((id) => {
+                  const aspect = dossier?.aspects.find((entry) => entry.id === id);
+                  return <td>
+                    {aspect ? <a href={withBase(`/records/${record.id}#${id}`)} aria-label={`${record.title}: ${labels[id]} ${aspect.status}, ${aspect.claimIds.length} linked claims`}>
+                      <span class={`badge coverage-${aspect.status}`}>{aspect.status}</span>
+                      {aspect.claimIds.length > 0 && <small class="muted">{aspect.claimIds.length} {aspect.claimIds.length === 1 ? "claim" : "claims"}</small>}
+                    </a> : <span class="badge coverage-unassessed">unassessed</span>}
+                  </td>;
+                })}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel coverage-guide" aria-labelledby="reading-map">
+      <h2 id="reading-map">How to read the map</h2>
+      <dl class="guide-grid">
+        <div><dt>Documented</dt><dd>A dossier aspect has cited claims. This does not certify completeness, current deployment, or independent reproduction.</dd></div>
+        <div><dt>Partial</dt><dd>Some claims are attached, but the dossier still identifies material open questions.</dd></div>
+        <div><dt>Unknown</dt><dd>The dossier records insufficient support for an answer. Unknown is not a negative finding.</dd></div>
+        <div><dt>Unassessed</dt><dd>No aspect entry exists in the catalog for this system. This is an editorial gap, not a product observation.</dd></div>
+      </dl>
+      <p class="muted">Aspect statuses summarize coverage only. A source's origin, review activity and the state of each individual claim remain separate. Cross-system counts are not rankings.</p>
+      <a class="button" href={withBase("/methodology#evidence")}>Read the evidence methodology</a>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .coverage-page { display: grid; gap: 1.5rem; }
+  .page-header { display: block; margin-bottom: 0; }
+  .coverage-summary { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; }
+  .coverage-summary strong { font-size: 1.3rem; }
+  .data-table { white-space: nowrap; }
+  .data-table th:first-child { min-width: 12rem; text-align: left; }
+  .data-table td { min-width: 7rem; }
+  .data-table small { display: block; font-size: .75rem; }
+  .coverage-documented { color: var(--accent); }
+  .coverage-partial { color: var(--text); }
+  .coverage-unknown, .coverage-unassessed { color: var(--muted); }
+  .guide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: .75rem 1.5rem; margin: 0 0 1rem; }
+  .guide-grid dt { font-weight: 700; }
+  .guide-grid dd { margin: .2rem 0 0; }
+</style>

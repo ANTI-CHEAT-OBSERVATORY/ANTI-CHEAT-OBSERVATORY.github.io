@@ -1,0 +1,57 @@
+{
+  "id": "vanguard-driver",
+  "kind": "component",
+  "title": "Vanguard kernel driver",
+  "summary": "Riot identifies a Vanguard kernel-mode driver that guards access to game clients and participates in host-integrity checks. Its startup timing depends on whether an eligible player opts into the 2026 Pre-Check on-demand mode.",
+  "vendor": "Riot Games",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel",
+    "Hardware"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "driver",
+    "boot-start",
+    "on-demand",
+    "driver attestation",
+    "anti-cheat-driver"
+  ],
+  "relatedIds": [
+    "vanguard",
+    "vanguard-client",
+    "boot-trust",
+    "byovd"
+  ],
+  "sections": [
+    {
+      "title": "Kernel role",
+      "claimIds": [
+        "claim-vanguard-driver-01"
+      ]
+    },
+    {
+      "title": "Two startup modes",
+      "claimIds": [
+        "claim-vanguard-driver-02"
+      ]
+    },
+    {
+      "title": "Eligibility boundary",
+      "claimIds": [
+        "claim-vanguard-driver-03"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-013",
+    "src-052"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": [
+    "vanguard-boot"
+  ]
+}

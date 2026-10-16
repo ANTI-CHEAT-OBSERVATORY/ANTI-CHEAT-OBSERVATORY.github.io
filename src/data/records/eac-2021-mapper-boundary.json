@@ -1,0 +1,52 @@
+{
+  "id": "eac-2021-mapper-boundary",
+  "kind": "finding",
+  "title": "2021 EAC mapped-module validation finding",
+  "summary": "Aftermath Labs demonstrates an historical trust-boundary issue: its studied mapping path accepted altered image sections while a legitimacy check trusted the mapped EAC image range. No ongoing bypass or patch status is established.",
+  "vendor": "Independent research (Aftermath Labs)",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel",
+    "User mode",
+    "Research"
+  ],
+  "historical": true,
+  "updated": "2026-10-16",
+  "tags": [
+    "Easy Anti-Cheat",
+    "historical finding",
+    "module validation"
+  ],
+  "relatedIds": [
+    "eac-2021-module-delivery",
+    "eac-2021-manual-map"
+  ],
+  "sourceIds": [
+    "src-exp-eac-mapper"
+  ],
+  "buildIds": [],
+  "mechanismIds": [],
+  "sections": [
+    {
+      "title": "Manual Mapping",
+      "claimIds": [
+        "claim-exp-eac-2021-mapper-boundary-01"
+      ]
+    },
+    {
+      "title": "A quick look at EasyAntiCheat.dll",
+      "claimIds": [
+        "claim-exp-eac-2021-mapper-boundary-02",
+        "claim-exp-eac-2021-mapper-boundary-03"
+      ]
+    },
+    {
+      "title": "Demo",
+      "claimIds": [
+        "claim-exp-eac-2021-mapper-boundary-04"
+      ]
+    }
+  ]
+}

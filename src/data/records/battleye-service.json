@@ -1,0 +1,55 @@
+{
+  "id": "battleye-service",
+  "kind": "component",
+  "title": "BattlEye Windows service",
+  "summary": "BattlEye's FAQ identifies BEService.exe and BEService_x64.exe in game distributions and a BE Service installation required for protected server play. Service initialization and version failures can prevent joining without implying a cheating ban.",
+  "vendor": "BattlEye Innovations",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "Windows service",
+    "launcher",
+    "installation",
+    "server play"
+  ],
+  "relatedIds": [
+    "battleye",
+    "battleye-driver"
+  ],
+  "filenames": [
+    "BEService.exe",
+    "BEService_x64.exe"
+  ],
+  "sections": [
+    {
+      "title": "Service identity and protected play",
+      "claimIds": [
+        "claim-battleye-service-01"
+      ]
+    },
+    {
+      "title": "Lifecycle and updates",
+      "claimIds": [
+        "claim-battleye-service-02"
+      ]
+    },
+    {
+      "title": "Server enforcement distinction",
+      "claimIds": [
+        "claim-battleye-service-03"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-009",
+    "src-010"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

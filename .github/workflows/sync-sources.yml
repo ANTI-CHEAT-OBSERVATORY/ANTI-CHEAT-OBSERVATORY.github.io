@@ -1,0 +1,86 @@
+name: Sync research sources
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+    - cron: "17 7 * * 1"
+  workflow_dispatch:
+    inputs:
+      backfill:
+        description: "Inspect only the configured bounded historical endpoints"
+        type: boolean
+        default: false
+      force:
+        description: "Poll all configured sources irrespective of interval"
+        type: boolean
+        default: false
+      digest:
+        description: "Generate a weekly-style digest on this manual run"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sync-sources
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - name: Collect public source metadata
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BACKFILL: ${{ inputs.backfill }}
+          FORCE: ${{ inputs.force }}
+        run: |
+          args=()
+          if [ "$BACKFILL" = true ]; then args+=(--backfill); fi
+          if [ "$FORCE" = true ]; then args+=(--force); fi
+          npm run sync -- "${args[@]}"
+      - name: Generate weekly digest
+        if: github.event.schedule == '17 7 * * 1' || inputs.digest == true
+        run: npm run digest
+      - name: Validate retained source snapshot
+        run: npm run validate
+      - name: Commit only discovery state when it changed
+        id: snapshot
+        run: |
+          git add src/data/discovery.json src/data/discovery-state.json src/data/discovery-sources.json
+          if git diff --cached --quiet; then
+            echo "No discovery changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(discovery): update retained source metadata"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      # GITHUB_TOKEN pushes do not trigger the Pages push workflow.
+      - name: Rebuild Pages from the committed snapshot
+        if: steps.snapshot.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: gh workflow run pages.yml --ref "$DEFAULT_BRANCH"
+      - name: Summarize unreviewed changes and unavailable sources
+        run: |
+          node -e '
+            const snapshot = require("./src/data/discovery.json");
+            console.log(`Retained items: ${snapshot.items.length}; pending changes: ${snapshot.changes.filter((change) => change.review === "pending").length}.`);
+            for (const source of snapshot.sources.filter((entry) => entry.state !== "ok")) console.log(`::notice::${source.id}: ${source.state}; last success ${source.lastSuccess ?? "never"}`);
+          '

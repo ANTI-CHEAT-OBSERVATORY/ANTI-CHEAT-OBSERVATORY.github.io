@@ -1,0 +1,58 @@
+{
+  "id": "tencent-vm-coverage-2026",
+  "title": "Tencent VM: reading coverage, not just a devirtualization headline",
+  "summary": "Aftermath Labs reports recovering 815 of 865 virtualized functions across four named ACE drivers in its July 2026 Tencent VM study. The result is meaningful as measured coverage of those samples, not evidence that every protected function or release has been analyzed.",
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "category": "Reverse engineering",
+  "author": "Observatory editorial",
+  "productIds": [
+    "anti-cheat-expert"
+  ],
+  "relatedIds": [
+    "code-devirtualization",
+    "ace-base-vulnerability",
+    "ace-game-driver",
+    "ace-base-driver",
+    "ace-boot-driver",
+    "ace-core-driver"
+  ],
+  "tags": [
+    "Tencent VM",
+    "ACE",
+    "devirtualization",
+    "coverage",
+    "Aftermath Labs"
+  ],
+  "takeaways": [
+    "The paper's 94.2% figure is aggregate function coverage for four inspected drivers, not a generic recovery guarantee.",
+    "Separating VM scaffolding from original program semantics is central to interpreting any recovered code.",
+    "The article states that version information for Tencent VM was unavailable; avoid projecting its results onto all ACE releases."
+  ],
+  "sections": [
+    {
+      "title": "The sample and its numerator",
+      "claimIds": [
+        "claim-tencent-vm-coverage-2026-01",
+        "claim-tencent-vm-coverage-2026-02"
+      ]
+    },
+    {
+      "title": "How the authors explain the result",
+      "claimIds": [
+        "claim-tencent-vm-coverage-2026-03"
+      ]
+    },
+    {
+      "title": "What did not recover",
+      "claimIds": [
+        "claim-tencent-vm-coverage-2026-05",
+        "claim-tencent-vm-coverage-2026-05-s01"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-001",
+    "src-057"
+  ]
+}

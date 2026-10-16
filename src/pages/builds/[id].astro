@@ -1,0 +1,19 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { builds, claims, sources, validations } from "../../lib/knowledge";
+import { records } from "../../lib/catalog";
+import { withBase } from "../../lib/paths";
+import type { BuildSample } from "../../lib/knowledge-types";
+export function getStaticPaths() { return builds.map((build) => ({ params: { id: build.id }, props: { build } })); }
+const { build } = Astro.props as { build: BuildSample };
+const linked = claims.filter((claim) => claim.buildIds.includes(build.id));
+---
+<Layout title={`Build · ${build.label}`} description={`Source-reported and project-computed sample identities for ${build.label}`}>
+  <div class="page-container build-detail" data-pagefind-body><p><a href={withBase("/catalog")}>Catalog</a> / Build <code>{build.id}</code></p><header class="page-header"><h1>{build.label}</h1><p class="mono">{build.id}</p></header>
+    <section class="panel"><h2>Sample identity and scope</h2><dl><dt>Version</dt><dd>{build.version ?? "Unknown"}</dd><dt>Platform</dt><dd>{build.platform}</dd><dt>Acquired</dt><dd>{build.acquiredAt ?? "Unknown; do not assume possession or direct analysis"}</dd><dt>Systems</dt><dd>{build.systemIds.length ? build.systemIds.map((id) => <span>{records.find((record) => record.id === id)?.title ?? id} (<code>{id}</code>) </span>) : "Unknown"}</dd><dt>Records</dt><dd>{build.recordIds.map((id) => <a href={withBase(`/records/${id}`)}>{records.find((record) => record.id === id)?.title ?? id}</a>)}</dd></dl></section>
+    <section class="panel"><h2>Hashes are not interchangeable</h2>{build.hashes.length ? <div class="table-wrap"><table class="data-table"><thead><tr><th>Algorithm / value</th><th>Origin</th><th>Evidence</th></tr></thead><tbody>{build.hashes.map((hash) => <tr><td><code>{hash.algorithm}: {hash.value}</code></td><td>{hash.origin === "project-computed" ? "Project-computed on an identified artifact" : "Source-reported; not independently computed here"}</td><td>{hash.sourceId && <a href={withBase(`/sources/${hash.sourceId}`)}>{sources.find((source) => source.id === hash.sourceId)?.title ?? hash.sourceId}</a>}{hash.validationId && <> · {validations.find((item) => item.id === hash.validationId)?.title ?? hash.validationId}</>}</td></tr>)}</tbody></table></div> : <p>No cryptographic hash documented. Filename and version do not identify an artifact.</p>}</section>
+    <section class="panel"><h2>Sources and limitations</h2>{build.sourceIds.length ? <ul>{build.sourceIds.map((id) => <li><a href={withBase(`/sources/${id}`)}>{sources.find((source) => source.id === id)?.title ?? id}</a></li>)}</ul> : <p>No source linked.</p>}{build.limitations.length ? <ul>{build.limitations.map((limit) => <li>{limit}</li>)}</ul> : <p>No further limitations documented.</p>}</section>
+    <section class="panel"><h2>Claims explicitly scoped to this build</h2>{linked.length ? <ul>{linked.map((claim) => <li><a href={withBase(`/claims/${claim.id}`)}>{claim.statement}</a> · {claim.state} · {claim.applicability}</li>)}</ul> : <p>No claims explicitly scoped to this build. Unscoped claims are not implicitly current build observations.</p>}</section>
+  </div>
+</Layout>
+<style>.build-detail{padding-block:2rem 5rem}.build-detail .panel{margin:1rem 0;padding:1rem 1.25rem}.build-detail dl{display:grid;grid-template-columns:minmax(9rem,14rem) minmax(0,1fr);gap:.6rem}.build-detail dd{margin:0;overflow-wrap:anywhere}.build-detail dd a{margin-right:.8rem}.build-detail td code{overflow-wrap:anywhere}.build-detail li{margin:.7rem 0}@media(max-width:600px){.build-detail dl{grid-template-columns:1fr}.build-detail dt{font-weight:bold}}</style>

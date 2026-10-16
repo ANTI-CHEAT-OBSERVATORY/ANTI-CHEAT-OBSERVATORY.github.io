@@ -1,0 +1,52 @@
+{
+  "id": "ace-base-driver",
+  "kind": "component",
+  "title": "ACE-BASE.sys — research artifact",
+  "summary": "Aftermath Labs names ACE-BASE.sys in its four-driver Tencent VM study and reports recovering 313 of 329 virtualized functions. That July 2026 artifact is not automatically the same version as the older ACE-BASE.sys access-control finding.",
+  "vendor": "Tencent Cloud",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel",
+    "Research"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "ACE-BASE.sys",
+    "Tencent VM",
+    "sample identity",
+    "anti-cheat-driver"
+  ],
+  "filenames": [
+    "ACE-BASE.sys"
+  ],
+  "affectedVersions": "July 2026 study artifact; no exact version or verified hash established for this record. Do not equate it with CVE-2024-22830 by filename alone.",
+  "relatedIds": [
+    "anti-cheat-expert",
+    "code-devirtualization",
+    "ace-base-vulnerability"
+  ],
+  "sections": [
+    {
+      "title": "Identity in public research",
+      "claimIds": [
+        "claim-ace-base-driver-01"
+      ]
+    },
+    {
+      "title": "Measured recovery boundary",
+      "claimIds": [
+        "claim-ace-base-driver-02"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-001"
+  ],
+  "historical": false,
+  "buildIds": [
+    "build-ace-base-2024"
+  ],
+  "mechanismIds": []
+}

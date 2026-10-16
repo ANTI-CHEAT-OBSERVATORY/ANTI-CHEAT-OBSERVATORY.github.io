@@ -1,0 +1,50 @@
+{
+  "id": "kernel-symbol-resolution",
+  "kind": "technique",
+  "title": "Resolving kernel symbols and offsets at runtime",
+  "summary": "Kernel drivers need addresses of routines and structure offsets that change between Windows builds. Drivers may resolve exports dynamically, hardcode version-specific offsets, or accept offsets from their user-mode client — and that last option moves a kernel read/write target into data the client controls.",
+  "vendor": "Cross-vendor",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "symbol resolution",
+    "offsets",
+    "kernel read/write",
+    "client-supplied data"
+  ],
+  "relatedIds": [
+    "ioctl-authorization",
+    "driver-attack-surface",
+    "ironshield-tvk-driver",
+    "driver-client-authentication"
+  ],
+  "sections": [
+    {
+      "title": "The supported mechanism",
+      "claimIds": [
+        "claim-kernel-symbol-resolution-01",
+        "claim-kernel-symbol-resolution-02"
+      ]
+    },
+    {
+      "title": "When the client supplies the offsets",
+      "claimIds": [
+        "claim-kernel-symbol-resolution-03",
+        "claim-kernel-symbol-resolution-04"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-042",
+    "src-006",
+    "src-023"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

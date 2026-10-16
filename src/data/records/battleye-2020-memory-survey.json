@@ -1,0 +1,50 @@
+{
+  "id": "battleye-2020-memory-survey",
+  "kind": "component",
+  "title": "BattlEye targeted memory survey (2020)",
+  "summary": "The 2020 targeted module account reports checks for thread start addresses outside known modules and executable private/mapped memory in the game and lsass processes. It shows collection logic, not a validated ban decision.",
+  "vendor": "BattlEye",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode"
+  ],
+  "historical": false,
+  "updated": "2026-10-16",
+  "tags": [
+    "BattlEye",
+    "thread starts",
+    "memory inspection"
+  ],
+  "relatedIds": [
+    "battleye-client",
+    "battleye-2020-targeted-driver-scan"
+  ],
+  "sourceIds": [
+    "src-exp-battleye-tracking"
+  ],
+  "buildIds": [],
+  "mechanismIds": [],
+  "sections": [
+    {
+      "title": "Shellcode detection",
+      "claimIds": [
+        "claim-exp-battleye-2020-memory-survey-01"
+      ]
+    },
+    {
+      "title": "Shellcode dumping",
+      "claimIds": [
+        "claim-exp-battleye-2020-memory-survey-02",
+        "claim-exp-battleye-2020-memory-survey-03"
+      ]
+    },
+    {
+      "title": "Handle enumeration",
+      "claimIds": [
+        "claim-exp-battleye-2020-memory-survey-04"
+      ]
+    }
+  ]
+}

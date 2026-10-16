@@ -1,0 +1,117 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ClaimEvidence from "../../components/ClaimEvidence.astro";
+import PostCard from "../../components/PostCard.astro";
+import { posts } from "../../lib/research";
+import { records, sectionId, kindNames } from "../../lib/catalog";
+import { claimsByIds, sourcesForPost } from "../../lib/knowledge";
+import { withBase, editUrl } from "../../lib/paths";
+import type { ResearchPost } from "../../lib/knowledge-types";
+
+export function getStaticPaths() {
+  return posts.map((post) => ({ params: { id: post.id }, props: { post } }));
+}
+interface Props {
+  post: ResearchPost;
+}
+const { post } = Astro.props;
+const products = records.filter((record) => post.productIds.includes(record.id));
+const related = records.filter((record) => post.relatedIds.includes(record.id));
+const sources = sourcesForPost(post.id);
+const otherPosts = posts.filter((entry) =>
+  entry.id !== post.id &&
+  (entry.category === post.category || entry.productIds.some((id) => post.productIds.includes(id)))
+).slice(0, 3);
+const edit = editUrl(`src/data/posts/${post.id}.json`);
+---
+
+<Layout title={post.title} description={post.summary} active="research">
+  <div class="page-container note-page">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href={withBase("/")}>Observatory</a> / <a href={withBase("/blog")}>Research notes</a> / {post.title}
+    </nav>
+    <header class="page-header">
+      <p class="badge" data-pagefind-filter={`category:${post.category}`}>{post.category}</p>
+      <h1 data-pagefind-meta="title">{post.title}</h1>
+      <p data-pagefind-meta="description">{post.summary}</p>
+      <p class="muted">By {post.author} · Published <time datetime={post.published}>{post.published}</time> · Updated <time datetime={post.updated}>{post.updated}</time></p>
+      {products.length > 0 && <p class="system-links">Systems: {products.map((product) => <a href={withBase(`/records/${product.id}`)}>{product.title}</a>)}</p>}
+    </header>
+    <div class="note-layout">
+      <article class="stack note-content" data-pagefind-body>
+        <section class="panel">
+          <h2>Key takeaways</h2>
+          <ul>{post.takeaways.map((takeaway) => <li>{takeaway}</li>)}</ul>
+        </section>
+        {post.sections.map((section, index) => (
+          <section class="note-section" id={sectionId(section.title, index)}>
+            <h2>{section.title}</h2>
+            <div class="stack">
+              {claimsByIds(section.claimIds).map((claim) => <ClaimEvidence claim={claim} />)}
+            </div>
+          </section>
+        ))}
+        <section class="panel" id="sources">
+          <h2>Sources & provenance</h2>
+          <p class="muted">These notes synthesize attributed public research. Source access and revision limits are part of the evidence, not independent reproduction of the claims.</p>
+          <ol class="source-list">
+            {sources.map((source) => (
+              <li id={`source-${source.id}`}>
+                <a href={withBase(`/sources/${source.id}`)}>{source.title}</a>
+                <span class="muted"> · {source.author && `${source.author} / `}{source.publisher}{source.published && ` · Published ${source.published}`} · Accessed {source.accessed} · {source.provenance} · {source.access} · {source.revision.kind === "unversioned" ? "unversioned" : `${source.revision.kind}: ${source.revision.value}`}</span>
+                <a href={source.url} target="_blank" rel="noopener noreferrer" aria-label={`Read original: ${source.title}`}> ↗ Original</a>
+              </li>
+            ))}
+          </ol>
+        </section>
+        <div class="panel">
+          <p>Corrections should preserve attribution and historical scope.</p>
+          {edit
+            ? <a href={edit} target="_blank" rel="noopener noreferrer">Edit this note on GitHub ↗</a>
+            : <a href={withBase("/publishing")}>Open the publishing workspace</a>}
+        </div>
+      </article>
+      <aside class="note-aside">
+        <nav class="panel" aria-label="Contents of this note">
+          <h2>In this note</h2>
+          <ul>
+            <li><a href="#sources">Sources & provenance</a></li>
+            {post.sections.map((section, index) => <li><a href={`#${sectionId(section.title, index)}`}>{section.title}</a></li>)}
+          </ul>
+        </nav>
+        {related.length > 0 && <div class="panel">
+          <h2>Related records</h2>
+          <ul>{related.map((record) => <li><span class="muted">{kindNames[record.kind]} · </span><a href={withBase(`/records/${record.id}`)}>{record.title}</a></li>)}</ul>
+        </div>}
+        <div class="panel"><h2>Topics</h2><p>{post.tags.join(" · ")}</p></div>
+        <a href={withBase("/methodology#limits")}>How we evaluate sources</a>
+      </aside>
+    </div>
+    {otherPosts.length > 0 && <section class="related-notes">
+      <h2>Further reading</h2>
+      <div class="grid">{otherPosts.map((entry) => <PostCard post={entry} />)}</div>
+      <p><a href={withBase("/blog")}>All research notes →</a></p>
+    </section>}
+  </div>
+</Layout>
+
+<style>
+  .note-page { padding-block: 2rem 5rem; }
+  .breadcrumbs { font-size: .8rem; opacity: .75; margin-bottom: 1.2rem; overflow-wrap: anywhere; }
+  .page-header { display: block; max-width: 75ch; }
+  .page-header h1 { margin: .4rem 0; }
+  .system-links { display: flex; flex-wrap: wrap; gap: .65rem; }
+  .note-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(14rem, 18rem); gap: 2rem; align-items: start; margin-top: 2rem; }
+  .note-content { min-width: 0; }
+  .note-content h2 { margin-top: 0; }
+  .note-section { scroll-margin-top: 5rem; }
+  .note-section > h2 { border-bottom: 1px solid currentColor; padding-bottom: .4rem; }
+  .note-aside { display: grid; gap: 1rem; }
+  .note-aside h2 { font-size: 1rem; margin: 0 0 .7rem; }
+  .note-aside ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .55rem; }
+  .source-list { display: grid; gap: .65rem; padding-left: 1.4rem; }
+  .source-list li { overflow-wrap: anywhere; }
+  .related-notes { margin-top: 3rem; }
+  .related-notes .grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); }
+  @media (max-width: 760px) { .note-layout { grid-template-columns: 1fr; } .note-aside { grid-row: 1; } }
+</style>

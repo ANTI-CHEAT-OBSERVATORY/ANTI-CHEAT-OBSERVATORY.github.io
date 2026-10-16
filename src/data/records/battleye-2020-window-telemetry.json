@@ -1,0 +1,40 @@
+{
+  "id": "battleye-2020-window-telemetry",
+  "kind": "component",
+  "title": "BattlEye visible-window telemetry (2020)",
+  "summary": "A 2020 decompilation of a targeted client module shows collection of visible window metadata. Its decompiled loop replaces title characters before transmission, so it is not evidence of sending raw window titles.",
+  "vendor": "BattlEye",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode"
+  ],
+  "historical": false,
+  "updated": "2026-10-16",
+  "tags": [
+    "BattlEye",
+    "window metadata",
+    "historical analysis"
+  ],
+  "relatedIds": [
+    "battleye-client",
+    "battleye-2020-targeted-driver-scan"
+  ],
+  "sourceIds": [
+    "src-exp-battleye-tracking"
+  ],
+  "buildIds": [],
+  "mechanismIds": [],
+  "sections": [
+    {
+      "title": "Window enumeration",
+      "claimIds": [
+        "claim-exp-battleye-2020-window-telemetry-01",
+        "claim-exp-battleye-2020-window-telemetry-02",
+        "claim-exp-battleye-2020-window-telemetry-03",
+        "claim-exp-battleye-2020-window-telemetry-04"
+      ]
+    }
+  ]
+}

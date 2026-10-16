@@ -1,0 +1,50 @@
+{
+  "id": "ntquerysysteminformation",
+  "kind": "component",
+  "title": "NtQuerySystemInformation: documented queries and internal selectors",
+  "summary": "A partially documented Windows information-query family. Process enumeration and code-integrity policy are relevant to anti-cheat research, but this reference does not establish that a named product uses every selector.",
+  "vendor": "Microsoft Windows",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode"
+  ],
+  "historical": false,
+  "updated": "2026-10-16",
+  "tags": [
+    "native-api",
+    "partially-documented-api",
+    "platform-reference",
+    "system enumeration"
+  ],
+  "relatedIds": [
+    "extended-handle-inventory",
+    "ntqueryinformationprocess"
+  ],
+  "sourceIds": [
+    "src-ref-ntqsi"
+  ],
+  "buildIds": [],
+  "mechanismIds": [],
+  "sections": [
+    {
+      "title": "Query contract and compatibility",
+      "claimIds": [
+        "claim-ref-ntquerysysteminformation-01"
+      ]
+    },
+    {
+      "title": "Processes and policy are different observations",
+      "claimIds": [
+        "claim-ref-ntquerysysteminformation-02",
+        "claim-ref-ntquerysysteminformation-03"
+      ]
+    }
+  ],
+  "aliases": [
+    "NtQuerySystemInformation",
+    "SystemCodeIntegrityInformation",
+    "SystemBasicProcessInformation"
+  ]
+}

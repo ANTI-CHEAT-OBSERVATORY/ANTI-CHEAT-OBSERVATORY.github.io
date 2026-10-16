@@ -1,0 +1,54 @@
+{
+  "id": "eac-service",
+  "kind": "component",
+  "title": "EOS Anti-Cheat Windows service",
+  "summary": "Epic identifies a Windows service executable that initializes other anti-cheat components for protected games. It is installed separately by the service installer, started at protected game launch and stopped after game exit.",
+  "vendor": "Epic Games",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "EOS",
+    "Windows service",
+    "installation",
+    "lifecycle"
+  ],
+  "relatedIds": [
+    "easy-anti-cheat",
+    "eac-bootstrapper"
+  ],
+  "filenames": [
+    "EasyAntiCheat_EOS.exe"
+  ],
+  "sections": [
+    {
+      "title": "Service versus installer",
+      "claimIds": [
+        "claim-eac-service-01"
+      ]
+    },
+    {
+      "title": "Install and runtime lifecycle",
+      "claimIds": [
+        "claim-eac-service-02"
+      ]
+    },
+    {
+      "title": "Session boundary",
+      "claimIds": [
+        "claim-eac-service-03"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-030",
+    "src-019"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

@@ -1,0 +1,54 @@
+{
+  "id": "ricochet-driver",
+  "kind": "component",
+  "title": "RICOCHET PC kernel-level driver",
+  "summary": "Activision identifies an internally developed PC kernel driver that monitors unauthorized software interactions with protected Call of Duty titles. Its stated activity is tied to game runtime rather than system boot, with reports sent for team review.",
+  "vendor": "Activision",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "Call of Duty",
+    "kernel driver",
+    "game-active",
+    "reporting",
+    "anti-cheat-driver"
+  ],
+  "relatedIds": [
+    "ricochet",
+    "process-integrity",
+    "driver-attack-surface"
+  ],
+  "sections": [
+    {
+      "title": "Purpose and host boundary",
+      "claimIds": [
+        "claim-ricochet-driver-01"
+      ]
+    },
+    {
+      "title": "Game-bound lifetime",
+      "claimIds": [
+        "claim-ricochet-driver-02"
+      ]
+    },
+    {
+      "title": "Separation from backend protection",
+      "claimIds": [
+        "claim-ricochet-driver-03"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-045"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": [
+    "ricochet-driver-deployment"
+  ]
+}

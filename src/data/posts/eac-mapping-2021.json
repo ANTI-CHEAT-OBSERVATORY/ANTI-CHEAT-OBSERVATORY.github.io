@@ -1,0 +1,59 @@
+{
+  "id": "eac-mapping-2021",
+  "title": "EAC module delivery in 2021: encrypted transport, manual map and trust boundary",
+  "summary": "Aftermath Labs reports distinct steps from x86 launcher through encrypted image delivery and kernel mapping into a game; the demonstrated image-validation concern is scoped to those source-described components and not a current bypass assertion.",
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "category": "Reverse engineering",
+  "author": "Observatory editorial",
+  "productIds": [
+    "easy-anti-cheat"
+  ],
+  "relatedIds": [
+    "eac-2021-module-delivery",
+    "eac-2021-manual-map",
+    "eac-2021-mapper-boundary"
+  ],
+  "tags": [
+    "Easy Anti-Cheat",
+    "DLL loading",
+    "historical research"
+  ],
+  "takeaways": [
+    "Distinguish encrypted transport, image encoding and mapping: they defend different boundaries.",
+    "A manually mapped DLL can be treated as trusted by address even when the image content has not been authenticated in the studied path.",
+    "The author expressly says some memory checks are inlined and the complete product was not reversed; universal evasion is not proven."
+  ],
+  "sourceIds": [
+    "src-exp-eac-mapper"
+  ],
+  "sections": [
+    {
+      "title": "The launcher and trust in input",
+      "claimIds": [
+        "claim-exp-eac-2021-module-delivery-01",
+        "claim-exp-eac-2021-module-delivery-02",
+        "claim-exp-eac-2021-module-delivery-03",
+        "claim-exp-eac-2021-module-delivery-04"
+      ]
+    },
+    {
+      "title": "What the kernel mapper actually did",
+      "claimIds": [
+        "claim-exp-eac-2021-manual-map-01",
+        "claim-exp-eac-2021-manual-map-02",
+        "claim-exp-eac-2021-manual-map-03",
+        "claim-exp-eac-2021-manual-map-04"
+      ]
+    },
+    {
+      "title": "Image legitimacy versus image range",
+      "claimIds": [
+        "claim-exp-eac-2021-mapper-boundary-01",
+        "claim-exp-eac-2021-mapper-boundary-02",
+        "claim-exp-eac-2021-mapper-boundary-03",
+        "claim-exp-eac-2021-mapper-boundary-04"
+      ]
+    }
+  ]
+}

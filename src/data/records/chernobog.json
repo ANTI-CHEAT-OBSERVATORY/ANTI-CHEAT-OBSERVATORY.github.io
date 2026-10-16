@@ -1,0 +1,55 @@
+{
+  "id": "chernobog",
+  "kind": "project",
+  "title": "chernobog — Hikari LLVM obfuscation recovery plugin",
+  "summary": "An open-source Hex-Rays decompiler plugin that targets Hikari LLVM obfuscation: it recovers flattened control flow, removes opaque predicates, resolves encrypted strings and constants, and simplifies mixed boolean-arithmetic expressions with Z3-checked rules. It is tooling for studying protected binaries, including anti-cheat components.",
+  "vendor": "Independent research (19h)",
+  "platforms": [
+    "Windows",
+    "macOS",
+    "Linux"
+  ],
+  "layers": [
+    "User mode",
+    "Research"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "obfuscation",
+    "deobfuscation",
+    "Hex-Rays",
+    "MBA",
+    "research-binary",
+    "control flow flattening"
+  ],
+  "relatedIds": [
+    "code-devirtualization",
+    "driver-attack-surface"
+  ],
+  "repoUrl": "https://github.com/19h/chernobog",
+  "repoLicense": "Not stated",
+  "repoLanguage": "C++",
+  "reviewedCommit": "84308f8393723fe22ff090351b3d37c65a171434",
+  "sections": [
+    {
+      "title": "What the tooling targets",
+      "claimIds": [
+        "claim-chernobog-01",
+        "claim-chernobog-02"
+      ]
+    },
+    {
+      "title": "Evidence-oriented engineering",
+      "claimIds": [
+        "claim-chernobog-03",
+        "claim-chernobog-04"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-016"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

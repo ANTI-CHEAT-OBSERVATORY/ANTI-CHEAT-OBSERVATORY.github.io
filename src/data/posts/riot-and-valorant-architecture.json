@@ -1,0 +1,62 @@
+{
+  "id": "riot-and-valorant-architecture",
+  "title": "Riot’s two game-layer responses: League client hardening and VALORANT visibility",
+  "summary": "A comparative reading of Riot’s 2018 and 2020 engineering disclosures distinguishes local executable/value obfuscation from server-side withholding of enemy state. Neither design is the Vanguard driver and neither source proves a perfectly opaque client.",
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "category": "Research methods",
+  "author": "Observatory editorial",
+  "productIds": [],
+  "relatedIds": [
+    "league-2018-code-bootstrap",
+    "league-2018-data-obfuscation",
+    "valorant-fog-pvs-2020",
+    "server-authority"
+  ],
+  "tags": [
+    "Riot Games",
+    "League of Legends",
+    "VALORANT",
+    "Fog of War"
+  ],
+  "takeaways": [
+    "League’s bootstrap is about controlling the load of encrypted user-mode client code and dependencies, not kernel interception.",
+    "Moving encrypted game values and withholding unrevealed enemy state address different forms of information leakage.",
+    "PVS favors optimistic visibility to avoid pop-in, so server withholding is a minimization technique rather than proof that no enemy data is ever exposed."
+  ],
+  "sourceIds": [
+    "src-exp-riot-league",
+    "src-050"
+  ],
+  "sections": [
+    {
+      "title": "League’s earlier client-code controls",
+      "claimIds": [
+        "claim-exp-league-2018-code-bootstrap-01",
+        "claim-exp-league-2018-code-bootstrap-02",
+        "claim-exp-league-2018-code-bootstrap-03",
+        "claim-exp-league-2018-code-bootstrap-04",
+        "claim-exp-league-2018-code-bootstrap-05"
+      ]
+    },
+    {
+      "title": "The separate value-search problem",
+      "claimIds": [
+        "claim-exp-league-2018-data-obfuscation-01",
+        "claim-exp-league-2018-data-obfuscation-02",
+        "claim-exp-league-2018-data-obfuscation-03",
+        "claim-exp-league-2018-data-obfuscation-04"
+      ]
+    },
+    {
+      "title": "VALORANT server relevancy and its performance tradeoffs",
+      "claimIds": [
+        "claim-exp-valorant-fog-pvs-2020-01",
+        "claim-exp-valorant-fog-pvs-2020-02",
+        "claim-exp-valorant-fog-pvs-2020-03",
+        "claim-exp-valorant-fog-pvs-2020-04",
+        "claim-exp-valorant-fog-pvs-2020-05"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "ironshield",
+  "kind": "product",
+  "title": "Ironshield",
+  "summary": "An in-house anti-cheat for a PC game, examined publicly through a static analysis of its kernel-mode driver tvk.sys. The analysis documents a user-mode client authenticating to a kernel driver that filters handles, blocks selected DLL loads, caches process path hashes and logs in an encrypted format.",
+  "vendor": "IRONMACE Co., Ltd.",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode",
+    "Kernel"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "Ironshield",
+    "kernel anti-cheat",
+    "in-house anti-cheat",
+    "tvk.sys"
+  ],
+  "relatedIds": [
+    "ironshield-tvk-driver",
+    "ironshield-tvk-ioctl-authorization",
+    "ironshield-analysis",
+    "driver-attack-surface",
+    "process-integrity",
+    "ioctl-authorization"
+  ],
+  "sections": [
+    {
+      "title": "Publicly documented shape",
+      "claimIds": [
+        "claim-ironshield-01"
+      ]
+    },
+    {
+      "title": "Disclosure context",
+      "claimIds": [
+        "claim-ironshield-03"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-023"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

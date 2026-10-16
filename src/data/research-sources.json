@@ -1,0 +1,91 @@
+[
+  {
+    "id": "revers-engineering",
+    "name": "Revers.engineering",
+    "url": "https://revers.engineering/applied-re-crude-te-for-control-flow-tracing/",
+    "type": "Independent research",
+    "description": "Applied reverse-engineering research on tracing, instrumentation, hypervisor-assisted analysis and integrity-check measurement.",
+    "access": "Public",
+    "limitation": "A published tracing experiment and a simulated integrity-check harness do not establish current behaviour of any specific anti-cheat; this catalog did not reproduce the experiments.",
+    "topics": [
+      "control-flow tracing",
+      "hypervisor tracing",
+      "instrumentation",
+      "measurement"
+    ]
+  },
+  {
+    "id": "back-engineering",
+    "name": "Back Engineering → Aftermath Labs",
+    "url": "https://back.engineering/",
+    "type": "Independent research",
+    "description": "Publication home of the deep dives accompanying Aftermath Labs' public research repositories, including the ring-1.io analysis.",
+    "access": "Public",
+    "limitation": "The Back Engineering homepage redirected to Aftermath Labs when checked; article-level URLs remain the citation of record.",
+    "topics": [
+      "devirtualization",
+      "cheat platform analysis",
+      "bootchain implants"
+    ]
+  },
+  {
+    "id": "secret-club",
+    "name": "secret.club",
+    "url": "https://secret.club/",
+    "type": "Independent research",
+    "description": "Original, attributed anti-cheat and systems research, including the 2019 BattlEye analysis and the 2020 system-emulation study.",
+    "access": "Public",
+    "limitation": "Independent researchers' dated observations are not vendor documentation; a publication about a sampled version does not establish current detection or enforcement behaviour.",
+    "topics": ["BattlEye", "emulation detection", "anti-cheat internals"]
+  },
+  {
+    "id": "aftermath-labs",
+    "name": "Aftermath Labs research blog",
+    "url": "https://aftermathlabs.net/blog/",
+    "type": "Independent research",
+    "description": "Original research on static devirtualization of protectors used in game security, including Tencent VM, Themida and an anti-cheat kernel driver.",
+    "access": "Public",
+    "limitation": "Articles cover selected artifacts and measured coverage; version information is sometimes unavailable, and the authors also sell obfuscation products, which they disclose.",
+    "topics": [
+      "Tencent VM",
+      "Themida",
+      "devirtualization coverage",
+      "ACE drivers"
+    ]
+  },
+  {
+    "id": "aftermath-ring-artifacts",
+    "name": "Aftermath Labs ring-1.io artifacts",
+    "url": "https://github.com/aftermathlabs/ring-1.io",
+    "type": "Independent research",
+    "description": "Repository accompanying the ring-1.io write-up, containing deobfuscated implant and loader artifacts plus an IDA database.",
+    "access": "Public",
+    "limitation": "The repository also distributes cheat modules and implant binaries for analysis. This catalog links to it and does not host or mirror those artifacts.",
+    "topics": [
+      "ring-1.io",
+      "UEFI implant",
+      "boot integrity",
+      "research provenance"
+    ]
+  },
+  {
+    "id": "unknowncheats",
+    "name": "UnknownCheats anti-cheat forum",
+    "url": "https://www.unknowncheats.me/forum/anti-cheat-bypass/605951-battleye-kernel-detection.html",
+    "type": "Community forum",
+    "description": "Large public game-hacking forum whose anti-cheat sections are frequently the first place a question appears. Included as a discovery pointer.",
+    "access": "Partially accessible",
+    "limitation": "Automated and browser retrieval both returned HTTP 403 / a Cloudflare interstitial on 2026-10-16, and the forum RSS endpoint returned 403 as well. Nothing in this catalog is attributed to a thread body that could not be read.",
+    "topics": ["community discussion", "claim triage", "access limits"]
+  },
+  {
+    "id": "guidedhacking",
+    "name": "GuidedHacking anti-cheat forum",
+    "url": "https://guidedhacking.com/threads/anticheat-battleye-bypass-overview.11602",
+    "type": "Community forum",
+    "description": "Tutorial-oriented game-hacking community with anti-cheat overview threads. Included as a discovery pointer.",
+    "access": "Partially accessible",
+    "limitation": "Direct thread retrieval returned HTTP 403 and a browser visit hit a security-verification interstitial on 2026-10-16. Only indexed titles and URLs were available, not article bodies or claimed test results.",
+    "topics": ["community guides", "source evaluation", "access limits"]
+  }
+]

@@ -1,0 +1,1192 @@
+[
+  {
+    "id": "secret-club",
+    "name": "secret.club",
+    "url": "https://secret.club/",
+    "kind": "rss",
+    "endpoint": "https://secret.club/feed.xml",
+    "originId": "secret-club",
+    "systemIds": [],
+    "topics": [
+      "anti-cheat",
+      "reverse engineering",
+      "kernel",
+      "virtualization"
+    ],
+    "intervalHours": 24,
+    "backfillEndpoints": [
+      "https://secret.club/"
+    ],
+    "scope": "Publisher feed and approved public dated-article index only; no author profiles, article traversal or binary downloads. Archive entries remain unreviewed metadata."
+  },
+  {
+    "id": "aftermath-labs",
+    "name": "Aftermath Labs",
+    "url": "https://aftermathlabs.net/blog/",
+    "kind": "rss",
+    "endpoint": "https://aftermathlabs.net/blog/index.xml",
+    "originId": "aftermath-labs",
+    "systemIds": [],
+    "topics": [
+      "anti-cheat",
+      "reverse engineering",
+      "virtualization"
+    ],
+    "intervalHours": 24,
+    "backfillEndpoints": [
+      "https://aftermathlabs.net/sitemap.xml"
+    ],
+    "scope": "Publisher blog feed and public sitemap; no linked downloads."
+  },
+  {
+    "id": "revers-engineering",
+    "name": "Revers.engineering",
+    "url": "https://revers.engineering/",
+    "kind": "rss",
+    "endpoint": "https://revers.engineering/feed/",
+    "originId": "revers-engineering",
+    "systemIds": [],
+    "topics": [
+      "reverse engineering",
+      "kernel",
+      "virtualization"
+    ],
+    "intervalHours": 24,
+    "backfillEndpoints": [
+      "https://revers.engineering/sitemap_index.xml"
+    ],
+    "scope": "Publisher RSS and declared sitemap index only; no arbitrary link traversal."
+  },
+  {
+    "id": "eac-linux-devirt",
+    "name": "EAC Linux devirtualization",
+    "url": "https://github.com/19h/eac-linux-devirt",
+    "kind": "github",
+    "endpoint": "https://api.github.com/repos/19h/eac-linux-devirt",
+    "originId": "19h/eac-linux-devirt",
+    "systemIds": [
+      "easy-anti-cheat"
+    ],
+    "topics": [
+      "devirtualization",
+      "linux",
+      "research"
+    ],
+    "intervalHours": 24,
+    "backfillEndpoints": [
+      "https://api.github.com/repos/19h/eac-linux-devirt/commits?per_page=100"
+    ],
+    "scope": "Public repository metadata, up to 30 releases and 30 recently updated public issues per poll, bounded commit history and compare patches; no clone or artifact download."
+  },
+  {
+    "id": "ironshield-analysis",
+    "name": "Ironshield tvk.sys analysis",
+    "url": "https://github.com/hseoa/ironshield-analysis",
+    "kind": "github",
+    "endpoint": "https://api.github.com/repos/hseoa/ironshield-analysis",
+    "originId": "hseoa/ironshield-analysis",
+    "systemIds": [],
+    "topics": [
+      "anti-cheat",
+      "kernel",
+      "research"
+    ],
+    "intervalHours": 24,
+    "backfillEndpoints": [
+      "https://api.github.com/repos/hseoa/ironshield-analysis/commits?per_page=100"
+    ],
+    "scope": "Public repository metadata, up to 30 releases and 30 recently updated public issues per poll, bounded commit history and compare patches; no clone or artifact download."
+  },
+  {
+    "id": "ring-one-io",
+    "name": "ring-1.io analysis artifacts",
+    "url": "https://github.com/aftermathlabs/ring-1.io",
+    "kind": "github",
+    "endpoint": "https://api.github.com/repos/aftermathlabs/ring-1.io",
+    "originId": "aftermathlabs/ring-1.io",
+    "systemIds": [],
+    "topics": [
+      "anti-cheat",
+      "deobfuscation",
+      "research"
+    ],
+    "intervalHours": 24,
+    "backfillEndpoints": [
+      "https://api.github.com/repos/aftermathlabs/ring-1.io/commits?per_page=100"
+    ],
+    "scope": "Public repository metadata, up to 30 releases and 30 recently updated public issues per poll, bounded commit history and compare patches; no clone or artifact download."
+  },
+  {
+    "id": "chernobog",
+    "name": "chernobog deobfuscation plugin",
+    "url": "https://github.com/19h/chernobog",
+    "kind": "github",
+    "endpoint": "https://api.github.com/repos/19h/chernobog",
+    "originId": "19h/chernobog",
+    "systemIds": [],
+    "topics": [
+      "deobfuscation",
+      "research"
+    ],
+    "intervalHours": 24,
+    "backfillEndpoints": [
+      "https://api.github.com/repos/19h/chernobog/commits?per_page=100"
+    ],
+    "scope": "Public repository metadata, up to 30 releases and 30 recently updated public issues per poll, bounded commit history and compare patches; no clone or artifact download."
+  },
+  {
+    "id": "unknowncheats",
+    "name": "UnknownCheats anti-cheat forum",
+    "url": "https://www.unknowncheats.me/forum/anti-cheat-bypass/",
+    "kind": "rss",
+    "endpoint": "https://www.unknowncheats.me/forum/external.php?type=RSS2",
+    "originId": "unknowncheats",
+    "systemIds": [],
+    "topics": [
+      "anti-cheat",
+      "community"
+    ],
+    "intervalHours": 48,
+    "backfillEndpoints": [],
+    "scope": "Public RSS only where permitted; access denials remain blocked, no bypass or mirror scraping."
+  },
+  {
+    "id": "guidedhacking",
+    "name": "GuidedHacking anti-cheat forum",
+    "url": "https://guidedhacking.com/forums/anti-cheat-bypass.61/",
+    "kind": "rss",
+    "endpoint": "https://guidedhacking.com/forums/anti-cheat-bypass.61/index.rss",
+    "originId": "guidedhacking",
+    "systemIds": [],
+    "topics": [
+      "anti-cheat",
+      "community"
+    ],
+    "intervalHours": 48,
+    "backfillEndpoints": [],
+    "scope": "Public RSS only where permitted; access denials remain blocked, no bypass or mirror scraping."
+  },
+  {
+    "id": "src-001",
+    "name": "Static Devirtualization of Tencent VM",
+    "url": "https://aftermathlabs.net/blog/31/07/2026/",
+    "kind": "page",
+    "endpoint": "https://aftermathlabs.net/blog/31/07/2026/",
+    "originId": "aftermathlabs.net/blog/31",
+    "systemIds": [
+      "anti-cheat-expert"
+    ],
+    "topics": [
+      "ace-base.sys",
+      "tencent vm",
+      "sample identity",
+      "ace-boot.sys",
+      "lifecycle uncertainty",
+      "ace-core.sys"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed publication document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-003",
+    "name": "CVE-2024-22830 detail",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-22830",
+    "kind": "page",
+    "endpoint": "https://nvd.nist.gov/vuln/detail/CVE-2024-22830",
+    "originId": "nvd.nist.gov/vuln/detail",
+    "systemIds": [],
+    "topics": [
+      "cve-2024-22830",
+      "ace-base.sys",
+      "access control",
+      "driver security"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed disclosure document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-004",
+    "name": "ACE-BASE.sys driver record",
+    "url": "https://www.loldrivers.io/drivers/ff77b58d-e143-4f61-92de-c0d9bc0af7d5/",
+    "kind": "page",
+    "endpoint": "https://www.loldrivers.io/drivers/ff77b58d-e143-4f61-92de-c0d9bc0af7d5/",
+    "originId": "www.loldrivers.io/drivers/ff77b58d-e143-4f61-92de-c0d9bc0af7d5",
+    "systemIds": [],
+    "topics": [
+      "cve-2024-22830",
+      "ace-base.sys",
+      "access control",
+      "driver security",
+      "research method",
+      "source provenance"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed publication document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-006",
+    "name": "Driver security checklist",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/driversecurity/driver-security-checklist",
+    "kind": "page",
+    "endpoint": "https://learn.microsoft.com/en-us/windows-hardware/drivers/driversecurity/driver-security-checklist",
+    "originId": "learn.microsoft.com/en-us/windows-hardware",
+    "systemIds": [
+      "ironshield"
+    ],
+    "topics": [
+      "cve-2024-22830",
+      "ace-base.sys",
+      "access control",
+      "driver security",
+      "byovd",
+      "driver signing"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-007",
+    "name": "PC Game Anti-Cheating Service Level Agreement",
+    "url": "https://intl.cloud.tencent.com/document/product/301/62803",
+    "kind": "page",
+    "endpoint": "https://intl.cloud.tencent.com/document/product/301/62803",
+    "originId": "intl.cloud.tencent.com/document/product",
+    "systemIds": [
+      "anti-cheat-expert"
+    ],
+    "topics": [
+      "ace",
+      "tencent vm",
+      "devirtualization",
+      "windows hardening"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed publication document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-008",
+    "name": "BattlEye anti-cheat: analysis and mitigation",
+    "url": "https://secret.club/2019/02/10/battleye-anticheat.html",
+    "kind": "page",
+    "endpoint": "https://secret.club/2019/02/10/battleye-anticheat.html",
+    "originId": "secret.club/2019/02",
+    "systemIds": [
+      "battleye"
+    ],
+    "topics": [
+      "beserver",
+      "backend",
+      "historical architecture",
+      "beclient",
+      "in-process checks"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed publication document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-009",
+    "name": "BattlEye FAQ: Driver Load Error and Compatibility",
+    "url": "https://www.battleye.com/support/faq/",
+    "kind": "page",
+    "endpoint": "https://www.battleye.com/support/faq/",
+    "originId": "www.battleye.com/support/faq",
+    "systemIds": [
+      "battleye"
+    ],
+    "topics": [
+      "kernel driver",
+      "compatibility",
+      "windows",
+      "windows service",
+      "launcher",
+      "installation"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-010",
+    "name": "BattlEye – The Anti-Cheat Gold Standard",
+    "url": "https://www.battleye.com/",
+    "kind": "page",
+    "endpoint": "https://www.battleye.com/",
+    "originId": "www.battleye.com",
+    "systemIds": [
+      "battleye"
+    ],
+    "topics": [
+      "kernel driver",
+      "compatibility",
+      "windows",
+      "windows service",
+      "launcher",
+      "installation"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-011",
+    "name": "BattlEye Privacy Policy: BattlEye Anti-Cheat Software",
+    "url": "https://www.battleye.com/privacy-policy/",
+    "kind": "page",
+    "endpoint": "https://www.battleye.com/privacy-policy/",
+    "originId": "www.battleye.com",
+    "systemIds": [
+      "battleye"
+    ],
+    "topics": [
+      "game service",
+      "driver",
+      "dynamic scanning",
+      "server administration"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-012",
+    "name": "Secure the Windows boot process",
+    "url": "https://learn.microsoft.com/en-us/windows/security/operating-system-security/system-security/secure-the-windows-10-boot-process",
+    "kind": "page",
+    "endpoint": "https://learn.microsoft.com/en-us/windows/security/operating-system-security/system-security/secure-the-windows-10-boot-process",
+    "originId": "learn.microsoft.com/en-us/windows",
+    "systemIds": [
+      "vanguard"
+    ],
+    "topics": [
+      "secure boot",
+      "measured boot",
+      "startup order",
+      "tpm"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-013",
+    "name": "Incoming: Vanguard On-Demand",
+    "url": "https://www.riotgames.com/en/news/vanguard-on-demand",
+    "kind": "page",
+    "endpoint": "https://www.riotgames.com/en/news/vanguard-on-demand",
+    "originId": "www.riotgames.com/en/news",
+    "systemIds": [
+      "ea-javelin",
+      "easy-anti-cheat",
+      "vanguard"
+    ],
+    "topics": [
+      "secure boot",
+      "measured boot",
+      "startup order",
+      "tpm",
+      "byovd",
+      "driver signing"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-014",
+    "name": "Vanguard Security Update: Closing the Pre-Boot Gap",
+    "url": "https://www.riotgames.com/en/news/vanguard-security-update-motherboard",
+    "kind": "page",
+    "endpoint": "https://www.riotgames.com/en/news/vanguard-security-update-motherboard",
+    "originId": "www.riotgames.com/en/news",
+    "systemIds": [
+      "vanguard"
+    ],
+    "topics": [
+      "secure boot",
+      "measured boot",
+      "startup order",
+      "tpm",
+      "dma",
+      "iommu"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-015",
+    "name": "Microsoft recommended driver block rules",
+    "url": "https://learn.microsoft.com/en-us/windows/security/application-security/application-control/app-control-for-business/design/microsoft-recommended-driver-block-rules",
+    "kind": "page",
+    "endpoint": "https://learn.microsoft.com/en-us/windows/security/application-security/application-control/app-control-for-business/design/microsoft-recommended-driver-block-rules",
+    "originId": "learn.microsoft.com/en-us/windows",
+    "systemIds": [
+      "vanguard"
+    ],
+    "topics": [
+      "byovd",
+      "driver signing",
+      "vulnerable driver blocklist",
+      "research method",
+      "source provenance",
+      "scope"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-017",
+    "name": "Loki: Hardening Code Obfuscation Against Automated Attacks",
+    "url": "https://www.usenix.org/conference/usenixsecurity22/presentation/schloegel",
+    "kind": "page",
+    "endpoint": "https://www.usenix.org/conference/usenixsecurity22/presentation/schloegel",
+    "originId": "www.usenix.org/conference/usenixsecurity22",
+    "systemIds": [],
+    "topics": [
+      "code virtualization",
+      "devirtualization",
+      "reverse engineering",
+      "obfuscation"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed publication document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-019",
+    "name": "Anti-Cheat Interfaces",
+    "url": "https://dev.epicgames.com/docs/epic-online-services/trust-and-safety/anti-cheat-interfaces/anti-cheat-interfaces",
+    "kind": "page",
+    "endpoint": "https://dev.epicgames.com/docs/epic-online-services/trust-and-safety/anti-cheat-interfaces/anti-cheat-interfaces",
+    "originId": "dev.epicgames.com/docs/epic-online-services",
+    "systemIds": [
+      "ea-javelin",
+      "easy-anti-cheat",
+      "vanguard"
+    ],
+    "topics": [
+      "code virtualization",
+      "devirtualization",
+      "reverse engineering",
+      "obfuscation",
+      "enforcement",
+      "privacy"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-020",
+    "name": "Kernel DMA Protection (Memory Access Protection) for OEMs",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-kernel-dma-protection",
+    "kind": "page",
+    "endpoint": "https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-kernel-dma-protection",
+    "originId": "learn.microsoft.com/en-us/windows-hardware",
+    "systemIds": [
+      "vanguard"
+    ],
+    "topics": [
+      "dma",
+      "iommu",
+      "firmware",
+      "memory isolation"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-021",
+    "name": "WinVerifyTrust function (wintrust.h)",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/wintrust/nf-wintrust-winverifytrust",
+    "kind": "page",
+    "endpoint": "https://learn.microsoft.com/en-us/windows/win32/api/wintrust/nf-wintrust-winverifytrust",
+    "originId": "learn.microsoft.com/en-us/windows",
+    "systemIds": [],
+    "topics": [
+      "client authentication",
+      "code signing",
+      "certificate validation",
+      "trust boundary"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-022",
+    "name": "Driver Signing Options",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/dashboard/driver-signing-offerings",
+    "kind": "page",
+    "endpoint": "https://learn.microsoft.com/en-us/windows-hardware/drivers/dashboard/driver-signing-offerings",
+    "originId": "learn.microsoft.com/en-us/windows-hardware",
+    "systemIds": [],
+    "topics": [
+      "client authentication",
+      "code signing",
+      "certificate validation",
+      "trust boundary"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-024",
+    "name": "How to install and troubleshoot EA Javelin anticheat on PC: Common errors",
+    "url": "https://help.ea.com/en/articles/platforms/pc-ea-anticheat/",
+    "kind": "page",
+    "endpoint": "https://help.ea.com/en/articles/platforms/pc-ea-anticheat/",
+    "originId": "help.ea.com/en/articles",
+    "systemIds": [
+      "ea-javelin"
+    ],
+    "topics": [
+      "ea",
+      "service",
+      "game launch",
+      "installation",
+      "anti-tamper",
+      "kernel"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-025",
+    "name": "A Deep Dive on EA anticheat for PC",
+    "url": "https://www.ea.com/security/news/eaac-deep-dive",
+    "kind": "page",
+    "endpoint": "https://www.ea.com/security/news/eaac-deep-dive",
+    "originId": "www.ea.com/security/news",
+    "systemIds": [
+      "ea-javelin",
+      "easy-anti-cheat",
+      "vanguard"
+    ],
+    "topics": [
+      "ea",
+      "service",
+      "game launch",
+      "installation",
+      "anti-tamper",
+      "kernel"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-026",
+    "name": "Raising the Bar: A Year of Progress for EA Javelin Anticheat",
+    "url": "https://www.ea.com/news/ea-javelin-anticheat-2026-update",
+    "kind": "page",
+    "endpoint": "https://www.ea.com/news/ea-javelin-anticheat-2026-update",
+    "originId": "www.ea.com/news/ea-javelin-anticheat-2026-update",
+    "systemIds": [
+      "ea-javelin"
+    ],
+    "topics": [
+      "ea",
+      "service",
+      "game launch",
+      "installation",
+      "anti-tamper",
+      "kernel"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-027",
+    "name": "Introducing EA Javelin Anticheat",
+    "url": "https://www.ea.com/news/introducing-ea-javelin-anticheat",
+    "kind": "page",
+    "endpoint": "https://www.ea.com/news/introducing-ea-javelin-anticheat",
+    "originId": "www.ea.com/news/introducing-ea-javelin-anticheat",
+    "systemIds": [
+      "ea-javelin"
+    ],
+    "topics": [
+      "ea",
+      "anti-tamper",
+      "kernel",
+      "game-specific"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-028",
+    "name": "EA Javelin Anticheat is Coming to Apex Legends",
+    "url": "https://www.ea.com/games/apex-legends/apex-legends/news/javelin-anticheat-announcement",
+    "kind": "page",
+    "endpoint": "https://www.ea.com/games/apex-legends/apex-legends/news/javelin-anticheat-announcement",
+    "originId": "www.ea.com/games/apex-legends",
+    "systemIds": [
+      "ea-javelin"
+    ],
+    "topics": [
+      "ea",
+      "anti-tamper",
+      "kernel",
+      "game-specific"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-029",
+    "name": "Anti-Cheat Interfaces: Platform Components",
+    "url": "https://dev.epicgames.com/docs/epic-online-services/trust-and-safety/anti-cheat-interfaces/anti-cheat-interfaces?lang=en-US",
+    "kind": "page",
+    "endpoint": "https://dev.epicgames.com/docs/epic-online-services/trust-and-safety/anti-cheat-interfaces/anti-cheat-interfaces?lang=en-US",
+    "originId": "dev.epicgames.com/docs/epic-online-services",
+    "systemIds": [
+      "easy-anti-cheat"
+    ],
+    "topics": [
+      "eos",
+      "bootstrapper",
+      "launch",
+      "module updates",
+      "windows service",
+      "installation"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-030",
+    "name": "Using Anti-Cheat: Client Module Setup and Bootstrapper Configuration",
+    "url": "https://dev.epicgames.com/docs/epic-online-services/trust-and-safety/anti-cheat-interfaces/using-anti-cheat",
+    "kind": "page",
+    "endpoint": "https://dev.epicgames.com/docs/epic-online-services/trust-and-safety/anti-cheat-interfaces/using-anti-cheat",
+    "originId": "dev.epicgames.com/docs/epic-online-services",
+    "systemIds": [
+      "easy-anti-cheat"
+    ],
+    "topics": [
+      "eos",
+      "bootstrapper",
+      "launch",
+      "module updates",
+      "windows service",
+      "installation"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-035",
+    "name": "Ransomware Actor Abuses Genshin Impact Anti-Cheat Driver to Kill Antivirus",
+    "url": "https://www.trendmicro.com/en_us/research/22/h/ransomware-actor-abuses-genshin-impact-anti-cheat-driver-to-kill-antivirus.html",
+    "kind": "page",
+    "endpoint": "https://www.trendmicro.com/en_us/research/22/h/ransomware-actor-abuses-genshin-impact-anti-cheat-driver-to-kill-antivirus.html",
+    "originId": "www.trendmicro.com/en_us/research",
+    "systemIds": [],
+    "topics": [
+      "research method",
+      "source provenance",
+      "scope",
+      "uncertainty",
+      "mhyprot2.sys",
+      "byovd"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed publication document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-036",
+    "name": "What is FACEIT Anti-cheat and how does it work?",
+    "url": "https://support.faceit.com/hc/en-us/articles/9394666828188-What-is-FACEIT-Anti-cheat-and-how-does-it-work",
+    "kind": "page",
+    "endpoint": "https://support.faceit.com/hc/en-us/articles/9394666828188-What-is-FACEIT-Anti-cheat-and-how-does-it-work",
+    "originId": "support.faceit.com/hc/en-us",
+    "systemIds": [
+      "faceit"
+    ],
+    "topics": [
+      "app",
+      "counter-strike 2",
+      "match validation",
+      "kernel driver",
+      "boot-loaded",
+      "tpm"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-037",
+    "name": "Windows Security Requirements FAQ",
+    "url": "https://support.faceit.com/hc/en-us/articles/23117181142556-Windows-Security-Requirements-FAQ",
+    "kind": "page",
+    "endpoint": "https://support.faceit.com/hc/en-us/articles/23117181142556-Windows-Security-Requirements-FAQ",
+    "originId": "support.faceit.com/hc/en-us",
+    "systemIds": [
+      "faceit"
+    ],
+    "topics": [
+      "app",
+      "counter-strike 2",
+      "match validation",
+      "kernel driver",
+      "boot-loaded",
+      "tpm"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-038",
+    "name": "ObRegisterCallbacks function (wdm.h)",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/wdm/nf-wdm-obregistercallbacks",
+    "kind": "page",
+    "endpoint": "https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/wdm/nf-wdm-obregistercallbacks",
+    "originId": "learn.microsoft.com/en-us/windows-hardware",
+    "systemIds": [],
+    "topics": [
+      "object callbacks",
+      "handle access",
+      "process protection",
+      "pre-operation"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-039",
+    "name": "Virtualization-based Security (VBS)",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-vbs",
+    "kind": "page",
+    "endpoint": "https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-vbs",
+    "originId": "learn.microsoft.com/en-us/windows-hardware",
+    "systemIds": [
+      "easy-anti-cheat",
+      "vanguard"
+    ],
+    "topics": [
+      "hypervisor",
+      "vbs",
+      "hvci",
+      "virtual machine"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-040",
+    "name": "FLT_PARAMETERS for IRP_MJ_ACQUIRE_FOR_SECTION_SYNCHRONIZATION",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/ifs/flt-parameters-for-irp-mj-acquire-for-section-synchronization",
+    "kind": "page",
+    "endpoint": "https://learn.microsoft.com/en-us/windows-hardware/drivers/ifs/flt-parameters-for-irp-mj-acquire-for-section-synchronization",
+    "originId": "learn.microsoft.com/en-us/windows-hardware",
+    "systemIds": [],
+    "topics": [
+      "minifilter",
+      "dll blocking",
+      "section synchronization",
+      "image loading"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-041",
+    "name": "Peeking into VALORANT's Netcode",
+    "url": "https://www.riotgames.com/en/news/peeking-valorants-netcode",
+    "kind": "page",
+    "endpoint": "https://www.riotgames.com/en/news/peeking-valorants-netcode",
+    "originId": "www.riotgames.com/en/news",
+    "systemIds": [
+      "easy-anti-cheat",
+      "vanguard"
+    ],
+    "topics": [
+      "input automation",
+      "computer vision",
+      "behavioral analysis",
+      "pixelbot",
+      "server authority",
+      "game state"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-042",
+    "name": "MmGetSystemRoutineAddress function (wdm.h)",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/wdm/nf-wdm-mmgetsystemroutineaddress",
+    "kind": "page",
+    "endpoint": "https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/wdm/nf-wdm-mmgetsystemroutineaddress",
+    "originId": "learn.microsoft.com/en-us/windows-hardware",
+    "systemIds": [],
+    "topics": [
+      "symbol resolution",
+      "offsets",
+      "kernel read/write",
+      "client-supplied data"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-044",
+    "name": "Protecting anti-malware services",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/services/protecting-anti-malware-services-",
+    "kind": "page",
+    "endpoint": "https://learn.microsoft.com/en-us/windows/win32/services/protecting-anti-malware-services-",
+    "originId": "learn.microsoft.com/en-us/windows",
+    "systemIds": [
+      "vanguard"
+    ],
+    "topics": [
+      "protected process light",
+      "elam",
+      "code integrity",
+      "injection resistance"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-045",
+    "name": "RICOCHET Anti-Cheat: How It Works, Protecting Your Privacy and FAQ",
+    "url": "https://www.callofduty.com/warzone/ricochet",
+    "kind": "page",
+    "endpoint": "https://www.callofduty.com/warzone/ricochet",
+    "originId": "www.callofduty.com/warzone/ricochet",
+    "systemIds": [
+      "ricochet"
+    ],
+    "topics": [
+      "call of duty",
+      "kernel driver",
+      "game-active",
+      "reporting",
+      "session lifecycle",
+      "server analysis"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed publication document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-046",
+    "name": "Trusted Platform Module and Secure Boot",
+    "url": "https://support.activision.com/articles/trusted-platform-module-and-secure-boot",
+    "kind": "page",
+    "endpoint": "https://support.activision.com/articles/trusted-platform-module-and-secure-boot",
+    "originId": "support.activision.com/articles/trusted-platform-module-and-secure-boot",
+    "systemIds": [
+      "ricochet"
+    ],
+    "topics": [
+      "call of duty",
+      "session lifecycle",
+      "server analysis",
+      "secure boot"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-048",
+    "name": "Deobfuscation and Analysis of Ring-1.io",
+    "url": "https://aftermathlabs.net/blog/04/02/2026/",
+    "kind": "page",
+    "endpoint": "https://aftermathlabs.net/blog/04/02/2026/",
+    "originId": "aftermathlabs.net/blog/04",
+    "systemIds": [
+      "battleye"
+    ],
+    "topics": [
+      "bootkit",
+      "uefi",
+      "deobfuscation",
+      "cheat platform analysis",
+      "blare2"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed publication document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-049",
+    "name": "GetRuntimeAttestationReport function (sysinfoapi.h)",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getruntimeattestationreport",
+    "kind": "page",
+    "endpoint": "https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getruntimeattestationreport",
+    "originId": "learn.microsoft.com/en-us/windows",
+    "systemIds": [
+      "vanguard"
+    ],
+    "topics": [
+      "attestation",
+      "hvci",
+      "tpm",
+      "driver inventory",
+      "on-demand anti-cheat"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-050",
+    "name": "Demolishing Wallhacks with VALORANT's Fog of War",
+    "url": "https://www.riotgames.com/en/news/demolishing-wallhacks-valorants-fog-war",
+    "kind": "page",
+    "endpoint": "https://www.riotgames.com/en/news/demolishing-wallhacks-valorants-fog-war",
+    "originId": "www.riotgames.com/en/news",
+    "systemIds": [
+      "easy-anti-cheat",
+      "vanguard"
+    ],
+    "topics": [
+      "server authority",
+      "game state",
+      "network validation",
+      "information exposure"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-051",
+    "name": "What is Vanguard?",
+    "url": "https://support.riotgames.com/en-us/riot/performance/what-is-vanguard",
+    "kind": "page",
+    "endpoint": "https://support.riotgames.com/en-us/riot/performance/what-is-vanguard",
+    "originId": "support.riotgames.com/en-us/riot",
+    "systemIds": [
+      "vanguard"
+    ],
+    "topics": [
+      "client",
+      "tray",
+      "game lifecycle",
+      "riot",
+      "boot integrity",
+      "on-demand"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-052",
+    "name": "Vanguard Pre-Check",
+    "url": "https://support.riotgames.com/en-us/riot/performance/vanguard-pre-check",
+    "kind": "page",
+    "endpoint": "https://support.riotgames.com/en-us/riot/performance/vanguard-pre-check",
+    "originId": "support.riotgames.com/en-us/riot",
+    "systemIds": [
+      "vanguard"
+    ],
+    "topics": [
+      "client",
+      "tray",
+      "game lifecycle",
+      "driver",
+      "boot-start",
+      "on-demand"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed vendor document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-053",
+    "name": "BattlEye client emulation",
+    "url": "https://secret.club/2020/07/06/bottleye.html",
+    "kind": "page",
+    "endpoint": "https://secret.club/2020/07/06/bottleye.html",
+    "originId": "secret.club/2020/07",
+    "systemIds": [
+      "battleye"
+    ],
+    "topics": [
+      "anti-cheat research"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed publication document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-054",
+    "name": "Applied Reverse Engineering: Crude T&E for Control-Flow Tracing",
+    "url": "https://revers.engineering/applied-re-crude-te-for-control-flow-tracing/",
+    "kind": "page",
+    "endpoint": "https://revers.engineering/applied-re-crude-te-for-control-flow-tracing/",
+    "originId": "revers.engineering",
+    "systemIds": [],
+    "topics": [
+      "anti-cheat research"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed publication document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-056",
+    "name": "How anti-cheats detect system emulation",
+    "url": "https://secret.club/2020/04/13/how-anti-cheats-detect-system-emulation.html",
+    "kind": "page",
+    "endpoint": "https://secret.club/2020/04/13/how-anti-cheats-detect-system-emulation.html",
+    "originId": "secret.club/2020/04",
+    "systemIds": [
+      "battleye",
+      "easy-anti-cheat"
+    ],
+    "topics": [
+      "anti-cheat research"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed publication document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-057",
+    "name": "Static Devirtualization of Themida",
+    "url": "https://aftermathlabs.net/blog/09/05/2026/",
+    "kind": "page",
+    "endpoint": "https://aftermathlabs.net/blog/09/05/2026/",
+    "originId": "aftermathlabs.net/blog/09",
+    "systemIds": [
+      "anti-cheat-expert"
+    ],
+    "topics": [
+      "anti-cheat research"
+    ],
+    "intervalHours": 72,
+    "backfillEndpoints": [],
+    "scope": "Selected reviewed publication document; inspect only public title, description and headings. No archive endpoint or linked files."
+  },
+  {
+    "id": "src-002",
+    "name": "CVE-2024-22830 record",
+    "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2024/22xxx/CVE-2024-22830.json",
+    "kind": "page",
+    "endpoint": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2024/22xxx/CVE-2024-22830.json",
+    "originId": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2024/22xxx/CVE-2024-22830.json",
+    "systemIds": [],
+    "topics": [
+      "cve-2024-22830",
+      "ace-base.sys",
+      "access control",
+      "driver security",
+      "research method",
+      "source provenance"
+    ],
+    "intervalHours": 168,
+    "backfillEndpoints": [],
+    "scope": "Selected cited pinned README or public CVE text: bounded metadata/headings only; no repository clone or artifact fetch."
+  },
+  {
+    "id": "src-005",
+    "name": "Report CVE-2024-22830 (original advisory URL cited by CVE Program)",
+    "url": "https://www.defencetech.it/wp-content/uploads/2024/04/Report-CVE-2024-22830.pdf",
+    "kind": "page",
+    "endpoint": "https://www.defencetech.it/wp-content/uploads/2024/04/Report-CVE-2024-22830.pdf",
+    "originId": "https://www.defencetech.it/wp-content/uploads/2024/04/Report-CVE-2024-22830.pdf",
+    "systemIds": [],
+    "topics": [
+      "cve-2024-22830",
+      "ace-base.sys",
+      "access control",
+      "driver security"
+    ],
+    "intervalHours": 168,
+    "backfillEndpoints": [],
+    "scope": "Selected cited document: HTTP HEAD validator metadata only. Never download or mirror the PDF."
+  },
+  {
+    "id": "src-018",
+    "name": "Loki: Hardening Code Obfuscation Against Automated Attacks (full paper)",
+    "url": "https://www.usenix.org/system/files/sec22-schloegel.pdf",
+    "kind": "page",
+    "endpoint": "https://www.usenix.org/system/files/sec22-schloegel.pdf",
+    "originId": "https://www.usenix.org/system/files/sec22-schloegel.pdf",
+    "systemIds": [],
+    "topics": [
+      "code virtualization",
+      "devirtualization",
+      "reverse engineering",
+      "obfuscation"
+    ],
+    "intervalHours": 168,
+    "backfillEndpoints": [],
+    "scope": "Selected cited document: HTTP HEAD validator metadata only. Never download or mirror the PDF."
+  },
+  {
+    "id": "src-031",
+    "name": "EAC Linux research README at reviewed revision 10d67114e3",
+    "url": "https://github.com/19h/eac-linux-devirt/blob/10d67114e35c4504abee49915ab3940bc4e6987c/README.md",
+    "kind": "page",
+    "endpoint": "https://github.com/19h/eac-linux-devirt/blob/10d67114e35c4504abee49915ab3940bc4e6987c/README.md",
+    "originId": "https://github.com/19h/eac-linux-devirt",
+    "systemIds": [
+      "easy-anti-cheat"
+    ],
+    "topics": [
+      "devirtualization",
+      "easy anti-cheat",
+      "linux",
+      "vm handlers",
+      "static analysis",
+      "ai-assisted recovery"
+    ],
+    "intervalHours": 168,
+    "backfillEndpoints": [],
+    "scope": "Selected cited pinned README or public CVE text: bounded metadata/headings only; no repository clone or artifact fetch."
+  },
+  {
+    "id": "src-034",
+    "name": "EAC Linux README at later upstream revision dc5f947d75",
+    "url": "https://github.com/19h/eac-linux-devirt/blob/dc5f947d7531cfac19f01f2b9c8da2b77fb58957/README.md",
+    "kind": "page",
+    "endpoint": "https://github.com/19h/eac-linux-devirt/blob/dc5f947d7531cfac19f01f2b9c8da2b77fb58957/README.md",
+    "originId": "https://github.com/19h/eac-linux-devirt",
+    "systemIds": [
+      "easy-anti-cheat"
+    ],
+    "topics": [
+      "devirtualization",
+      "easy anti-cheat",
+      "linux",
+      "vm handlers",
+      "static analysis",
+      "ai-assisted recovery"
+    ],
+    "intervalHours": 168,
+    "backfillEndpoints": [],
+    "scope": "Selected cited pinned README or public CVE text: bounded metadata/headings only; no repository clone or artifact fetch."
+  }
+]

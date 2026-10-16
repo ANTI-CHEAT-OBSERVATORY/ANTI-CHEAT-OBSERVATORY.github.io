@@ -1,0 +1,50 @@
+{
+  "id": "handle-access-filtering",
+  "kind": "technique",
+  "title": "Handle access filtering with object callbacks",
+  "summary": "Object callbacks let a kernel driver observe process and thread handle creation and duplication and strip requested access before the handle exists. Anti-cheat drivers use this to protect game processes from outside handle-based access without relying on user-mode checks.",
+  "vendor": "Cross-vendor",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "object callbacks",
+    "handle access",
+    "process protection",
+    "pre-operation"
+  ],
+  "relatedIds": [
+    "driver-attack-surface",
+    "process-integrity",
+    "protected-process-light",
+    "ironshield-tvk-driver",
+    "ioctl-authorization"
+  ],
+  "sections": [
+    {
+      "title": "What the mechanism provides",
+      "claimIds": [
+        "claim-handle-access-filtering-01",
+        "claim-handle-access-filtering-02"
+      ]
+    },
+    {
+      "title": "How anti-cheat uses it",
+      "claimIds": [
+        "claim-handle-access-filtering-03",
+        "claim-handle-access-filtering-04"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-038",
+    "src-023"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

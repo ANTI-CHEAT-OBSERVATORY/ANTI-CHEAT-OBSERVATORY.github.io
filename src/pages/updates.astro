@@ -1,0 +1,172 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { posts } from "../lib/research";
+import { corrections, sourceById } from "../lib/knowledge";
+import { recordById } from "../lib/catalog";
+import { discovery, discoveryChanges, discoveryItems, discoverySources, pendingChanges, trackedRepos, recentDigest } from "../lib/discovery";
+import { withBase } from "../lib/paths";
+
+const reviewedPosts = [...posts].sort((a, b) => b.updated.localeCompare(a.updated) || a.title.localeCompare(b.title));
+const reviewedCorrections = [...corrections].sort((a, b) => b.date.localeCompare(a.date));
+const pending = [...pendingChanges].sort((a, b) => b.date.localeCompare(a.date));
+const reviewedChanges = discoveryChanges.filter((change) => change.review === "reviewed").sort((a, b) => b.date.localeCompare(a.date));
+const drifting = trackedRepos.filter((repo) => repo.drift || repo.stale || !repo.reviewedCommit || !repo.headSha);
+const issues = discoverySources.filter((source) => source.state !== "ok" || source.backfill.state !== "complete");
+const sourceByStatusId = new Map(discoverySources.map((source) => [source.id, source]));
+const itemById = new Map(discoveryItems.map((item) => [item.id, item]));
+const changeById = new Map(discoveryChanges.map((change) => [change.id, change]));
+const safeExternal = (value: string | undefined | null) => {
+  if (!value) return null;
+  try {
+    const url = new URL(value);
+    return url.protocol === "http:" || url.protocol === "https:" ? url.href : null;
+  } catch {
+    return null;
+  }
+};
+const dateLabel = (value: string | null) => {
+  if (!value || Number.isNaN(Date.parse(value))) return "Not recorded";
+  const date = new Date(value);
+  return /^\d{4}-\d{2}-\d{2}$/.test(value)
+    ? date.toISOString().slice(0, 10)
+    : `${date.toISOString().slice(0, 16).replace("T", " ")} UTC`;
+};
+const sourceState = { ok: "Reachable", blocked: "Blocked", error: "Fetch failed", pending: "Not yet collected" } as const;
+const backfillState = { pending: "Pending", partial: "Partial", complete: "Complete", blocked: "Blocked" } as const;
+const shortSha = (sha: string | null) => sha ? sha.slice(0, 12) : "Not recorded";
+---
+
+<Layout title="Updates" active="updates" description="Reviewed editorial and correction updates, distinct from pending automated source changes, blocked discovery sources and upstream repository drift.">
+  <div class="page-container updates-page">
+    <header class="page-header">
+      <p class="muted">Research reference / updates</p>
+      <h1>Updates and review queue</h1>
+      <p>Editorial research and corrections below are published by the Observatory. Discovered publications and source changes are <strong>not</strong> reviewed conclusions until explicitly linked and inspected. The automated snapshot is a lead queue, not a new finding.</p>
+      <nav class="update-links" aria-label="Update feeds"><a href={withBase("/feed")}>Browse and filter source discovery</a><a href={withBase("/updates.xml")}>Updates RSS</a><a href={withBase("/digest.xml")}>Weekly digest RSS</a><a href={withBase("/api/v2/discovery.json")}>Snapshot JSON</a></nav>
+      <p class="muted" id="digest">Discovery snapshot: <time datetime={discovery.syncedAt}>{dateLabel(discovery.syncedAt)}</time>. Digest generated <time datetime={recentDigest.generatedAt}>{dateLabel(recentDigest.generatedAt)}</time>; covers {dateLabel(recentDigest.from)} – {dateLabel(recentDigest.to)}. Dates describe the committed snapshot, not live source status.</p>
+    </header>
+
+    <section id="editorial" aria-labelledby="editorial-heading">
+      <div class="section-title"><h2 id="editorial-heading">Published research notes</h2><span class="badge">Editorial · {reviewedPosts.length}</span></div>
+      <p>Written analysis is separate from the automated discovery queue. Publication and last editorial update dates are labeled separately.</p>
+      <div class="table-wrap"><table class="data-table">
+        <caption>Observatory editorial notes ordered by most recent editorial update; publication dates do not imply that external sources were rechecked that day.</caption>
+        <thead><tr><th scope="col">Note</th><th scope="col">Category</th><th scope="col">Published</th><th scope="col">Updated</th></tr></thead>
+        <tbody>{reviewedPosts.map((post) => <tr><th scope="row"><a href={withBase(`/blog/${post.id}`)}>{post.title}</a><p class="detail">{post.summary}</p></th><td>{post.category}</td><td><time datetime={post.published}>{dateLabel(post.published)}</time></td><td><time datetime={post.updated}>{dateLabel(post.updated)}</time></td></tr>)}</tbody>
+      </table></div>
+      {reviewedPosts.length === 0 && <p>No editorial notes are published.</p>}
+    </section>
+
+    <section id="corrections" aria-labelledby="corrections-heading">
+      <div class="section-title"><h2 id="corrections-heading">Published corrections and disputes</h2><span class="badge">Editorial record · {reviewedCorrections.length}</span></div>
+      <p>A correction's status and before/after wording are preserved; an open dispute is not a resolved finding.</p>
+      {reviewedCorrections.length ? <div class="change-grid">{reviewedCorrections.map((correction) => <article class="panel change-card" id={`correction-${correction.id}`}>
+        <p class="muted"><time datetime={correction.date}>{dateLabel(correction.date)}</time> · {correction.kind} · <span class="badge">{correction.status}</span></p>
+        <h3>{correction.title}</h3><p>{correction.summary}</p>
+        <dl class="change-pair"><div><dt>Before</dt><dd>{correction.before}</dd></div><div><dt>After</dt><dd>{correction.after}</dd></div></dl>
+        {(correction.recordIds.length > 0 || correction.claimIds.length > 0 || correction.sourceIds.length > 0) && <p class="links">Affected: {correction.recordIds.map((id) => <a href={withBase(`/records/${id}`)}>{recordById(id)?.title ?? id}</a>)}{correction.claimIds.map((id) => <a href={withBase(`/claims/${id}`)}>Claim {id}</a>)}{correction.sourceIds.map((id) => <a href={withBase(`/sources/${id}`)}>{sourceById(id)?.title ?? id}</a>)}</p>}
+      </article>)}</div> : <p>No published corrections are recorded.</p>}
+    </section>
+
+    <section id="pending" aria-labelledby="pending-heading">
+      <div class="section-title"><h2 id="pending-heading">Discovery changes awaiting review</h2><span class="badge">Pending · {pending.length}</span></div>
+      <p>Automated comparisons flag differences; they do not establish what changed in a product or validate the underlying claim. Text in the diff is metadata only and is never executed or rendered as HTML.</p>
+      {pending.length ? <div class="change-grid">{pending.map((change) => {
+        const source = sourceByStatusId.get(change.sourceId);
+        const sourceLink = safeExternal(change.sourceUrl);
+        const compareLink = safeExternal(change.compareUrl);
+        return <article class="panel change-card" id={`change-${change.id}`}>
+          <p class="muted"><time datetime={change.date}>{dateLabel(change.date)}</time> · {change.kind} · <span class="badge">Pending review</span></p>
+          <h3>{source?.name ?? change.sourceId}</h3><p>{change.summary}</p>
+          <dl class="change-pair"><div><dt>Before</dt><dd>{change.before}</dd></div><div><dt>After</dt><dd>{change.after}</dd></div></dl>
+          {(change.diff.removed.length > 0 || change.diff.added.length > 0) && <div class="diff" aria-label="Recorded text diff">{change.diff.removed.map((line) => <p class="removed">− {line}</p>)}{change.diff.added.map((line) => <p class="added">+ {line}</p>)}</div>}
+          <p class="links">{sourceLink && <a href={sourceLink} target="_blank" rel="noopener noreferrer">Source</a>}{compareLink && <a href={compareLink} target="_blank" rel="noopener noreferrer">Upstream comparison</a>}{change.recordIds.map((id) => <a href={withBase(`/records/${id}`)}>{recordById(id)?.title ?? id}</a>)}{change.claimIds.map((id) => <a href={withBase(`/claims/${id}`)}>Claim {id}</a>)}</p>
+        </article>;
+      })}</div> : <p>No recorded source changes are currently awaiting review. This does not mean all sources were reachable; see collection status below.</p>}
+      {reviewedChanges.length > 0 && <details class="panel reviewed-changes"><summary>{reviewedChanges.length} source changes marked reviewed in the discovery snapshot</summary><div class="change-grid">{reviewedChanges.map((change) => {
+        const sourceLink = safeExternal(change.sourceUrl);
+        const compareLink = safeExternal(change.compareUrl);
+        return <article class="change-card" id={`change-${change.id}`}>
+          <p class="muted"><time datetime={change.date}>{dateLabel(change.date)}</time> · {change.kind} · <span class="badge">Reviewed</span></p>
+          <h3>{sourceByStatusId.get(change.sourceId)?.name ?? change.sourceId}</h3><p>{change.summary}</p>
+          <dl class="change-pair"><div><dt>Before</dt><dd>{change.before}</dd></div><div><dt>After</dt><dd>{change.after}</dd></div></dl>
+          {(change.diff.removed.length > 0 || change.diff.added.length > 0) && <div class="diff" aria-label="Recorded text diff">{change.diff.removed.map((line) => <p class="removed">− {line}</p>)}{change.diff.added.map((line) => <p class="added">+ {line}</p>)}</div>}
+          <p class="links">{sourceLink && <a href={sourceLink} target="_blank" rel="noopener noreferrer">Source</a>}{compareLink && <a href={compareLink} target="_blank" rel="noopener noreferrer">Upstream comparison</a>}{change.recordIds.map((id) => <a href={withBase(`/records/${id}`)}>{recordById(id)?.title ?? id}</a>)}{change.claimIds.map((id) => <a href={withBase(`/claims/${id}`)}>Claim {id}</a>)}</p>
+        </article>;
+      })}</div></details>}
+    </section>
+
+    <section id="repositories" aria-labelledby="repositories-heading">
+      <div class="section-title"><h2 id="repositories-heading">Tracked repository drift</h2><span class="badge">{drifting.length} need attention / {trackedRepos.length} tracked</span></div>
+      <p>Reviewed commit comes from the catalog record; the upstream head is from the last collection. A moved head never advances the reviewed commit automatically. Missing commits and stale snapshots are stated explicitly rather than treated as matches.</p>
+      <div class="table-wrap"><table class="data-table repo-table">
+        <caption>Current recorded upstream heads compared with reviewed commits; stale snapshots cannot establish current repository state.</caption>
+        <thead><tr><th scope="col">Repository</th><th scope="col">Reviewed commit</th><th scope="col">Upstream head</th><th scope="col">Assessment</th></tr></thead>
+        <tbody>{trackedRepos.map((repo) => <tr>
+          <th scope="row">{safeExternal(repo.url) ? <a href={safeExternal(repo.url)!} target="_blank" rel="noopener noreferrer">{repo.name}</a> : repo.name}{repo.recordId && <p class="detail"><a href={withBase(`/records/${repo.recordId}`)}>Catalog record</a></p>}</th>
+          <td class="mono" title={repo.reviewedCommit ?? undefined}>{shortSha(repo.reviewedCommit)}</td>
+          <td><span class="mono" title={repo.headSha ?? undefined}>{shortSha(repo.headSha)}</span>{repo.headDate && <><br /><span class="muted">Commit <time datetime={repo.headDate}>{dateLabel(repo.headDate)}</time></span></>}{repo.pushedAt && <><br /><span class="muted">Last pushed <time datetime={repo.pushedAt}>{dateLabel(repo.pushedAt)}</time></span></>}</td>
+          <td><span class="badge">{repo.stale ? "Snapshot stale" : repo.drift ? "Drift since review" : !repo.reviewedCommit ? "No reviewed commit" : !repo.headSha ? "Head unavailable" : "Matches reviewed commit"}</span>{repo.stale && repo.drift && <><br />Last known head differs from reviewed commit.</>}{repo.archived && <><br />Archived upstream.</>}</td>
+        </tr>)}</tbody>
+      </table></div>
+      {trackedRepos.length === 0 && <p>No repositories are tracked in the committed snapshot.</p>}
+    </section>
+
+    <section id="collection" aria-labelledby="collection-heading">
+      <div class="section-title"><h2 id="collection-heading">Collection health and historical backfill</h2><span class="badge">{issues.length} incomplete or unavailable / {discoverySources.length} sources</span></div>
+      <p>Blocked and failed sources remain listed with their last successful retrieval. The digest records {recentDigest.addedIds.length} new publication IDs and {recentDigest.changeIds.length} change IDs in its stated interval; these are automated observations, not editorial updates.</p>
+      <div class="table-wrap"><table class="data-table status-table">
+        <caption>Complete discovery source status at snapshot time: attempt, last success and backfill scope, including unavailable sources.</caption>
+        <thead><tr><th scope="col">Source</th><th scope="col">Collection status</th><th scope="col">Last successful retrieval</th><th scope="col">Backfill coverage</th></tr></thead>
+        <tbody>{discoverySources.map((source) => <tr>
+          <th scope="row">{safeExternal(source.url) ? <a href={safeExternal(source.url)!} target="_blank" rel="noopener noreferrer">{source.name}</a> : source.name}<br /><span class="muted">{source.itemCount} retained items</span></th>
+          <td><span class="badge">{sourceState[source.state]}</span>{source.httpStatus !== null && <> · HTTP {source.httpStatus}</>}<br /><span class="muted">Attempted <time datetime={source.lastAttempt}>{dateLabel(source.lastAttempt)}</time></span>{source.error && <p class="detail">{source.error}</p>}</td>
+          <td>{source.lastSuccess ? <time datetime={source.lastSuccess}>{dateLabel(source.lastSuccess)}</time> : "Never recorded"}</td>
+          <td>{backfillState[source.backfill.state]}{(source.backfill.inspectedFrom || source.backfill.inspectedThrough) && <><br /><span class="muted">Inspected {source.backfill.inspectedFrom ?? "unknown start"} – {source.backfill.inspectedThrough ?? "unknown end"}</span></>}{source.backfill.detail && <p class="detail">{source.backfill.detail}</p>}</td>
+        </tr>)}</tbody>
+      </table></div>
+      {(recentDigest.blockedSourceIds.length > 0 || recentDigest.addedIds.length > 0 || recentDigest.changeIds.length > 0) && <details class="panel digest-detail"><summary>Weekly digest identifiers and blocked sources</summary>
+        {recentDigest.blockedSourceIds.length > 0 && <p>Blocked during digest: {recentDigest.blockedSourceIds.map((id) => sourceByStatusId.get(id)?.name ?? id).join(", ")}</p>}
+        {recentDigest.addedIds.length > 0 && <p>New discoveries: {recentDigest.addedIds.map((id) => itemById.get(id)?.title ?? id).join("; ")}</p>}
+        {recentDigest.changeIds.length > 0 && <p>Source changes: {recentDigest.changeIds.map((id) => changeById.get(id)?.summary ?? id).join("; ")}</p>}
+      </details>}
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .updates-page { padding-block: 2rem 5rem; }
+  .page-header { max-width: 82ch; }
+  .page-header h1 { margin-block: .3rem .75rem; }
+  .update-links { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; margin: 1rem 0; }
+  .updates-page a { color: var(--accent); text-decoration: underline; text-underline-offset: .18em; }
+  .updates-page section { margin-block: 2.5rem 3.5rem; }
+  .section-title { display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem 1rem; }
+  .section-title h2 { margin-bottom: .3rem; }
+  .table-wrap { overflow-x: auto; }
+  .data-table { width: 100%; min-width: 700px; border-collapse: collapse; }
+  .data-table caption { text-align: left; color: var(--muted); margin-bottom: .65rem; }
+  .data-table th, .data-table td { text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); padding: .7rem; overflow-wrap: anywhere; }
+  .data-table th:first-child { min-width: 14rem; }
+  .data-table thead th { white-space: nowrap; }
+  .detail { margin: .3rem 0 0; color: var(--muted); font-weight: 400; }
+  .change-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 28rem), 1fr)); gap: .8rem; }
+  .change-card { padding: 1rem; min-width: 0; overflow-wrap: anywhere; }
+  .change-card h3 { margin-block: .25rem; }
+  .change-card p { margin-bottom: .65rem; }
+  .change-pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: .5rem; margin: .75rem 0; }
+  .change-pair > div { border-left: 2px solid var(--border); padding-left: .7rem; }
+  .change-pair dt { color: var(--muted); font-size: .85rem; }
+  .change-pair dd { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .diff { border: 1px solid var(--border); padding: .65rem; margin: .8rem 0; font: .85rem/1.5 var(--mono, monospace); white-space: pre-wrap; overflow-wrap: anywhere; }
+  .diff p { margin: 0; }
+  .removed { color: #e6a299; }
+  .added { color: #87ddbd; }
+  .links { display: flex; gap: .3rem .9rem; flex-wrap: wrap; }
+  .reviewed-changes, .digest-detail { padding: 1rem; margin-top: 1rem; }
+  summary { cursor: pointer; }
+  .badge { display: inline-block; font-size: .83rem; }
+  .muted { color: var(--muted); }
+  .mono { font-family: var(--mono, monospace); }
+  @media (max-width: 640px) { .updates-page { padding-block: 1rem 3rem; } .data-table th, .data-table td { padding: .5rem; } }
+</style>

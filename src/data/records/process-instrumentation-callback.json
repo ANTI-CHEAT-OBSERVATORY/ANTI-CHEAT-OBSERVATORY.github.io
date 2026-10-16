@@ -1,0 +1,56 @@
+{
+  "id": "process-instrumentation-callback",
+  "kind": "component",
+  "title": "ProcessInstrumentationCallback: kernel-to-user return observation",
+  "summary": "An undocumented Native selector and callback structure described by PHNT-based documentation. It concerns process instrumentation at kernel-to-user transitions, not a kernel driver or a universally available anti-cheat bypass.",
+  "vendor": "Microsoft Windows",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode"
+  ],
+  "historical": false,
+  "updated": "2026-10-16",
+  "tags": [
+    "native-api",
+    "undocumented-api",
+    "platform-reference",
+    "instrumentation callback"
+  ],
+  "relatedIds": [
+    "ntqueryinformationprocess",
+    "thread-hide-from-debugger"
+  ],
+  "sourceIds": [
+    "src-ref-phnt-processclass",
+    "src-ref-phnt-instrumentation"
+  ],
+  "buildIds": [],
+  "mechanismIds": [],
+  "sections": [
+    {
+      "title": "Selector and structure",
+      "claimIds": [
+        "claim-ref-process-instrumentation-callback-01"
+      ]
+    },
+    {
+      "title": "Transition context",
+      "claimIds": [
+        "claim-ref-process-instrumentation-callback-02"
+      ]
+    },
+    {
+      "title": "Access scope",
+      "claimIds": [
+        "claim-ref-process-instrumentation-callback-03"
+      ]
+    }
+  ],
+  "aliases": [
+    "ProcessInstrumentationCallback",
+    "PROCESS_INSTRUMENTATION_CALLBACK_INFORMATION",
+    "NtSetInformationProcess"
+  ]
+}

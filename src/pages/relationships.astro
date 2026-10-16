@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { records } from "../lib/catalog";
+import { relationships, claims, sources } from "../lib/knowledge";
+import { withBase } from "../lib/paths";
+const entities = new Map(records.map((record) => [record.id, record.title]));
+const systems = records.filter((record) => record.kind === "product");
+const edges = relationships.filter((edge) => edge.claimIds.length && edge.claimIds.some((id) => claims.some((claim) => claim.id === id && claim.citations.some((citation) => sources.some((source) => source.id === citation.sourceId)))));
+---
+<Layout title="Evidence-backed relationships" description="Sourced, navigable graph and table of documented relationships.">
+  <div class="page-container relationship-view"><header class="page-header"><h1>Documented relationships</h1><p>Only explicitly recorded, source-cited edges appear here. Metadata “related” IDs are not evidence. Each graph edge opens its supporting claim; the complete source/claim table is always available below.</p></header>
+    <form id="relationship-filters" class="panel"><label>System <select name="system"><option value="">All documented systems</option>{systems.map((system) => <option value={system.id}>{system.title}</option>)}</select></label><label>Entity <select name="entity"><option value="">All entities</option>{[...new Set(edges.flatMap((edge) => [edge.fromId, edge.toId]))].sort().map((id) => <option value={id}>{entities.get(id) ?? id}</option>)}</select></label><button type="submit" class="button">Apply and share filters</button></form>
+    <section class="panel"><h2>Evidence graph</h2><p>Tab to each edge; activate to open its supporting claim. The table presents the same edges without relying on graphics.</p><div id="relationship-graph" role="group" aria-label="Sourced relationship graph"></div></section>
+    <section class="panel"><h2>Accessible evidence table</h2><p id="relationship-count" role="status">{edges.length} documented edges</p><div class="table-wrap"><table class="data-table" id="relationship-table"><thead><tr><th>From → to</th><th>Relationship</th><th>Supporting claim and exact source</th></tr></thead><tbody>{edges.map((edge) => <tr data-from={edge.fromId} data-to={edge.toId} data-claims={edge.claimIds.join(" ")}><td>{entities.get(edge.fromId) ?? edge.fromId} → {entities.get(edge.toId) ?? edge.toId}</td><td>{edge.type}<p>{edge.description}</p></td><td>{edge.claimIds.map((id) => { const claim = claims.find((item) => item.id === id); return <div><a href={withBase(`/claims/${id}`)}>{claim?.statement ?? id}</a> · {claim?.state}{claim?.citations.map((citation) => <div><a href={withBase(`/sources/${citation.sourceId}`)}>{sources.find((source) => source.id === citation.sourceId)?.title ?? citation.sourceId}</a> · {citation.locator.kind}: <code>{citation.locator.value}</code></div>)}</div>; })}</td></tr>)}</tbody></table></div><p id="relationship-empty" hidden>No sourced relationships match these filters.</p></section>
+    <noscript><p>Graph filtering requires JavaScript; the complete source-cited table remains available.</p></noscript>
+  </div>
+  <script>import "../scripts/relationships.ts";</script>
+</Layout>
+<style>.relationship-view{padding-block:2rem 5rem}.relationship-view .panel{padding:1rem;margin:1rem 0}.relationship-view form{display:flex;flex-wrap:wrap;align-items:end;gap:1rem}.relationship-view label{display:grid;gap:.4rem;min-width:min(100%,17rem)}.relationship-view select{padding:.5rem;max-width:100%;color:inherit;background:var(--surface,transparent);border:1px solid currentColor}.relationship-view td{vertical-align:top}.relationship-view td div{margin:.35rem 0}.relationship-view td code{overflow-wrap:anywhere}#relationship-graph{width:100%;overflow:auto}#relationship-graph :global(svg){min-width:620px;max-height:800px}#relationship-graph :global(a:focus-visible){outline:3px solid currentColor}</style>

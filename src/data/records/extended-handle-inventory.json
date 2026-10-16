@@ -1,0 +1,47 @@
+{
+  "id": "extended-handle-inventory",
+  "kind": "component",
+  "title": "Extended handle inventory: SYSTEM_HANDLE_INFORMATION_EX",
+  "summary": "A community-described Native structure for system handle metadata. Useful for understanding handle-access research; a table of handle metadata is not itself permission to read another process.",
+  "vendor": "Microsoft Windows",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode"
+  ],
+  "historical": false,
+  "updated": "2026-10-16",
+  "tags": [
+    "native-api",
+    "undocumented-api",
+    "platform-reference",
+    "handle metadata"
+  ],
+  "relatedIds": [
+    "ntquerysysteminformation"
+  ],
+  "sourceIds": [
+    "src-ref-phnt-handles"
+  ],
+  "buildIds": [],
+  "mechanismIds": [],
+  "sections": [
+    {
+      "title": "Container layout",
+      "claimIds": [
+        "claim-ref-extended-handle-inventory-01"
+      ]
+    },
+    {
+      "title": "Per-entry evidence",
+      "claimIds": [
+        "claim-ref-extended-handle-inventory-02"
+      ]
+    }
+  ],
+  "aliases": [
+    "SYSTEM_HANDLE_INFORMATION_EX",
+    "SYSTEM_HANDLE_TABLE_ENTRY_INFO_EX"
+  ]
+}

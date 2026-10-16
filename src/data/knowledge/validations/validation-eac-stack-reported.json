@@ -1,0 +1,28 @@
+{
+  "id": "validation-eac-stack-reported",
+  "title": "Author-reported 10d67114e3 stack repair regression suite",
+  "claimIds": [
+    "claim-eac-linux-devirt-07"
+  ],
+  "buildId": "build-eac-plx-reviewed",
+  "activity": "behavior-reproduced",
+  "performedBy": "source-author",
+  "authority": "reported",
+  "status": "reported",
+  "authorized": true,
+  "environment": "Author-reported Linux original-VM oracle and x86-64 Mach-O tests with controlled bindings; toolchain and sample recorded in pinned README.",
+  "tools": "Author reports test_vm_stack_state.py, test_mount_recovery.py, validate_stack_state.py; Capstone 5.0.9, LIEF 1.0.0, Unicorn 2.1.4, Python 3.14, IDA 9.5.",
+  "inputs": "Author reports 108 stack-region and 128 continuation comparisons at -O0/-O2 and five sub_6F0D0 mount fixtures.",
+  "expected": "Matching bounded original VM comparisons and mount outputs under specified fixtures.",
+  "observed": "Pinned README reports 27 regression tests passed and bounded comparisons; catalog did not run them.",
+  "bounds": "Specific recorded revision, compiled artifacts and fixture paths only; not whole-program equivalence or external dispute resolution.",
+  "sourceIds": [
+    "src-031"
+  ],
+  "executedAt": null,
+  "reviewedAt": "2026-10-16",
+  "limitations": [
+    "Execution date not available in inspected README.",
+    "Reported source-author results, not independently observed by this catalog."
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "hypervisor-detection-2020",
+  "title": "Hypervisor detection in 2020: separate possibilities from observations",
+  "summary": "A secret.club multi-author investigation compares possible system-emulation signals with checks its authors reported observing in BattlEye and Easy Anti-Cheat. It is useful precisely because theoretical detection ideas and product-specific evidence are not the same thing.",
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "category": "Virtualization",
+  "author": "Observatory editorial",
+  "productIds": [
+    "battleye",
+    "easy-anti-cheat"
+  ],
+  "relatedIds": [
+    "hypervisor-trust",
+    "battleye-driver",
+    "eac-service"
+  ],
+  "tags": [
+    "hypervisors",
+    "timing",
+    "BattlEye",
+    "Easy Anti-Cheat",
+    "measurement"
+  ],
+  "takeaways": [
+    "An architecture-based detection idea is not evidence that a named vendor deployed it.",
+    "The authors reported 2020 timing checks in both products and additional EAC-specific observations, with no general present-day coverage claim.",
+    "Timing and processor-state anomalies need benign-baseline testing before they are treated as actionable risk signals."
+  ],
+  "sections": [
+    {
+      "title": "Two layers of evidence in one article",
+      "claimIds": [
+        "claim-hypervisor-detection-2020-01"
+      ]
+    },
+    {
+      "title": "Reported vendor behavior",
+      "claimIds": [
+        "claim-hypervisor-detection-2020-03",
+        "claim-hypervisor-detection-2020-03-s01"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-056"
+  ]
+}

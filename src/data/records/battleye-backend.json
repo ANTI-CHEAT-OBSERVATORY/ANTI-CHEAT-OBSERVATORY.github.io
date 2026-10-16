@@ -1,0 +1,39 @@
+{
+  "id": "battleye-backend",
+  "kind": "component",
+  "title": "BEServer — reported backend boundary",
+  "summary": "The 2019 secret.club investigation calls BEServer a proprietary backend responsible for collecting information and taking action. It is a remote trust boundary in that research account, not a documented local driver or a claim to have inspected BattlEye's server implementation.",
+  "vendor": "BattlEye Innovations",
+  "platforms": [
+    "Server OS not established"
+  ],
+  "layers": [
+    "Server"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "BEServer",
+    "backend",
+    "historical architecture"
+  ],
+  "relatedIds": [
+    "battleye",
+    "battleye-client",
+    "battleye-service",
+    "server-authority"
+  ],
+  "sections": [
+    {
+      "title": "A separate backend boundary",
+      "claimIds": [
+        "claim-battleye-backend-01"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-008"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

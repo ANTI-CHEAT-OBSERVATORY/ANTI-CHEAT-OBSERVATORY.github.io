@@ -1,0 +1,49 @@
+{
+  "id": "thread-hide-from-debugger",
+  "kind": "component",
+  "title": "NtSetInformationThread: ThreadHideFromDebugger selector",
+  "summary": "An undocumented selector within a partially documented Native thread-setting family. Check Point describes the debugger-event effect and debugging hazards; this reference does not attribute it to an unnamed anti-cheat.",
+  "vendor": "Microsoft Windows",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode"
+  ],
+  "historical": false,
+  "updated": "2026-10-16",
+  "tags": [
+    "native-api",
+    "undocumented-api",
+    "platform-reference",
+    "anti-debugging"
+  ],
+  "relatedIds": [
+    "process-instrumentation-callback",
+    "x64dbg-debugger"
+  ],
+  "sourceIds": [
+    "src-ref-phnt-thread",
+    "src-ref-antidebug"
+  ],
+  "buildIds": [],
+  "mechanismIds": [],
+  "sections": [
+    {
+      "title": "Family versus selector",
+      "claimIds": [
+        "claim-ref-thread-hide-from-debugger-01"
+      ]
+    },
+    {
+      "title": "Debugger-visible effect",
+      "claimIds": [
+        "claim-ref-thread-hide-from-debugger-02"
+      ]
+    }
+  ],
+  "aliases": [
+    "NtSetInformationThread",
+    "ThreadHideFromDebugger"
+  ]
+}

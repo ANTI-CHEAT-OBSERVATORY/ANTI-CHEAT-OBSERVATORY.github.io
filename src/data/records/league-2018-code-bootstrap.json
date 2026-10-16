@@ -1,0 +1,45 @@
+{
+  "id": "league-2018-code-bootstrap",
+  "kind": "component",
+  "title": "League .text encryption and import bootstrap (2018)",
+  "summary": "Riot’s 2018 engineering article describes selectively encrypted game code and an external import bootstrap that loads before other dependencies, distinct from Vanguard’s kernel driver. Deployment beyond the article’s reported work is not audited.",
+  "vendor": "Riot Games",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode"
+  ],
+  "historical": false,
+  "updated": "2026-10-16",
+  "tags": [
+    "League of Legends",
+    "encrypted code",
+    "historical engineering"
+  ],
+  "relatedIds": [
+    "league-2018-data-obfuscation"
+  ],
+  "sourceIds": [
+    "src-exp-riot-league"
+  ],
+  "buildIds": [],
+  "mechanismIds": [],
+  "sections": [
+    {
+      "title": "Encrypting game code",
+      "claimIds": [
+        "claim-exp-league-2018-code-bootstrap-01",
+        "claim-exp-league-2018-code-bootstrap-02",
+        "claim-exp-league-2018-code-bootstrap-03",
+        "claim-exp-league-2018-code-bootstrap-04"
+      ]
+    },
+    {
+      "title": "Making life difficult for debuggers",
+      "claimIds": [
+        "claim-exp-league-2018-code-bootstrap-05"
+      ]
+    }
+  ]
+}

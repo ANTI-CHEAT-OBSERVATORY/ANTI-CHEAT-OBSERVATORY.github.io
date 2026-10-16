@@ -1,0 +1,60 @@
+{
+  "id": "linux-proton-anticheat",
+  "kind": "technique",
+  "title": "Anti-cheat on Linux and Proton",
+  "summary": "Kernel anti-cheat on Windows has no direct equivalent on Linux, so vendors supporting Linux deliver a separate client module that runs under Wine or Proton and validate sessions through the same client-server or peer-to-peer model as Windows.",
+  "vendor": "Epic Games / cross-vendor",
+  "platforms": [
+    "Linux",
+    "Windows"
+  ],
+  "layers": [
+    "User mode",
+    "Kernel",
+    "Server"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "Linux",
+    "Proton",
+    "Wine",
+    "client module",
+    "platform support"
+  ],
+  "relatedIds": [
+    "easy-anti-cheat",
+    "eac-service",
+    "eac-linux-devirt",
+    "server-authority",
+    "code-devirtualization"
+  ],
+  "sections": [
+    {
+      "title": "How Linux support is delivered",
+      "claimIds": [
+        "claim-linux-proton-anticheat-01",
+        "claim-linux-proton-anticheat-02"
+      ]
+    },
+    {
+      "title": "Platform-specific differences that are documented",
+      "claimIds": [
+        "claim-linux-proton-anticheat-03",
+        "claim-linux-proton-anticheat-04"
+      ]
+    },
+    {
+      "title": "What the Linux artifact looks like in practice",
+      "claimIds": [
+        "claim-linux-proton-anticheat-05"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-019",
+    "src-031"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

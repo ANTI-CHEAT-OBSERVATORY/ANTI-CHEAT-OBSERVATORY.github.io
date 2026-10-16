@@ -1,0 +1,53 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { posts } from "../lib/research";
+import { records } from "../lib/catalog";
+import { mechanisms, claims, sources } from "../lib/knowledge";
+import { withBase } from "../lib/paths";
+const projects = records.filter((entry) => entry.kind === "project");
+const sourceClaimIds = new Map<string, Set<string>>();
+for (const claim of claims) {
+  if (claim.review === "collected" || (claim.kind !== "observation" && claim.kind !== "inference")) continue;
+  for (const citation of claim.citations) {
+    if (citation.relation !== "supports") continue;
+    let ids = sourceClaimIds.get(citation.sourceId);
+    if (!ids) {
+      ids = new Set<string>();
+      sourceClaimIds.set(citation.sourceId, ids);
+    }
+    ids.add(claim.id);
+  }
+}
+const inspectedSources = sources
+  .filter((source) => sourceClaimIds.has(source.id) && source.access === "available" && source.transport !== "index-only")
+  .sort((a, b) => a.publisher.localeCompare(b.publisher) || a.title.localeCompare(b.title));
+---
+<Layout title="Research" active="research" description="Editorial research notes, inspectable mechanisms and public-source projects with attributed claims.">
+  <div class="page-container stack">
+    <header class="page-header page-header-row"><div><p class="eyebrow">Reference & editorial / {claims.length} scoped claims</p><h1>Research</h1><p class="muted">Read public work with claim-level citations, provenance, review activity and applicable build. Editorial notes interpret the evidence; they do not add a second claim database.</p></div><a class="button" href={withBase("/methodology")}>Evidence method</a></header>
+    <nav class="secondary-navigation panel" aria-label="Research sections"><a href="#notes">Research notes</a><a href="#source-library">Source library</a><a href={withBase("/reference")}>APIs &amp; binaries</a><a href="#mechanisms">Mechanisms</a><a href={withBase("/projects")}>Projects ({projects.length})</a><a href={withBase("/relationships")}>Relationships</a><a href={withBase("/workspace")}>Validation workspace</a><a href={withBase("/publishing")}>Submit attributed note</a></nav>
+    <section id="notes" class="stack"><div class="page-header page-header-row"><div><h2>Editorial notes</h2><p class="muted">{posts.length} original summaries with takeaways and links to shared evidence.</p></div><a href={withBase("/blog")}>Browse and filter notes →</a></div><div class="table-wrap" role="region" tabindex="0" aria-label="Scrollable research notes"><table class="data-table"><thead><tr><th scope="col">Note</th><th scope="col">Category</th><th scope="col">Published</th><th scope="col">Attributed evidence</th></tr></thead><tbody>{posts.map((post) => <tr><th scope="row"><a href={withBase(`/blog/${post.id}`)}>{post.title}</a><small class="table-summary muted">{post.summary}</small></th><td>{post.category}</td><td class="mono small"><time datetime={post.published}>{post.published}</time></td><td class="small">{post.sections.reduce((count, section) => count + section.claimIds.length, 0)} claim references · {post.sourceIds.length} sources</td></tr>)}</tbody></table></div></section>
+    <section id="source-library" class="stack">
+      <div>
+        <h2>Inspected source library</h2>
+        <p class="muted">Original research, public code, disclosures and technical documentation supporting attributed claims. Source type and revision remain visible; a citation is not independent reproduction.</p>
+      </div>
+      <details class="panel">
+        <summary>Browse {inspectedSources.length} sources with inspected technical claims</summary>
+        <div class="table-wrap" role="region" tabindex="0" aria-label="Scrollable inspected source library">
+          <table class="data-table">
+            <thead><tr><th scope="col">Original source</th><th scope="col">Publisher / provenance</th><th scope="col">Publication / revision</th><th scope="col">Claim evidence</th></tr></thead>
+            <tbody>{inspectedSources.map((source) => <tr>
+              <th scope="row"><a href={source.url} target="_blank" rel="noopener noreferrer">{source.title} ↗</a></th>
+              <td class="small">{source.publisher}<small class="table-summary muted">{source.provenance}{source.transport === "mirror" && " · mirror, not an independent origin"}</small></td>
+              <td class="small mono">{source.published ? <time datetime={source.published}>{source.published}</time> : "Undated"}<small class="table-summary muted">{source.revision.kind === "git" ? `Commit ${source.revision.value?.slice(0, 10)}` : source.revision.kind === "publication" ? `Publication ${source.revision.value}` : "Unversioned"}</small></td>
+              <td class="small"><a href={withBase(`/sources/${source.id}`)}>{sourceClaimIds.get(source.id)?.size} attributed claims &amp; provenance</a></td>
+            </tr>)}</tbody>
+          </table>
+        </div>
+      </details>
+    </section>
+    <section id="mechanisms" class="stack"><div class="page-header page-header-row"><div><h2>Mechanism worksheets</h2><p class="muted">{mechanisms.length} inspectable mechanisms, with explicit unknowns and links to underlying claims.</p></div><a href={withBase("/catalog?kind=technique")}>Technique records →</a></div><div class="table-wrap" role="region" tabindex="0" aria-label="Scrollable mechanism inventory"><table class="data-table"><thead><tr><th scope="col">Mechanism</th><th scope="col">Scope</th><th scope="col">Claims</th><th scope="col">Open questions</th></tr></thead><tbody>{mechanisms.map((mechanism) => <tr><th scope="row"><a href={withBase(`/mechanisms/${mechanism.id}`)}>{mechanism.title}</a><small class="table-summary muted">{mechanism.summary}</small></th><td class="small">{mechanism.systemIds.length ? mechanism.systemIds.map((id) => <a href={withBase(`/records/${id}`)}>{id} </a>) : "Cross-system"}</td><td>{mechanism.claimIds.length}</td><td class="small">{mechanism.unknowns.length ? mechanism.unknowns.join(" · ") : "See worksheet for recorded scope"}</td></tr>)}</tbody></table></div></section>
+    <p class="panel small">{sources.length} source records support this collection. Repository stars and popularity do not determine claim validity. <a href={withBase("/data")}>Download normalized dataset →</a></p>
+  </div>
+</Layout>

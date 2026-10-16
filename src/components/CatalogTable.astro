@@ -1,0 +1,64 @@
+---
+import { records, kindNames, countKind } from "../lib/catalog";
+import { recordKinds, claimStates } from "../lib/knowledge-types";
+import { claimsForRecord, systemsForRecord, buildById } from "../lib/knowledge";
+import { withBase } from "../lib/paths";
+const vendors = [...new Set(records.map((record) => record.vendor))].sort();
+const platforms = [...new Set(records.flatMap((record) => record.platforms))].sort();
+const layers = [...new Set(records.flatMap((record) => record.layers))].sort();
+const entries = records.map((record) => {
+  const claims = claimsForRecord(record.id);
+  const builds = record.buildIds.flatMap((id) => { const build = buildById(id); return build ? [build] : []; });
+  return { record, claims, builds, systems: systemsForRecord(record.id), states: [...new Set(claims.map((claim) => claim.state))] };
+});
+---
+<section class="stack" id="catalog" aria-labelledby="catalog-heading" data-pagefind-ignore>
+  <header class="page-header page-header-row"><div><p class="eyebrow">Research reference / {records.length} records</p><h1 id="catalog-heading">Catalog</h1><p class="muted">Search cited records and full text. Sources, claims, build scope and limitations remain attached to each record.</p></div><a class="button" href={withBase("/data")}>Data &amp; API</a></header>
+  <form id="catalog-filters" class="panel filter-bar" role="search" aria-label="Catalog search and filters" action={withBase("/")} method="get">
+    <label class="field field-search">Search records and indexed text<input type="search" id="catalog-search" name="q" autocomplete="off" placeholder="Driver, hash, CVE, function, source…" /></label>
+    <details class="catalog-advanced" data-collapse-below="800" open><summary>Filters and scope</summary><div class="catalog-filter-fields">
+    <label class="field">Kind<select name="kind"><option value="">All types ({records.length})</option>{recordKinds.map((kind) => <option value={kind}>{kindNames[kind]} ({countKind(kind)})</option>)}</select></label>
+    <label class="field">Vendor<select name="vendor"><option value="">All vendors</option>{vendors.map((vendor) => <option value={vendor}>{vendor}</option>)}</select></label>
+    <label class="field">Platform<select name="platform"><option value="">All platforms</option>{platforms.map((platform) => <option value={platform}>{platform}</option>)}</select></label>
+    <label class="field">Layer<select name="layer"><option value="">All layers</option>{layers.map((layer) => <option value={layer}>{layer}</option>)}</select></label>
+    <label class="field">Period<select name="historical"><option value="">All periods</option><option value="yes">Historical</option><option value="no">Not marked historical</option></select></label>
+    <label class="field">Claim state<select name="state"><option value="">All states</option>{claimStates.map((state) => <option value={state}>{state}</option>)}</select></label>
+    </div></details>
+    <div class="filter-actions"><button class="button" type="submit">Search</button><button type="button" id="reset-filters" class="button">Clear</button><button type="button" class="button" data-save-query>Save query</button></div>
+  </form>
+  <p id="results-count" class="muted" role="status" aria-live="polite">Showing {records.length} records</p>
+  <div class="table-wrap" role="region" tabindex="0" aria-label="Scrollable catalog table">
+    <table class="data-table catalog-table">
+      <caption class="sr-only">Records with system context, claim states, applicable build scope and editorial review date. Unknown build scope is not current-version evidence.</caption>
+      <thead><tr><th scope="col">Record</th><th scope="col">Type</th><th scope="col">System / layer</th><th scope="col">Evidence / state</th><th scope="col">Build scope</th><th scope="col">Reviewed</th><th scope="col">Save</th></tr></thead>
+      <tbody>{entries.map(({ record, claims, builds, systems, states }) => (
+        <tr data-record data-kind={record.kind} data-vendor={record.vendor} data-platforms={JSON.stringify(record.platforms)} data-layers={JSON.stringify(record.layers)} data-historical={String(record.historical)} data-states={JSON.stringify(states)}
+          data-search={[record.title, record.summary, record.vendor, ...record.tags, ...record.platforms, ...record.layers, ...(record.aliases ?? []), ...(record.filenames ?? []), ...(record.cves ?? []), ...systems.map((system) => system.title), ...builds.flatMap((build) => [build.label, build.version ?? "", ...build.hashes.map((hash) => hash.value)])].join(" ").normalize("NFKC").toLocaleLowerCase("en")}>
+          <th scope="row"><a href={withBase(`/records/${record.id}`)}>{record.title}</a><small class="muted table-summary catalog-summary">{record.summary}</small></th>
+          <td><span class="badge">{kindNames[record.kind]}</span></td>
+          <td class="small">{systems.length ? systems.map((system) => <a class="system-link" href={withBase(`/records/${system.id}`)}>{system.title}</a>) : "Cross-vendor context"}<br /><span class="muted">{record.layers.join(", ")}</span></td>
+          <td class="small"><div class="catalog-states">{states.map((state) => <span class:list={["badge", `state-${state}`]}>{state}</span>)}</div><span class="muted">{record.sourceIds.length} sources · {claims.length} claims</span></td>
+          <td class="small">{builds.length ? builds.map((build) => <a class="build-link" href={withBase(`/builds/${build.id}`)}>{build.version ?? build.label}</a>) : <span class="muted">Build not established</span>}</td>
+          <td class="mono small"><time datetime={record.updated}>{record.updated}</time>{record.historical && <span class="badge">Historical</span>}</td>
+          <td><button type="button" class="button-subtle" data-bookmark-id={record.id} data-bookmark-type="record" data-bookmark-title={record.title} data-bookmark-url={withBase(`/records/${record.id}`)}>Bookmark</button></td>
+        </tr>
+      ))}</tbody>
+    </table>
+  </div>
+  <p id="empty-state" class="muted" hidden>No records match these metadata filters. Try clearing a filter; indexed full-text matches appear below.</p>
+  <section id="fulltext-results" class="stack" aria-labelledby="fulltext-title" hidden><h2 id="fulltext-title">Indexed full-text matches</h2><p class="muted" id="fulltext-status" role="status" aria-live="polite"></p><ol id="fulltext-list" class="search-results"></ol><button type="button" id="fulltext-more" class="button" hidden>Load more matches</button></section>
+  <noscript><p class="panel">All records remain accessible above. Enable JavaScript to search full text and filter the table.</p></noscript>
+</section>
+<script>import "../scripts/catalog";</script>
+<style>
+  .catalog-table { min-width: 1080px; }
+  .catalog-table th[scope=row] { width: 27%; min-width: 260px; }
+  .catalog-summary { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+  .catalog-states { display: flex; flex-wrap: wrap; gap: .2rem; margin-bottom: .25rem; }
+  .system-link, .build-link { display: block; margin-bottom: .2rem; }
+  .filter-bar > .field-search { flex: 1 0 100%; }
+  .catalog-advanced { flex: 1 0 100%; min-width: 0; }
+  .catalog-advanced summary { cursor: pointer; margin-bottom: .5rem; }
+  .catalog-filter-fields { display: flex; flex-wrap: wrap; gap: .8rem; }
+  .catalog-filter-fields > .field { flex: 1 1 140px; min-width: 0; }
+</style>

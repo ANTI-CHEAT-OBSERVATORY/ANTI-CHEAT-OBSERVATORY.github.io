@@ -1,0 +1,54 @@
+{
+  "id": "equ8-helper-36",
+  "kind": "component",
+  "title": "EQU8_HELPER_36.sys research sample",
+  "summary": "A driver filename and installed path reported by the original EQU8 researcher for one system. Its driver entry creates a named device and registers callbacks; neither sample bytes nor a version-linked hash were obtained here.",
+  "vendor": "EQU8",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel",
+    "Research"
+  ],
+  "historical": false,
+  "updated": "2026-10-16",
+  "tags": [
+    "EQU8",
+    "research-binary",
+    "kernel driver",
+    "anti-cheat-driver"
+  ],
+  "relatedIds": [
+    "equ8-2021",
+    "equ8-session-device"
+  ],
+  "sourceIds": [
+    "src-exp-equ8-analysis"
+  ],
+  "buildIds": [],
+  "mechanismIds": [],
+  "sections": [
+    {
+      "title": "Kernel driver’s location",
+      "claimIds": [
+        "claim-exp-equ8-helper-36-01"
+      ]
+    },
+    {
+      "title": "The DriverEntry",
+      "claimIds": [
+        "claim-exp-equ8-helper-36-02"
+      ]
+    },
+    {
+      "title": "Beginning the analysis",
+      "claimIds": [
+        "claim-exp-equ8-helper-36-03"
+      ]
+    }
+  ],
+  "filenames": [
+    "EQU8_HELPER_36.sys"
+  ]
+}

@@ -1,0 +1,23 @@
+---
+import type { Claim } from "../lib/knowledge-types";
+import { buildById, sourceById, validationsForClaim } from "../lib/knowledge";
+import { withBase } from "../lib/paths";
+interface Props { claim: Claim; compact?: boolean }
+const { claim, compact = false } = Astro.props;
+const builds = claim.buildIds.map(buildById).filter((build) => build !== undefined);
+const validations = validationsForClaim(claim.id);
+---
+<article class:list={["claim-evidence", { compact }]} id={`claim-${claim.id}`} data-pagefind-meta={`claim:${claim.id}`}>
+  <div class="claim-head"><span class="badge">{claim.kind}</span><span class="badge" data-pagefind-filter={`provenance:${claim.provenance}`}>{claim.provenance}</span><span class="badge" data-pagefind-filter={`review:${claim.review}`}>{claim.review}</span><span class:list={["badge", `state-${claim.state}`]} data-pagefind-filter={`state:${claim.state}`}>{claim.state}</span></div>
+  <p class="claim-statement"><a href={withBase(`/claims/${claim.id}`)}>{claim.statement}</a></p>
+  <p class="muted small">Applicability: {claim.applicability} · Reviewed <time datetime={claim.reviewedAt}>{claim.reviewedAt}</time></p>
+  {builds.length > 0 && <p class="small">Applicable builds: {builds.map((build, index) => <Fragment>{index > 0 && ", "}<a href={withBase(`/builds/${build.id}`)}>{build.label}</a>{build.version && ` (${build.version})`}</Fragment>)}</p>}
+  {claim.citations.length > 0 ? <ul class="claim-citations">{claim.citations.map((citation) => {
+    const source = sourceById(citation.sourceId);
+    const locatorUrl = citation.locator.url && /^https?:\/\//i.test(citation.locator.url) ? citation.locator.url : undefined;
+    return <li><span class="badge">{citation.relation}</span> {source ? <a href={withBase(`/sources/${source.id}`)}>{source.title}</a> : <span>{citation.sourceId}</span>} <span class="muted">· {citation.locator.kind}: {citation.locator.value}</span> {citation.locator.addressSpace && <span class="muted"> · {citation.locator.addressSpace}{citation.locator.imageBase && ` at ${citation.locator.imageBase}`}</span>} {locatorUrl && <a href={locatorUrl} target="_blank" rel="noopener noreferrer">Locator ↗</a>}<span class="citation-evidence">{citation.evidence}</span>{source && <span class="muted small">{source.publisher} · {source.provenance} · {source.revision.kind === "unversioned" ? "Unversioned source" : `${source.revision.kind} ${source.revision.value}`} · {source.access} · {source.transport}</span>}</li>;
+  })}</ul> : <p class="muted small">No direct citations recorded; inspect provenance and limitations before relying on this claim.</p>}
+  {claim.limitations.length > 0 && <div class="claim-limits"><strong>Limits</strong><ul>{claim.limitations.map((limit) => <li>{limit}</li>)}</ul></div>}
+  {validations.length > 0 && <p class="small">Validation records: {validations.map((item, index) => <Fragment>{index > 0 && ", "}<a href={withBase(`/workspace#validation-${item.id}`)}>{item.title} ({item.authority}; {item.status})</a></Fragment>)}</p>}
+  <div class="claim-actions"><a class="small" href={withBase(`/claims/${claim.id}`)}>Claim detail ↗</a><button type="button" class="small button-subtle" data-bookmark-id={claim.id} data-bookmark-type="claim" data-bookmark-title={claim.statement} data-bookmark-url={withBase(`/claims/${claim.id}`)}>Bookmark</button></div>
+</article>

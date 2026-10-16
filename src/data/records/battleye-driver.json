@@ -1,0 +1,55 @@
+{
+  "id": "battleye-driver",
+  "kind": "component",
+  "title": "BattlEye kernel driver",
+  "summary": "BattlEye names BEDaisy.sys as its Windows driver and advertises kernel-based protection. A documented compatibility failure involving a Windows hardware-enforced stack-protection setting is not itself evidence of a vulnerability or universal incompatibility.",
+  "vendor": "BattlEye Innovations",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "kernel driver",
+    "compatibility",
+    "Windows",
+    "anti-cheat-driver"
+  ],
+  "relatedIds": [
+    "battleye",
+    "battleye-service",
+    "driver-attack-surface"
+  ],
+  "filenames": [
+    "BEDaisy.sys"
+  ],
+  "sections": [
+    {
+      "title": "Driver identity and scope",
+      "claimIds": [
+        "claim-battleye-driver-01"
+      ]
+    },
+    {
+      "title": "Load-time compatibility",
+      "claimIds": [
+        "claim-battleye-driver-02"
+      ]
+    },
+    {
+      "title": "Other system boundaries",
+      "claimIds": [
+        "claim-battleye-driver-03"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-009",
+    "src-010"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

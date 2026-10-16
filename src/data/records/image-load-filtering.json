@@ -1,0 +1,49 @@
+{
+  "id": "image-load-filtering",
+  "kind": "technique",
+  "title": "Image and DLL load filtering",
+  "summary": "Minifilters and file-system section-sync callbacks can inspect — and in some cases deny — the creation of executable sections, letting an anti-cheat driver block configured libraries from loading into a protected game process.",
+  "vendor": "Cross-vendor",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "minifilter",
+    "DLL blocking",
+    "section synchronization",
+    "image loading"
+  ],
+  "relatedIds": [
+    "process-integrity",
+    "driver-attack-surface",
+    "handle-access-filtering",
+    "ironshield-tvk-driver"
+  ],
+  "sections": [
+    {
+      "title": "The callback and its constraints",
+      "claimIds": [
+        "claim-image-load-filtering-01",
+        "claim-image-load-filtering-02"
+      ]
+    },
+    {
+      "title": "How it is used against injected libraries",
+      "claimIds": [
+        "claim-image-load-filtering-03",
+        "claim-image-load-filtering-04"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-040",
+    "src-023"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

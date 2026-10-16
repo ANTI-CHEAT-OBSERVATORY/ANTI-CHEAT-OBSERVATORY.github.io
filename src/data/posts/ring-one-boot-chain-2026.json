@@ -1,0 +1,53 @@
+{
+  "id": "ring-one-boot-chain-2026",
+  "title": "Ring-1.io in the boot chain: what the 2026 analysis demonstrates",
+  "summary": "Aftermath Labs' analysis of selected ring-1.io artifacts follows a reported bootloader implant across firmware, Hyper-V and the Windows guest. Its strongest lesson is about checking trust boundaries across layers, not asserting universal behavior for every cheat build or anti-cheat product.",
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "category": "Kernel research",
+  "author": "Observatory editorial",
+  "productIds": [],
+  "relatedIds": [
+    "boot-trust",
+    "hypervisor-trust",
+    "process-integrity",
+    "driver-attack-surface"
+  ],
+  "tags": [
+    "ring-1.io",
+    "firmware",
+    "Hyper-V",
+    "boot integrity",
+    "Aftermath Labs"
+  ],
+  "takeaways": [
+    "The studied platform crosses the boot, virtualization, kernel and game-process layers; game-process scanning alone cannot characterize that whole chain.",
+    "The article says its observed bootloader modifications violate Secure Boot integrity; this is not a claim that Secure Boot is universally unbreakable.",
+    "Repository artifacts help identify the scope of this research but are not needed to reproduce an attack or to infer which games remain affected."
+  ],
+  "sections": [
+    {
+      "title": "What was inspected",
+      "claimIds": [
+        "claim-ring-one-boot-chain-2026-01"
+      ]
+    },
+    {
+      "title": "Where the trust boundaries change",
+      "claimIds": [
+        "claim-ring-one-boot-chain-2026-03",
+        "claim-ring-one-boot-chain-2026-04"
+      ]
+    },
+    {
+      "title": "Evidence and limitations",
+      "claimIds": [
+        "claim-ring-one-boot-chain-2026-05"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-048",
+    "src-047"
+  ]
+}

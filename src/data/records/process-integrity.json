@@ -1,0 +1,42 @@
+{
+  "id": "process-integrity",
+  "kind": "technique",
+  "title": "Game process integrity",
+  "summary": "Client protection seeks to detect or prevent unauthorized inspection and modification of the running game process, including memory manipulation and unexpected loaded code. It is a boundary around a local process, not proof that every action sent to a game server is honest.",
+  "vendor": "Cross-vendor",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode",
+    "Kernel",
+    "Server"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "memory integrity",
+    "process protection",
+    "client trust"
+  ],
+  "relatedIds": [
+    "vanguard",
+    "easy-anti-cheat",
+    "server-authority",
+    "driver-attack-surface"
+  ],
+  "sections": [
+    {
+      "title": "Objective and observable surface",
+      "claimIds": [
+        "claim-process-integrity-01"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-019",
+    "src-013"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

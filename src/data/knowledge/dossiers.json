@@ -1,0 +1,1042 @@
+[
+  {
+    "systemId": "anti-cheat-expert",
+    "aspects": [
+      {
+        "id": "deployment",
+        "status": "partial",
+        "claimIds": [
+          "claim-ace-base-driver-01",
+          "claim-ace-boot-driver-01",
+          "claim-ace-boot-driver-02",
+          "claim-anti-cheat-expert-02"
+        ],
+        "questions": [
+          "Which ACE installation stage loads ACE-BASE.sys version 1.0.2202.6217 in the affected product, if any?"
+        ]
+      },
+      {
+        "id": "components",
+        "status": "partial",
+        "claimIds": [
+          "claim-ace-base-driver-01",
+          "claim-ace-base-driver-02",
+          "claim-ace-boot-driver-01",
+          "claim-ace-boot-driver-02",
+          "claim-ace-core-driver-01",
+          "claim-ace-core-driver-02"
+        ],
+        "questions": [
+          "What signed file hash unambiguously identifies ACE-BASE.sys version 1.0.2202.6217?"
+        ]
+      },
+      {
+        "id": "interfaces",
+        "status": "unknown",
+        "claimIds": [],
+        "questions": [
+          "Which precise ACE-BASE.sys device access controls and IOCTL pathways did the original reporter inspect?"
+        ]
+      },
+      {
+        "id": "mechanisms",
+        "status": "partial",
+        "claimIds": [
+          "claim-ace-game-driver-02",
+          "claim-anti-cheat-expert-02"
+        ],
+        "questions": [
+          "Which driver operations were actually involved in CVE-2024-22830 rather than ACE components in general?"
+        ]
+      },
+      {
+        "id": "protection",
+        "status": "partial",
+        "claimIds": [
+          "claim-ace-base-driver-01",
+          "claim-ace-base-driver-02",
+          "claim-ace-boot-driver-02",
+          "claim-ace-core-driver-01",
+          "claim-ace-core-driver-02",
+          "claim-ace-game-driver-02"
+        ],
+        "questions": [
+          "Is the code-protection scheme of the affected ACE-BASE.sys build documented by a primary report?"
+        ]
+      },
+      {
+        "id": "findings",
+        "status": "unknown",
+        "claimIds": [],
+        "questions": [
+          "What fixed ACE-BASE.sys version or vendor remediation establishes closure of CVE-2024-22830?"
+        ]
+      },
+      {
+        "id": "research",
+        "status": "partial",
+        "claimIds": [
+          "claim-ace-base-driver-02",
+          "claim-ace-boot-driver-02",
+          "claim-ace-core-driver-01",
+          "claim-ace-core-driver-02",
+          "claim-ace-game-driver-01",
+          "claim-ace-game-driver-02"
+        ],
+        "questions": [
+          "Can the original Defence Tech advisory be retrieved at an authoritative location rather than the redirected PDF URL?"
+        ]
+      },
+      {
+        "id": "history",
+        "status": "partial",
+        "claimIds": [
+          "claim-ace-base-driver-01",
+          "claim-anti-cheat-expert-02",
+          "claim-tencent-vm-coverage-2026-01",
+          "claim-tencent-vm-coverage-2026-02"
+        ],
+        "questions": [
+          "Which ACE releases contained the affected ACE-BASE.sys version, and when was it removed?"
+        ]
+      }
+    ],
+    "priorities": [
+      "Which precise ACE-BASE.sys device access controls and IOCTL pathways did the original reporter inspect?",
+      "Which ACE releases contained the affected ACE-BASE.sys version, and when was it removed?"
+    ]
+  },
+  {
+    "systemId": "battleye",
+    "aspects": [
+      {
+        "id": "deployment",
+        "status": "partial",
+        "claimIds": [
+          "claim-battleye-backend-01",
+          "claim-battleye-client-02",
+          "claim-battleye-driver-01",
+          "claim-battleye-driver-02",
+          "claim-battleye-service-01",
+          "claim-battleye-service-02"
+        ],
+        "questions": [
+          "At what point in a documented game session does BEClient load, and which games use that sequence?"
+        ]
+      },
+      {
+        "id": "components",
+        "status": "partial",
+        "claimIds": [
+          "claim-battleye-backend-01",
+          "claim-battleye-client-01",
+          "claim-battleye-client-02",
+          "claim-battleye-driver-01",
+          "claim-battleye-driver-02"
+        ],
+        "questions": [
+          "Which BEClient/BEService/BEDaisy versions correspond to the historical vmcall sample?"
+        ]
+      },
+      {
+        "id": "interfaces",
+        "status": "partial",
+        "claimIds": [
+          "claim-battleye-backend-01",
+          "claim-battleye-client-02",
+          "claim-battleye-service-01",
+          "claim-battleye-service-03",
+          "claim-battleye-01",
+          "claim-battleye-03",
+          "claim-battleye-client-detection-2019-01"
+        ],
+        "questions": [
+          "What exact BEClient-to-service message contract is described for the published 2019 analysis?"
+        ]
+      },
+      {
+        "id": "mechanisms",
+        "status": "partial",
+        "claimIds": [
+          "claim-battleye-client-01",
+          "claim-battleye-driver-03",
+          "claim-battleye-01",
+          "claim-battleye-06",
+          "claim-battleye-client-detection-2019-01",
+          "claim-battleye-client-detection-2019-03"
+        ],
+        "questions": [
+          "Which reported client detections were measured on a named sample rather than generalized from old shellcode?"
+        ]
+      },
+      {
+        "id": "protection",
+        "status": "partial",
+        "claimIds": [
+          "claim-battleye-driver-01",
+          "claim-battleye-driver-02",
+          "claim-battleye-service-01",
+          "claim-battleye-service-02",
+          "claim-battleye-01",
+          "claim-battleye-03",
+          "claim-battleye-04",
+          "claim-battleye-client-emulation-2020-03"
+        ],
+        "questions": [
+          "What published source documents protection of the studied BEClient build?"
+        ]
+      },
+      {
+        "id": "findings",
+        "status": "unknown",
+        "claimIds": [],
+        "questions": [
+          "Is there a primary advisory substantiating any BattlEye weakness referenced in these records?"
+        ]
+      },
+      {
+        "id": "research",
+        "status": "partial",
+        "claimIds": [
+          "claim-battleye-client-02",
+          "claim-battleye-client-detection-2019-01",
+          "claim-battleye-client-detection-2019-03",
+          "claim-battleye-client-emulation-2020-02"
+        ],
+        "questions": [
+          "What source revision or archived artifact preserves the historical vmcall investigation?"
+        ]
+      },
+      {
+        "id": "history",
+        "status": "partial",
+        "claimIds": [
+          "claim-battleye-driver-02",
+          "claim-battleye-service-02",
+          "claim-battleye-client-emulation-2020-02"
+        ],
+        "questions": [
+          "Which 2019 observations remain applicable to an identified later BattlEye client build?"
+        ]
+      }
+    ],
+    "priorities": [
+      "What exact BEClient-to-service message contract is described for the published 2019 analysis?",
+      "Which 2019 observations remain applicable to an identified later BattlEye client build?"
+    ]
+  },
+  {
+    "systemId": "ea-javelin",
+    "aspects": [
+      {
+        "id": "deployment",
+        "status": "partial",
+        "claimIds": [
+          "claim-ea-javelin-service-01",
+          "claim-ea-javelin-service-02",
+          "claim-ea-javelin-service-03",
+          "claim-ea-javelin-01",
+          "claim-ea-javelin-02",
+          "claim-ea-javelin-03",
+          "claim-ea-javelin-04"
+        ],
+        "questions": [
+          "How is the EA Javelin service launched and stopped for a named game and current vendor-supported platform?"
+        ]
+      },
+      {
+        "id": "components",
+        "status": "partial",
+        "claimIds": [
+          "claim-ea-javelin-service-01",
+          "claim-ea-javelin-service-03",
+          "claim-enforcement-and-appeals-05",
+          "claim-enforcement-and-appeals-06"
+        ],
+        "questions": [
+          "What versioned service and kernel-driver filenames are published by EA?"
+        ]
+      },
+      {
+        "id": "interfaces",
+        "status": "partial",
+        "claimIds": [
+          "claim-enforcement-and-appeals-01",
+          "claim-enforcement-and-appeals-05",
+          "claim-enforcement-and-appeals-06"
+        ],
+        "questions": [
+          "Does an EA document specify the service-to-driver request boundary or caller authentication?"
+        ]
+      },
+      {
+        "id": "mechanisms",
+        "status": "partial",
+        "claimIds": [
+          "claim-ea-javelin-02",
+          "claim-enforcement-and-appeals-01",
+          "claim-enforcement-and-appeals-05"
+        ],
+        "questions": [
+          "Which EA-reported anti-tamper behavior maps to an identified Javelin build?"
+        ]
+      },
+      {
+        "id": "protection",
+        "status": "partial",
+        "claimIds": [
+          "claim-ea-javelin-service-02",
+          "claim-ea-javelin-service-03",
+          "claim-ea-javelin-01",
+          "claim-ea-javelin-03",
+          "claim-ea-javelin-04",
+          "claim-ea-javelin-05",
+          "claim-enforcement-and-appeals-03"
+        ],
+        "questions": [
+          "Is Javelin code protection documented for any versioned artifact?"
+        ]
+      },
+      {
+        "id": "findings",
+        "status": "unknown",
+        "claimIds": [],
+        "questions": [
+          "Are any Javelin-specific vendor advisories or fixed builds publicly documented?"
+        ]
+      },
+      {
+        "id": "research",
+        "status": "partial",
+        "claimIds": [
+          "claim-ea-javelin-02",
+          "claim-ea-javelin-05",
+          "claim-ea-javelin-06",
+          "claim-enforcement-and-appeals-03",
+          "claim-enforcement-and-appeals-05"
+        ],
+        "questions": [
+          "Which EA security announcement gives an identifiable release revision for the cited behavior?"
+        ]
+      },
+      {
+        "id": "history",
+        "status": "partial",
+        "claimIds": [
+          "claim-ea-javelin-01",
+          "claim-ea-javelin-02",
+          "claim-ea-javelin-04",
+          "claim-ea-javelin-05",
+          "claim-ea-javelin-06",
+          "claim-enforcement-and-appeals-03"
+        ],
+        "questions": [
+          "What vendor-documented changes distinguish Javelin releases from earlier EA anti-cheat integrations?"
+        ]
+      }
+    ],
+    "priorities": [
+      "Does an EA document specify the service-to-driver request boundary or caller authentication?",
+      "What vendor-documented changes distinguish Javelin releases from earlier EA anti-cheat integrations?"
+    ]
+  },
+  {
+    "systemId": "easy-anti-cheat",
+    "aspects": [
+      {
+        "id": "deployment",
+        "status": "partial",
+        "claimIds": [
+          "claim-eac-bootstrapper-01",
+          "claim-eac-bootstrapper-02",
+          "claim-eac-bootstrapper-03",
+          "claim-eac-service-01",
+          "claim-eac-service-02",
+          "claim-eac-service-03"
+        ],
+        "questions": [
+          "Which EOS client/server integration stage installs or starts the Windows EAC service in a named game?"
+        ]
+      },
+      {
+        "id": "components",
+        "status": "partial",
+        "claimIds": [
+          "claim-eac-bootstrapper-01",
+          "claim-eac-bootstrapper-03",
+          "claim-eac-service-01",
+          "claim-eac-service-02",
+          "claim-eac-service-03"
+        ],
+        "questions": [
+          "What source-reported SHA-256 identifies plx.elf separately from its extracted ELF extent?"
+        ]
+      },
+      {
+        "id": "interfaces",
+        "status": "partial",
+        "claimIds": [
+          "claim-eac-bootstrapper-03",
+          "claim-eac-service-03",
+          "claim-easy-anti-cheat-01",
+          "claim-easy-anti-cheat-03",
+          "claim-easy-anti-cheat-05",
+          "claim-easy-anti-cheat-06",
+          "claim-enforcement-and-appeals-01",
+          "claim-enforcement-and-appeals-05"
+        ],
+        "questions": [
+          "Which EOS interface guarantees server-side enforcement versus client-side reporting in the cited vendor documents?"
+        ]
+      },
+      {
+        "id": "mechanisms",
+        "status": "partial",
+        "claimIds": [
+          "claim-eac-bootstrapper-03",
+          "claim-eac-service-03",
+          "claim-easy-anti-cheat-01",
+          "claim-easy-anti-cheat-02",
+          "claim-easy-anti-cheat-04",
+          "claim-enforcement-and-appeals-01",
+          "claim-enforcement-and-appeals-05",
+          "claim-eac-pinned-stack-oracle"
+        ],
+        "questions": [
+          "What exact behavior of Linux plx.elf at function 0x237F0 is contested against which binary and repository commit?"
+        ]
+      },
+      {
+        "id": "protection",
+        "status": "partial",
+        "claimIds": [
+          "claim-eac-bootstrapper-01",
+          "claim-eac-bootstrapper-02",
+          "claim-eac-bootstrapper-03",
+          "claim-eac-linux-devirt-01",
+          "claim-eac-linux-devirt-04",
+          "claim-eac-service-02",
+          "claim-eac-service-03",
+          "claim-eac-linux-devirt-01-s01",
+          "claim-eac-linux-devirt-03-s02",
+          "claim-eac-pinned-xmm"
+        ],
+        "questions": [
+          "Which protected Linux functions remain unresolved after the pinned 10d67114e3 stack snapshot?"
+        ]
+      },
+      {
+        "id": "findings",
+        "status": "unknown",
+        "claimIds": [],
+        "questions": [
+          "Can the function-level critique be checked against an identified original binary and criticized output revision?"
+        ]
+      },
+      {
+        "id": "research",
+        "status": "partial",
+        "claimIds": [
+          "claim-eac-linux-devirt-01",
+          "claim-eac-linux-devirt-04",
+          "claim-eac-linux-devirt-05",
+          "claim-eac-linux-devirt-06",
+          "claim-eac-linux-devirt-07",
+          "claim-eac-linux-devirt-10",
+          "claim-eac-linux-devirt-01-s01",
+          "claim-eac-linux-devirt-03-s02",
+          "claim-eac-pinned-stack-oracle",
+          "claim-eac-pinned-xmm"
+        ],
+        "questions": [
+          "Can the original X thread beyond its opening post and two comparison images be inspected through permitted access?"
+        ]
+      },
+      {
+        "id": "history",
+        "status": "partial",
+        "claimIds": [
+          "claim-eac-linux-devirt-01",
+          "claim-eac-linux-devirt-04",
+          "claim-eac-linux-devirt-07",
+          "claim-eac-linux-devirt-09",
+          "claim-eac-linux-devirt-10",
+          "claim-eac-linux-devirt-01-s01"
+        ],
+        "questions": [
+          "What changed between 10d67114e3 and dc5f947d75 without asserting that the critic accepted later repairs?"
+        ]
+      }
+    ],
+    "priorities": [
+      "Identify the compared binary and revision for the function 0x237F0 critique before adjudicating its dispute.",
+      "Inspect the pinned README hash-bound reports without equating reported regressions with independent program equivalence."
+    ]
+  },
+  {
+    "systemId": "faceit",
+    "aspects": [
+      {
+        "id": "deployment",
+        "status": "partial",
+        "claimIds": [
+          "claim-faceit-client-02",
+          "claim-faceit-client-03",
+          "claim-faceit-driver-01",
+          "claim-faceit-driver-02",
+          "claim-faceit-driver-03",
+          "claim-faceit-01",
+          "claim-faceit-02"
+        ],
+        "questions": [
+          "Which FACEIT client startup phase loads the driver according to current official instructions?"
+        ]
+      },
+      {
+        "id": "components",
+        "status": "partial",
+        "claimIds": [
+          "claim-faceit-client-02",
+          "claim-faceit-driver-01",
+          "claim-faceit-driver-03",
+          "claim-faceit-01",
+          "claim-faceit-02"
+        ],
+        "questions": [
+          "What exact driver version and hash correspond to vendor descriptions of FACEIT protection?"
+        ]
+      },
+      {
+        "id": "interfaces",
+        "status": "partial",
+        "claimIds": [
+          "claim-faceit-client-01",
+          "claim-faceit-driver-02",
+          "claim-faceit-01",
+          "claim-faceit-04"
+        ],
+        "questions": [
+          "What client-to-driver authorization or backend boundary is documented by FACEIT?"
+        ]
+      },
+      {
+        "id": "mechanisms",
+        "status": "partial",
+        "claimIds": [
+          "claim-faceit-01",
+          "claim-faceit-04"
+        ],
+        "questions": [
+          "Which FACEIT-described process checks belong to a named build rather than product marketing?"
+        ]
+      },
+      {
+        "id": "protection",
+        "status": "partial",
+        "claimIds": [
+          "claim-faceit-client-01",
+          "claim-faceit-driver-01",
+          "claim-faceit-01"
+        ],
+        "questions": [
+          "Is the protection scheme of any identified FACEIT driver sample publicly documented?"
+        ]
+      },
+      {
+        "id": "findings",
+        "status": "unknown",
+        "claimIds": [],
+        "questions": [
+          "Are any FACEIT-specific fixes linked to a disclosed affected version and advisory?"
+        ]
+      },
+      {
+        "id": "research",
+        "status": "unknown",
+        "claimIds": [],
+        "questions": [
+          "What primary technical source verifies behavior beyond the vendor FAQ?"
+        ]
+      },
+      {
+        "id": "history",
+        "status": "partial",
+        "claimIds": [
+          "claim-faceit-03"
+        ],
+        "questions": [
+          "Which documented driver behavior changed across FACEIT client releases?"
+        ]
+      }
+    ],
+    "priorities": [
+      "What client-to-driver authorization or backend boundary is documented by FACEIT?",
+      "Which documented driver behavior changed across FACEIT client releases?"
+    ]
+  },
+  {
+    "systemId": "ironshield",
+    "aspects": [
+      {
+        "id": "deployment",
+        "status": "partial",
+        "claimIds": [
+          "claim-ironshield-analysis-03",
+          "claim-ironshield-tvk-driver-01",
+          "claim-ironshield-tvk-driver-05",
+          "claim-ironshield-tvk-driver-07",
+          "claim-ironshield-tvk-ioctl-authorization-03",
+          "claim-ironshield-tvk-ioctl-authorization-05",
+          "claim-ironshield-01",
+          "claim-iron-tvk-config"
+        ],
+        "questions": [
+          "Which registry Platform and App IDs are accepted by tvk.sys 1.0.0.165 versus the reported September 17 1.0.0.167 build?"
+        ]
+      },
+      {
+        "id": "components",
+        "status": "partial",
+        "claimIds": [
+          "claim-ironshield-analysis-01",
+          "claim-ironshield-analysis-03",
+          "claim-ironshield-analysis-04",
+          "claim-ironshield-tvk-driver-01",
+          "claim-ironshield-tvk-driver-02",
+          "claim-ironshield-tvk-driver-03",
+          "claim-iron-tvk-config"
+        ],
+        "questions": [
+          "Can either author-described tvk.sys build be matched to a source-reported or independently computed hash?"
+        ]
+      },
+      {
+        "id": "interfaces",
+        "status": "partial",
+        "claimIds": [
+          "claim-ironshield-analysis-03",
+          "claim-ironshield-tvk-driver-01",
+          "claim-ironshield-tvk-driver-05",
+          "claim-ironshield-tvk-ioctl-authorization-01",
+          "claim-ironshield-tvk-ioctl-authorization-03",
+          "claim-iron-tvk-offset"
+        ],
+        "questions": [
+          "Which tvk.sys device security descriptor and create-path caller validation are shown for each analyzed build?"
+        ]
+      },
+      {
+        "id": "mechanisms",
+        "status": "partial",
+        "claimIds": [
+          "claim-ironshield-analysis-03",
+          "claim-ironshield-tvk-driver-01",
+          "claim-ironshield-tvk-driver-03",
+          "claim-ironshield-tvk-driver-04",
+          "claim-ironshield-tvk-ioctl-authorization-04",
+          "claim-ironshield-tvk-ioctl-authorization-05",
+          "claim-iron-tvk-policy",
+          "claim-iron-tvk-offset"
+        ],
+        "questions": [
+          "Does the user-supplied g_CiOptions offset escape the CI.dll image boundary on both analyzed builds?"
+        ]
+      },
+      {
+        "id": "protection",
+        "status": "partial",
+        "claimIds": [
+          "claim-ironshield-analysis-01",
+          "claim-ironshield-analysis-03",
+          "claim-ironshield-tvk-driver-04",
+          "claim-ironshield-tvk-driver-05",
+          "claim-ironshield-tvk-driver-06",
+          "claim-ironshield-tvk-ioctl-authorization-03",
+          "claim-ironshield-tvk-ioctl-authorization-04"
+        ],
+        "questions": [
+          "Which tvk.sys virtualized functions were recovered, and which remain unverified beyond the author’s static analysis?"
+        ]
+      },
+      {
+        "id": "findings",
+        "status": "partial",
+        "claimIds": [
+          "claim-ironshield-tvk-ioctl-authorization-01",
+          "claim-ironshield-tvk-ioctl-authorization-03",
+          "claim-ironshield-tvk-ioctl-authorization-04",
+          "claim-ironshield-tvk-ioctl-authorization-05",
+          "claim-ironshield-tvk-ioctl-authorization-06",
+          "claim-ironshield-tvk-ioctl-authorization-07",
+          "claim-iron-tvk-offset"
+        ],
+        "questions": [
+          "Did IRONMACE publish a fix or respond after the researcher’s prepublication notice?"
+        ]
+      },
+      {
+        "id": "research",
+        "status": "partial",
+        "claimIds": [
+          "claim-ironshield-analysis-01",
+          "claim-ironshield-analysis-02",
+          "claim-ironshield-analysis-04",
+          "claim-ironshield-tvk-driver-01",
+          "claim-ironshield-tvk-driver-04",
+          "claim-ironshield-tvk-driver-05",
+          "claim-iron-tvk-policy",
+          "claim-iron-tvk-config",
+          "claim-iron-tvk-offset"
+        ],
+        "questions": [
+          "Is a pinned immutable commit available for the current unversioned hseoa README analysis?"
+        ]
+      },
+      {
+        "id": "history",
+        "status": "partial",
+        "claimIds": [
+          "claim-ironshield-analysis-02",
+          "claim-ironshield-tvk-ioctl-authorization-06",
+          "claim-ironshield-tvk-ioctl-authorization-07",
+          "claim-iron-tvk-config"
+        ],
+        "questions": [
+          "What evidence maps the reported September 17 build to a calendar year and release provenance?"
+        ]
+      }
+    ],
+    "priorities": [
+      "Identify immutable tvk.sys 165/167 samples and a pinned analysis commit before comparing affected builds.",
+      "Seek the vendor response/fix evidence and check bounded authorization assumptions without executing samples in discovery."
+    ]
+  },
+  {
+    "systemId": "ricochet",
+    "aspects": [
+      {
+        "id": "deployment",
+        "status": "partial",
+        "claimIds": [
+          "claim-ricochet-driver-02",
+          "claim-ricochet-02",
+          "claim-ricochet-03",
+          "claim-ricochet-04"
+        ],
+        "questions": [
+          "Which Call of Duty releases and supported platforms load the RICOCHET kernel driver?"
+        ]
+      },
+      {
+        "id": "components",
+        "status": "partial",
+        "claimIds": [
+          "claim-ricochet-driver-01",
+          "claim-ricochet-driver-02",
+          "claim-ricochet-driver-03",
+          "claim-ricochet-01",
+          "claim-ricochet-02",
+          "claim-ricochet-03",
+          "claim-ricochet-04"
+        ],
+        "questions": [
+          "What vendor-published hash/version identifies the driver for a named game release?"
+        ]
+      },
+      {
+        "id": "interfaces",
+        "status": "partial",
+        "claimIds": [
+          "claim-ricochet-driver-03",
+          "claim-ricochet-01",
+          "claim-ricochet-04"
+        ],
+        "questions": [
+          "Which RICOCHET client-to-backend signals and authorization boundaries are actually documented?"
+        ]
+      },
+      {
+        "id": "mechanisms",
+        "status": "partial",
+        "claimIds": [
+          "claim-ricochet-01",
+          "claim-ricochet-04"
+        ],
+        "questions": [
+          "Which vendor-described kernel checks apply to a named RICOCHET driver build?"
+        ]
+      },
+      {
+        "id": "protection",
+        "status": "partial",
+        "claimIds": [
+          "claim-ricochet-driver-01",
+          "claim-ricochet-driver-02",
+          "claim-ricochet-driver-03",
+          "claim-ricochet-01",
+          "claim-ricochet-03"
+        ],
+        "questions": [
+          "Does the vendor describe driver code protection for any versioned artifact?"
+        ]
+      },
+      {
+        "id": "findings",
+        "status": "unknown",
+        "claimIds": [],
+        "questions": [
+          "Is any RICOCHET weakness supported by a vendor advisory and fixed build?"
+        ]
+      },
+      {
+        "id": "research",
+        "status": "partial",
+        "claimIds": [
+          "claim-ricochet-driver-01",
+          "claim-ricochet-driver-03",
+          "claim-ricochet-01"
+        ],
+        "questions": [
+          "Which primary technical release notes distinguish marketing claims from investigated driver behavior?"
+        ]
+      },
+      {
+        "id": "history",
+        "status": "unknown",
+        "claimIds": [],
+        "questions": [
+          "When did documented RICOCHET kernel-driver rollout differ by title or platform?"
+        ]
+      }
+    ],
+    "priorities": [
+      "Which RICOCHET client-to-backend signals and authorization boundaries are actually documented?",
+      "When did documented RICOCHET kernel-driver rollout differ by title or platform?"
+    ]
+  },
+  {
+    "systemId": "vanguard",
+    "aspects": [
+      {
+        "id": "deployment",
+        "status": "partial",
+        "claimIds": [
+          "claim-boot-trust-01",
+          "claim-boot-trust-02",
+          "claim-boot-trust-03",
+          "claim-dma-02",
+          "claim-dma-03"
+        ],
+        "questions": [
+          "At what boot phase does vgk.sys initialize for a named Vanguard client version?"
+        ]
+      },
+      {
+        "id": "components",
+        "status": "partial",
+        "claimIds": [
+          "claim-boot-trust-01",
+          "claim-boot-trust-02",
+          "claim-boot-trust-03",
+          "claim-dma-02",
+          "claim-enforcement-and-appeals-05",
+          "claim-enforcement-and-appeals-06"
+        ],
+        "questions": [
+          "Which vendor-published driver file hash identifies the described Vanguard build?"
+        ]
+      },
+      {
+        "id": "interfaces",
+        "status": "partial",
+        "claimIds": [
+          "claim-boot-trust-01",
+          "claim-boot-trust-02",
+          "claim-dma-01",
+          "claim-enforcement-and-appeals-01",
+          "claim-enforcement-and-appeals-05",
+          "claim-enforcement-and-appeals-06"
+        ],
+        "questions": [
+          "What exact vgk-to-vgc service authorization or telemetry boundary is publicly documented?"
+        ]
+      },
+      {
+        "id": "mechanisms",
+        "status": "partial",
+        "claimIds": [
+          "claim-boot-trust-02",
+          "claim-dma-01",
+          "claim-enforcement-and-appeals-01",
+          "claim-enforcement-and-appeals-05",
+          "claim-hypervisor-trust-01"
+        ],
+        "questions": [
+          "Which vendor-described boot trust checks were tested on a specified game and OS version?"
+        ]
+      },
+      {
+        "id": "protection",
+        "status": "partial",
+        "claimIds": [
+          "claim-dma-02",
+          "claim-dma-03",
+          "claim-enforcement-and-appeals-03",
+          "claim-enforcement-and-appeals-06",
+          "claim-hypervisor-trust-01",
+          "claim-hypervisor-trust-02",
+          "claim-hypervisor-trust-03"
+        ],
+        "questions": [
+          "Is driver code protection described for a particular vgk.sys revision?"
+        ]
+      },
+      {
+        "id": "findings",
+        "status": "unknown",
+        "claimIds": [],
+        "questions": [
+          "Which disclosed Vanguard issues have vendor-confirmed affected and fixed versions?"
+        ]
+      },
+      {
+        "id": "research",
+        "status": "partial",
+        "claimIds": [
+          "claim-boot-trust-03",
+          "claim-dma-03",
+          "claim-enforcement-and-appeals-03",
+          "claim-enforcement-and-appeals-05"
+        ],
+        "questions": [
+          "Is there a first-party technical source for Vanguard driver behavior beyond policy explanation?"
+        ]
+      },
+      {
+        "id": "history",
+        "status": "partial",
+        "claimIds": [
+          "claim-boot-trust-01",
+          "claim-boot-trust-03",
+          "claim-dma-03",
+          "claim-enforcement-and-appeals-03",
+          "claim-runtime-driver-attestation-02",
+          "claim-vanguard-driver-02"
+        ],
+        "questions": [
+          "Which Riot publication dates establish changes to reboot/installation requirements?"
+        ]
+      }
+    ],
+    "priorities": [
+      "What exact vgk-to-vgc service authorization or telemetry boundary is publicly documented?",
+      "Which Riot publication dates establish changes to reboot/installation requirements?"
+    ]
+  },
+  {
+    "systemId": "equ8-2021",
+    "aspects": [
+      {
+        "id": "deployment",
+        "status": "partial",
+        "claimIds": [
+          "claim-exp-equ8-helper-36-01",
+          "claim-exp-equ8-2021-01"
+        ],
+        "questions": [
+          "Which signed versions and protected games deployed the studied driver, and at what installation or startup stage?"
+        ]
+      },
+      {
+        "id": "components",
+        "status": "partial",
+        "claimIds": [
+          "claim-exp-equ8-2021-01",
+          "claim-exp-equ8-2021-02",
+          "claim-exp-equ8-2021-03",
+          "claim-exp-equ8-helper-36-01",
+          "claim-exp-equ8-helper-36-02"
+        ],
+        "questions": [
+          "Which exact versions and roles of the accompanying user-mode modules and service agents are documented?"
+        ]
+      },
+      {
+        "id": "interfaces",
+        "status": "partial",
+        "claimIds": [
+          "claim-exp-equ8-session-device-01",
+          "claim-exp-equ8-session-device-02",
+          "claim-exp-equ8-session-device-03",
+          "claim-exp-equ8-session-device-04",
+          "claim-exp-equ8-etw-handle-log-01"
+        ],
+        "questions": [
+          "What access-control, message-format and compatibility details apply to interfaces outside the 2021 pseudocode sample?"
+        ]
+      },
+      {
+        "id": "mechanisms",
+        "status": "partial",
+        "claimIds": [
+          "claim-exp-equ8-handle-callbacks-01",
+          "claim-exp-equ8-handle-callbacks-02",
+          "claim-exp-equ8-handle-callbacks-03",
+          "claim-exp-equ8-handle-callbacks-04",
+          "claim-exp-equ8-etw-handle-log-02"
+        ],
+        "questions": [
+          "What other EQU8 detection paths, if any, accompany the studied handle pre-operation callbacks?"
+        ]
+      },
+      {
+        "id": "protection",
+        "status": "partial",
+        "claimIds": [
+          "claim-exp-equ8-session-device-02",
+          "claim-exp-equ8-handle-callbacks-01",
+          "claim-exp-equ8-handle-callbacks-02",
+          "claim-exp-equ8-handle-callbacks-03"
+        ],
+        "questions": [
+          "How does this deployment protect itself against adversaries with kernel privileges, if at all?"
+        ]
+      },
+      {
+        "id": "findings",
+        "status": "unknown",
+        "claimIds": [],
+        "questions": [
+          "Was a vendor-confirmed vulnerability or subsequent remediation published for any of the 2021 issues suggested by the researcher?"
+        ]
+      },
+      {
+        "id": "research",
+        "status": "partial",
+        "claimIds": [
+          "claim-exp-equ8-2021-03",
+          "claim-exp-equ8-helper-36-03",
+          "claim-exp-equ8-etw-handle-log-03"
+        ],
+        "questions": [
+          "Can an independently attributable signed sample and a version-linked digest be established without hosting driver bytes?"
+        ]
+      },
+      {
+        "id": "history",
+        "status": "partial",
+        "claimIds": [
+          "claim-exp-equ8-2021-01",
+          "claim-exp-equ8-helper-36-01"
+        ],
+        "questions": [
+          "When did EQU8 change the driver deployment, device interface or callback policy after the August 2021 article?"
+        ]
+      }
+    ],
+    "priorities": [
+      "Acquire an official version and signed metadata mapping for EQU8_HELPER_36.sys before relating the 2021 pseudocode to another driver build.",
+      "Establish whether and how subsequent EQU8 versions changed privilege gating, handle filtering, and driver integrity."
+    ]
+  }
+]

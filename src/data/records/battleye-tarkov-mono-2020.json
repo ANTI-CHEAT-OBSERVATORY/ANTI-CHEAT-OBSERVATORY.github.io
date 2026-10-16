@@ -1,0 +1,54 @@
+{
+  "id": "battleye-tarkov-mono-2020",
+  "kind": "component",
+  "title": "Tarkov Mono and asset inventory module (2020)",
+  "summary": "Secret Club reconstructs a game-specific BattlEye-streamed module that scans selected Escape from Tarkov folders and reports filenames and file or Mono image sizes. Vendor assignment beyond that researcher attribution is not independently verified.",
+  "vendor": "BattlEye (researcher attribution)",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode"
+  ],
+  "historical": false,
+  "updated": "2026-10-16",
+  "tags": [
+    "BattlEye",
+    "Escape from Tarkov",
+    "Mono",
+    "historical analysis"
+  ],
+  "relatedIds": [
+    "battleye-client",
+    "battleye-backend"
+  ],
+  "sourceIds": [
+    "src-exp-tarkov-mono"
+  ],
+  "buildIds": [],
+  "mechanismIds": [],
+  "sections": [
+    {
+      "title": "BattlEye..?",
+      "claimIds": [
+        "claim-exp-battleye-tarkov-mono-2020-01",
+        "claim-exp-battleye-tarkov-mono-2020-07"
+      ]
+    },
+    {
+      "title": "Functionality",
+      "claimIds": [
+        "claim-exp-battleye-tarkov-mono-2020-02",
+        "claim-exp-battleye-tarkov-mono-2020-04"
+      ]
+    },
+    {
+      "title": "Shellcode",
+      "claimIds": [
+        "claim-exp-battleye-tarkov-mono-2020-03",
+        "claim-exp-battleye-tarkov-mono-2020-05",
+        "claim-exp-battleye-tarkov-mono-2020-06"
+      ]
+    }
+  ]
+}

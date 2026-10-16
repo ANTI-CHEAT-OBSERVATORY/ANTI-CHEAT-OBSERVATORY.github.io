@@ -1,0 +1,65 @@
+{
+  "id": "vanguard",
+  "kind": "product",
+  "title": "Riot Vanguard",
+  "summary": "Riot's PC game-security system combines a game-active client with a kernel driver. The optional June 2026 Pre-Check mode changes driver startup on qualifying secured Windows PCs; boot-start remains the usual path otherwise.",
+  "vendor": "Riot Games",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode",
+    "Kernel",
+    "Hardware",
+    "Server"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "Riot",
+    "boot integrity",
+    "on-demand",
+    "driver attestation"
+  ],
+  "relatedIds": [
+    "vanguard-driver",
+    "vanguard-client",
+    "boot-trust",
+    "byovd",
+    "dma"
+  ],
+  "games": [
+    "VALORANT",
+    "League of Legends"
+  ],
+  "sections": [
+    {
+      "title": "Client, driver and protected game",
+      "claimIds": [
+        "claim-vanguard-01",
+        "claim-vanguard-02"
+      ]
+    },
+    {
+      "title": "Boot continuity and optional on-demand lifecycle",
+      "claimIds": [
+        "claim-vanguard-03",
+        "claim-vanguard-04"
+      ]
+    },
+    {
+      "title": "Pre-Check trust prerequisites",
+      "claimIds": [
+        "claim-vanguard-05",
+        "claim-vanguard-06"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-051",
+    "src-013",
+    "src-052"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

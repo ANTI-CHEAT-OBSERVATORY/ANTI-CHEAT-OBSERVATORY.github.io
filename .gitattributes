@@ -1,0 +1,13 @@
+* text=auto eol=lf
+
+# Binary assets keep their bytes
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+
+# dist/ is generated and ignored via .gitignore

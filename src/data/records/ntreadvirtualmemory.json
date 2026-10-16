@@ -1,0 +1,48 @@
+{
+  "id": "ntreadvirtualmemory",
+  "kind": "component",
+  "title": "NtReadVirtualMemory: process-memory read interface",
+  "summary": "A PHNT-described Native memory-read interface also visible in historical BattlEye pattern-scanning pseudocode. Reading memory is an access-controlled operation; the API name does not establish an anti-cheat bypass.",
+  "vendor": "Microsoft Windows",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode"
+  ],
+  "historical": false,
+  "updated": "2026-10-16",
+  "tags": [
+    "native-api",
+    "undocumented-api",
+    "platform-reference",
+    "memory reads"
+  ],
+  "relatedIds": [
+    "ntqueryvirtualmemory",
+    "battleye-client"
+  ],
+  "sourceIds": [
+    "src-ref-phnt-read",
+    "src-008"
+  ],
+  "buildIds": [],
+  "mechanismIds": [],
+  "sections": [
+    {
+      "title": "Read contract",
+      "claimIds": [
+        "claim-ref-ntreadvirtualmemory-01"
+      ]
+    },
+    {
+      "title": "Historical scanning context",
+      "claimIds": [
+        "claim-ref-ntreadvirtualmemory-02"
+      ]
+    }
+  ],
+  "aliases": [
+    "NtReadVirtualMemory"
+  ]
+}

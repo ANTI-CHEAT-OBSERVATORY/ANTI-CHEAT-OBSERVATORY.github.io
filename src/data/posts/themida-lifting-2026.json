@@ -1,0 +1,45 @@
+{
+  "id": "themida-lifting-2026",
+  "title": "When lifting virtualized code changes the question",
+  "summary": "IDontCode and naci's 2026 Themida article describes guided symbolic evaluation as an alternative to matching individual virtual-machine handlers. For anti-cheat research, its main lesson is that recovered code must preserve original semantics and retain explicit uncertainty about protected binaries.",
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "category": "Reverse engineering",
+  "author": "Observatory editorial",
+  "productIds": [],
+  "relatedIds": [
+    "code-devirtualization"
+  ],
+  "tags": [
+    "Themida",
+    "devirtualization",
+    "symbolic evaluation",
+    "Aftermath Labs",
+    "analysis limits"
+  ],
+  "takeaways": [
+    "A recovered native-looking function is a research artifact whose behavioral fidelity matters more than its appearance.",
+    "The article favors generic intermediate-representation optimizations over fragile per-handler fingerprints while retaining VM-specific control-flow handling.",
+    "This is research on obfuscation, not a report that a named anti-cheat was bypassed."
+  ],
+  "sections": [
+    {
+      "title": "The analytical model",
+      "claimIds": [
+        "claim-themida-lifting-2026-03",
+        "claim-themida-lifting-2026-04",
+        "claim-themida-lifting-2026-03-s01"
+      ]
+    },
+    {
+      "title": "Limits on a clean-looking result",
+      "claimIds": [
+        "claim-themida-lifting-2026-05"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-057",
+    "src-001"
+  ]
+}

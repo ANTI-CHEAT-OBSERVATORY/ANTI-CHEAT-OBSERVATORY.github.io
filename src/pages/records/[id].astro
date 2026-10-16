@@ -1,0 +1,189 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ClaimEvidence from "../../components/ClaimEvidence.astro";
+import ProductMap from "../../components/ProductMap.astro";
+import RepoPanel from "../../components/RepoPanel.astro";
+import { records, recordById, kindNames, sectionId, projectsForProduct } from "../../lib/catalog";
+import { postsForRecord } from "../../lib/research";
+import {
+  claimsForRecord, claimsByIds, sourcesByIds, sourcesForRecord, buildsForSystem,
+  mechanismsForSystem, correctionsForRecord, dossierForSystem, systemsForRecord,
+  relationshipsFor, buildById, mechanismById, sourceById, claimById,
+} from "../../lib/knowledge";
+import { dossierAspects, type CatalogRecord, type Claim, type BuildSample, type Mechanism } from "../../lib/knowledge-types";
+import { editUrl, withBase } from "../../lib/paths";
+
+export function getStaticPaths() {
+  return records.map((record) => ({ params: { id: record.id }, props: { record } }));
+}
+interface Props { record: CatalogRecord }
+const { record } = Astro.props;
+const isProduct = record.kind === "product";
+const scopedClaims = claimsForRecord(record.id);
+const scopedIds = new Set(scopedClaims.map((claim) => claim.id));
+const sections = record.sections.map((section, index) => ({
+  title: section.title, id: sectionId(section.title, index),
+  claims: claimsByIds(section.claimIds).filter((claim) => scopedIds.has(claim.id)),
+}));
+const sectionClaimIds = new Set(sections.flatMap((section) => section.claims.map((claim) => claim.id)));
+const additionalClaims = scopedClaims.filter((claim) => !sectionClaimIds.has(claim.id));
+const systems = systemsForRecord(record.id);
+const builds = [...new Map<string, BuildSample>([
+  ...record.buildIds.map((id) => buildById(id)).filter((build) => build != null),
+  ...(isProduct ? buildsForSystem(record.id) : []),
+].map((build) => [build.id, build] as const)).values()];
+const mechanisms = isProduct ? mechanismsForSystem(record.id) : [];
+const recordMechanisms = new Map<string, Mechanism>([
+  ...mechanisms,
+  ...record.mechanismIds.map((id) => mechanismById(id)).filter((mechanism) => mechanism != null),
+].map((mechanism) => [mechanism.id, mechanism] as const));
+const corrections = correctionsForRecord(record.id);
+const dossier = isProduct ? dossierForSystem(record.id) : undefined;
+const dossierRows = dossierAspects.map((id) => dossier?.aspects.find((aspect) => aspect.id === id) ??
+  { id, status: "unknown" as const, claimIds: [], questions: [] });
+const related = records.filter((entry) => entry.id !== record.id &&
+  (record.relatedIds.includes(entry.id) || entry.relatedIds.includes(record.id)));
+const reading = postsForRecord(record.id);
+const projects = isProduct ? projectsForProduct(record.id) : [];
+const sourceIds = new Set([
+  ...sourcesForRecord(record.id).map((source) => source.id),
+  ...scopedClaims.flatMap((claim) => claim.citations.map((citation) => citation.sourceId)),
+  ...builds.flatMap((build) => build.sourceIds),
+  ...corrections.flatMap((correction) => correction.sourceIds),
+]);
+const sources = sourcesByIds([...sourceIds]);
+const relationships = relationshipsFor(record.id);
+const claimHref = (claimId: string) => scopedIds.has(claimId) ? `#claim-${claimId}` : withBase(`/claims/${claimId}`);
+const evidenceHref = (id: string) => sourceById(id) ? withBase(`/sources/${id}`) : claimById(id) ? claimHref(id) : undefined;
+const entityHref = (id: string) => recordById(id) ? withBase(`/records/${id}`) : mechanismById(id) ? withBase(`/mechanisms/${id}`) : buildById(id) ? withBase(`/builds/${id}`) : sourceById(id) ? withBase(`/sources/${id}`) : claimById(id) ? withBase(`/claims/${id}`) : undefined;
+const entityTitle = (id: string) => recordById(id)?.title ?? mechanismById(id)?.title ?? buildById(id)?.label ?? sourceById(id)?.title ?? claimById(id)?.statement ?? id;
+const edit = editUrl(`src/data/records/${record.id}.json`);
+---
+
+<Layout title={record.title} description={record.summary} active={isProduct ? "systems" : record.kind === "project" ? "research" : "catalog"}>
+  <div class="page-container record-page">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href={withBase("/")}>Home</a><span aria-hidden="true">/</span><a href={withBase(`/catalog?kind=${record.kind}`)}>{kindNames[record.kind]}</a><span aria-hidden="true">/</span><span aria-current="page">{record.title}</span></nav>
+    <header class="page-header">
+      <div class="header-label"><span class="badge">{kindNames[record.kind]}</span>{record.historical && <span class="badge">Historical</span>}<span class="muted mono">{record.id}</span></div>
+      <h1 data-pagefind-meta="title">{record.title}</h1><p class="lede">{record.summary}</p>
+      <div class="header-label"><span>{record.vendor}</span><span>Updated <time datetime={record.updated}>{record.updated}</time></span><span>{scopedClaims.length} scoped claims</span><span>{sources.length} sources</span></div>
+      <div class="actions"><button class="button" type="button" data-bookmark-id={record.id} data-bookmark-type="record" data-bookmark-title={record.title} data-bookmark-url={withBase(`/records/${record.id}`)}>Bookmark</button><button class="button" type="button" data-watch-id={record.id} data-watch-title={record.title}>Watch updates</button></div>
+    </header>
+    <div class="record-layout">
+      <article class="record-body" data-pagefind-body>
+        <div class="index-fields">
+          <span data-pagefind-filter={`kind:${record.kind}`}>Type: {kindNames[record.kind]}</span>
+          <span data-pagefind-filter={`vendor:${record.vendor}`}>Publisher: {record.vendor}</span>
+          <span data-pagefind-filter={`historical:${record.historical ? "yes" : "no"}`}>{record.historical ? "Historical record" : "Current catalog record"}</span>
+          {record.platforms.map((platform) => <span data-pagefind-filter={`platform:${platform}`}>Platform: {platform}</span>)}
+          {record.layers.map((layer) => <span data-pagefind-filter={`layer:${layer}`}>Layer: {layer}</span>)}
+        </div>
+        <section id="overview" class="record-section">
+          <h2>Overview</h2>
+          <p>{record.summary}</p>
+          <p class="muted">{record.historical ? "Historical record, not a current exposure assessment." : "Source review is not independent runtime verification."} Claims below preserve their provenance, review activity, version applicability, and limitations.</p>
+          <dl class="fact-list">
+            <div><dt>Record ID</dt><dd class="mono" data-pagefind-meta="record-id">{record.id}</dd></div>
+            <div><dt>Platforms</dt><dd>{record.platforms.join(", ") || "Not established"}</dd></div>
+            <div><dt>Trust layers</dt><dd>{record.layers.join(", ") || "Not established"}</dd></div>
+            {record.aliases?.length && <div><dt>Other names</dt><dd>{record.aliases.join(", ")}</dd></div>}
+            {record.games?.length && <div><dt>Documented games</dt><dd>{record.games.join(", ")}</dd></div>}
+            {record.filenames?.length && <div><dt>Documented filenames</dt><dd class="mono">{record.filenames.join(", ")}</dd></div>}
+            {record.cves?.length && <div><dt>Published identifiers</dt><dd>{record.cves.map((cve) => <a href={`https://www.cve.org/CVERecord?id=${encodeURIComponent(cve)}`} target="_blank" rel="noopener noreferrer">{cve}</a>)}</dd></div>}
+            {record.affectedVersions && <div><dt>Version scope</dt><dd>{record.affectedVersions}</dd></div>}
+          </dl>
+          {systems.length > 0 && !isProduct && <p>System context: {systems.map((system) => <a class="inline-link" href={withBase(`/records/${system.id}`)}>{system.title}</a>)}</p>}
+          {isProduct && <div class="dossier-summary"><h3>Eight-aspect evidence and gaps</h3><p class="muted">Status describes published coverage, not product quality or absence of undocumented behavior.</p><div class="table-wrap"><table class="data-table"><thead><tr><th scope="col">Aspect</th><th scope="col">Coverage</th><th scope="col">Evidence and open questions</th></tr></thead><tbody>{dossierRows.map((aspect) => <tr id={aspect.id}><th scope="row">{aspect.id}</th><td><span class="badge">{aspect.status}</span></td><td>{aspect.claimIds.length > 0 && <div class="aspect-claims">{aspect.claimIds.map((id) => <a href={claimHref(id)}>{id}</a>)}</div>}{aspect.questions.map((question) => <p class="muted">{question}</p>)}{aspect.claimIds.length === 0 && aspect.questions.length === 0 && <span class="muted">No documented evidence in this aspect.</span>}</td></tr>)}</tbody></table></div>{dossier?.priorities.length ? <p><strong>Research priorities:</strong> {dossier.priorities.join(" · ")}</p> : null}</div>}
+        </section>
+        <section id="record-components" class="record-section">
+          <h2>Components</h2>
+          {isProduct ? <ProductMap product={record} /> : <p class="muted">{record.kind === "component" ? "This component's documented scope and filenames appear above; linked catalog records appear in the outline." : "Related components and systems, where documented, are linked in the outline."}</p>}
+        </section>
+        <section id="record-mechanisms" class="record-section">
+          <h2>Mechanisms</h2>
+          {recordMechanisms.size > 0 ? [...recordMechanisms.values()].map((mechanism) => <article class="mechanism-entry"><h3><a href={withBase(`/mechanisms/${mechanism.id}`)}>{mechanism.title}</a></h3><p>{mechanism.summary}</p>{mechanism.worksheet.length > 0 && <ul class="worksheet">{mechanism.worksheet.map((row) => <li><strong>{row.topic}:</strong> {row.claimIds.map((id) => <a href={claimHref(id)}>{id}</a>)}{row.unknown && <span class="muted">{row.unknown}</span>}</li>)}</ul>}{mechanism.unknowns.length > 0 && <p class="muted">Open questions: {mechanism.unknowns.join(" · ")}</p>}</article>) : <p class="muted">No mechanism worksheet is linked to this record. The scoped claims below retain what the reviewed sources actually establish.</p>}
+        </section>
+        <section id="record-findings" class="record-section">
+          <h2>Findings</h2>
+          {sections.map((section) => <section class="claim-group" id={section.id}><h3>{section.title}</h3>{section.claims.map((claim: Claim) => <ClaimEvidence claim={claim} />)}</section>)}
+          {additionalClaims.length > 0 && <section class="claim-group"><h3>Additional scoped claims</h3>{additionalClaims.map((claim) => <ClaimEvidence claim={claim} />)}</section>}
+          {scopedClaims.length === 0 && <p class="muted">No claims are scoped to this record.</p>}
+          {record.remediation && <p class="panel"><strong>Defensive context:</strong> {record.remediation}</p>}
+        </section>
+        <section id="record-research" class="record-section">
+          <h2>Research</h2>
+          {record.kind === "project" && <RepoPanel record={record} />}
+          {reading.length > 0 && <div class="research-links"><h3>Related reading</h3><ul>{reading.map((post) => <li><a href={withBase(`/blog/${post.id}`)}>{post.title}</a><span class="muted"> {post.summary}</span></li>)}</ul></div>}
+          {projects.length > 0 && <div class="research-links"><h3>Research projects</h3><ul>{projects.map((project) => <li><a href={withBase(`/records/${project.id}`)}>{project.title}</a><span class="muted"> {project.summary}</span></li>)}</ul></div>}
+          {relationships.length > 0 && <div class="research-links"><h3>Evidence relationships</h3><ul>{relationships.map((relation) => { const otherId = relation.fromId === record.id ? relation.toId : relation.fromId; const href = entityHref(otherId); return <li>{relation.type}: {href ? <a href={href}>{entityTitle(otherId)}</a> : <span>{entityTitle(otherId)}</span>} — {relation.description}{relation.claimIds.length > 0 && <> (evidence: {relation.claimIds.map((id) => <a class="inline-link" href={claimHref(id)}>{id}</a>)})</>}</li>; })}</ul></div>}
+          {builds.length > 0 && <div id="builds" class="research-links"><h3>Documented builds and samples</h3><ul>{builds.map((build) => <li><a href={withBase(`/builds/${build.id}`)}>{build.label}</a> · {build.platform}{build.version && ` · ${build.version}`}{build.hashes.map((hash) => <div class="hash-entry"><span>SHA-256 ({hash.origin}): </span><code>{hash.value}</code>{hash.sourceId && <> · <a href={withBase(`/sources/${hash.sourceId}`)}>reported source</a></>}</div>)}{build.limitations.map((limitation) => <p class="muted">{limitation}</p>)}</li>)}</ul></div>}
+          <div id="sources" class="research-links"><h3>Sources and provenance</h3><p class="muted">Access dates reflect source retrieval, not continuous review. Source revisions, transport and access state are recorded per item.</p>{sources.length > 0 ? <ol>{sources.map((source) => <li><a href={withBase(`/sources/${source.id}`)}>{source.title}</a> · {source.publisher} · {source.provenance}{source.published && <> · Published {source.published}</>} · Accessed {source.accessed}<div class="source-detail">{source.revision.kind}: {source.revision.value ?? "no stable revision supplied"} · {source.access} · {source.transport} · <a href={source.url} target="_blank" rel="noopener noreferrer">Original source</a></div>{source.limitations.map((limitation) => <p class="muted">{limitation}</p>)}</li>)}</ol> : <p class="muted">No sources are attached to this record.</p>}</div>
+        </section>
+        <section id="record-history" class="record-section">
+          <h2>History</h2>
+          <p class="muted">Record updated <time datetime={record.updated}>{record.updated}</time>. {record.historical ? "Historical material is not a current affected-version assessment." : "Published information can change after the catalog review."}</p>
+          {corrections.length > 0 ? <ol class="correction-list">{corrections.map((correction) => <li><h3>{correction.title}</h3><p><time datetime={correction.date}>{correction.date}</time> · {correction.kind} · {correction.status}</p><p>{correction.summary}</p><dl><div><dt>Earlier account</dt><dd>{correction.before}</dd></div><div><dt>Revised account</dt><dd>{correction.after}</dd></div></dl>{correction.claimIds.length > 0 && <p>Claims: {correction.claimIds.map((id) => <a class="inline-link" href={claimHref(id)}>{id}</a>)}</p>}{correction.resolutionEvidenceIds.length > 0 && <p>Resolution evidence: {correction.resolutionEvidenceIds.map((id) => evidenceHref(id) ? <a class="inline-link" href={evidenceHref(id)}>{id}</a> : <span class="mono">{id} </span>)}</p>}</li>)}</ol> : <p class="muted">No correction or dispute is linked to this record.</p>}
+        </section>
+        {edit && <p class="muted">To propose a catalog correction, <a href={edit} target="_blank" rel="noopener noreferrer">edit the record on GitHub</a> or follow the <a href={withBase("/publishing")}>publishing guide</a>. Claims and sources are stored separately.</p>}
+      </article>
+      <aside class="record-aside" aria-label="Dossier outline">
+        <details class="panel outline-panel" data-collapse-below="850" open><summary>In this dossier</summary>
+          <nav class="outline" aria-label="On this page"><a href="#overview">Overview</a><a href="#record-components">Components</a><a href="#record-mechanisms">Mechanisms</a><a href="#record-findings">Findings</a>{sections.map((section) => <a class="outline-sub" href={`#${section.id}`}>{section.title}</a>)}<a href="#record-research">Research</a><a href="#sources" class="outline-sub">Sources</a>{builds.length > 0 && <a href="#builds" class="outline-sub">Builds</a>}<a href="#record-history">History</a></nav>
+          {related.length > 0 && <div class="related"><h2>Connected records</h2><ul>{related.map((entry) => <li><span class="muted">{kindNames[entry.kind]}</span><a href={withBase(`/records/${entry.id}`)}>{entry.title}</a></li>)}</ul></div>}
+          <a class="context-link" href={withBase("/methodology")}>How to read evidence and review states →</a>
+        </details>
+      </aside>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .record-page { padding-block: 1.2rem 4rem; }
+  .breadcrumbs { display: flex; flex-wrap: wrap; gap: .5rem; font-size: .86rem; margin-bottom: 1.4rem; }
+  .page-header { display: block; margin-bottom: 1.4rem; }
+  .page-header h1 { margin: .65rem 0; line-height: 1.16; }
+  .header-label,.actions { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem 1rem; }
+  .lede { max-width: 75ch; font-size: 1.1rem; }
+  .actions { margin-top: 1rem; }
+  .record-layout { display: grid; grid-template-columns: minmax(0,1fr) minmax(13rem,16rem); align-items: start; gap: 1.7rem; }
+  .record-body { min-width: 0; }
+  .index-fields { display: flex; flex-wrap: wrap; gap: .3rem .8rem; font-size: .85rem; color: var(--muted,#9aa9af); }
+  .record-section { border-top: 1px solid var(--border,#3b464d); padding: 1.2rem 0 1.65rem; scroll-margin-top: 5rem; }
+  .record-section > h2 { margin: 0 0 .8rem; }
+  .record-section h3 { margin: 1.1rem 0 .55rem; }
+  .record-section p,.record-section li,.record-section dd { line-height: 1.6; overflow-wrap: anywhere; }
+  .fact-list { display: grid; grid-template-columns: repeat(auto-fit,minmax(12rem,1fr)); gap: .85rem; margin: 1rem 0; }
+  .fact-list dt,.correction-list dt { color: var(--muted,#9aa9af); font-size: .88rem; }
+  .fact-list dd,.correction-list dd { margin: .2rem 0; }
+  .fact-list dd a { margin-right: .75rem; }
+  .dossier-summary { margin-top: 1.3rem; }
+  .dossier-summary .data-table { width: 100%; }
+  .dossier-summary td,.dossier-summary th { vertical-align: top; text-align: left; }
+  .dossier-summary td p { margin: .3rem 0; }
+  .aspect-claims { display: flex; flex-wrap: wrap; gap: .35rem .7rem; }
+  .aspect-claims a { overflow-wrap: anywhere; }
+  .dossier-summary tr { scroll-margin-top: 5rem; }
+  .mechanism-entry,.claim-group,.research-links { margin-block: 1.1rem; }
+  .mechanism-entry + .mechanism-entry,.research-links + .research-links { border-top: 1px solid var(--border,#3b464d); padding-top: .8rem; }
+  .worksheet,.research-links ul { padding-left: 1.3rem; }
+  .worksheet li,.research-links li { margin-bottom: .6rem; }
+  .worksheet a,.inline-link { margin-right: .6rem; }
+  .hash-entry { overflow-wrap: anywhere; }
+  .hash-entry code { word-break: break-all; }
+  .source-detail { font-size: .88rem; color: var(--muted,#9aa9af); }
+  .research-links p { margin: .2rem 0 .5rem; }
+  .correction-list { padding-left: 1.3rem; }
+  .correction-list li { padding-bottom: .85rem; }
+  .correction-list h3 { margin-bottom: .1rem; }
+  .record-aside { display: grid; gap: .8rem; position: sticky; top: 5rem; }
+  .record-aside h2 { font-size: 1rem; margin: 0 0 .65rem; }
+  .outline { display: grid; gap: .45rem; }
+  .outline-panel summary { cursor: pointer; font-weight: 700; }
+  .outline-panel[open] summary, .outline-panel nav, .outline-panel .related { margin-bottom: 1rem; }
+  .outline-sub { font-size: .88rem; padding-left: .75rem; }
+  .related ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .7rem; }
+  .related li { display: grid; gap: .2rem; }
+  .related li span { font-size: .8rem; }
+  .context-link { display: block; }
+  @media (max-width: 850px) { .record-layout { grid-template-columns: 1fr; } .record-aside { position: static; grid-row: 1; } }
+</style>

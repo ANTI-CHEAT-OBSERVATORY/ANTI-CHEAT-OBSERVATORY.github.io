@@ -1,0 +1,60 @@
+{
+  "id": "eac-bootstrapper",
+  "kind": "component",
+  "title": "EOS Anti-Cheat bootstrapper",
+  "summary": "Epic documents a distributable bootstrapper that prepares client protection before launching a game and fetches the game's configured anti-cheat client module. Its executable names vary by platform and bundle architecture.",
+  "vendor": "Epic Games",
+  "platforms": [
+    "Windows",
+    "Linux",
+    "macOS"
+  ],
+  "layers": [
+    "User mode"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "EOS",
+    "bootstrapper",
+    "launch",
+    "module updates"
+  ],
+  "relatedIds": [
+    "easy-anti-cheat",
+    "eac-service",
+    "process-integrity"
+  ],
+  "filenames": [
+    "start_protected_game.exe",
+    "start_protected_game.app",
+    "start_protected_game_x86-64.app",
+    "start_protected_game"
+  ],
+  "sections": [
+    {
+      "title": "Launch boundary",
+      "claimIds": [
+        "claim-eac-bootstrapper-01"
+      ]
+    },
+    {
+      "title": "Platform-specific distributed artifacts",
+      "claimIds": [
+        "claim-eac-bootstrapper-02"
+      ]
+    },
+    {
+      "title": "Developer configuration",
+      "claimIds": [
+        "claim-eac-bootstrapper-03"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-030",
+    "src-019"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

@@ -1,0 +1,27 @@
+{
+  "id": "validation-eac-later-reported",
+  "title": "Author-reported later dc5f947d75 flag-repair suite",
+  "claimIds": [
+    "claim-eac-linux-devirt-10"
+  ],
+  "buildId": "build-eac-plx-later",
+  "activity": "behavior-reproduced",
+  "performedBy": "source-author",
+  "authority": "reported",
+  "status": "reported",
+  "authorized": true,
+  "environment": "Later upstream README author-described regression snapshot.",
+  "tools": "Author-described regression and flag-repair validation; exact run environment not established by catalog.",
+  "inputs": "Later README reports 108 function entries, 645 relocations, 877 patched branches and 34 tests.",
+  "expected": "Author-defined targeted flag/control-flow comparisons.",
+  "observed": "README reports selected repairs and retained unverified behavior; no catalog execution.",
+  "bounds": "Different repository revision and tests; compared version in external criticism remains unknown.",
+  "sourceIds": [
+    "src-034"
+  ],
+  "executedAt": null,
+  "reviewedAt": "2026-10-16",
+  "limitations": [
+    "Reported by repository author; exact run date and full test inputs not preserved by legacy catalog."
+  ]
+}

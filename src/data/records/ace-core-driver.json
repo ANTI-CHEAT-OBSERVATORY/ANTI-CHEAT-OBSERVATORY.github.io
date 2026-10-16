@@ -1,0 +1,49 @@
+{
+  "id": "ace-core-driver",
+  "kind": "component",
+  "title": "ACE-CORE.sys — research artifact",
+  "summary": "Aftermath Labs reports recovering 150 of 167 virtualized functions in ACE-CORE.sys, one of four named ACE kernel-driver artifacts. Its published recovery limits matter as much as the successful results when evaluating the research.",
+  "vendor": "Tencent Cloud",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel",
+    "Research"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "ACE-CORE.sys",
+    "Tencent VM",
+    "research coverage",
+    "anti-cheat-driver"
+  ],
+  "filenames": [
+    "ACE-CORE.sys"
+  ],
+  "affectedVersions": "July 31, 2026 research artifact only; no complete product version range or verified sample hash established by this record.",
+  "relatedIds": [
+    "anti-cheat-expert",
+    "code-devirtualization"
+  ],
+  "sections": [
+    {
+      "title": "Artifact and protection context",
+      "claimIds": [
+        "claim-ace-core-driver-01"
+      ]
+    },
+    {
+      "title": "Retaining failed recovery cases",
+      "claimIds": [
+        "claim-ace-core-driver-02"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-001"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

@@ -1,0 +1,733 @@
+[
+  {
+    "id": "eac-linux-recovery",
+    "title": "EAC Linux plx.elf devirtualization analysis",
+    "summary": "Repository research describes an analyzed Linux sample; not a statement about EAC current deployment.",
+    "systemIds": [
+      "easy-anti-cheat"
+    ],
+    "recordIds": [
+      "eac-linux-devirt"
+    ],
+    "buildIds": [
+      "build-eac-plx-reviewed",
+      "build-eac-plx-later"
+    ],
+    "claimIds": [
+      "claim-eac-linux-devirt-04",
+      "claim-eac-linux-devirt-06",
+      "claim-eac-linux-devirt-09",
+      "claim-eac-linux-devirt-01",
+      "claim-eac-linux-devirt-07",
+      "claim-eac-linux-devirt-08",
+      "claim-eac-linux-devirt-01-s01",
+      "claim-eac-linux-devirt-03-s02",
+      "claim-eac-pinned-stack-oracle",
+      "claim-eac-pinned-xmm",
+      "claim-eac-function-output-open"
+    ],
+    "worksheet": [
+      {
+        "topic": "trigger",
+        "claimIds": [
+          "claim-eac-linux-devirt-04"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "context",
+        "claimIds": [
+          "claim-eac-linux-devirt-04"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "inputs",
+        "claimIds": [
+          "claim-eac-linux-devirt-04"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "outputs",
+        "claimIds": [
+          "claim-eac-linux-devirt-04",
+          "claim-eac-linux-devirt-06"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "conditions",
+        "claimIds": [
+          "claim-eac-linux-devirt-09"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "protected-object",
+        "claimIds": [],
+        "unknown": "No source-specific protected-object detail established for this mechanism at the documented revision."
+      },
+      {
+        "topic": "primitives",
+        "claimIds": [
+          "claim-eac-linux-devirt-06"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "dependencies",
+        "claimIds": [
+          "claim-eac-linux-devirt-01",
+          "claim-eac-linux-devirt-01-s01",
+          "claim-eac-linux-devirt-03-s02",
+          "claim-eac-pinned-xmm"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "validation",
+        "claimIds": [
+          "claim-eac-linux-devirt-07",
+          "claim-eac-linux-devirt-08",
+          "claim-eac-pinned-stack-oracle"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "counterexamples",
+        "claimIds": [
+          "claim-eac-linux-devirt-01",
+          "claim-eac-linux-devirt-08",
+          "claim-eac-linux-devirt-01-s01",
+          "claim-eac-pinned-xmm"
+        ],
+        "unknown": null
+      }
+    ],
+    "unknowns": [
+      "Specific behavior outside the cited source and version is not established."
+    ]
+  },
+  {
+    "id": "ironshield-tvk-auth",
+    "title": "tvk.sys client authorization and IOCTL interface",
+    "summary": "Static analysis scoped to the author-described 165/167 drivers.",
+    "systemIds": [
+      "ironshield"
+    ],
+    "recordIds": [
+      "ironshield-tvk-ioctl-authorization"
+    ],
+    "buildIds": [
+      "build-ironshield-165",
+      "build-ironshield-167"
+    ],
+    "claimIds": [
+      "claim-ironshield-tvk-ioctl-authorization-01",
+      "claim-ironshield-tvk-ioctl-authorization-05",
+      "claim-ironshield-tvk-ioctl-authorization-04",
+      "claim-ironshield-tvk-ioctl-authorization-03",
+      "claim-ironshield-tvk-ioctl-authorization-07",
+      "claim-iron-tvk-policy",
+      "claim-iron-tvk-config",
+      "claim-iron-tvk-offset"
+    ],
+    "worksheet": [
+      {
+        "topic": "trigger",
+        "claimIds": [
+          "claim-ironshield-tvk-ioctl-authorization-01",
+          "claim-iron-tvk-policy"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "context",
+        "claimIds": [
+          "claim-ironshield-tvk-ioctl-authorization-01"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "inputs",
+        "claimIds": [
+          "claim-ironshield-tvk-ioctl-authorization-01",
+          "claim-ironshield-tvk-ioctl-authorization-05",
+          "claim-iron-tvk-offset"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "outputs",
+        "claimIds": [
+          "claim-ironshield-tvk-ioctl-authorization-01",
+          "claim-ironshield-tvk-ioctl-authorization-04"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "conditions",
+        "claimIds": [
+          "claim-ironshield-tvk-ioctl-authorization-01",
+          "claim-iron-tvk-policy",
+          "claim-iron-tvk-config"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "protected-object",
+        "claimIds": [
+          "claim-ironshield-tvk-ioctl-authorization-04",
+          "claim-iron-tvk-policy"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "primitives",
+        "claimIds": [
+          "claim-ironshield-tvk-ioctl-authorization-01"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "dependencies",
+        "claimIds": [
+          "claim-ironshield-tvk-ioctl-authorization-03"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "validation",
+        "claimIds": [
+          "claim-ironshield-tvk-ioctl-authorization-01"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "counterexamples",
+        "claimIds": [
+          "claim-ironshield-tvk-ioctl-authorization-07"
+        ],
+        "unknown": null
+      }
+    ],
+    "unknowns": [
+      "Specific behavior outside the cited source and version is not established."
+    ]
+  },
+  {
+    "id": "battleye-client-report",
+    "title": "BattlEye client-side reporting",
+    "summary": "Historical published client analysis only.",
+    "systemIds": [
+      "battleye"
+    ],
+    "recordIds": [
+      "battleye-client"
+    ],
+    "buildIds": [],
+    "claimIds": [
+      "claim-battleye-client-01",
+      "claim-battleye-client-02"
+    ],
+    "worksheet": [
+      {
+        "topic": "trigger",
+        "claimIds": [
+          "claim-battleye-client-01"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "context",
+        "claimIds": [
+          "claim-battleye-client-01",
+          "claim-battleye-client-02"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "inputs",
+        "claimIds": [
+          "claim-battleye-client-01",
+          "claim-battleye-client-02"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "outputs",
+        "claimIds": [
+          "claim-battleye-client-02"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "conditions",
+        "claimIds": [],
+        "unknown": "No source-specific conditions detail established for this mechanism at the documented revision."
+      },
+      {
+        "topic": "protected-object",
+        "claimIds": [
+          "claim-battleye-client-01"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "primitives",
+        "claimIds": [],
+        "unknown": "No source-specific primitives detail established for this mechanism at the documented revision."
+      },
+      {
+        "topic": "dependencies",
+        "claimIds": [],
+        "unknown": "No source-specific dependencies detail established for this mechanism at the documented revision."
+      },
+      {
+        "topic": "validation",
+        "claimIds": [],
+        "unknown": "No source-specific validation detail established for this mechanism at the documented revision."
+      },
+      {
+        "topic": "counterexamples",
+        "claimIds": [],
+        "unknown": "No source-specific counterexamples detail established for this mechanism at the documented revision."
+      }
+    ],
+    "unknowns": [
+      "Specific behavior outside the cited source and version is not established."
+    ]
+  },
+  {
+    "id": "vanguard-boot",
+    "title": "Vanguard boot-time driver lifecycle",
+    "summary": "Vendor-described boot-time behavior; game-specific builds unknown.",
+    "systemIds": [
+      "vanguard"
+    ],
+    "recordIds": [
+      "vanguard-driver"
+    ],
+    "buildIds": [],
+    "claimIds": [
+      "claim-vanguard-driver-01",
+      "claim-vanguard-driver-02",
+      "claim-vanguard-driver-03"
+    ],
+    "worksheet": [
+      {
+        "topic": "trigger",
+        "claimIds": [
+          "claim-vanguard-driver-01",
+          "claim-vanguard-driver-02"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "context",
+        "claimIds": [
+          "claim-vanguard-driver-01",
+          "claim-vanguard-driver-02"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "inputs",
+        "claimIds": [
+          "claim-vanguard-driver-01"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "outputs",
+        "claimIds": [
+          "claim-vanguard-driver-01"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "conditions",
+        "claimIds": [
+          "claim-vanguard-driver-03"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "protected-object",
+        "claimIds": [
+          "claim-vanguard-driver-01",
+          "claim-vanguard-driver-02"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "primitives",
+        "claimIds": [],
+        "unknown": "No source-specific primitives detail established for this mechanism at the documented revision."
+      },
+      {
+        "topic": "dependencies",
+        "claimIds": [
+          "claim-vanguard-driver-02",
+          "claim-vanguard-driver-03"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "validation",
+        "claimIds": [
+          "claim-vanguard-driver-02"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "counterexamples",
+        "claimIds": [],
+        "unknown": "No source-specific counterexamples detail established for this mechanism at the documented revision."
+      }
+    ],
+    "unknowns": [
+      "Specific behavior outside the cited source and version is not established."
+    ]
+  },
+  {
+    "id": "faceit-client-lifecycle",
+    "title": "FACEIT client and driver lifecycle",
+    "summary": "Vendor-described client behavior; exact driver revision unknown.",
+    "systemIds": [
+      "faceit"
+    ],
+    "recordIds": [
+      "faceit-client"
+    ],
+    "buildIds": [],
+    "claimIds": [
+      "claim-faceit-client-02",
+      "claim-faceit-client-03",
+      "claim-faceit-client-01"
+    ],
+    "worksheet": [
+      {
+        "topic": "trigger",
+        "claimIds": [
+          "claim-faceit-client-02",
+          "claim-faceit-client-03"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "context",
+        "claimIds": [
+          "claim-faceit-client-02"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "inputs",
+        "claimIds": [],
+        "unknown": "No source-specific inputs detail established for this mechanism at the documented revision."
+      },
+      {
+        "topic": "outputs",
+        "claimIds": [],
+        "unknown": "No source-specific outputs detail established for this mechanism at the documented revision."
+      },
+      {
+        "topic": "conditions",
+        "claimIds": [
+          "claim-faceit-client-01"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "protected-object",
+        "claimIds": [
+          "claim-faceit-client-02"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "primitives",
+        "claimIds": [],
+        "unknown": "No source-specific primitives detail established for this mechanism at the documented revision."
+      },
+      {
+        "topic": "dependencies",
+        "claimIds": [
+          "claim-faceit-client-01",
+          "claim-faceit-client-03"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "validation",
+        "claimIds": [],
+        "unknown": "FACEIT states when its client is required and when data collection activates, but the cited support page provides no independent measurement of process/driver start, stop or data-collection timing."
+      },
+      {
+        "topic": "counterexamples",
+        "claimIds": [],
+        "unknown": "No source-specific counterexamples detail established for this mechanism at the documented revision."
+      }
+    ],
+    "unknowns": [
+      "Specific behavior outside the cited source and version is not established."
+    ]
+  },
+  {
+    "id": "ricochet-driver-deployment",
+    "title": "RICOCHET kernel driver deployment",
+    "summary": "Vendor-described deployment; exact build unknown.",
+    "systemIds": [
+      "ricochet"
+    ],
+    "recordIds": [
+      "ricochet-driver"
+    ],
+    "buildIds": [],
+    "claimIds": [
+      "claim-ricochet-driver-02",
+      "claim-ricochet-driver-01",
+      "claim-ricochet-driver-03"
+    ],
+    "worksheet": [
+      {
+        "topic": "trigger",
+        "claimIds": [
+          "claim-ricochet-driver-02"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "context",
+        "claimIds": [
+          "claim-ricochet-driver-01",
+          "claim-ricochet-driver-02"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "inputs",
+        "claimIds": [],
+        "unknown": "Activision describes unauthorized software interacting with protected games, but does not disclose the specific driver inputs or event formats it consumes."
+      },
+      {
+        "topic": "outputs",
+        "claimIds": [
+          "claim-ricochet-driver-01"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "conditions",
+        "claimIds": [],
+        "unknown": "No source-specific conditions detail established for this mechanism at the documented revision."
+      },
+      {
+        "topic": "protected-object",
+        "claimIds": [
+          "claim-ricochet-driver-01",
+          "claim-ricochet-driver-02"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "primitives",
+        "claimIds": [],
+        "unknown": "No source-specific primitives detail established for this mechanism at the documented revision."
+      },
+      {
+        "topic": "dependencies",
+        "claimIds": [],
+        "unknown": "Activision's product overview does not specify the OS security features or driver/service components required for this kernel driver to initialize on a particular machine."
+      },
+      {
+        "topic": "validation",
+        "claimIds": [
+          "claim-ricochet-driver-03"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "counterexamples",
+        "claimIds": [],
+        "unknown": "No source-specific counterexamples detail established for this mechanism at the documented revision."
+      }
+    ],
+    "unknowns": [
+      "Specific behavior outside the cited source and version is not established."
+    ]
+  },
+  {
+    "id": "javelin-service",
+    "title": "EA Javelin service and kernel boundaries",
+    "summary": "Vendor-described deployment; exact build unknown.",
+    "systemIds": [
+      "ea-javelin"
+    ],
+    "recordIds": [
+      "ea-javelin-service"
+    ],
+    "buildIds": [],
+    "claimIds": [
+      "claim-ea-javelin-service-01",
+      "claim-ea-javelin-service-03",
+      "claim-ea-javelin-service-02"
+    ],
+    "worksheet": [
+      {
+        "topic": "trigger",
+        "claimIds": [
+          "claim-ea-javelin-service-01",
+          "claim-ea-javelin-service-03"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "context",
+        "claimIds": [
+          "claim-ea-javelin-service-01",
+          "claim-ea-javelin-service-03"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "inputs",
+        "claimIds": [
+          "claim-ea-javelin-service-03"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "outputs",
+        "claimIds": [],
+        "unknown": "No source-specific outputs detail established for this mechanism at the documented revision."
+      },
+      {
+        "topic": "conditions",
+        "claimIds": [],
+        "unknown": "No source-specific conditions detail established for this mechanism at the documented revision."
+      },
+      {
+        "topic": "protected-object",
+        "claimIds": [
+          "claim-ea-javelin-service-01",
+          "claim-ea-javelin-service-02"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "primitives",
+        "claimIds": [],
+        "unknown": "No source-specific primitives detail established for this mechanism at the documented revision."
+      },
+      {
+        "topic": "dependencies",
+        "claimIds": [
+          "claim-ea-javelin-service-02"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "validation",
+        "claimIds": [],
+        "unknown": "No source-specific validation detail established for this mechanism at the documented revision."
+      },
+      {
+        "topic": "counterexamples",
+        "claimIds": [],
+        "unknown": "No source-specific counterexamples detail established for this mechanism at the documented revision."
+      }
+    ],
+    "unknowns": [
+      "Specific behavior outside the cited source and version is not established."
+    ]
+  },
+  {
+    "id": "ace-base-access",
+    "title": "ACE-BASE.sys reported authorization failure",
+    "summary": "Historical CVE-affected version only.",
+    "systemIds": [
+      "anti-cheat-expert"
+    ],
+    "recordIds": [
+      "ace-base-vulnerability"
+    ],
+    "buildIds": [
+      "build-ace-base-2024"
+    ],
+    "claimIds": [
+      "claim-ace-base-vulnerability-01"
+    ],
+    "worksheet": [
+      {
+        "topic": "trigger",
+        "claimIds": [],
+        "unknown": "The CVE description does not identify the IOCTL, caller action, device path, or request sequence that triggers the ACE-BASE.sys access-control flaw."
+      },
+      {
+        "topic": "context",
+        "claimIds": [
+          "claim-ace-base-vulnerability-01"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "inputs",
+        "claimIds": [
+          "claim-ace-base-vulnerability-01"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "outputs",
+        "claimIds": [
+          "claim-ace-base-vulnerability-01"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "conditions",
+        "claimIds": [
+          "claim-ace-base-vulnerability-01"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "protected-object",
+        "claimIds": [
+          "claim-ace-base-vulnerability-01"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "primitives",
+        "claimIds": [],
+        "unknown": "No source-specific primitives detail established for this mechanism at the documented revision."
+      },
+      {
+        "topic": "dependencies",
+        "claimIds": [
+          "claim-ace-base-vulnerability-01"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "validation",
+        "claimIds": [
+          "claim-ace-base-vulnerability-01"
+        ],
+        "unknown": null
+      },
+      {
+        "topic": "counterexamples",
+        "claimIds": [],
+        "unknown": "The CVE record does not supply a non-affected version, patch comparison, or verified negative test for the ACE-BASE.sys 1.0.2202.6217 finding."
+      }
+    ],
+    "unknowns": [
+      "Specific behavior outside the cited source and version is not established."
+    ]
+  }
+]

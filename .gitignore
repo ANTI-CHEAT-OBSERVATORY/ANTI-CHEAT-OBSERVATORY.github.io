@@ -1,0 +1,18 @@
+node_modules/
+dist/
+.astro/
+.env
+.env.*
+!.env.example
+*.log
+
+# Import lock (transient; removed by the importer)
+.aco-import.lock
+
+# Local migration/scratch artifacts
+.citation-cleanup.json
+.research-expansion.json
+.reference-expansion.json
+
+# Pagefind index is generated into dist/ at build time
+dist/pagefind/

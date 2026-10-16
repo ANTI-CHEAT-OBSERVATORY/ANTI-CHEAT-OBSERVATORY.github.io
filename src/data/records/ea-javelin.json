@@ -1,0 +1,68 @@
+{
+  "id": "ea-javelin",
+  "kind": "product",
+  "title": "EA Javelin Anticheat",
+  "summary": "EA's in-house PC anti-cheat and anti-tamper solution operates at kernel level for selected EA games. EA describes game-bound runtime, separately updated protection and configurable security requirements, not uniform enforcement across every EA title.",
+  "vendor": "Electronic Arts",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode",
+    "Kernel",
+    "Hardware"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "EA",
+    "anti-tamper",
+    "kernel",
+    "game-specific"
+  ],
+  "relatedIds": [
+    "ea-javelin-service",
+    "driver-attack-surface",
+    "boot-trust",
+    "dma",
+    "input-automation"
+  ],
+  "games": [
+    "EA SPORTS FC",
+    "Battlefield 2042",
+    "Battlefield 6",
+    "Apex Legends"
+  ],
+  "sections": [
+    {
+      "title": "In-house kernel protection",
+      "claimIds": [
+        "claim-ea-javelin-01",
+        "claim-ea-javelin-02"
+      ]
+    },
+    {
+      "title": "Installation and session lifecycle",
+      "claimIds": [
+        "claim-ea-javelin-03",
+        "claim-ea-javelin-04"
+      ]
+    },
+    {
+      "title": "Title-specific hardware and threat model",
+      "claimIds": [
+        "claim-ea-javelin-05",
+        "claim-ea-javelin-06"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-027",
+    "src-025",
+    "src-026",
+    "src-024",
+    "src-028"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

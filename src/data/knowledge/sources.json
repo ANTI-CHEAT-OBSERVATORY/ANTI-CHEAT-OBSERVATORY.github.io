@@ -1,0 +1,1442 @@
+[
+  {
+    "id": "src-001",
+    "title": "Static Devirtualization of Tencent VM",
+    "url": "https://aftermathlabs.net/blog/31/07/2026/",
+    "publisher": "Aftermath Labs",
+    "published": "2026-07-31",
+    "accessed": "2026-10-16",
+    "provenance": "publication",
+    "revision": {
+      "kind": "publication",
+      "value": "2026-07-31"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://aftermathlabs.net/blog/31/07/2026/",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-002",
+    "title": "CVE-2024-22830 record",
+    "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2024/22xxx/CVE-2024-22830.json",
+    "publisher": "CVE Program",
+    "published": "2024-05-01",
+    "accessed": "2026-10-16",
+    "provenance": "disclosure",
+    "revision": {
+      "kind": "publication",
+      "value": "2024-05-01"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2024/22xxx/CVE-2024-22830.json",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-004",
+    "title": "ACE-BASE.sys driver record",
+    "url": "https://www.loldrivers.io/drivers/ff77b58d-e143-4f61-92de-c0d9bc0af7d5/",
+    "publisher": "LOLDrivers",
+    "accessed": "2026-10-16",
+    "provenance": "publication",
+    "revision": {
+      "kind": "unversioned",
+      "value": null
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://www.loldrivers.io/drivers/ff77b58d-e143-4f61-92de-c0d9bc0af7d5/",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-006",
+    "title": "Driver security checklist",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/driversecurity/driver-security-checklist",
+    "publisher": "Microsoft",
+    "published": "2025-02-26",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "publication",
+      "value": "2025-02-26"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://learn.microsoft.com/en-us/windows-hardware/drivers/driversecurity/driver-security-checklist",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-007",
+    "title": "PC Game Anti-Cheating Service Level Agreement",
+    "url": "https://intl.cloud.tencent.com/document/product/301/62803",
+    "publisher": "Tencent Cloud",
+    "accessed": "2026-10-16",
+    "provenance": "publication",
+    "revision": {
+      "kind": "unversioned",
+      "value": null
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://intl.cloud.tencent.com/document/product/301/62803",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-008",
+    "title": "BattlEye anti-cheat: analysis and mitigation",
+    "url": "https://secret.club/2019/02/10/battleye-anticheat.html",
+    "publisher": "secret.club / vmcall",
+    "published": "2019-02-10",
+    "accessed": "2026-10-16",
+    "provenance": "publication",
+    "revision": {
+      "kind": "publication",
+      "value": "2019-02-10"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://secret.club/2019/02/10/battleye-anticheat.html",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-009",
+    "title": "BattlEye FAQ: Driver Load Error and Compatibility",
+    "url": "https://www.battleye.com/support/faq/",
+    "publisher": "BattlEye Innovations",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "unversioned",
+      "value": null
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://www.battleye.com/support/faq/",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-010",
+    "title": "BattlEye – The Anti-Cheat Gold Standard",
+    "url": "https://www.battleye.com/",
+    "publisher": "BattlEye Innovations",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "unversioned",
+      "value": null
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://www.battleye.com/",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-011",
+    "title": "BattlEye Privacy Policy: BattlEye Anti-Cheat Software",
+    "url": "https://www.battleye.com/privacy-policy/",
+    "publisher": "BattlEye Innovations",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "unversioned",
+      "value": null
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://www.battleye.com/privacy-policy/",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-012",
+    "title": "Secure the Windows boot process",
+    "url": "https://learn.microsoft.com/en-us/windows/security/operating-system-security/system-security/secure-the-windows-10-boot-process",
+    "publisher": "Microsoft",
+    "published": "2025-08-18",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "publication",
+      "value": "2025-08-18"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://learn.microsoft.com/en-us/windows/security/operating-system-security/system-security/secure-the-windows-10-boot-process",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-013",
+    "title": "Incoming: Vanguard On-Demand",
+    "url": "https://www.riotgames.com/en/news/vanguard-on-demand",
+    "publisher": "Riot Games",
+    "published": "2026-06-24",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "publication",
+      "value": "2026-06-24"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://www.riotgames.com/en/news/vanguard-on-demand",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-014",
+    "title": "Vanguard Security Update: Closing the Pre-Boot Gap",
+    "url": "https://www.riotgames.com/en/news/vanguard-security-update-motherboard",
+    "publisher": "Riot Games",
+    "published": "2025-12-18",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "publication",
+      "value": "2025-12-18"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://www.riotgames.com/en/news/vanguard-security-update-motherboard",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-015",
+    "title": "Microsoft recommended driver block rules",
+    "url": "https://learn.microsoft.com/en-us/windows/security/application-security/application-control/app-control-for-business/design/microsoft-recommended-driver-block-rules",
+    "publisher": "Microsoft",
+    "published": "2026-05-01",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "publication",
+      "value": "2026-05-01"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://learn.microsoft.com/en-us/windows/security/application-security/application-control/app-control-for-business/design/microsoft-recommended-driver-block-rules",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-016",
+    "title": "19h/chernobog — Hex-Rays plugin defeating Hikari LLVM obfuscation",
+    "url": "https://github.com/19h/chernobog/blob/84308f8393723fe22ff090351b3d37c65a171434/README.md",
+    "publisher": "GitHub / 19h",
+    "accessed": "2026-10-16",
+    "provenance": "repository",
+    "revision": {
+      "kind": "git",
+      "value": "84308f8393723fe22ff090351b3d37c65a171434"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://github.com/19h/chernobog",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "Pinned README text inspected; plugin binaries were not acquired or executed."
+    ]
+  },
+  {
+    "id": "src-018",
+    "title": "Loki: Hardening Code Obfuscation Against Automated Attacks (full paper)",
+    "url": "https://www.usenix.org/system/files/sec22-schloegel.pdf",
+    "publisher": "USENIX Security Symposium",
+    "published": "2022-08-10",
+    "accessed": "2026-10-16",
+    "provenance": "publication",
+    "revision": {
+      "kind": "publication",
+      "value": "2022-08-10"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://www.usenix.org/system/files/sec22-schloegel.pdf",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-019",
+    "title": "Anti-Cheat Interfaces",
+    "url": "https://dev.epicgames.com/docs/epic-online-services/trust-and-safety/anti-cheat-interfaces/anti-cheat-interfaces",
+    "publisher": "Epic Games",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "unversioned",
+      "value": null
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://dev.epicgames.com/docs/epic-online-services/trust-and-safety/anti-cheat-interfaces/anti-cheat-interfaces",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-020",
+    "title": "Kernel DMA Protection (Memory Access Protection) for OEMs",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-kernel-dma-protection",
+    "publisher": "Microsoft",
+    "published": "2020-06-15",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "publication",
+      "value": "2020-06-15"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-kernel-dma-protection",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-021",
+    "title": "WinVerifyTrust function (wintrust.h)",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/wintrust/nf-wintrust-winverifytrust",
+    "publisher": "Microsoft Learn",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "unversioned",
+      "value": null
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://learn.microsoft.com/en-us/windows/win32/api/wintrust/nf-wintrust-winverifytrust",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-022",
+    "title": "Driver Signing Options",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/dashboard/driver-signing-offerings",
+    "publisher": "Microsoft Learn",
+    "published": "2026-03-23",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "publication",
+      "value": "2026-03-23"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://learn.microsoft.com/en-us/windows-hardware/drivers/dashboard/driver-signing-offerings",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-023",
+    "title": "Static analysis of Ironshield anti-cheat",
+    "url": "https://github.com/hseoa/ironshield-analysis/blob/bdd1e531c3ede7190792c37d1dbfe1d320950729/README.md",
+    "publisher": "hseoa (independent analysis)",
+    "published": "2026-09-23",
+    "accessed": "2026-10-16",
+    "provenance": "repository",
+    "revision": {
+      "kind": "git",
+      "value": "bdd1e531c3ede7190792c37d1dbfe1d320950729"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://github.com/hseoa/ironshield-analysis",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "Pinned research README inspected; tvk.sys binary was not acquired or executed by this catalog."
+    ]
+  },
+  {
+    "id": "src-024",
+    "title": "How to install and troubleshoot EA Javelin anticheat on PC: Common errors",
+    "url": "https://help.ea.com/en/articles/platforms/pc-ea-anticheat/",
+    "publisher": "EA Help",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "unversioned",
+      "value": null
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://help.ea.com/en/articles/platforms/pc-ea-anticheat/",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-025",
+    "title": "A Deep Dive on EA anticheat for PC",
+    "url": "https://www.ea.com/security/news/eaac-deep-dive",
+    "publisher": "Electronic Arts",
+    "published": "2022-09-13",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "publication",
+      "value": "2022-09-13"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://www.ea.com/security/news/eaac-deep-dive",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-026",
+    "title": "Raising the Bar: A Year of Progress for EA Javelin Anticheat",
+    "url": "https://www.ea.com/news/ea-javelin-anticheat-2026-update",
+    "publisher": "Electronic Arts",
+    "published": "2026-09-10",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "publication",
+      "value": "2026-09-10"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://www.ea.com/news/ea-javelin-anticheat-2026-update",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-027",
+    "title": "Introducing EA Javelin Anticheat",
+    "url": "https://www.ea.com/news/introducing-ea-javelin-anticheat",
+    "publisher": "Electronic Arts",
+    "published": "2025-04-24",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "publication",
+      "value": "2025-04-24"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://www.ea.com/news/introducing-ea-javelin-anticheat",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-028",
+    "title": "EA Javelin Anticheat is Coming to Apex Legends",
+    "url": "https://www.ea.com/games/apex-legends/apex-legends/news/javelin-anticheat-announcement",
+    "publisher": "Electronic Arts",
+    "published": "2026-09-24",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "publication",
+      "value": "2026-09-24"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://www.ea.com/games/apex-legends/apex-legends/news/javelin-anticheat-announcement",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-030",
+    "title": "Using Anti-Cheat: Client Module Setup and Bootstrapper Configuration",
+    "url": "https://dev.epicgames.com/docs/epic-online-services/trust-and-safety/anti-cheat-interfaces/using-anti-cheat",
+    "publisher": "Epic Games",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "unversioned",
+      "value": null
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://dev.epicgames.com/docs/epic-online-services/trust-and-safety/anti-cheat-interfaces/using-anti-cheat",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-031",
+    "title": "EAC Linux research README at reviewed revision 10d67114e3",
+    "url": "https://github.com/19h/eac-linux-devirt/blob/10d67114e35c4504abee49915ab3940bc4e6987c/README.md",
+    "publisher": "GitHub / 19h",
+    "accessed": "2026-10-16",
+    "provenance": "repository",
+    "revision": {
+      "kind": "git",
+      "value": "10d67114e35c4504abee49915ab3940bc4e6987c"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://github.com/19h/eac-linux-devirt",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "Original source hash and extracted extent hash are author-reported; no binary acquired or computed by this catalog."
+    ]
+  },
+  {
+    "id": "src-032",
+    "title": "IDontCode: partial agreement and correctness critique of EAC recovery",
+    "url": "https://x.com/_xeroxz/status/2110927039117283506",
+    "publisher": "IDontCode / X",
+    "published": "2026-10-16",
+    "accessed": "2026-10-16",
+    "provenance": "community",
+    "revision": {
+      "kind": "publication",
+      "value": "2026-10-16"
+    },
+    "access": "blocked",
+    "transport": "direct",
+    "originId": "https://x.com/_xeroxz/status/2110927039117283506",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "Direct X and Nitter access were unavailable. Only the opening post and two attached images were read through the VXTwitter mirror; the remaining thread was not inspected.",
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-033",
+    "title": "VXTwitter retrieval of the critique's opening post and attached image URLs",
+    "url": "https://api.vxtwitter.com/_xeroxz/status/2110927039117283506",
+    "publisher": "VXTwitter / mirror of IDontCode's post",
+    "published": "2026-10-16",
+    "accessed": "2026-10-16",
+    "provenance": "community",
+    "revision": {
+      "kind": "publication",
+      "value": "2026-10-16"
+    },
+    "access": "available",
+    "transport": "mirror",
+    "retrievalUrl": "https://api.vxtwitter.com/_xeroxz/status/2110927039117283506",
+    "originId": "https://x.com/_xeroxz/status/2110927039117283506",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "Third-party retrieval of the original post; not an independent author or corroboration."
+    ]
+  },
+  {
+    "id": "src-034",
+    "title": "EAC Linux README at later upstream revision dc5f947d75",
+    "url": "https://github.com/19h/eac-linux-devirt/blob/dc5f947d7531cfac19f01f2b9c8da2b77fb58957/README.md",
+    "publisher": "GitHub / 19h",
+    "accessed": "2026-10-16",
+    "provenance": "repository",
+    "revision": {
+      "kind": "git",
+      "value": "dc5f947d7531cfac19f01f2b9c8da2b77fb58957"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://github.com/19h/eac-linux-devirt",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": []
+  },
+  {
+    "id": "src-035",
+    "title": "Ransomware Actor Abuses Genshin Impact Anti-Cheat Driver to Kill Antivirus",
+    "url": "https://www.trendmicro.com/en_us/research/22/h/ransomware-actor-abuses-genshin-impact-anti-cheat-driver-to-kill-antivirus.html",
+    "publisher": "Trend Micro",
+    "published": "2022-08-24",
+    "accessed": "2026-10-16",
+    "provenance": "publication",
+    "revision": {
+      "kind": "publication",
+      "value": "2022-08-24"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://www.trendmicro.com/en_us/research/22/h/ransomware-actor-abuses-genshin-impact-anti-cheat-driver-to-kill-antivirus.html",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-036",
+    "title": "What is FACEIT Anti-cheat and how does it work?",
+    "url": "https://support.faceit.com/hc/en-us/articles/9394666828188-What-is-FACEIT-Anti-cheat-and-how-does-it-work",
+    "publisher": "FACEIT",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "unversioned",
+      "value": null
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://support.faceit.com/hc/en-us/articles/9394666828188-What-is-FACEIT-Anti-cheat-and-how-does-it-work",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-037",
+    "title": "Windows Security Requirements FAQ",
+    "url": "https://support.faceit.com/hc/en-us/articles/23117181142556-Windows-Security-Requirements-FAQ",
+    "publisher": "FACEIT",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "unversioned",
+      "value": null
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://support.faceit.com/hc/en-us/articles/23117181142556-Windows-Security-Requirements-FAQ",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-038",
+    "title": "ObRegisterCallbacks function (wdm.h)",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/wdm/nf-wdm-obregistercallbacks",
+    "publisher": "Microsoft Learn",
+    "published": "2018-04-30",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "publication",
+      "value": "2018-04-30"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/wdm/nf-wdm-obregistercallbacks",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-039",
+    "title": "Virtualization-based Security (VBS)",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-vbs",
+    "publisher": "Microsoft",
+    "published": "2023-03-17",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "publication",
+      "value": "2023-03-17"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-vbs",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-040",
+    "title": "FLT_PARAMETERS for IRP_MJ_ACQUIRE_FOR_SECTION_SYNCHRONIZATION",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/ifs/flt-parameters-for-irp-mj-acquire-for-section-synchronization",
+    "publisher": "Microsoft Learn",
+    "published": "2023-03-13",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "publication",
+      "value": "2023-03-13"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://learn.microsoft.com/en-us/windows-hardware/drivers/ifs/flt-parameters-for-irp-mj-acquire-for-section-synchronization",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-041",
+    "title": "Peeking into VALORANT's Netcode",
+    "url": "https://www.riotgames.com/en/news/peeking-valorants-netcode",
+    "publisher": "Riot Games",
+    "published": "2020-07-28",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "publication",
+      "value": "2020-07-28"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://www.riotgames.com/en/news/peeking-valorants-netcode",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-042",
+    "title": "MmGetSystemRoutineAddress function (wdm.h)",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/wdm/nf-wdm-mmgetsystemroutineaddress",
+    "publisher": "Microsoft Learn",
+    "published": "2018-04-30",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "publication",
+      "value": "2018-04-30"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/wdm/nf-wdm-mmgetsystemroutineaddress",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-044",
+    "title": "Protecting anti-malware services",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/services/protecting-anti-malware-services-",
+    "publisher": "Microsoft Learn",
+    "published": "2018-08-02",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "publication",
+      "value": "2018-08-02"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://learn.microsoft.com/en-us/windows/win32/services/protecting-anti-malware-services-",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-045",
+    "title": "RICOCHET Anti-Cheat: How It Works, Protecting Your Privacy and FAQ",
+    "url": "https://www.callofduty.com/warzone/ricochet",
+    "publisher": "Activision / Call of Duty",
+    "accessed": "2026-10-16",
+    "provenance": "publication",
+    "revision": {
+      "kind": "unversioned",
+      "value": null
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://www.callofduty.com/warzone/ricochet",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-046",
+    "title": "Trusted Platform Module and Secure Boot",
+    "url": "https://support.activision.com/articles/trusted-platform-module-and-secure-boot",
+    "publisher": "Activision Support",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "unversioned",
+      "value": null
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://support.activision.com/articles/trusted-platform-module-and-secure-boot",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-047",
+    "title": "aftermathlabs/ring-1.io — Deobfuscation and Analysis of Ring-1.io",
+    "url": "https://github.com/aftermathlabs/ring-1.io",
+    "publisher": "GitHub / Aftermath Labs",
+    "accessed": "2026-10-16",
+    "provenance": "repository",
+    "revision": {
+      "kind": "unversioned",
+      "value": null
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://github.com/aftermathlabs/ring-1.io",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-048",
+    "title": "Deobfuscation and Analysis of Ring-1.io",
+    "url": "https://aftermathlabs.net/blog/04/02/2026/",
+    "publisher": "Aftermath Labs",
+    "published": "2026-02-04",
+    "accessed": "2026-10-16",
+    "provenance": "publication",
+    "revision": {
+      "kind": "publication",
+      "value": "2026-02-04"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://aftermathlabs.net/blog/04/02/2026/",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-049",
+    "title": "GetRuntimeAttestationReport function (sysinfoapi.h)",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getruntimeattestationreport",
+    "publisher": "Microsoft Learn",
+    "published": "2026-01-21",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "publication",
+      "value": "2026-01-21"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getruntimeattestationreport",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-050",
+    "title": "Demolishing Wallhacks with VALORANT's Fog of War",
+    "url": "https://www.riotgames.com/en/news/demolishing-wallhacks-valorants-fog-war",
+    "publisher": "Riot Games",
+    "published": "2020-04-14",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "publication",
+      "value": "2020-04-14"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://www.riotgames.com/en/news/demolishing-wallhacks-valorants-fog-war",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-051",
+    "title": "What is Vanguard?",
+    "url": "https://support.riotgames.com/en-us/riot/performance/what-is-vanguard",
+    "publisher": "Riot Games",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "unversioned",
+      "value": null
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://support.riotgames.com/en-us/riot/performance/what-is-vanguard",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-052",
+    "title": "Vanguard Pre-Check",
+    "url": "https://support.riotgames.com/en-us/riot/performance/vanguard-pre-check",
+    "publisher": "Riot Games",
+    "published": "2026-06-24",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "publication",
+      "value": "2026-06-24"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://support.riotgames.com/en-us/riot/performance/vanguard-pre-check",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-053",
+    "title": "BattlEye client emulation",
+    "url": "https://secret.club/2020/07/06/bottleye.html",
+    "publisher": "secret.club",
+    "author": "vmcall",
+    "published": "2020-07-06",
+    "accessed": "2026-10-16",
+    "provenance": "publication",
+    "revision": {
+      "kind": "publication",
+      "value": "2020-07-06"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://secret.club/2020/07/06/bottleye.html",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-056",
+    "title": "How anti-cheats detect system emulation",
+    "url": "https://secret.club/2020/04/13/how-anti-cheats-detect-system-emulation.html",
+    "publisher": "secret.club",
+    "author": "daax, iPower, ajkhoury and drew",
+    "published": "2020-04-13",
+    "accessed": "2026-10-16",
+    "provenance": "publication",
+    "revision": {
+      "kind": "publication",
+      "value": "2020-04-13"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://secret.club/2020/04/13/how-anti-cheats-detect-system-emulation.html",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-057",
+    "title": "Static Devirtualization of Themida",
+    "url": "https://aftermathlabs.net/blog/09/05/2026/",
+    "publisher": "Aftermath Labs",
+    "author": "IDontCode and naci",
+    "published": "2026-05-09",
+    "accessed": "2026-10-16",
+    "provenance": "publication",
+    "revision": {
+      "kind": "publication",
+      "value": "2026-05-09"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://aftermathlabs.net/blog/09/05/2026/",
+    "rights": "Third-party content; citation and metadata only, no redistribution license asserted.",
+    "limitations": [
+      "No immutable snapshot or content digest verified for this URL."
+    ]
+  },
+  {
+    "id": "src-exp-equ8-analysis",
+    "title": "EQU8 - Kernel Component Analysis",
+    "url": "https://aftermathlabs.net/blog/12/08/2021/",
+    "publisher": "Aftermath Labs",
+    "author": "bright",
+    "published": "2021-08-12",
+    "accessed": "2026-10-16",
+    "provenance": "publication",
+    "revision": {
+      "kind": "publication",
+      "value": "2021-08-12"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://aftermathlabs.net/blog/12/08/2021/",
+    "rights": "Third-party article metadata and short passage-level descriptions only; no reproduction of underlying protected artifacts.",
+    "limitations": [
+      "Article text inspected; no binary sample acquired, reproduced or independently checked.",
+      "No immutable capture or content hash of this web page verified."
+    ]
+  },
+  {
+    "id": "src-exp-eac-mapper",
+    "title": "EasyAntiCheat Exploit to inject unsigned code into protected processes",
+    "url": "https://aftermathlabs.net/blog/10/08/2021/",
+    "publisher": "Aftermath Labs",
+    "author": "bright",
+    "published": "2021-08-10",
+    "accessed": "2026-10-16",
+    "provenance": "publication",
+    "revision": {
+      "kind": "publication",
+      "value": "2021-08-10"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://aftermathlabs.net/blog/10/08/2021/",
+    "rights": "Third-party article metadata and short passage-level descriptions only; no reproduction of underlying protected artifacts.",
+    "limitations": [
+      "Article text inspected; no binary sample acquired, reproduced or independently checked.",
+      "No immutable capture or content hash of this web page verified."
+    ]
+  },
+  {
+    "id": "src-exp-eac-integrity",
+    "title": "CVEAC-2020: Bypassing EasyAntiCheat integrity checks",
+    "url": "https://secret.club/2020/04/08/eac_integrity_check_bypass.html",
+    "publisher": "secret.club",
+    "author": "iPower",
+    "published": "2020-04-08",
+    "accessed": "2026-10-16",
+    "provenance": "publication",
+    "revision": {
+      "kind": "publication",
+      "value": "2020-04-08"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://secret.club/2020/04/08/eac_integrity_check_bypass.html",
+    "rights": "Third-party article metadata and short passage-level descriptions only; no reproduction of underlying protected artifacts.",
+    "limitations": [
+      "Article text inspected; no binary sample acquired, reproduced or independently checked.",
+      "No immutable capture or content hash of this web page verified."
+    ]
+  },
+  {
+    "id": "src-exp-battleye-tracking",
+    "title": "BattlEye reverse engineer tracking",
+    "url": "https://secret.club/2020/03/31/battleye-developer-tracking.html",
+    "publisher": "secret.club",
+    "author": "vmcall",
+    "published": "2020-03-31",
+    "accessed": "2026-10-16",
+    "provenance": "publication",
+    "revision": {
+      "kind": "publication",
+      "value": "2020-03-31"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://secret.club/2020/03/31/battleye-developer-tracking.html",
+    "rights": "Third-party article metadata and short passage-level descriptions only; no reproduction of underlying protected artifacts.",
+    "limitations": [
+      "Article text inspected; no binary sample acquired, reproduced or independently checked.",
+      "No immutable capture or content hash of this web page verified."
+    ]
+  },
+  {
+    "id": "src-exp-tarkov-mono",
+    "title": "How Escape from Tarkov ensures game integrity",
+    "url": "https://secret.club/2020/04/16/mono-integrity.html",
+    "publisher": "secret.club",
+    "author": "vmcall",
+    "published": "2020-04-16",
+    "accessed": "2026-10-16",
+    "provenance": "publication",
+    "revision": {
+      "kind": "publication",
+      "value": "2020-04-16"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://secret.club/2020/04/16/mono-integrity.html",
+    "rights": "Third-party article metadata and short passage-level descriptions only; no reproduction of underlying protected artifacts.",
+    "limitations": [
+      "Article text inspected; no binary sample acquired, reproduced or independently checked.",
+      "No immutable capture or content hash of this web page verified."
+    ]
+  },
+  {
+    "id": "src-exp-riot-league",
+    "title": "Riot’s Approach to Anti-Cheat",
+    "url": "https://www.riotgames.com/en/news/riots-approach-anti-cheat",
+    "publisher": "Riot Games",
+    "author": "Michael VanKuipers",
+    "published": "2018-07-17",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "publication",
+      "value": "2018-07-17"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://www.riotgames.com/en/news/riots-approach-anti-cheat",
+    "rights": "Third-party article metadata and short passage-level descriptions only; no reproduction of underlying protected artifacts.",
+    "limitations": [
+      "Article text inspected; no binary sample acquired, reproduced or independently checked.",
+      "No immutable capture or content hash of this web page verified."
+    ]
+  },
+  {
+    "id": "src-ref-ntqsi",
+    "title": "NtQuerySystemInformation — Microsoft Win32 reference",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/winternl/nf-winternl-ntquerysysteminformation",
+    "publisher": "Microsoft",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "unversioned",
+      "value": null
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://learn.microsoft.com/en-us/windows/win32/api/winternl/nf-winternl-ntquerysysteminformation",
+    "rights": "Third-party material retains its own rights; citation, metadata and original paraphrases only.",
+    "limitations": [
+      "Living documentation or repository content; no identified binary or runtime behavior independently verified."
+    ]
+  },
+  {
+    "id": "src-ref-ntqip",
+    "title": "NtQueryInformationProcess — Microsoft Win32 reference",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/winternl/nf-winternl-ntqueryinformationprocess",
+    "publisher": "Microsoft",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "unversioned",
+      "value": null
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://learn.microsoft.com/en-us/windows/win32/api/winternl/nf-winternl-ntqueryinformationprocess",
+    "rights": "Third-party material retains its own rights; citation, metadata and original paraphrases only.",
+    "limitations": [
+      "Living documentation or repository content; no identified binary or runtime behavior independently verified."
+    ]
+  },
+  {
+    "id": "src-ref-ntqvm",
+    "title": "NtQueryVirtualMemory — Windows Driver Kit reference",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/ntifs/nf-ntifs-ntqueryvirtualmemory",
+    "publisher": "Microsoft",
+    "accessed": "2026-10-16",
+    "provenance": "vendor",
+    "revision": {
+      "kind": "unversioned",
+      "value": null
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/ntifs/nf-ntifs-ntqueryvirtualmemory",
+    "rights": "Third-party material retains its own rights; citation, metadata and original paraphrases only.",
+    "limitations": [
+      "Living documentation or repository content; no identified binary or runtime behavior independently verified."
+    ]
+  },
+  {
+    "id": "src-ref-phnt-vm",
+    "title": "NtQueryVirtualMemory — PHNT declaration and selector contracts",
+    "url": "https://ntdoc.m417z.com/ntqueryvirtualmemory",
+    "publisher": "NtDoc / System Informer PHNT",
+    "accessed": "2026-10-16",
+    "provenance": "publication",
+    "revision": {
+      "kind": "unversioned",
+      "value": null
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://github.com/winsiderss/systeminformer",
+    "rights": "Third-party material retains its own rights; citation, metadata and original paraphrases only.",
+    "limitations": [
+      "Living documentation or repository content; no identified binary or runtime behavior independently verified."
+    ]
+  },
+  {
+    "id": "src-ref-phnt-read",
+    "title": "NtReadVirtualMemory — PHNT declaration",
+    "url": "https://ntdoc.m417z.com/ntreadvirtualmemory",
+    "publisher": "NtDoc / System Informer PHNT",
+    "accessed": "2026-10-16",
+    "provenance": "publication",
+    "revision": {
+      "kind": "unversioned",
+      "value": null
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://github.com/winsiderss/systeminformer",
+    "rights": "Third-party material retains its own rights; citation, metadata and original paraphrases only.",
+    "limitations": [
+      "Living documentation or repository content; no identified binary or runtime behavior independently verified."
+    ]
+  },
+  {
+    "id": "src-ref-phnt-processclass",
+    "title": "PROCESSINFOCLASS — Native process selectors",
+    "url": "https://ntdoc.m417z.com/processinfoclass",
+    "publisher": "NtDoc / System Informer PHNT",
+    "accessed": "2026-10-16",
+    "provenance": "publication",
+    "revision": {
+      "kind": "unversioned",
+      "value": null
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://github.com/winsiderss/systeminformer",
+    "rights": "Third-party material retains its own rights; citation, metadata and original paraphrases only.",
+    "limitations": [
+      "Living documentation or repository content; no identified binary or runtime behavior independently verified."
+    ]
+  },
+  {
+    "id": "src-ref-phnt-instrumentation",
+    "title": "PROCESS_INSTRUMENTATION_CALLBACK_INFORMATION — PHNT structure",
+    "url": "https://ntdoc.m417z.com/process_instrumentation_callback_information",
+    "publisher": "NtDoc / System Informer PHNT",
+    "accessed": "2026-10-16",
+    "provenance": "publication",
+    "revision": {
+      "kind": "unversioned",
+      "value": null
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://github.com/winsiderss/systeminformer",
+    "rights": "Third-party material retains its own rights; citation, metadata and original paraphrases only.",
+    "limitations": [
+      "Living documentation or repository content; no identified binary or runtime behavior independently verified."
+    ]
+  },
+  {
+    "id": "src-ref-phnt-thread",
+    "title": "NtSetInformationThread — Native thread selector contracts",
+    "url": "https://ntdoc.m417z.com/ntsetinformationthread",
+    "publisher": "NtDoc / System Informer PHNT",
+    "accessed": "2026-10-16",
+    "provenance": "publication",
+    "revision": {
+      "kind": "unversioned",
+      "value": null
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://github.com/winsiderss/systeminformer",
+    "rights": "Third-party material retains its own rights; citation, metadata and original paraphrases only.",
+    "limitations": [
+      "Living documentation or repository content; no identified binary or runtime behavior independently verified."
+    ]
+  },
+  {
+    "id": "src-ref-phnt-handles",
+    "title": "SYSTEM_HANDLE_INFORMATION_EX — PHNT structure",
+    "url": "https://ntdoc.m417z.com/system_handle_information_ex",
+    "publisher": "NtDoc / System Informer PHNT",
+    "accessed": "2026-10-16",
+    "provenance": "publication",
+    "revision": {
+      "kind": "unversioned",
+      "value": null
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://github.com/winsiderss/systeminformer",
+    "rights": "Third-party material retains its own rights; citation, metadata and original paraphrases only.",
+    "limitations": [
+      "Living documentation or repository content; no identified binary or runtime behavior independently verified."
+    ]
+  },
+  {
+    "id": "src-ref-antidebug",
+    "title": "Anti-Debug: Direct debugger interaction",
+    "url": "https://anti-debug.checkpoint.com/techniques/interactive.html",
+    "publisher": "Check Point Research",
+    "accessed": "2026-10-16",
+    "provenance": "publication",
+    "revision": {
+      "kind": "unversioned",
+      "value": null
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://anti-debug.checkpoint.com/techniques/interactive.html",
+    "rights": "Third-party material retains its own rights; citation, metadata and original paraphrases only.",
+    "limitations": [
+      "Living documentation or repository content; no identified binary or runtime behavior independently verified."
+    ]
+  },
+  {
+    "id": "src-ref-dbk",
+    "title": "DBKDrvr.c — Cheat Engine driver initialization and access checks",
+    "url": "https://github.com/cheat-engine/cheat-engine/blob/ec45d5f47f92a239ba0bf51ec5d04a7509c3fd37/DBKKernel/DBKDrvr.c",
+    "publisher": "Cheat Engine",
+    "accessed": "2026-10-16",
+    "provenance": "repository",
+    "revision": {
+      "kind": "git",
+      "value": "ec45d5f47f92a239ba0bf51ec5d04a7509c3fd37"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://github.com/cheat-engine/cheat-engine/blob/ec45d5f47f92a239ba0bf51ec5d04a7509c3fd37/DBKKernel/DBKDrvr.c",
+    "rights": "Third-party material retains its own rights; citation, metadata and original paraphrases only.",
+    "limitations": [
+      "Only the pinned source was inspected, not a compiled or signed DBK driver. Conditional compilation changes behavior."
+    ]
+  },
+  {
+    "id": "src-ref-dbk-package",
+    "title": "DBK64.inf — source package identity",
+    "url": "https://github.com/cheat-engine/cheat-engine/blob/ec45d5f47f92a239ba0bf51ec5d04a7509c3fd37/DBKKernel/DBK64.inf",
+    "publisher": "Cheat Engine",
+    "accessed": "2026-10-16",
+    "provenance": "repository",
+    "revision": {
+      "kind": "git",
+      "value": "ec45d5f47f92a239ba0bf51ec5d04a7509c3fd37"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://github.com/cheat-engine/cheat-engine/blob/ec45d5f47f92a239ba0bf51ec5d04a7509c3fd37/DBKKernel/DBK64.inf",
+    "rights": "Third-party material retains its own rights; citation, metadata and original paraphrases only.",
+    "limitations": [
+      "An INF in a source repository is packaging evidence, not proof of an installed version, valid signature or binary hash."
+    ]
+  },
+  {
+    "id": "src-ref-ksi-trust",
+    "title": "System Informer Kernel — verified-client security model",
+    "url": "https://github.com/winsiderss/systeminformer/blob/8df4ab6551ea331d6c3f0c9b0b11fcb21e82f850/KSystemInformer/README.md",
+    "publisher": "System Informer",
+    "accessed": "2026-10-16",
+    "provenance": "repository",
+    "revision": {
+      "kind": "git",
+      "value": "8df4ab6551ea331d6c3f0c9b0b11fcb21e82f850"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://github.com/winsiderss/systeminformer",
+    "rights": "Third-party material retains its own rights; citation, metadata and original paraphrases only.",
+    "limitations": [
+      "The README states the intended trust model; it is not an independent security audit or a claim that every historical Process Hacker driver has that model."
+    ]
+  },
+  {
+    "id": "src-ref-ksi-package",
+    "title": "KSystemInformer.inf — kernel package and architecture entries",
+    "url": "https://github.com/winsiderss/systeminformer/blob/8df4ab6551ea331d6c3f0c9b0b11fcb21e82f850/KSystemInformer/KSystemInformer.inf",
+    "publisher": "System Informer",
+    "accessed": "2026-10-16",
+    "provenance": "repository",
+    "revision": {
+      "kind": "git",
+      "value": "8df4ab6551ea331d6c3f0c9b0b11fcb21e82f850"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://github.com/winsiderss/systeminformer",
+    "rights": "Third-party material retains its own rights; citation, metadata and original paraphrases only.",
+    "limitations": [
+      "Package declarations do not identify an acquired sample or verify its signing/loading status."
+    ]
+  },
+  {
+    "id": "src-ref-x64dbg",
+    "title": "x64dbg — official project README",
+    "url": "https://github.com/x64dbg/x64dbg",
+    "publisher": "x64dbg project",
+    "accessed": "2026-10-16",
+    "provenance": "repository",
+    "revision": {
+      "kind": "unversioned",
+      "value": null
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://github.com/x64dbg/x64dbg",
+    "rights": "Third-party material retains its own rights; citation, metadata and original paraphrases only.",
+    "limitations": [
+      "The live README and project inventory were read. No release binary was downloaded, hashed, loaded or tested against an anti-cheat."
+    ]
+  },
+  {
+    "id": "src-ref-dbk-dispatch",
+    "title": "IOPLDispatcher.c — DBK capability routing and request checks",
+    "url": "https://github.com/cheat-engine/cheat-engine/blob/ec45d5f47f92a239ba0bf51ec5d04a7509c3fd37/DBKKernel/IOPLDispatcher.c",
+    "publisher": "Cheat Engine",
+    "accessed": "2026-10-16",
+    "provenance": "repository",
+    "revision": {
+      "kind": "git",
+      "value": "ec45d5f47f92a239ba0bf51ec5d04a7509c3fd37"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://github.com/cheat-engine/cheat-engine/blob/ec45d5f47f92a239ba0bf51ec5d04a7509c3fd37/DBKKernel/IOPLDispatcher.c",
+    "rights": "Third-party material retains its own rights; citation, metadata and original paraphrases only.",
+    "limitations": [
+      "Selected source dispatch branches were inspected; the backing memory-copy implementations and a compiled driver were not independently validated."
+    ]
+  },
+  {
+    "id": "src-ref-ksi-handlers",
+    "title": "System Informer communication handlers — capabilities and required client state",
+    "url": "https://github.com/winsiderss/systeminformer/blob/8df4ab6551ea331d6c3f0c9b0b11fcb21e82f850/KSystemInformer/comms_handlers.c",
+    "publisher": "System Informer",
+    "accessed": "2026-10-16",
+    "provenance": "repository",
+    "revision": {
+      "kind": "git",
+      "value": "8df4ab6551ea331d6c3f0c9b0b11fcb21e82f850"
+    },
+    "access": "available",
+    "transport": "direct",
+    "originId": "https://github.com/winsiderss/systeminformer",
+    "rights": "Third-party material retains its own rights; citation, metadata and original paraphrases only.",
+    "limitations": [
+      "The handler table and selected handlers were inspected. End-to-end message authorization, client-state establishment and runtime memory access were not exercised."
+    ]
+  }
+]

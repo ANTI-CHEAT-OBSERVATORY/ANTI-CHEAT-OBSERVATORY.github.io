@@ -1,0 +1,89 @@
+{
+  "id": "eac-linux-devirt",
+  "kind": "project",
+  "title": "EAC Linux devirtualization (plx.elf)",
+  "summary": "AI-assisted partial recovery of EAC Linux plx.elf with disputed output correctness. A public critique identifies issues in a recovered function; the repository's coverage and tests are author-reported, not independent semantic validation or evidence of a current bypass.",
+  "vendor": "Independent research (19h)",
+  "platforms": [
+    "Linux"
+  ],
+  "layers": [
+    "User mode",
+    "Research"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "devirtualization",
+    "Easy Anti-Cheat",
+    "Linux",
+    "VM handlers",
+    "static analysis",
+    "AI-assisted recovery",
+    "disputed correctness"
+  ],
+  "relatedIds": [
+    "easy-anti-cheat",
+    "eac-service",
+    "code-devirtualization",
+    "linux-proton-anticheat"
+  ],
+  "repoUrl": "https://github.com/19h/eac-linux-devirt",
+  "repoLicense": "Not stated",
+  "repoLanguage": "C",
+  "reviewedCommit": "10d67114e35c4504abee49915ab3940bc4e6987c",
+  "sections": [
+    {
+      "title": "Correction: partial recovery and disputed correctness",
+      "claimIds": [
+        "claim-eac-linux-devirt-01",
+        "claim-eac-linux-devirt-01-s01",
+        "claim-eac-linux-devirt-03-s02"
+      ]
+    },
+    {
+      "title": "What the project analyzes and publishes",
+      "claimIds": [
+        "claim-eac-linux-devirt-04",
+        "claim-eac-linux-devirt-05",
+        "claim-eac-pinned-stack-oracle",
+        "claim-eac-pinned-xmm",
+        "claim-eac-function-output-open"
+      ]
+    },
+    {
+      "title": "Author-reported measurements at the reviewed revision",
+      "claimIds": [
+        "claim-eac-linux-devirt-06",
+        "claim-eac-linux-devirt-07"
+      ]
+    },
+    {
+      "title": "Stated limits and unresolved recovery",
+      "claimIds": [
+        "claim-eac-linux-devirt-08",
+        "claim-eac-linux-devirt-09"
+      ]
+    },
+    {
+      "title": "Later upstream work is not a resolved-dispute finding",
+      "claimIds": [
+        "claim-eac-linux-devirt-10"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-031",
+    "src-032",
+    "src-033",
+    "src-034"
+  ],
+  "historical": false,
+  "buildIds": [
+    "build-eac-plx-reviewed",
+    "build-eac-plx-later",
+    "build-eac-plx-extracted"
+  ],
+  "mechanismIds": [
+    "eac-linux-recovery"
+  ]
+}

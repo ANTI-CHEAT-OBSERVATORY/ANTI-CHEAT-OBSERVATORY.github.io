@@ -1,0 +1,59 @@
+{
+  "id": "easy-anti-cheat",
+  "kind": "product",
+  "title": "Easy Anti-Cheat (Epic Online Services)",
+  "summary": "Epic's EOS Anti-Cheat interfaces couple a protected game client and launch bootstrapper with server or peer verification during multiplayer sessions. Platform modules, deployment and enforcement are configured per game, so integration is not equivalent to automatic protection.",
+  "vendor": "Epic Games",
+  "platforms": [
+    "Windows",
+    "Linux",
+    "macOS"
+  ],
+  "layers": [
+    "User mode",
+    "Server"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "EOS",
+    "game integration",
+    "session validation",
+    "platform-dependent"
+  ],
+  "relatedIds": [
+    "eac-bootstrapper",
+    "eac-service",
+    "process-integrity",
+    "server-authority"
+  ],
+  "sections": [
+    {
+      "title": "Protected session model",
+      "claimIds": [
+        "claim-easy-anti-cheat-01",
+        "claim-easy-anti-cheat-02"
+      ]
+    },
+    {
+      "title": "Deployment and lifecycle",
+      "claimIds": [
+        "claim-easy-anti-cheat-03",
+        "claim-easy-anti-cheat-04"
+      ]
+    },
+    {
+      "title": "Platform and authority boundaries",
+      "claimIds": [
+        "claim-easy-anti-cheat-05",
+        "claim-easy-anti-cheat-06"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-030",
+    "src-019"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

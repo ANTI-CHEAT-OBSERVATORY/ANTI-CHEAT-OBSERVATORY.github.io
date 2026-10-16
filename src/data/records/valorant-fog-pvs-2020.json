@@ -1,0 +1,61 @@
+{
+  "id": "valorant-fog-pvs-2020",
+  "kind": "component",
+  "title": "VALORANT Fog of War visibility PVS (2020)",
+  "summary": "Riot’s original engineering account explains server-side relevancy filtering using precomputed potentially visible cell sets and eventual state catch-up, while acknowledging intentional optimistic visibility. Not equivalent to perfect secrecy.",
+  "vendor": "Riot Games",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Server",
+    "User mode"
+  ],
+  "historical": false,
+  "updated": "2026-10-16",
+  "tags": [
+    "VALORANT",
+    "Fog of War",
+    "network relevancy"
+  ],
+  "relatedIds": [
+    "server-authority"
+  ],
+  "sourceIds": [
+    "src-050"
+  ],
+  "buildIds": [],
+  "mechanismIds": [],
+  "sections": [
+    {
+      "title": "Prototyping",
+      "claimIds": [
+        "claim-exp-valorant-fog-pvs-2020-01"
+      ]
+    },
+    {
+      "title": "Server-Side Occlusion Culling",
+      "claimIds": [
+        "claim-exp-valorant-fog-pvs-2020-02"
+      ]
+    },
+    {
+      "title": "Attempt #2",
+      "claimIds": [
+        "claim-exp-valorant-fog-pvs-2020-03"
+      ]
+    },
+    {
+      "title": "Performance",
+      "claimIds": [
+        "claim-exp-valorant-fog-pvs-2020-04"
+      ]
+    },
+    {
+      "title": "Consistency & State Management",
+      "claimIds": [
+        "claim-exp-valorant-fog-pvs-2020-05"
+      ]
+    }
+  ]
+}

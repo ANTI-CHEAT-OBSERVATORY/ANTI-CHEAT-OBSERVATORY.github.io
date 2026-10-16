@@ -1,0 +1,56 @@
+{
+  "id": "battleye-client-emulation-2020",
+  "title": "BattlEye client emulation: a 2020 boundary-of-trust case study",
+  "summary": "vmcall's BottlEye write-up makes the game-to-anti-cheat client interface visible and argues that historical server exchanges could be satisfied without the expected local components. Its demonstrated outcomes are tied to 2020 integrations, not a general present-day bypass claim.",
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "category": "Reverse engineering",
+  "author": "Observatory editorial",
+  "productIds": [
+    "battleye"
+  ],
+  "relatedIds": [
+    "battleye-service",
+    "battleye-driver",
+    "process-integrity",
+    "server-authority"
+  ],
+  "tags": [
+    "BattlEye",
+    "BEClient",
+    "client-server trust",
+    "historical analysis"
+  ],
+  "takeaways": [
+    "BEClient is an integration boundary between the game and BattlEye; the article examines what server-visible communication demonstrated about local trust.",
+    "A historically accepted client exchange does not establish that the service or driver was authentic.",
+    "Game-specific protocol variations and subsequent changes prevent extrapolating the 2020 demonstration to current games."
+  ],
+  "sections": [
+    {
+      "title": "A different question from client scanning",
+      "claimIds": [
+        "claim-battleye-client-emulation-2020-02",
+        "claim-battleye-client-emulation-2020-01-s02"
+      ]
+    },
+    {
+      "title": "What the demonstration supports",
+      "claimIds": [
+        "claim-battleye-client-emulation-2020-03",
+        "claim-battleye-client-emulation-2020-04",
+        "claim-battleye-client-emulation-2020-03-s01"
+      ]
+    },
+    {
+      "title": "Version and integration caveats",
+      "claimIds": [
+        "claim-battleye-client-emulation-2020-05"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-053",
+    "src-008"
+  ]
+}

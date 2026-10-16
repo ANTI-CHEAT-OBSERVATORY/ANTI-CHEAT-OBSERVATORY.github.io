@@ -1,0 +1,72 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { records } from "../lib/catalog";
+import { sourcesByIds } from "../lib/knowledge";
+import { withBase } from "../lib/paths";
+import type { CatalogRecord } from "../lib/knowledge-types";
+
+const groups: { id: string; title: string; description: string; records: CatalogRecord[] }[] = [
+  { id: "native-interfaces", title: "Native & undocumented interfaces", description: "Memory, process, thread and instrumentation contracts. Documentation status applies to the specific interface or selector—not every function in the same family.", records: [] },
+  { id: "research-binaries", title: "Binaries & research tooling", description: "Publicly described anti-cheat binaries, analysis targets and research tools. A tool's capabilities do not establish access to a protected game or successful anti-cheat evasion.", records: [] },
+  { id: "drivers", title: "Drivers & disclosed samples", description: "Anti-cheat components, dual-use diagnostic drivers and historical vulnerability disclosures. Their different roles and trust boundaries stay separate.", records: [] },
+];
+for (const record of records) {
+  if (record.tags.includes("dual-use-driver") || record.tags.includes("vulnerable-driver") || record.tags.includes("anti-cheat-driver")) groups[2].records.push(record);
+  else if (record.tags.includes("research-binary")) groups[1].records.push(record);
+  else if (record.tags.includes("native-api") || record.tags.includes("undocumented-api")) groups[0].records.push(record);
+}
+const entryCount = groups.reduce((count, group) => count + group.records.length, 0);
+const context = (record: CatalogRecord) => {
+  if (record.tags.includes("vulnerable-driver")) return "Historical disclosure";
+  if (record.tags.includes("anti-cheat-driver")) return "Anti-cheat driver";
+  if (record.tags.includes("dual-use-driver")) return "Dual-use research driver";
+  if (record.tags.includes("research-binary")) return record.tags.includes("platform-reference") || record.kind === "project" ? "Research tool / plugin" : "Published analysis target";
+  if (record.tags.includes("undocumented-api")) return "Undocumented interface / selector";
+  if (record.tags.includes("partially-documented-api")) return "Partially documented Native API";
+  return "Documented platform interface";
+};
+---
+<Layout title="APIs, binaries & drivers" active="research" description="Source-backed Native interfaces, undocumented selectors, research tools, anti-cheat drivers and historical sample disclosures.">
+  <div class="page-container stack reference-page">
+    <header class="page-header editorial-header">
+      <p class="eyebrow">Technical reference / {entryCount} linked records</p>
+      <h1>APIs, binaries &amp; drivers</h1>
+      <p>Inspect the interfaces and artifacts that appear in anti-cheat analysis, game-security research and tooling. Each entry opens its technical breakdown, passage-level evidence and applicability limits.</p>
+      <p class="muted">A Windows reference is not automatically an anti-cheat implementation detail. A powerful driver is not automatically vulnerable. Historical findings do not establish current bypasses.</p>
+    </header>
+    <nav class="secondary-navigation panel" aria-label="API and artifact reference sections">
+      {groups.map((group) => <a href={`#${group.id}`}>{group.title} ({group.records.length})</a>)}
+      <a href="#sample-provenance">Samples &amp; leaks</a>
+      <a href={withBase("/research")}>Research notes</a>
+    </nav>
+    {groups.map((group) => <section id={group.id} class="stack">
+      <div><h2>{group.title}</h2><p class="muted">{group.description}</p></div>
+      <div class="table-wrap" role="region" tabindex="0" aria-label={`Scrollable ${group.title.toLowerCase()}`}>
+        <table class="data-table reference-table">
+          <caption class="sr-only">{group.title}: scope, provenance and technical evidence</caption>
+          <thead><tr><th scope="col">Interface / artifact</th><th scope="col">Role / contract</th><th scope="col">Documented scope</th><th scope="col">Original evidence</th></tr></thead>
+          <tbody>{group.records.map((record) => <tr>
+            <th scope="row"><a href={withBase(`/records/${record.id}`)}>{record.title}</a><small class="table-summary muted">{record.vendor}</small>{record.filenames && record.filenames.length > 0 && <small class="table-summary mono">{record.filenames.join(" · ")}</small>}</th>
+            <td class="small">{context(record)}<small class="table-summary muted">{record.layers.join(" · ")}</small></td>
+            <td class="small">{record.summary}<small class="table-summary muted">Reviewed <time datetime={record.updated}>{record.updated}</time></small></td>
+            <td class="small"><ul class="reference-sources">{sourcesByIds(record.sourceIds).map((source) => <li><a href={source.url} target="_blank" rel="noopener noreferrer">{source.title} ↗</a><small class="table-summary muted">{source.publisher} · {source.provenance}{source.access !== "available" && ` · ${source.access}`}{source.transport === "mirror" && " · mirror"}</small></li>)}</ul><a href={withBase(`/records/${record.id}#record-findings`)}>Technical claims &amp; limits →</a></td>
+          </tr>)}</tbody>
+        </table>
+      </div>
+    </section>)}
+    <section id="sample-provenance" class="panel">
+      <h2>Samples, disclosures &amp; leaks</h2>
+      <p>Use the original publication, advisory or sample-provenance record to identify what was actually examined. A filename, signature or archive described as a “leak” does not establish an exact version, redistribution rights or present-day exploitability.</p>
+      <p>Links here lead to public research, source repositories and provenance records—not unverified binary mirrors. Source-reported hashes remain distinct from project-computed hashes; unacquired samples stay unacquired. Driver packaging and source code are not substitutes for inspection of a matching binary.</p>
+      <p><a href={withBase("/catalog?kind=finding")}>Browse historical disclosures</a> · <a href={withBase("/research#source-library")}>Inspect the source library</a> · <a href={withBase("/methodology#limits")}>Read the evidence limits</a></p>
+    </section>
+  </div>
+</Layout>
+<style>
+  .reference-page > .page-header { max-width: 82ch; }
+  .reference-table { min-width: 850px; }
+  .reference-table th:first-child { width: 23%; }
+  .reference-table td:nth-child(2) { width: 16%; }
+  .reference-table td:nth-child(3) { width: 34%; }
+  .reference-sources { display: grid; gap: .65rem; padding-left: 1rem; margin: 0 0 1rem; }
+</style>

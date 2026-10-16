@@ -1,0 +1,88 @@
+[
+  {
+    "id": "edge-eac-linux-recovery",
+    "fromId": "easy-anti-cheat",
+    "toId": "eac-linux-recovery",
+    "type": "examines",
+    "claimIds": [
+      "claim-eac-linux-devirt-04"
+    ],
+    "description": "The cited eac-linux-devirt account examines this mechanism for easy-anti-cheat; the edge does not assert current deployment or independent reproduction."
+  },
+  {
+    "id": "edge-ironshield-tvk-auth",
+    "fromId": "ironshield",
+    "toId": "ironshield-tvk-auth",
+    "type": "examines",
+    "claimIds": [
+      "claim-ironshield-tvk-ioctl-authorization-01",
+      "claim-ironshield-tvk-ioctl-authorization-04"
+    ],
+    "description": "The cited ironshield-tvk-ioctl-authorization account examines this mechanism for ironshield; the edge does not assert current deployment or independent reproduction."
+  },
+  {
+    "id": "edge-battleye-client-report",
+    "fromId": "battleye",
+    "toId": "battleye-client-report",
+    "type": "examines",
+    "claimIds": [
+      "claim-battleye-client-01",
+      "claim-battleye-client-02"
+    ],
+    "description": "The cited battleye-client account examines this mechanism for battleye; the edge does not assert current deployment or independent reproduction."
+  },
+  {
+    "id": "edge-vanguard-boot",
+    "fromId": "vanguard",
+    "toId": "vanguard-boot",
+    "type": "examines",
+    "claimIds": [
+      "claim-vanguard-driver-01",
+      "claim-vanguard-driver-02"
+    ],
+    "description": "The cited vanguard-driver account examines this mechanism for vanguard; the edge does not assert current deployment or independent reproduction."
+  },
+  {
+    "id": "edge-faceit-client",
+    "fromId": "faceit",
+    "toId": "faceit-client",
+    "type": "examines",
+    "claimIds": [
+      "claim-faceit-client-02",
+      "claim-faceit-client-03"
+    ],
+    "description": "The cited faceit-client account examines this mechanism for faceit; the edge does not assert current deployment or independent reproduction."
+  },
+  {
+    "id": "edge-ricochet-driver",
+    "fromId": "ricochet",
+    "toId": "ricochet-driver",
+    "type": "examines",
+    "claimIds": [
+      "claim-ricochet-driver-02",
+      "claim-ricochet-driver-01"
+    ],
+    "description": "The cited ricochet-driver account examines this mechanism for ricochet; the edge does not assert current deployment or independent reproduction."
+  },
+  {
+    "id": "edge-javelin-service",
+    "fromId": "ea-javelin",
+    "toId": "javelin-service",
+    "type": "examines",
+    "claimIds": [
+      "claim-ea-javelin-service-01",
+      "claim-ea-javelin-service-03"
+    ],
+    "description": "The cited ea-javelin-service account examines this mechanism for ea-javelin; the edge does not assert current deployment or independent reproduction."
+  },
+  {
+    "id": "edge-ace-base-access",
+    "fromId": "anti-cheat-expert",
+    "toId": "ace-base-access",
+    "type": "examines",
+    "claimIds": [
+      "claim-ace-base-vulnerability-01"
+    ],
+    "description": "The cited ace-base-vulnerability account examines this mechanism for anti-cheat-expert; the edge does not assert current deployment or independent reproduction."
+  }
+]

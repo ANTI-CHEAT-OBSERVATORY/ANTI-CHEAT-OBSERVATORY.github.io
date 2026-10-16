@@ -1,0 +1,67 @@
+{
+  "id": "equ8-kernel-2021",
+  "title": "EQU8 in 2021: a small kernel driver with a privileged control plane",
+  "summary": "A close reading of the original EQU8 driver teardown separates sample provenance, service-to-driver control, process protection and callback telemetry. The 2021 account does not measure subsequent versions or server enforcement.",
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "category": "Kernel research",
+  "author": "Observatory editorial",
+  "productIds": [
+    "equ8-2021"
+  ],
+  "relatedIds": [
+    "equ8-2021",
+    "equ8-helper-36",
+    "equ8-session-device",
+    "equ8-handle-callbacks",
+    "equ8-etw-handle-log"
+  ],
+  "tags": [
+    "EQU8",
+    "object callbacks",
+    "historical research"
+  ],
+  "takeaways": [
+    "The driver path and size characterize one installed sample, not every EQU8 release.",
+    "A privilege-gated device CREATE and IOCTL control path are distinct from the callback that reduces process/thread handle access.",
+    "The bounded callback log proves a reported collection path, not a ban decision or full kernel adversary coverage."
+  ],
+  "sourceIds": [
+    "src-exp-equ8-analysis"
+  ],
+  "sections": [
+    {
+      "title": "The sample and installation context",
+      "claimIds": [
+        "claim-exp-equ8-2021-01",
+        "claim-exp-equ8-2021-02",
+        "claim-exp-equ8-2021-03",
+        "claim-exp-equ8-helper-36-01",
+        "claim-exp-equ8-helper-36-02",
+        "claim-exp-equ8-helper-36-03"
+      ]
+    },
+    {
+      "title": "Who can control protection",
+      "claimIds": [
+        "claim-exp-equ8-session-device-01",
+        "claim-exp-equ8-session-device-02",
+        "claim-exp-equ8-session-device-03",
+        "claim-exp-equ8-session-device-04",
+        "claim-exp-equ8-handle-callbacks-01",
+        "claim-exp-equ8-handle-callbacks-02",
+        "claim-exp-equ8-handle-callbacks-03",
+        "claim-exp-equ8-handle-callbacks-04"
+      ]
+    },
+    {
+      "title": "Tracing, event collection and limits",
+      "claimIds": [
+        "claim-exp-equ8-etw-handle-log-01",
+        "claim-exp-equ8-etw-handle-log-02",
+        "claim-exp-equ8-etw-handle-log-03",
+        "claim-exp-equ8-etw-handle-log-04"
+      ]
+    }
+  ]
+}

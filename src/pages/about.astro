@@ -1,0 +1,55 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { withBase, repositoryUrl } from "../lib/paths";
+---
+
+<Layout title="About" active="about" description="Purpose, scope, evidence standards, corrections and publishing terms for Anti-Cheat Observatory.">
+  <div class="page-container editorial-page" data-pagefind-body>
+    <header class="page-header editorial-header">
+      <p class="eyebrow">About this reference</p>
+      <h1>Anti-Cheat Observatory</h1>
+      <p>A selected, public-source reference to anti-cheat systems, components and security research. Its job is to make the evidence and its limits easier to inspect—not to rank products or certify defenses. Historical findings are not advertised as working bypasses.</p>
+    </header>
+
+    <div class="editorial-body">
+      <section id="scope">
+        <h2>Purpose and scope</h2>
+        <p>The <a href={withBase("/")}>catalog</a> connects system dossiers, technical claims, research notes and source records. The <a href={withBase("/reference")}>APIs &amp; binaries reference</a> groups documented and undocumented interfaces, research binaries and drivers by their catalog tags. Inclusion describes cited research or relevant interfaces, not ownership by an anti-cheat vendor, use in a particular deployment or effectiveness against a product.</p>
+        <p>This is a curated selection, not an exhaustive system inventory or live status monitor. A missing item means the reference has not established it; it does not prove the capability or behavior is absent.</p>
+      </section>
+
+      <section id="evidence">
+        <h2>Evidence standard</h2>
+        <p>Substantive claims should identify a source and precise passage, the observation or inference it supports, applicable build or environment where known, and the limits of that support. The <a href={withBase("/methodology")}>methodology</a> distinguishes provenance, review activity and claim state; contextual citations do not independently corroborate a statement.</p>
+        <p>Reading a source establishes what that source reports. It is not inspection of an identified binary, independent runtime reproduction or confirmation of current deployment. Source-reported versions and hashes are not project-computed measurements. Contradictions and unknowns remain visible rather than being resolved by assumption.</p>
+      </section>
+
+      <section id="research">
+        <h2>Research versus discovery</h2>
+        <p>Reviewed research records summarize accessible evidence with attribution, scope and explicit limitations. Discovery entries collect leads from public feeds, repository activity or indexes for possible later review. An item appearing in the <a href={withBase("/updates")}>updates</a> stream does not mean its underlying article, code or artifact has been inspected, nor does a metadata change establish that a product changed. Review and publication are separate steps.</p>
+      </section>
+
+      <section id="history">
+        <h2>Historical and build limits</h2>
+        <p>Reports about a particular version, build or historical incident stay bounded to that context. Product families and deployed configurations change; a past vulnerability does not establish current exposure, and a past observation is not evidence of an active bypass. Unspecified versions stay unspecified. Compare the cited source, its review date and the claim's applicability before drawing conclusions about a different environment.</p>
+      </section>
+
+      <section id="corrections">
+        <h2>Corrections and contributions</h2>
+        <p>If a citation, scope or interpretation is wrong, identify the affected record and claim, the exact source passage or counterevidence, and the version or environment to which the correction applies. The <a href={withBase("/publishing")}>publishing workspace</a> prepares an attributed proposal for local import; it does not submit or publish directly. Corrections should preserve the trace of earlier claims and their disputes rather than silently rewriting history.</p>
+        {repositoryUrl && <p>To propose a change, <a href={`${repositoryUrl}/issues`} rel="noopener noreferrer">open a repository issue</a> or <a href={`${repositoryUrl}/pulls`} rel="noopener noreferrer">submit a pull request</a>. Do not include private telemetry, personal information, proprietary binaries or exploit payloads. For an undisclosed vulnerability, use the affected vendor's security reporting process first.</p>}
+      </section>
+
+      <section id="publishing">
+        <h2>Updates and publication</h2>
+        <p>The site is statically built with Astro for hosting on GitHub Pages; browsing it does not require an account or backend. Catalog edits are made in the repository, reviewed through its Git-backed workflow and published when the Pages workflow builds and deploys the default branch. The <a href={withBase("/updates")}>updates page</a> separates newly discovered source metadata from reviewed editorial material; publication is not a guarantee that third-party links remain accessible or that a claim still applies to current builds.</p>
+        {repositoryUrl && <p><a href={repositoryUrl} rel="noopener noreferrer">Browse the repository</a> · <a href={`${repositoryUrl}/actions/workflows/pages.yml`} rel="noopener noreferrer">View the Pages publishing workflow</a></p>}
+      </section>
+
+      <section id="rights">
+        <h2>Code and content rights</h2>
+        <p>Application code, templates, schemas and configuration are licensed under <a href={repositoryUrl ? `${repositoryUrl}/blob/HEAD/LICENSE` : "https://opensource.org/license/mit"} rel="noopener noreferrer">MIT</a>. Original editorial prose and curated catalog data are licensed under <a href={repositoryUrl ? `${repositoryUrl}/blob/HEAD/LICENSE-CONTENT` : "https://creativecommons.org/licenses/by/4.0/"} rel="noopener noreferrer">CC BY 4.0</a>. Third-party publications, code, excerpts and artifacts retain their own rights; linking or quoting them does not relicense them. Vendor names identify their owners, not endorsements.</p>
+      </section>
+    </div>
+  </div>
+</Layout>

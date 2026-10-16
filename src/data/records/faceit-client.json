@@ -1,0 +1,53 @@
+{
+  "id": "faceit-client",
+  "kind": "component",
+  "title": "FACEIT Anti-Cheat app",
+  "summary": "FACEIT identifies a client app required for protected Counter-Strike 2 matches, alongside a boot-loaded kernel driver and a server-side SDK. It describes game-time collection and driver tray controls as separate lifecycle properties.",
+  "vendor": "FACEIT",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "app",
+    "Counter-Strike 2",
+    "match validation"
+  ],
+  "relatedIds": [
+    "faceit",
+    "faceit-driver",
+    "server-authority"
+  ],
+  "sections": [
+    {
+      "title": "Match participation",
+      "claimIds": [
+        "claim-faceit-client-01"
+      ]
+    },
+    {
+      "title": "Activation and collection",
+      "claimIds": [
+        "claim-faceit-client-02"
+      ]
+    },
+    {
+      "title": "Deployment bounds",
+      "claimIds": [
+        "claim-faceit-client-03"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-036",
+    "src-037"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": [
+    "faceit-client-lifecycle"
+  ]
+}

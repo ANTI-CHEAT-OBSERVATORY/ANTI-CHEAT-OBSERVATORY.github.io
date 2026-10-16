@@ -1,0 +1,62 @@
+{
+  "id": "server-authority",
+  "kind": "technique",
+  "title": "Server authority and game-state validation",
+  "summary": "An authoritative server decides consequential game state rather than accepting the client as the source of truth. It can reject impossible movement or combat outcomes but still must address information exposure, rule bugs and plausible automated input.",
+  "vendor": "Cross-vendor",
+  "platforms": [
+    "Cross-platform"
+  ],
+  "layers": [
+    "Server",
+    "User mode"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "server authority",
+    "game state",
+    "network validation",
+    "information exposure"
+  ],
+  "relatedIds": [
+    "easy-anti-cheat",
+    "vanguard",
+    "input-automation",
+    "dma",
+    "process-integrity"
+  ],
+  "sections": [
+    {
+      "title": "The authority boundary",
+      "claimIds": [
+        "claim-server-authority-01"
+      ]
+    },
+    {
+      "title": "What is actually validated",
+      "claimIds": [
+        "claim-server-authority-02"
+      ]
+    },
+    {
+      "title": "Deployment limits",
+      "claimIds": [
+        "claim-server-authority-04"
+      ]
+    },
+    {
+      "title": "Reduce what the client can know",
+      "claimIds": [
+        "claim-server-authority-03-s01"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-019",
+    "src-041",
+    "src-050"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

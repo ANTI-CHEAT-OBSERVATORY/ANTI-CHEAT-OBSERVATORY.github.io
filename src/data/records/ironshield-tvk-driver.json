@@ -1,0 +1,77 @@
+{
+  "id": "ironshield-tvk-driver",
+  "kind": "component",
+  "title": "tvk.sys — Ironshield kernel driver",
+  "summary": "The kernel-mode driver through which Ironshield's user-mode client applies policy. A public static analysis documents its service configuration, encrypted IOCTL transport, client authorization, process and thread handle filtering, a DLL-blocking minifilter, an AVL process path-hash cache, dynamic API resolution and an encrypted logging code path whose runtime initialization was not found in the analyzed build.",
+  "vendor": "IRONMACE Co., Ltd.",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "tvk.sys",
+    "kernel driver",
+    "handle filtering",
+    "minifilter",
+    "IOCTL",
+    "anti-cheat-driver"
+  ],
+  "filenames": [
+    "tvk.sys"
+  ],
+  "affectedVersions": "Analysis describes driver version 1.0.0.165 and a September 17 build identified as 1.0.0.167; other versions are not established.",
+  "relatedIds": [
+    "ironshield",
+    "ironshield-tvk-ioctl-authorization",
+    "ironshield-analysis",
+    "handle-access-filtering",
+    "image-load-filtering",
+    "driver-transport-encryption",
+    "driver-attack-surface"
+  ],
+  "sections": [
+    {
+      "title": "Initialization and identity",
+      "claimIds": [
+        "claim-ironshield-tvk-driver-01",
+        "claim-ironshield-tvk-driver-02"
+      ]
+    },
+    {
+      "title": "Policy, process tracking and filtering",
+      "claimIds": [
+        "claim-ironshield-tvk-driver-03",
+        "claim-ironshield-tvk-driver-04"
+      ]
+    },
+    {
+      "title": "Transport, strings and logging",
+      "claimIds": [
+        "claim-ironshield-tvk-driver-05",
+        "claim-ironshield-tvk-driver-06"
+      ]
+    },
+    {
+      "title": "Anti-analysis posture and open questions",
+      "claimIds": [
+        "claim-ironshield-tvk-driver-07",
+        "claim-iron-tvk-policy",
+        "claim-iron-tvk-config"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-023"
+  ],
+  "historical": false,
+  "buildIds": [
+    "build-ironshield-165",
+    "build-ironshield-167"
+  ],
+  "mechanismIds": [
+    "ironshield-tvk-auth"
+  ]
+}

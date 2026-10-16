@@ -1,0 +1,51 @@
+{
+  "id": "driver-client-authentication",
+  "kind": "technique",
+  "title": "Authenticating a user-mode client to a kernel driver",
+  "summary": "Before a kernel anti-cheat driver accepts commands, it has to establish that the caller is the game's own component rather than an arbitrary process. Certificate validation, protected process levels and broker designs are the documented approaches; substring checks and shared secrets embedded in code are the common shortcuts.",
+  "vendor": "Cross-vendor",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel",
+    "User mode"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "client authentication",
+    "code signing",
+    "certificate validation",
+    "trust boundary"
+  ],
+  "relatedIds": [
+    "ioctl-authorization",
+    "driver-attack-surface",
+    "protected-process-light",
+    "driver-transport-encryption",
+    "ironshield-tvk-ioctl-authorization"
+  ],
+  "sections": [
+    {
+      "title": "What signature checking does and does not prove",
+      "claimIds": [
+        "claim-driver-client-authentication-01"
+      ]
+    },
+    {
+      "title": "Documented shortcut and its consequences",
+      "claimIds": [
+        "claim-driver-client-authentication-03"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-021",
+    "src-022",
+    "src-006",
+    "src-023"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

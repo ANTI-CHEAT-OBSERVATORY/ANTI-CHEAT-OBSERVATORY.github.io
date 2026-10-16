@@ -1,0 +1,50 @@
+---
+import { withBase } from "../lib/paths";
+import { claimsForPost, sourcesForPost } from "../lib/knowledge";
+import type { ResearchPost } from "../lib/knowledge-types";
+interface Props {
+  post: ResearchPost;
+  featured?: boolean;
+}
+const { post, featured = false } = Astro.props;
+const sources = sourcesForPost(post.id);
+const claims = claimsForPost(post.id);
+const search = [
+  post.title,
+  post.summary,
+  ...post.takeaways,
+  ...post.tags,
+  ...claims.map((claim) => claim.statement),
+  ...sources.flatMap((source) => [source.title, source.publisher, source.author ?? ""]),
+].join(" ").normalize("NFKC").toLocaleLowerCase("en");
+---
+
+<article
+  class:list={["panel", "post-card", { featured }]}
+  data-post
+  data-category={post.category}
+  data-products={JSON.stringify(post.productIds)}
+  data-provenances={JSON.stringify([...new Set(sources.map((source) => source.provenance))])}
+  data-search={search}
+>
+  <div class="post-card-meta">
+    <span class="badge">{post.category}</span>
+    <time datetime={post.published}>{post.published}</time>
+  </div>
+  <h3><a href={withBase(`/blog/${post.id}`)}>{post.title}</a></h3>
+  <p>{post.summary}</p>
+  <p class="muted post-card-footer">
+    {claims.length} {claims.length === 1 ? "claim" : "claims"} · {sources.length} {sources.length === 1 ? "source" : "sources"}
+  </p>
+</article>
+
+<style>
+  .post-card { display: grid; gap: .65rem; align-content: start; }
+  .post-card h3, .post-card p { margin: 0; }
+  .post-card h3 { font-size: 1.08rem; line-height: 1.35; }
+  .post-card a { color: inherit; }
+  .post-card a:hover { color: var(--accent, #39b9d1); }
+  .post-card-meta { display: flex; align-items: center; flex-wrap: wrap; justify-content: space-between; gap: .4rem; font-size: .82rem; }
+  .post-card-footer { font-size: .82rem; }
+  [hidden] { display: none !important; }
+</style>

@@ -1,0 +1,58 @@
+{
+  "id": "protected-process-light",
+  "kind": "technique",
+  "title": "Protected process light and anti-cheat clients",
+  "summary": "Protected process levels use code integrity to restrict which signed code can load into a process and block injection and memory writes from ordinary processes. Anti-malware vendors opt in through an ELAM driver; game anti-cheat has used the same mechanism to protect its game client.",
+  "vendor": "Microsoft / cross-vendor",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel",
+    "User mode"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "protected process light",
+    "ELAM",
+    "code integrity",
+    "injection resistance"
+  ],
+  "relatedIds": [
+    "process-integrity",
+    "handle-access-filtering",
+    "runtime-driver-attestation",
+    "vanguard",
+    "driver-client-authentication"
+  ],
+  "sections": [
+    {
+      "title": "How the protection is established",
+      "claimIds": [
+        "claim-protected-process-light-01",
+        "claim-protected-process-light-02"
+      ]
+    },
+    {
+      "title": "The guarantees it provides",
+      "claimIds": [
+        "claim-protected-process-light-03",
+        "claim-protected-process-light-04"
+      ]
+    },
+    {
+      "title": "Use in game anti-cheat",
+      "claimIds": [
+        "claim-protected-process-light-05",
+        "claim-protected-process-light-06"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-044",
+    "src-013"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

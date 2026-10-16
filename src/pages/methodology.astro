@@ -1,0 +1,114 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { withBase } from "../lib/paths";
+---
+
+<Layout title="Research methodology" active="research" description="Definitions of source provenance, review activity, claim state, applicability, discovery and rights for the anti-cheat research reference.">
+  <div class="page-container method-page" data-pagefind-body>
+    <header class="page-header">
+      <p class="muted">Reading the evidence</p>
+      <h1>Methodology &amp; limits</h1>
+      <p>This is a selected, version-scoped research reference, not a bypass service, security certification or complete inventory of deployed products. Claims remain attached to specific citations and their limits.</p>
+    </header>
+
+    <nav class="panel method-nav" aria-label="On this page">
+      <a href="#evidence">Evidence dimensions</a><a href="#provenance">Provenance</a><a href="#review">Review</a><a href="#state">Claim state</a><a href="#research">Research process</a><a href="#limits">Inference limits</a><a href="#publication">Publication</a><a href="#rights">Rights</a>
+    </nav>
+
+    <section id="evidence" class="panel">
+      <h2>Three independent dimensions</h2>
+      <p><strong>Provenance</strong> says where an assertion originated; <strong>review activity</strong> says what evidence was actually inspected or tested; <strong>claim state</strong> says how an assertion stands against the available evidence. Neither a prestigious publisher nor a reproduced behavior automatically makes a broader interpretation correct. A disputed statement can be well sourced; a vendor statement can be accurately attributed without being independently tested.</p>
+      <p>Each claim also carries a <strong>kind</strong> (observation, inference, guidance or unknown), applicability, review date, limitations and citation locators. Scope applies to the claim, not every version of a system. A citation relation distinguishes support, contradiction and context; context alone does not corroborate. Source availability, retrieval transport and immutable revision identity are recorded separately.</p>
+    </section>
+
+    <section id="provenance" class="panel">
+      <h2>Source provenance: who supplied the material?</h2>
+      <div class="table-wrap"><table class="data-table">
+        <thead><tr><th scope="col">Label</th><th scope="col">Meaning, not a guarantee</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Vendor</th><td>Product developer or operator describes its own implementation, policy or response. Attribution is not independent efficacy testing.</td></tr>
+          <tr><th scope="row">Publication</th><td>Published third-party reporting or technical analysis; its own methods and version scope still matter.</td></tr>
+          <tr><th scope="row">Repository</th><td>Project code or documentation; a commit identifies a revision, not proof of what the code does in a deployed environment.</td></tr>
+          <tr><th scope="row">Community</th><td>Public user or community report; useful as a lead, not independently corroborated by popularity.</td></tr>
+          <tr><th scope="row">Academic</th><td>Scholarly research, subject to the paper's assumptions, experiments and publication date.</td></tr>
+          <tr><th scope="row">Disclosure</th><td>Advisory or disclosed issue; affected versions, remediation and present-day exposure must be checked separately.</td></tr>
+          <tr><th scope="row">Unverified</th><td>Origin or identity not sufficiently established; do not promote to a confirmed observation.</td></tr>
+        </tbody>
+      </table></div>
+      <p>A source records publisher, access date, origin, publication date where known, revision (<span class="mono">git</span>, publication revision or explicitly unversioned), access (<span class="mono">available</span>, <span class="mono">blocked</span>, <span class="mono">not-retrieved</span>), transport (<span class="mono">direct</span>, <span class="mono">mirror</span>, <span class="mono">index-only</span>), rights and limitations. A mirror or index snippet does not silently become the original publication.</p>
+    </section>
+
+    <section id="review" class="panel">
+      <h2>Review activity: what was done?</h2>
+      <dl class="definitions">
+        <div><dt>Collected</dt><dd>Identified and cataloged a source or claim; no source inspection or experiment is implied.</dd></div>
+        <div><dt>Source-inspected</dt><dd>Read the cited source in its available form. This establishes what that source says, not independent truth or reproduction.</dd></div>
+        <div><dt>Artifact-inspected</dt><dd>Inspected an identified artifact under the documented scope. A filename or source-reported hash alone is not artifact inspection.</dd></div>
+        <div><dt>Behavior-reproduced</dt><dd>A bounded behavior was actually exercised with recorded environment, inputs, observed result, authority and limitations in a validation record. A source author's reported test and Observatory observation must remain distinct.</dd></div>
+      </dl>
+      <p>Validation records attribute who performed an activity, whether its result was merely reported or observed, and whether the outcome passed, failed or was inconclusive. Do not infer an Observatory reproduction from a third-party assertion or a project's README.</p>
+    </section>
+
+    <section id="state" class="panel">
+      <h2>Claim state: what follows from the evidence?</h2>
+      <dl class="definitions">
+        <div><dt>Asserted</dt><dd>A statement is attributed, but not yet independently corroborated on its stated scope.</dd></div>
+        <div><dt>Corroborated</dt><dd>Independent supporting material exists for the specific scoped assertion; this does not prove all versions or related assertions.</dd></div>
+        <div><dt>Disputed</dt><dd>A substantive conflicting account remains unresolved. Keep both the challenge and supporting evidence visible.</dd></div>
+        <div><dt>Refuted</dt><dd>The stated claim is contradicted by stronger scoped evidence; retain its history rather than silently deleting it.</dd></div>
+        <div><dt>Superseded</dt><dd>A newer scoped claim replaces it; the older claim remains traceable and is not automatically false for its historical context.</dd></div>
+      </dl>
+      <p>Claims may link explicit contradictions, supersessions, corrections and validation records. A later repository commit, GitHub stars, source accessibility, or a period without enforcement cannot resolve a dispute on its own.</p>
+    </section>
+
+    <section id="research" class="panel">
+      <h2>Research process</h2>
+      <ol>
+        <li><strong>Identify scope:</strong> product, component, environment, version/build where known, and the specific research question. A filename alone is not sample identity; a source-reported hash is not a project-computed hash.</li>
+        <li><strong>Attribute:</strong> link each material claim to a global source, precise locator and its supporting, contradicting or contextual role. Record missing access and unversioned material honestly.</li>
+        <li><strong>Separate:</strong> keep direct observations, inferences, guidance and unknowns distinct. Record prerequisites, limitations and counterevidence before drawing a conclusion.</li>
+        <li><strong>Validate when possible:</strong> authorized reproduction requires a bounded environment, identifiable inputs and outputs, outcome and performer. Lack of reproduction stays visible.</li>
+        <li><strong>Maintain:</strong> record corrections, disputes and newer evidence without rewriting a historical observation into a current deployment claim.</li>
+      </ol>
+      <p>Discovery items are leads from third-party metadata, not automatically reviewed claims. Retrieval failures do not erase previously collected data; upstream repository drift does not advance a reviewed commit or establish an implementation change.</p>
+    </section>
+
+    <section id="limits" class="panel">
+      <h2>Inference limits</h2>
+      <ul>
+        <li>A legitimate vulnerable driver is not automatically malware; successful driver loading does not establish anti-cheat evasion.</li>
+        <li>An import, filename or mention of a technique is not evidence of runtime behavior or a tested attack path.</li>
+        <li>A past vulnerability does not establish current exposure; a vendor defense description does not establish comprehensive coverage.</li>
+        <li>Absence of a ban does not demonstrate absence of detection; enforcement may be delayed.</li>
+        <li>Kernel execution is not arbitrary control across all trust boundaries. Code virtualization and hypervisor virtualization are different topics.</li>
+        <li>A missing dossier aspect or matrix mark means insufficient catalog coverage, never proof that a feature or boundary is absent.</li>
+      </ul>
+      <p><a href={withBase("/coverage")}>Inspect dossier gaps</a> · <a href={withBase("/matrix")}>Browse the trust boundary map</a></p>
+    </section>
+
+    <section id="publication" class="panel">
+      <h2>Publication boundary</h2>
+      <p>Publish architecture, root causes, scope, historical incidents, open questions and defensive lessons. Do not publish proprietary driver binaries, ready-to-run cheats, bypass payloads, secrets, private telemetry or personal information. Undisclosed vulnerabilities belong in the affected vendor's security reporting process before public discussion; no response is not evidence of a fix. Blocking a driver can disrupt legitimate devices and is not a universal defense.</p>
+    </section>
+
+    <section id="rights" class="panel">
+      <h2>Provenance &amp; rights</h2>
+      <p>Summaries and citation links do not grant permission to copy or redistribute third-party publications, software, screenshots or binaries. Source rights are recorded alongside access and transport; original publisher terms still apply. Vendor names and trademarks identify their owners; this independent project is not endorsed by the vendors or linked projects. Public access to the data export is not a blanket license over linked artifacts. Consult the repository's current license terms before redistributing project content.</p>
+      <p>This project's application code is licensed under <a href="https://opensource.org/license/mit" rel="noopener noreferrer">MIT</a>; its original written content and catalog data are licensed under <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener noreferrer">CC BY 4.0</a>. Repository files <code>LICENSE</code> and <code>LICENSE-CONTENT</code> define that separation. These grants do not relicense linked third-party works or attributed excerpts.</p>
+      <p>The approach draws inspiration from <a href="https://lolbas-project.github.io/" rel="noopener noreferrer">LOLBAS</a>, <a href="https://www.loldrivers.io/" rel="noopener noreferrer">LOLDrivers</a> and <a href="https://malapi.io/" rel="noopener noreferrer">MalAPI</a>; none is an endorsement or evidence about a particular anti-cheat.</p>
+      <a class="button" href={withBase("/data")}>Explore versioned data exports</a>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .method-page { display: grid; gap: 1.25rem; }
+  .page-header { display: block; margin-bottom: 0; }
+  .method-nav { display: flex; flex-wrap: wrap; gap: .4rem 1rem; }
+  .definitions { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: .75rem 1.5rem; }
+  .definitions div { padding-bottom: .75rem; border-bottom: 1px solid var(--border); }
+  .definitions dt { font-weight: 700; }
+  .definitions dd { margin: .15rem 0 0; }
+  section { scroll-margin-top: 5rem; }
+  section p:last-child, section ul:last-child, section ol:last-child { margin-bottom: 0; }
+</style>

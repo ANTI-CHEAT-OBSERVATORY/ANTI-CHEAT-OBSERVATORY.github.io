@@ -1,0 +1,155 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { records } from "../lib/catalog";
+import { postCategories } from "../lib/research";
+import { sources, builds, mechanisms } from "../lib/knowledge";
+import { provenanceKinds } from "../lib/knowledge-types";
+import { withBase } from "../lib/paths";
+
+const products = records.filter((record) => record.kind === "product");
+const studies = records.filter((record) => record.kind !== "product");
+---
+
+<Layout title="Publishing workspace" active="research" description="Prepare an attributed, schema-checked research proposal for local import.">
+  <div class="page-container publishing-page">
+    <header class="page-header">
+      <h1>Prepare a research proposal</h1>
+      <p>Draft a source, attributed claims, and a research note in your browser. This page does not commit or publish files: download the proposal and import it in your local checkout.</p>
+    </header>
+    <div class="publishing-layout">
+      <form id="publication-form">
+        <fieldset class="panel stack">
+          <legend>1 · Note</legend>
+          <div class="grid two">
+            <label class="field">Title <input name="title" id="publication-title" required minlength="8" placeholder="A precise research title" /></label>
+            <label class="field">New post ID <input name="id" id="publication-id" required pattern="[a-z0-9]+(-[a-z0-9]+)*" placeholder="research-note-id" /><small>New, stable lowercase URL slug.</small></label>
+            <label class="field">Published <input name="published" type="date" required /></label>
+            <label class="field">Category <select name="category">{postCategories.map((category) => <option value={category}>{category}</option>)}</select></label>
+          </div>
+          <label class="field">Summary <textarea name="summary" rows="3" minlength="60" required placeholder="What was reported, by whom, and within what scope?"></textarea></label>
+          <div class="grid two">
+            <label class="field">Tags <input name="tags" required placeholder="driver analysis, integrity" /><small>Comma separated.</small></label>
+            <label class="field">Takeaways <textarea name="takeaways" rows="3" required placeholder="At least two original, attributed takeaways; one per line"></textarea><small>At least two complete statements, one per line.</small></label>
+          </div>
+          <fieldset class="selection"><legend>Related products / systems</legend><div class="checks">{products.map((record) => <label><input name="products" type="checkbox" value={record.id} /> {record.title}</label>)}</div></fieldset>
+          <label class="field">Related records <select name="related" multiple size="5">{studies.map((record) => <option value={record.id}>{record.title} ({record.kind})</option>)}</select><small>Optional; Ctrl / Command to select multiple.</small></label>
+        </fieldset>
+
+        <fieldset class="panel stack">
+          <legend>2 · Original source</legend>
+          <p class="muted">Cite the original publication rather than an unattributed repost. Choose an existing source or describe a new one, including what you could actually access.</p>
+          <div class="source-choices"><label><input type="radio" name="sourceMode" value="existing" checked /> Existing source</label><label><input type="radio" name="sourceMode" value="new" /> New original source</label></div>
+          <label class="field" id="existing-source-fields">Existing source <select name="existingSource" required><option value="">Select a source</option>{sources.map((source) => <option value={source.id} data-provenance={source.provenance}>{source.title} · {source.id} · {source.revision.value ?? "unversioned"} · {source.access}</option>)}</select><small>Choose the exact original work and revision supporting the claim.</small></label>
+          <fieldset class="new-source stack" id="new-source-fields" disabled hidden>
+            <legend>New source identity and retrieval</legend>
+            <div class="grid two">
+              <label class="field">Source ID <input name="sourceId" pattern="[a-z0-9]+(-[a-z0-9]+)*" required placeholder="original-publication-id" /></label>
+              <label class="field">Title <input name="sourceTitle" required /></label>
+              <label class="field">Original URL <input name="sourceUrl" type="url" pattern="https://.*" required placeholder="https://publisher.example/article" /></label>
+              <label class="field">Publisher <input name="publisher" required /></label>
+              <label class="field">Author, if established <input name="sourceAuthor" /></label>
+              <label class="field">Published, if established <input name="sourcePublished" type="date" /></label>
+              <label class="field">Accessed / attempted <input name="sourceAccessed" type="date" required /></label>
+              <label class="field">Provenance <select name="sourceProvenance" required><option value="">Select provenance</option>{provenanceKinds.map((kind) => <option value={kind}>{kind}</option>)}</select></label>
+              <label class="field">Revision type <select name="revisionKind"><option value="unversioned">Unversioned / not established</option><option value="git">Git commit</option><option value="publication">Publication revision</option></select></label>
+              <label class="field">Revision value <input name="revisionValue" placeholder="Full 40-character git SHA or named publication revision" disabled /></label>
+              <label class="field">Access <select name="sourceAccess" required><option value="">Select actual access</option><option value="available">Available</option><option value="blocked">Blocked</option><option value="not-retrieved">Not retrieved</option></select></label>
+              <label class="field">Transport <select name="sourceTransport" required><option value="">Select actual transport</option><option value="direct">Direct original</option><option value="mirror">Mirror</option><option value="index-only">Index only</option></select></label>
+              <label class="field">Retrieval URL, if different <input name="retrievalUrl" type="url" pattern="https://.*" /><small>Required when transport is a mirror; keep Original URL pointed at the original work.</small></label>
+              <label class="field">Origin ID <input name="originId" required placeholder="Original work / upstream identity" /><small>Stable identifier for the original work, not the copy URL.</small></label>
+            </div>
+            <label class="field">Rights <input name="rights" required placeholder="Known license or rights status; do not assume permission" /></label>
+            <label class="field">Source limitations <textarea name="sourceLimitations" rows="2" placeholder="One limitation per line: access, version, mirror, or scope"></textarea></label>
+          </fieldset>
+        </fieldset>
+
+        <fieldset class="panel stack">
+          <legend>3 · Attributed claims and note sections</legend>
+          <p class="muted">Write each claim as an original, scoped statement. A citation needs a meaningful locator and an explanation of what the source actually supports. Review level describes work performed, not confidence by itself. This single-source form cannot claim corroboration or artifact execution without separately documented evidence.</p>
+          <div id="claim-list" class="stack"></div>
+          <button id="add-claim" class="button" type="button">Add another claim</button>
+        </fieldset>
+        <label class="review-check"><input type="checkbox" name="reviewed" required /> I reviewed the citations, attribution, applicability, versions and limitations; this draft does not assert unverified current behavior.</label>
+        <p id="publication-error" role="alert" hidden></p>
+        <button class="button" type="submit">Validate and prepare proposal</button>
+        <p class="muted">Drafting is local to this browser. Browser validation checks schema and references, not the truth of a claim; the import command validates the merged dataset again.</p>
+      </form>
+      <aside class="panel publishing-aside stack">
+        <h2>How publication works</h2>
+        <ol><li>Choose an existing source or document a new original source.</li><li>Write one or more attributed claims and organize them into note sections.</li><li>Download <code>proposal.json</code>, review it, then from the repository root run <code>npm run import -- proposal.json</code>.</li><li>Review and commit the imported changes yourself; the site's normal build/deploy process handles publication.</li></ol>
+        <p>Import rejects duplicate IDs by default. This form only creates new entries; edit existing content through the repository and its normal review process.</p>
+        <a href={withBase("/methodology")}>Research methodology</a>
+      </aside>
+    </div>
+    <section id="publication-result" class="panel stack" hidden aria-label="Prepared proposal">
+      <h2>Proposal ready for review</h2>
+      <p>Download <code>proposal.json</code> and run <code>npm run import -- proposal.json</code> from the repository root. No repository files have been changed by this page.</p>
+      <div class="result-actions"><a class="button" id="download-proposal" download="proposal.json">Download proposal.json</a><button class="button" id="copy-proposal" type="button">Copy JSON</button></div>
+      <p id="publication-status" role="status" aria-live="polite"></p>
+      <label class="field">Generated proposal JSON <textarea id="publication-output" readonly rows="18" spellcheck="false"></textarea></label>
+    </section>
+    <noscript><p class="panel">JavaScript is required to prepare and validate a proposal locally.</p></noscript>
+  </div>
+  <template id="claim-template">
+    <fieldset class="claim-card stack">
+      <legend class="claim-heading">Claim</legend>
+      <div class="grid two">
+        <label class="field">New claim ID <input name="claimId" required pattern="[a-z0-9]+(-[a-z0-9]+)*" placeholder="specific-claim-id" /></label>
+        <label class="field">Post section title <input name="sectionTitle" required placeholder="What the source establishes" /></label>
+      </div>
+      <label class="field">Statement <textarea name="statement" rows="3" required placeholder="A specific, original assertion scoped to the cited evidence"></textarea></label>
+      <div class="grid two">
+        <label class="field">Kind <select name="kind"><option value="observation">Observation</option><option value="inference">Inference</option><option value="guidance">Guidance</option><option value="unknown">Unknown</option></select></label>
+        <label class="field">Evidence provenance <select name="provenance" required><option value="">Select provenance</option>{provenanceKinds.map((kind) => <option value={kind}>{kind}</option>)}</select><small>Must match the cited source's provenance; use “Inference” for your own interpretation of that source.</small></label>
+        <label class="field">Review activity <select name="review"><option value="collected">Collected</option><option value="source-inspected">Source inspected</option></select><small>Artifact inspection and reproduction require an independently documented, authorized validation record.</small></label>
+        <label class="field">State <select name="state"><option value="asserted">Asserted</option><option value="disputed">Disputed (cite a contradiction)</option></select></label>
+        <label class="field">Reviewed on <input name="reviewedAt" type="date" required /></label>
+        <label class="field">Applicability / affected versions <input name="applicability" required placeholder="Which build, version, platform and time period?" /></label>
+      </div>
+      <label class="field">Applicable existing builds <select name="buildIds" multiple size="4">{builds.map((build) => <option value={build.id}>{build.label} · {build.id}</option>)}</select><small>Optional. Select only builds the cited evidence actually covers.</small></label>
+      <label class="field">Related mechanisms <select name="mechanismIds" multiple size="3">{mechanisms.map((mechanism) => <option value={mechanism.id}>{mechanism.title} · {mechanism.id}</option>)}</select><small>Optional.</small></label>
+      <div class="grid two">
+        <label class="field">Citation relation <select name="relation"><option value="supports">Supports</option><option value="contradicts">Contradicts</option><option value="context">Context</option></select></label>
+        <label class="field">Locator kind <select name="locatorKind"><option value="document">Document</option><option value="section">Section</option><option value="function">Function</option><option value="line">Line</option><option value="timestamp">Timestamp</option></select></label>
+        <label class="field">Locator value <input name="locatorValue" required placeholder="Section heading, function, lines, timestamp…" /></label>
+        <label class="field">Deep-link URL, if available <input name="locatorUrl" type="url" pattern="https://.*" /></label>
+        <label class="field">Address space, if relevant <input name="addressSpace" placeholder="e.g. image VA, RVA, file offset" /></label>
+        <label class="field">Image base, if relevant <input name="imageBase" placeholder="Image base as reported by source" /></label>
+      </div>
+      <label class="field">What does this citation establish? <textarea name="evidence" rows="2" required placeholder="Describe the supporting passage or observed artifact without copying article text"></textarea></label>
+      <label class="field">Claim limitations <textarea name="limitations" rows="2" required placeholder="At least one uncertainty or scope limit; one per line"></textarea><small>Document at least one limitation, even when the remaining unknown is version applicability.</small></label>
+      <button class="button remove-claim" type="button">Remove claim</button>
+    </fieldset>
+  </template>
+  <script>import "../scripts/publishing";</script>
+</Layout>
+
+<style>
+  [hidden] { display: none !important; }
+  .publishing-page { padding-block: 2rem 4rem; }
+  .page-header { max-width: 75ch; margin-bottom: 2rem; }
+  .publishing-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(15rem, 19rem); align-items: start; gap: 1.25rem; }
+  #publication-form, .stack { display: grid; gap: 1rem; }
+  .panel { min-width: 0; }
+  fieldset { min-width: 0; }
+  fieldset.panel, .claim-card, .new-source { padding: 1rem; }
+  .claim-card, .new-source { border: 1px solid var(--border, #75808a); border-radius: .4rem; }
+  legend { font-weight: 700; padding: 0 .3rem; }
+  .grid.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem 1rem; }
+  .field { display: grid; gap: .3rem; min-width: 0; }
+  .field input, .field textarea, .field select { width: 100%; box-sizing: border-box; font: inherit; color: inherit; background: var(--surface, transparent); border: 1px solid var(--border, #75808a); border-radius: .3rem; padding: .55rem; }
+  .field select[multiple] { min-height: 5rem; }
+  .field small { font-size: .82rem; opacity: .8; }
+  .source-choices, .checks, .result-actions { display: flex; flex-wrap: wrap; gap: .5rem 1rem; }
+  .source-choices label, .checks label, .review-check { display: inline-flex; align-items: baseline; gap: .35rem; }
+  .selection { padding: .7rem; border: 1px solid var(--border, #75808a); }
+  .publishing-aside { position: sticky; top: 1rem; }
+  .publishing-aside ol { padding-inline-start: 1.3rem; }
+  .publishing-aside li + li { margin-top: .7rem; }
+  .remove-claim { justify-self: start; }
+  #publication-error { color: var(--danger, #dc5b5b); font-weight: 700; }
+  #publication-result { margin-top: 1.5rem; }
+  #publication-output { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .85rem; }
+  @media (max-width: 800px) { .publishing-layout { grid-template-columns: 1fr; } .publishing-aside { position: static; } }
+  @media (max-width: 540px) { .grid.two { grid-template-columns: 1fr; } }
+</style>

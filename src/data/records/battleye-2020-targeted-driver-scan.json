@@ -1,0 +1,52 @@
+{
+  "id": "battleye-2020-targeted-driver-scan",
+  "kind": "component",
+  "title": "BattlEye targeted driver and certificate scan (2020)",
+  "summary": "Secret Club reports a dynamically received BattlEye client module on a Tarkov research machine that enumerated installed drivers and signer information, with a file-content path for a specific filename pattern. This does not establish deployment prevalence.",
+  "vendor": "BattlEye",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode",
+    "Research"
+  ],
+  "historical": false,
+  "updated": "2026-10-16",
+  "tags": [
+    "BattlEye",
+    "research-binary",
+    "driver enumeration",
+    "historical analysis"
+  ],
+  "relatedIds": [
+    "battleye-client",
+    "battleye-backend"
+  ],
+  "sourceIds": [
+    "src-exp-battleye-tracking"
+  ],
+  "buildIds": [],
+  "mechanismIds": [],
+  "sections": [
+    {
+      "title": "Shellcode ??",
+      "claimIds": [
+        "claim-exp-battleye-2020-targeted-driver-scan-01"
+      ]
+    },
+    {
+      "title": "Device driver enumeration",
+      "claimIds": [
+        "claim-exp-battleye-2020-targeted-driver-scan-02",
+        "claim-exp-battleye-2020-targeted-driver-scan-03"
+      ]
+    },
+    {
+      "title": "Context",
+      "claimIds": [
+        "claim-exp-battleye-2020-targeted-driver-scan-04"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+---
+import type { CatalogRecord } from "../lib/knowledge-types";
+import { trackedRepos } from "../lib/discovery";
+
+interface Props {
+  record: CatalogRecord;
+}
+const { record } = Astro.props;
+const repo = trackedRepos.find((entry) => entry.recordId === record.id);
+const shortSha = (sha: string) => sha.slice(0, 12);
+const reviewedCommit = record.reviewedCommit;
+const rows = [
+  { label: "Language", value: repo?.language ?? record.repoLanguage },
+  { label: "License", value: repo?.license && repo.license !== "NOASSERTION" ? repo.license : record.repoLicense },
+  { label: "Stars at last snapshot", value: repo?.stars != null ? String(repo.stars) : null },
+  { label: "Reviewed commit", value: reviewedCommit ? shortSha(reviewedCommit) : null },
+  { label: "Upstream head", value: repo?.headSha ? shortSha(repo.headSha) : null },
+  { label: "Last upstream push", value: repo?.pushedAt ? repo.pushedAt.slice(0, 10) : null },
+];
+---
+
+<section class="panel repo-panel" aria-labelledby="repo-title">
+  <h2 id="repo-title">Upstream repository</h2>
+  {record.repoUrl && <p><a href={record.repoUrl} target="_blank" rel="noopener noreferrer">{record.repoUrl}</a></p>}
+  <dl class="repo-facts">
+    {rows.filter((row) => row.value != null).map((row) => (
+      <div><dt>{row.label}</dt><dd class="mono">{row.value}</dd></div>
+    ))}
+  </dl>
+  {repo?.drift && repo.headSha && reviewedCommit && (
+    <p class="repo-alert"><strong>Upstream moved since the reviewed commit.</strong> The tracked head <code>{shortSha(repo.headSha)}</code> differs from <code>{shortSha(reviewedCommit)}</code>. Findings are scoped to the reviewed revision until rechecked.</p>
+  )}
+  {repo?.stale && <p class="muted">Snapshot stale: the last fetch did not refresh upstream metadata.</p>}
+  {repo?.headMessage && <p class="muted">Latest upstream commit: {repo.headMessage}{repo.headDate ? ` (${repo.headDate.slice(0, 10)})` : ""}</p>}
+  <p class="muted">Repository counts and activity are secondary context, not evidence that the research claims have been independently reproduced.</p>
+</section>
+
+<style>
+  .repo-panel { min-width: 0; }
+  .repo-panel h2 { margin: 0 0 .7rem; }
+  .repo-panel p { overflow-wrap: anywhere; }
+  .repo-facts { display: grid; grid-template-columns: repeat(auto-fit,minmax(10rem,1fr)); gap: .7rem 1.2rem; margin: 1rem 0; }
+  .repo-facts div { min-width: 0; }
+  .repo-facts dt { color: var(--muted, #9aa9af); font-size: .85rem; }
+  .repo-facts dd { margin: .2rem 0; overflow-wrap: anywhere; }
+  .repo-alert { border-left: 3px solid #d7a65a; padding-left: .8rem; }
+</style>

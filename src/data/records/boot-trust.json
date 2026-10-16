@@ -1,0 +1,56 @@
+{
+  "id": "boot-trust",
+  "kind": "technique",
+  "title": "Boot-chain trust and anti-cheat timing",
+  "summary": "Boot security addresses software or devices that can influence a machine before a game or anti-cheat launches. Secure Boot, measured startup, firmware configuration and driver history supply different kinds of assurance; none should be collapsed into a single 'secure booted' verdict.",
+  "vendor": "Cross-vendor",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Firmware",
+    "Hardware",
+    "Kernel"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "Secure Boot",
+    "measured boot",
+    "startup order",
+    "TPM"
+  ],
+  "relatedIds": [
+    "vanguard",
+    "dma",
+    "byovd",
+    "hypervisor-trust"
+  ],
+  "sections": [
+    {
+      "title": "Who loads first",
+      "claimIds": [
+        "claim-boot-trust-01"
+      ]
+    },
+    {
+      "title": "Distinct boot assurances",
+      "claimIds": [
+        "claim-boot-trust-02"
+      ]
+    },
+    {
+      "title": "June 2026 on-demand qualification",
+      "claimIds": [
+        "claim-boot-trust-03"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-012",
+    "src-013",
+    "src-014"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

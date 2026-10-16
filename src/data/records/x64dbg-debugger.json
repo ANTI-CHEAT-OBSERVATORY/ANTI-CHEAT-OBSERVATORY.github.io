@@ -1,0 +1,54 @@
+{
+  "id": "x64dbg-debugger",
+  "kind": "component",
+  "title": "x64dbg: user-mode debugger and plugin host",
+  "summary": "An open-source Windows debugger used for legitimate executable analysis. Official project capabilities and architecture-specific binaries are documented here without promising attachment to or evasion of protected games.",
+  "vendor": "x64dbg project",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode"
+  ],
+  "historical": false,
+  "updated": "2026-10-16",
+  "tags": [
+    "research-binary",
+    "platform-reference",
+    "debugger",
+    "user-mode analysis"
+  ],
+  "relatedIds": [
+    "thread-hide-from-debugger",
+    "dbk-kernel-driver",
+    "ksysteminformer-driver"
+  ],
+  "sourceIds": [
+    "src-ref-x64dbg"
+  ],
+  "buildIds": [],
+  "mechanismIds": [],
+  "sections": [
+    {
+      "title": "Research surface",
+      "claimIds": [
+        "claim-ref-x64dbg-debugger-01"
+      ]
+    },
+    {
+      "title": "Architecture and filenames",
+      "claimIds": [
+        "claim-ref-x64dbg-debugger-02"
+      ]
+    }
+  ],
+  "filenames": [
+    "x32dbg.exe",
+    "x64dbg.exe",
+    "x96dbg.exe"
+  ],
+  "aliases": [
+    "x64dbg",
+    "x32dbg"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "eac-integrity-2020",
+  "title": "EAC self-integrity in 2020: a live driver and its pool copy",
+  "summary": "The original CVEAC-2020 writeup supports a narrow reconstruction of nonpaged section comparison and the researcher’s response. The article label is not a registered CVE and none of the results independently establish current exploitability.",
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "category": "Kernel research",
+  "author": "Observatory editorial",
+  "productIds": [
+    "easy-anti-cheat"
+  ],
+  "relatedIds": [
+    "eac-2020-driver-copy-integrity",
+    "eac-2020-integrity-research"
+  ],
+  "tags": [
+    "Easy Anti-Cheat",
+    "integrity comparison",
+    "2020"
+  ],
+  "takeaways": [
+    "The reconstructed memcmp checks selected sections against a private copy rather than hashing an entire driver.",
+    "The researcher reports an observed kick and debugger tracing; this catalog did not repeat either.",
+    "CVEAC-2020 is the researcher’s project/article label, not a CVE identifier, and no modern-version claim follows."
+  ],
+  "sourceIds": [
+    "src-exp-eac-integrity"
+  ],
+  "sections": [
+    {
+      "title": "The 2020 driver comparison",
+      "claimIds": [
+        "claim-exp-eac-2020-driver-copy-integrity-01",
+        "claim-exp-eac-2020-driver-copy-integrity-02",
+        "claim-exp-eac-2020-driver-copy-integrity-03",
+        "claim-exp-eac-2020-driver-copy-integrity-04"
+      ]
+    },
+    {
+      "title": "What the disclosure establishes",
+      "claimIds": [
+        "claim-exp-eac-2020-integrity-research-01",
+        "claim-exp-eac-2020-integrity-research-02",
+        "claim-exp-eac-2020-integrity-research-03",
+        "claim-exp-eac-2020-integrity-research-04"
+      ]
+    }
+  ]
+}

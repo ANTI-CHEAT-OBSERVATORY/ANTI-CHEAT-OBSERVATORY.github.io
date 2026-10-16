@@ -1,0 +1,46 @@
+{
+  "id": "eac-2020-driver-copy-integrity",
+  "kind": "component",
+  "title": "EasyAntiCheat.sys copy-based self-integrity (2020)",
+  "summary": "A 2020 original analysis reconstructs a nonpaged read-only section comparison between EasyAntiCheat.sys and its memory copy, reporting initialization gating on failed integrity. This is an historical sample, not current behavior.",
+  "vendor": "Easy Anti-Cheat",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel",
+    "Research"
+  ],
+  "historical": false,
+  "updated": "2026-10-16",
+  "tags": [
+    "Easy Anti-Cheat",
+    "driver integrity",
+    "historical analysis"
+  ],
+  "relatedIds": [
+    "easy-anti-cheat",
+    "eac-service"
+  ],
+  "sourceIds": [
+    "src-exp-eac-integrity"
+  ],
+  "buildIds": [],
+  "mechanismIds": [],
+  "sections": [
+    {
+      "title": "Reversing process",
+      "claimIds": [
+        "claim-exp-eac-2020-driver-copy-integrity-01",
+        "claim-exp-eac-2020-driver-copy-integrity-02"
+      ]
+    },
+    {
+      "title": "The integrity check function",
+      "claimIds": [
+        "claim-exp-eac-2020-driver-copy-integrity-03",
+        "claim-exp-eac-2020-driver-copy-integrity-04"
+      ]
+    }
+  ]
+}

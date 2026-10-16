@@ -1,0 +1,55 @@
+{
+  "id": "eac-2021-module-delivery",
+  "kind": "component",
+  "title": "EAC 2021 launcher-to-driver module delivery",
+  "summary": "Aftermath Labs reconstructs the historical delivery of an encrypted EasyAntiCheat.dll image through a user-mode package and driver device-control path. The article does not identify a version or demonstrate relevance to later releases.",
+  "vendor": "Easy Anti-Cheat",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode",
+    "Kernel"
+  ],
+  "historical": false,
+  "updated": "2026-10-16",
+  "tags": [
+    "Easy Anti-Cheat",
+    "module loading",
+    "research-binary"
+  ],
+  "relatedIds": [
+    "eac-bootstrapper",
+    "eac-2021-manual-map",
+    "easy-anti-cheat"
+  ],
+  "sourceIds": [
+    "src-exp-eac-mapper"
+  ],
+  "buildIds": [],
+  "mechanismIds": [],
+  "sections": [
+    {
+      "title": "x86 module",
+      "claimIds": [
+        "claim-exp-eac-2021-module-delivery-01",
+        "claim-exp-eac-2021-module-delivery-02"
+      ]
+    },
+    {
+      "title": "Image Encryption",
+      "claimIds": [
+        "claim-exp-eac-2021-module-delivery-03"
+      ]
+    },
+    {
+      "title": "Disclaimer",
+      "claimIds": [
+        "claim-exp-eac-2021-module-delivery-04"
+      ]
+    }
+  ],
+  "filenames": [
+    "EasyAntiCheat.dll"
+  ]
+}

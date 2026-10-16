@@ -1,0 +1,48 @@
+{
+  "id": "tarkov-mono-2020",
+  "title": "Tarkov’s 2020 streamed inventory: reporting Mono image and asset sizes",
+  "summary": "A close look at the original game-specific module analysis: its three directories, mixed file/loaded-image size inputs and bounded send buffer establish a dated client report, not a universal integrity proof or present-day bypass.",
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "category": "Reverse engineering",
+  "author": "Observatory editorial",
+  "productIds": [
+    "battleye"
+  ],
+  "relatedIds": [
+    "battleye-tarkov-mono-2020",
+    "battleye-client"
+  ],
+  "tags": [
+    "BattlEye",
+    "Escape from Tarkov",
+    "Mono"
+  ],
+  "takeaways": [
+    "The article hypothesizes a Battlestate–BattlEye request but does not document that exchange.",
+    "This inventory reports filenames and sizes, not hashes of all loaded managed method bodies.",
+    "ASCII path handling and fixed report capacity are published code constraints, not a verified current evasion."
+  ],
+  "sourceIds": [
+    "src-exp-tarkov-mono"
+  ],
+  "sections": [
+    {
+      "title": "Attribution and three-folder scan",
+      "claimIds": [
+        "claim-exp-battleye-tarkov-mono-2020-01",
+        "claim-exp-battleye-tarkov-mono-2020-02",
+        "claim-exp-battleye-tarkov-mono-2020-03"
+      ]
+    },
+    {
+      "title": "Report content, limits and what remains unknown",
+      "claimIds": [
+        "claim-exp-battleye-tarkov-mono-2020-04",
+        "claim-exp-battleye-tarkov-mono-2020-05",
+        "claim-exp-battleye-tarkov-mono-2020-06",
+        "claim-exp-battleye-tarkov-mono-2020-07"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "ricochet",
+  "kind": "product",
+  "title": "RICOCHET Anti-Cheat",
+  "summary": "Call of Duty's RICOCHET initiative combines PC client and kernel-driver monitoring with server-side analysis and in-game mitigations. Activision says its PC driver runs only while selected protected Call of Duty games are running.",
+  "vendor": "Activision",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode",
+    "Kernel",
+    "Hardware",
+    "Server"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "Call of Duty",
+    "session lifecycle",
+    "server analysis",
+    "Secure Boot"
+  ],
+  "relatedIds": [
+    "ricochet-driver",
+    "server-authority",
+    "boot-trust",
+    "process-integrity"
+  ],
+  "games": [
+    "Call of Duty: Black Ops 7",
+    "Call of Duty: Black Ops 6",
+    "Call of Duty: Warzone"
+  ],
+  "sections": [
+    {
+      "title": "Layered architecture",
+      "claimIds": [
+        "claim-ricochet-01",
+        "claim-ricochet-02"
+      ]
+    },
+    {
+      "title": "PC driver session boundary",
+      "claimIds": [
+        "claim-ricochet-03"
+      ]
+    },
+    {
+      "title": "Boot and hardware trust",
+      "claimIds": [
+        "claim-ricochet-04"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-045",
+    "src-046"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

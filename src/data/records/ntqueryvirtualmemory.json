@@ -1,0 +1,57 @@
+{
+  "id": "ntqueryvirtualmemory",
+  "kind": "component",
+  "title": "NtQueryVirtualMemory: region inventory and extended classes",
+  "summary": "A Native memory-query routine with a documented basic contract and additional community-described selectors. The 2019 BattlEye study shows why region metadata matters to historical executable-memory inspection.",
+  "vendor": "Microsoft Windows",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode"
+  ],
+  "historical": false,
+  "updated": "2026-10-16",
+  "tags": [
+    "native-api",
+    "partially-documented-api",
+    "platform-reference",
+    "memory inventory"
+  ],
+  "relatedIds": [
+    "ntreadvirtualmemory",
+    "ntqueryinformationprocess",
+    "battleye-client"
+  ],
+  "sourceIds": [
+    "src-ref-ntqvm",
+    "src-ref-phnt-vm",
+    "src-008"
+  ],
+  "buildIds": [],
+  "mechanismIds": [],
+  "sections": [
+    {
+      "title": "Documented subset",
+      "claimIds": [
+        "claim-ref-ntqueryvirtualmemory-01"
+      ]
+    },
+    {
+      "title": "Not every class is output-only",
+      "claimIds": [
+        "claim-ref-ntqueryvirtualmemory-02"
+      ]
+    },
+    {
+      "title": "Historical anti-cheat use",
+      "claimIds": [
+        "claim-ref-ntqueryvirtualmemory-03"
+      ]
+    }
+  ],
+  "aliases": [
+    "NtQueryVirtualMemory",
+    "MemoryBasicInformation"
+  ]
+}

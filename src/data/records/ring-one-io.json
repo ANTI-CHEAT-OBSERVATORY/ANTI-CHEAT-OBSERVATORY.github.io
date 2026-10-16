@@ -1,0 +1,50 @@
+{
+  "id": "ring-one-io",
+  "kind": "project",
+  "title": "ring-1.io bootloader implant deobfuscation",
+  "summary": "Aftermath Labs published a repository accompanying its deep dive on the ring-1.io cheat platform, including a partially deobfuscated loader, a deobfuscated UEFI bootloader implant with an IDA database, a modified bootmgfw image, and game cheat modules it dissected. The material is published for defensive research and credits named contributors by role.",
+  "vendor": "Aftermath Labs",
+  "platforms": [
+    "Windows",
+    "Firmware"
+  ],
+  "layers": [
+    "Firmware",
+    "Kernel",
+    "Hypervisor",
+    "Research"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "bootkit",
+    "UEFI",
+    "deobfuscation",
+    "cheat platform analysis",
+    "BLARE2"
+  ],
+  "relatedIds": [
+    "boot-trust",
+    "code-devirtualization",
+    "hypervisor-trust"
+  ],
+  "repoUrl": "https://github.com/aftermathlabs/ring-1.io",
+  "repoLicense": "Not stated",
+  "repoLanguage": "Not stated",
+  "reviewedCommit": "fb919638772fc7b744af0ba45b3a493e5aba0152",
+  "sections": [
+    {
+      "title": "What was analyzed",
+      "claimIds": [
+        "claim-ring-one-io-01",
+        "claim-ring-one-io-02"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-047",
+    "src-048"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

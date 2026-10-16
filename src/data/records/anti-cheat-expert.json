@@ -1,0 +1,51 @@
+{
+  "id": "anti-cheat-expert",
+  "kind": "product",
+  "title": "Anti-Cheat Expert (ACE)",
+  "summary": "Tencent Cloud documents a Windows PC hardening and anti-cheat service. Aftermath Labs' July 2026 research identifies four ACE kernel-driver artifacts protected with Tencent VM; their public analysis supplies component identities, not a complete current architecture or a bypass assessment.",
+  "vendor": "Tencent Cloud",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode",
+    "Kernel",
+    "Research"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "ACE",
+    "Tencent VM",
+    "devirtualization",
+    "Windows hardening"
+  ],
+  "relatedIds": [
+    "ace-game-driver",
+    "ace-base-driver",
+    "ace-boot-driver",
+    "ace-core-driver",
+    "code-devirtualization",
+    "ace-base-vulnerability"
+  ],
+  "sections": [
+    {
+      "title": "Four artifacts in public research",
+      "claimIds": [
+        "claim-anti-cheat-expert-02"
+      ]
+    },
+    {
+      "title": "Windows service scope",
+      "claimIds": [
+        "claim-anti-cheat-expert-01"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-001",
+    "src-007"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

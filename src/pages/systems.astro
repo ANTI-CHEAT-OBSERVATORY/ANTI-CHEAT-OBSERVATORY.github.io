@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { products, componentsForProduct } from "../lib/catalog";
+import { buildsForSystem, claimsForSystem, dossierForSystem, mechanismsForSystem } from "../lib/knowledge";
+import { dossierAspects } from "../lib/knowledge-types";
+import { withBase } from "../lib/paths";
+const systems = products().map((record) => ({ record, components: componentsForProduct(record.id), builds: buildsForSystem(record.id), mechanisms: mechanismsForSystem(record.id), claims: claimsForSystem(record.id), dossier: dossierForSystem(record.id) }));
+---
+<Layout title="Systems" active="systems" description="Documented anti-cheat systems, component inventories, evidence coverage and explicit gaps.">
+  <div class="page-container stack">
+    <header class="page-header page-header-row"><div><p class="eyebrow">System dossiers / {systems.length} documented</p><h1>Systems</h1><p class="muted">Compare documented scope, not effectiveness. Each dossier separates product statements, components, mechanisms, historical findings and unanswered questions.</p></div><a class="button" href={withBase("/coverage")}>Coverage map</a></header>
+    <div class="table-wrap" role="region" tabindex="0" aria-label="Scrollable systems overview"><table class="data-table"><caption class="sr-only">System dossiers with component inventories and evidence gaps</caption><thead><tr><th scope="col">System</th><th scope="col">Documented components</th><th scope="col">Claims</th><th scope="col">Mechanisms</th><th scope="col">Builds</th><th scope="col">Eight-aspect evidence coverage</th><th scope="col">Updated</th></tr></thead><tbody>{systems.map(({record, components, builds, claims, mechanisms, dossier}) => <tr><th scope="row"><a href={withBase(`/records/${record.id}`)}>{record.title}</a><small class="muted table-summary">{record.summary}</small></th><td>{components.length} <small class="muted">{components.slice(0,3).map((component) => component.title).join(", ")}</small></td><td>{claims.length}</td><td>{mechanisms.length}</td><td>{builds.length}</td><td>{dossier ? dossierAspects.map((aspect) => { const state = dossier.aspects.find((entry) => entry.id === aspect); return <span class="badge aspect-badge" title={`${aspect}: ${state?.status ?? "unknown"}`}>{aspect}: {state?.status ?? "unknown"}</span>; }) : <span class="muted">No aspect assessment recorded</span>}</td><td class="mono small"><time datetime={record.updated}>{record.updated}</time></td></tr>)}</tbody></table></div>
+    <p class="panel small">“Unknown” means evidence has not established an answer; it does not mean a system lacks a capability. A documented component count reflects linked catalog records, not a complete vendor inventory. <a href={withBase("/methodology#limits")}>How to interpret gaps ↗</a></p>
+  </div>
+  <style>.aspect-badge { margin:.12rem .22rem .12rem 0; white-space:nowrap; } td > small { display:block; max-width:26ch; }</style>
+</Layout>

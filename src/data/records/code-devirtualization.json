@@ -1,0 +1,47 @@
+{
+  "id": "code-devirtualization",
+  "kind": "technique",
+  "title": "Code devirtualization and protected logic",
+  "summary": "Code virtualization converts selected program routines into custom bytecode executed by a bundled software interpreter; devirtualization studies that interpreter to recover what the routines do. This is analysis of code protection, not placing an operating system under a hardware hypervisor.",
+  "vendor": "Cross-vendor",
+  "platforms": [
+    "Cross-platform"
+  ],
+  "layers": [
+    "User mode",
+    "Research"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "code virtualization",
+    "devirtualization",
+    "reverse engineering",
+    "obfuscation"
+  ],
+  "relatedIds": [
+    "hypervisor-trust",
+    "process-integrity"
+  ],
+  "sections": [
+    {
+      "title": "Software VM rather than machine VM",
+      "claimIds": [
+        "claim-code-devirtualization-01"
+      ]
+    },
+    {
+      "title": "Relevance to anti-cheat and boundaries",
+      "claimIds": [
+        "claim-code-devirtualization-03"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-018",
+    "src-013",
+    "src-019"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

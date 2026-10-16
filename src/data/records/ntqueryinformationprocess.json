@@ -1,0 +1,58 @@
+{
+  "id": "ntqueryinformationprocess",
+  "kind": "component",
+  "title": "NtQueryInformationProcess: process and protection queries",
+  "summary": "Microsoft documents part of this Native family; PHNT describes additional selectors. A 2019 BattlEye analysis supplies a concrete historical use of a process-protection query, not a statement about every current deployment.",
+  "vendor": "Microsoft Windows",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode"
+  ],
+  "historical": false,
+  "updated": "2026-10-16",
+  "tags": [
+    "native-api",
+    "partially-documented-api",
+    "platform-reference",
+    "process protection"
+  ],
+  "relatedIds": [
+    "ntquerysysteminformation",
+    "ntqueryvirtualmemory",
+    "battleye-client"
+  ],
+  "sourceIds": [
+    "src-ref-ntqip",
+    "src-ref-phnt-processclass",
+    "src-008"
+  ],
+  "buildIds": [],
+  "mechanismIds": [],
+  "sections": [
+    {
+      "title": "Documented process queries",
+      "claimIds": [
+        "claim-ref-ntqueryinformationprocess-01"
+      ]
+    },
+    {
+      "title": "Protection is a separate selector",
+      "claimIds": [
+        "claim-ref-ntqueryinformationprocess-02"
+      ]
+    },
+    {
+      "title": "A bounded BattlEye observation",
+      "claimIds": [
+        "claim-ref-ntqueryinformationprocess-03"
+      ]
+    }
+  ],
+  "aliases": [
+    "NtQueryInformationProcess",
+    "ProcessProtectionInformation",
+    "ProcessDebugPort"
+  ]
+}

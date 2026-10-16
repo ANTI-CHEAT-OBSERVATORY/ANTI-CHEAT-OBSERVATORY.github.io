@@ -1,0 +1,55 @@
+{
+  "id": "faceit-driver",
+  "kind": "component",
+  "title": "FACEIT Anti-Cheat kernel driver",
+  "summary": "FACEIT documents a boot-loaded kernel-mode driver and a tray option that unloads it until restart. Hardware-backed boot and DMA protections underpin FACEIT's evolving Windows trust requirements without proving that every threat is blocked.",
+  "vendor": "FACEIT",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel",
+    "Hardware"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "kernel driver",
+    "boot-loaded",
+    "TPM",
+    "IOMMU",
+    "anti-cheat-driver"
+  ],
+  "relatedIds": [
+    "faceit",
+    "faceit-client",
+    "boot-trust",
+    "dma"
+  ],
+  "sections": [
+    {
+      "title": "Boot and opt-out lifecycle",
+      "claimIds": [
+        "claim-faceit-driver-01"
+      ]
+    },
+    {
+      "title": "Platform trust context",
+      "claimIds": [
+        "claim-faceit-driver-02"
+      ]
+    },
+    {
+      "title": "Data collection distinction",
+      "claimIds": [
+        "claim-faceit-driver-03"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-036",
+    "src-037"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

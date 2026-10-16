@@ -1,0 +1,51 @@
+{
+  "id": "vanguard-client",
+  "kind": "component",
+  "title": "Vanguard game-active client",
+  "summary": "Riot describes a Vanguard client that runs while supported games are active, alongside a separate kernel driver. Its VGTray interface reports system security state and optional Pre-Check eligibility without defining every client-side detection method.",
+  "vendor": "Riot Games",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "client",
+    "tray",
+    "game lifecycle"
+  ],
+  "relatedIds": [
+    "vanguard",
+    "vanguard-driver",
+    "process-integrity"
+  ],
+  "sections": [
+    {
+      "title": "Role and separation",
+      "claimIds": [
+        "claim-vanguard-client-01"
+      ]
+    },
+    {
+      "title": "Visible status and Pre-Check",
+      "claimIds": [
+        "claim-vanguard-client-02"
+      ]
+    },
+    {
+      "title": "Deployment and removal",
+      "claimIds": [
+        "claim-vanguard-client-03"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-051",
+    "src-052"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

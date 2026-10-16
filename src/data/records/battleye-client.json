@@ -1,0 +1,49 @@
+{
+  "id": "battleye-client",
+  "kind": "component",
+  "title": "BEClient — in-process research component",
+  "summary": "vmcall's February 2019 BattlEye investigation describes BEClient as a Windows DLL mapped into the game process after initialization. The account separates client-context detections from the kernel driver and backend, and explicitly warns that its sampled shellcode may become obsolete.",
+  "vendor": "BattlEye Innovations",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "BEClient",
+    "in-process checks",
+    "historical architecture"
+  ],
+  "affectedVersions": "Architecture and sampled shellcode described in February 2019 research; current releases and exact DLL filenames are not established by this record.",
+  "relatedIds": [
+    "battleye",
+    "battleye-service",
+    "battleye-driver",
+    "battleye-backend",
+    "process-integrity"
+  ],
+  "sections": [
+    {
+      "title": "The reported client role",
+      "claimIds": [
+        "claim-battleye-client-01"
+      ]
+    },
+    {
+      "title": "Separating transport and observations",
+      "claimIds": [
+        "claim-battleye-client-02"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-008"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": [
+    "battleye-client-report"
+  ]
+}

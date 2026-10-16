@@ -1,0 +1,2811 @@
+{
+  "pages": {
+    "src-001": {
+      "hash": "baed6a3829ca83ed97e2",
+      "lines": [
+        "Static Devirtualization of Tencent VM",
+        "Over the course of several months we have noticed an increased interest in Tencent VM obfuscation. We have had complete static devirtualization of this VM obfuscation for quite some time now and have noticed others have ",
+        "Introduction",
+        "Virtual Machine Architecture",
+        "Boxed Instructions",
+        "CET Compatibility",
+        "SEH Compatibility",
+        "Guided Symbolic Execution",
+        "Virtualized Conditional Control Flow",
+        "Simple MBA Identity Rule Reduction",
+        "Lowering",
+        "Deobfuscation Coverage Statistics",
+        "Limitations",
+        "Conclusion",
+        "Related Posts"
+      ]
+    },
+    "src-003": {
+      "hash": "292ad2c13ba05e942353",
+      "lines": [
+        "NVD - Home"
+      ]
+    },
+    "src-004": {
+      "hash": "61504db6d5ae75b247e3",
+      "lines": [
+        "ACE-BASE.sys – Vulnerable Driver Hashes | LOLDrivers",
+        "ACE-BASE.sys is a known vulnerable driver abused for BYOVD. Get hashes, detection rules and blocklist guidance. CVE: CVE-2024-22830.",
+        "ACE-BASE.sys",
+        "Block ACE-BASE.sys across your endpoints",
+        "Known samples 1",
+        "Investigate this driver",
+        "Recorded CVEs"
+      ]
+    },
+    "src-006": {
+      "hash": "9ce6dc46756258ed9b70",
+      "lines": [
+        "Driver security checklist - Windows drivers | Microsoft Learn",
+        "This article provides a driver security checklist for driver developers.",
+        "Driver security checklist",
+        "In this article",
+        "Driver security overview",
+        "Confirm that a kernel driver is required",
+        "Use the driver frameworks",
+        "DMF - Driver Module Framework",
+        "Manage driver access control",
+        "Managing driver access control - WDF",
+        "Managing driver access control - WDM",
+        "Security Identifiers (SIDs) risk hierarchy",
+        "WDM Granular IOCTL security control",
+        "Control access to software only drivers",
+        "Follow driver secure coding guidelines",
+        "Memory buffers"
+      ]
+    },
+    "src-007": {
+      "hash": "391c978225f5ada765c4",
+      "lines": [
+        "PC Game Anti-Cheating Service Level Agreement",
+        "Tencent is a leading influencer in industries such as social media, mobile payments, online video, games, music, and more. Leverage Tencent&#x27;s vast ecosystem of key products across various verticals as well as its ex",
+        "tencent cloud",
+        "Terms and Policies",
+        "1. Terms and Definitions",
+        "2. Service Availability",
+        "3. Compensation Plan",
+        "4. Release of Liabilities",
+        "5. End User Data",
+        "6. Miscellaneous",
+        "Help and Support"
+      ]
+    },
+    "src-008": {
+      "hash": "8261a3484036c505242e",
+      "lines": [
+        "BattlEye anti-cheat: analysis and mitigation | secret club",
+        "BattlEye is a prevalent german third-party anti-cheat primarily developed by the 32-year-old founder Bastian Heiko Suter. It provides game publishers easy-to-use anti-cheat solutions, using generic protection mechanisms ",
+        "BattlEye anti-cheat: analysis and mitigation",
+        "Shellcode",
+        "How?",
+        "Disclaimer",
+        "Memory enumeration",
+        "Memory anomaly",
+        "Pattern scans",
+        "Module specific (Microsoft)",
+        "Module specific (Unknown)",
+        "Memory guard",
+        "Window enumeration",
+        "Anomaly in enumeration",
+        "Process enumeration",
+        "Path check"
+      ]
+    },
+    "src-009": {
+      "hash": "e185e7cd43b1041fbc98",
+      "lines": [
+        "BattlEye &#8211; The Anti-Cheat Gold Standard &raquo; FAQ",
+        "FAQ"
+      ]
+    },
+    "src-010": {
+      "hash": "b70aa81789e6e260273e",
+      "lines": [
+        "BattlEye &#8211; The Anti-Cheat Gold Standard",
+        "Independent quality",
+        "The Anti-Cheat Gold Standard",
+        "Covering all bases",
+        "All that glitters is not gold",
+        "Pro-active",
+        "Decade-long history",
+        "News of The Day - 25.09.2017",
+        "We want you!",
+        "Protection",
+        "On-The-Fly",
+        "Global Bans",
+        "Administration",
+        "Customization",
+        "Reliability"
+      ]
+    },
+    "src-011": {
+      "hash": "d236f066eebdd6fd3ebf",
+      "lines": [
+        "BattlEye &#8211; The Anti-Cheat Gold Standard &raquo; Privacy Policy",
+        "Privacy Policy",
+        "BattlEye Anti-Cheat Software",
+        "Website (English)",
+        "1. An overview of data protection",
+        "General",
+        "Data collection on our website",
+        "Analytics and third-party tools",
+        "2. General information and mandatory information",
+        "Data protection",
+        "Notice concerning the party responsible for this website",
+        "Revocation of your consent to the processing of your data",
+        "Right to file complaints with regulatory authorities",
+        "Right to data portability",
+        "SSL or TLS encryption"
+      ]
+    },
+    "src-012": {
+      "hash": "11cf621402bebc4a9b75",
+      "lines": [
+        "Secure the Windows boot process | Microsoft Learn",
+        "This article describes how Windows security features help protect your PC from malware, including rootkits and other applications.",
+        "Secure the Windows boot process",
+        "In this article",
+        "The threat: rootkits",
+        "The countermeasures",
+        "Secure Boot",
+        "Trusted Boot",
+        "Early Launch anti-malware",
+        "Measured Boot",
+        "Summary",
+        "Feedback",
+        "Additional resources"
+      ]
+    },
+    "src-015": {
+      "hash": "c521cd257037d288ffb9",
+      "lines": [
+        "Microsoft recommended driver block rules | Microsoft Learn",
+        "View a list of recommended block rules to block vulnerable non-Microsoft drivers discovered by Microsoft and the security research community.",
+        "Microsoft recommended driver block rules",
+        "In this article",
+        "Microsoft vulnerable driver blocklist",
+        "Blocking vulnerable drivers using App Control",
+        "Steps to download and apply the vulnerable driver blocklist binary",
+        "Vulnerable driver blocklist XML",
+        "More information",
+        "Feedback",
+        "Additional resources"
+      ]
+    },
+    "src-017": {
+      "hash": "c127423ba77a5b734341",
+      "lines": [
+        "Loki: Hardening Code Obfuscation Against Automated Attacks | USENIX",
+        "Loki: Hardening Code Obfuscation Against Automated Attacks",
+        "Open Access Media",
+        "Presentation Video"
+      ]
+    },
+    "src-020": {
+      "hash": "30f730d84829f651c6ea",
+      "lines": [
+        "Kernel DMA Protection (Memory Access Protection) for OEMs | Microsoft Learn",
+        "Provides guidance on what an OEM should do to enable Kernel DMA Protection",
+        "Kernel DMA Protection (Memory Access Protection) for OEMs",
+        "In this article",
+        "Verifying Kernel DMA Protection state on a Windows 10 system",
+        "Related topics",
+        "Additional resources"
+      ]
+    },
+    "src-021": {
+      "hash": "7eb95f18d121a6c6d6b2",
+      "lines": [
+        "WinVerifyTrust function (wintrust.h) - Win32 apps | Microsoft Learn",
+        "Performs a trust verification action on a specified object.",
+        "WinVerifyTrust function (wintrust.h)",
+        "In this article",
+        "Syntax",
+        "Parameters",
+        "Return value",
+        "Remarks",
+        "Requirements",
+        "Feedback",
+        "Additional resources"
+      ]
+    },
+    "src-022": {
+      "hash": "e7577b754dff6e2caf86",
+      "lines": [
+        "Driver Signing Options - Windows drivers | Microsoft Learn",
+        "This article covers various driver signing offerings available from the Hardware Dev Center. The article also recommends best practices.",
+        "Driver signing options and best practices",
+        "In this article",
+        "Hardware Lab Kit tested and dashboard signed drivers",
+        "Attestation signed drivers for testing scenarios",
+        "Preproduction signed drivers",
+        "Supported scenarios",
+        "OS configuration compatibility",
+        "Supported driver signature attributes",
+        "Provisioning and submission",
+        "Windows Server signed drivers",
+        "Windows Defender Application Control",
+        "Windows driver signing requirements",
+        "Feedback",
+        "Additional resources"
+      ]
+    },
+    "src-024": {
+      "hash": "9a76d3e3adfca95171c4",
+      "lines": [
+        "How to install and troubleshoot EA Javelin anticheat on PC",
+        "Learn how to download, uninstall, and troubleshoot EA Javelin anticheat on PC and find solutions for common error codes.",
+        "How do I install and troubleshoot EA Javelin anticheat on PC?",
+        "Overview",
+        "Table of Contents",
+        "How do I install EA Javelin anticheat?",
+        "What&#x27;s EA Javelin anticheat?",
+        "Which games use EA Javelin anticheat?",
+        "How do I uninstall EA Javelin anticheat?",
+        "How do I fix common errors with EA Javelin anticheat?",
+        "EA Javelin Anticheat Installer Error #41",
+        "EA Javelin Anticheat Installer Error #701",
+        "EA Javelin Anticheat has detected incompatible software. Please update or disable [software.name] and restart.",
+        "EA Javelin Anticheat has detected an incompatible driver. Please update or disable [driver.name] and restart. Error #119",
+        "Failure during update process"
+      ]
+    },
+    "src-025": {
+      "hash": "f7bbe4fc769f127ff005",
+      "lines": [
+        "A Deep Dive on EA anticheat for PC",
+        "EA anticheat protects the integrity of PC gameplay by detecting and preventing cheats. Check out our technical FAQ to learn more!",
+        "FAQ",
+        "Related News",
+        "Fighting for Fairness: Anti-Cheat Progress Report",
+        "EA Security - Keeping Your EA Account Safe",
+        "EA anticheat is leveling the playing field"
+      ]
+    },
+    "src-026": {
+      "hash": "1fd4c47240d7f312fd9c",
+      "lines": [
+        "Raising the Bar: A Year of Progress for EA Javelin Anticheat",
+        "57.1 million players safeguarded across our ecosystem, 26.7 million cheat attempts prevented, and more",
+        "The Last Year, By The Numbers",
+        "Faster, Smoother, Better",
+        "Securing the PC Ecosystem",
+        "Taking the Fight Outside the Game",
+        "Evolving Threat Detection",
+        "New Titles, New Challenges",
+        "The Trade-Offs We Make",
+        "What&#x27;s Next"
+      ]
+    },
+    "src-027": {
+      "hash": "27a27588cc755d97d1c1",
+      "lines": [
+        "Introducing EA Javelin Anticheat",
+        "EA’s anticheat technology gets a refresh, offering players and fans worldwide the safest gaming experience yet",
+        "“Our mission is to foster a gaming environment where skill and sportsmanship are the only paths to victory. EA Javelin Anticheat is a testament to our commitment to fair play and integrity.” - Elise Murphy, Head of Game ",
+        "“With EA Javelin Anticheat, we are not just reacting to cheating attempts; we are proactively creating a safe space where players can trust the fairness of their gaming experiences.” - AC Ward, Director of Anticheat Engi"
+      ]
+    },
+    "src-028": {
+      "hash": "468836e3711b843b317c",
+      "lines": [
+        "EA Javelin Anticheat is Coming to Apex Legends",
+        "Effective September 29th, 2026, Apex Legends will be switching its PC anticheat system to EA Javelin Anticheat.",
+        "Intro",
+        "EA Javelin Anticheat",
+        "What to Expect",
+        "Console Anticheat",
+        "Outro"
+      ]
+    },
+    "src-035": {
+      "hash": "d2eebc416b3fec9eb282",
+      "lines": [
+        "Ransomware Actor Abuses Genshin Impact Anti-Cheat Driver to Kill Antivirus | Trend Micro (US)",
+        "We investigate mhyprot2.sys, a vulnerable anti-cheat driver for the popular role-playing game Genshin Impact. The driver is currently being abused by a ransomware actor to kill antivirus processes and services for mass-d",
+        "Ransomware Actor Abuses Genshin Impact Anti-Cheat Driver to Kill Antivirus",
+        "Authors",
+        "Related Articles",
+        "Resources",
+        "Support",
+        "About Trend",
+        "Country Headquarters"
+      ]
+    },
+    "src-037": {
+      "hash": "534c51b21fc88795f93d",
+      "lines": [
+        "Windows Security Requirements FAQ &ndash; FACEIT",
+        "What is TPM 2.0 and Secure Boot?Secure Boot enforces a strict chain of trust: it checks that all software loaded at start-up is signed by...",
+        "Windows Security Requirements FAQ",
+        "What is TPM 2.0 and Secure Boot?",
+        "What is IOMMU and VBS?",
+        "How will these requirements affect my performance?",
+        "Why gradual rollout and not 100% enforcement to all players?",
+        "I enabled Secure Boot and now my PC won’t boot. What should I do?",
+        "My motherboard doesn’t have TPM 2.0. Can I still play?",
+        "Where can I find IOMMU? I don’t see it in my BIOS.",
+        "My hardware doesn’t have IOMMU. What should I do?",
+        "I play on Windows 10 or legacy BIOS/MBR. What should I do?",
+        "Do I have to install Windows 11 today in order to play FACEIT?",
+        "I am experiencing boot loops and crashes. How can I fix this?",
+        "What information does the FACEIT Anti-Cheat check?",
+        "Are there going to be cheaters on FACEIT after this update?"
+      ]
+    },
+    "src-038": {
+      "hash": "91f99f9f867c50faa6b3",
+      "lines": [
+        "ObRegisterCallbacks function (wdm.h) - Windows drivers | Microsoft Learn",
+        "The ObRegisterCallbacks routine registers a list of callback routines for thread, process, and desktop handle operations.",
+        "ObRegisterCallbacks function (wdm.h)",
+        "In this article",
+        "Syntax",
+        "Parameters",
+        "Return value",
+        "Remarks",
+        "Requirements",
+        "See also",
+        "Feedback",
+        "Additional resources"
+      ]
+    },
+    "src-039": {
+      "hash": "3d9799e6adb8caa0a97a",
+      "lines": [
+        "Virtualization-based Security (VBS) | Microsoft Learn",
+        "Provides guidance on what an OEM should do to enable VBS",
+        "Virtualization-based Security (VBS)",
+        "In this article",
+        "Related topics",
+        "Additional resources"
+      ]
+    },
+    "src-040": {
+      "hash": "afc5cab0b76155da51bb",
+      "lines": [
+        "FLT_PARAMETERS for IRP_MJ_ACQUIRE_FOR_SECTION_SYNCHRONIZATION Union - Windows drivers | Microsoft Learn",
+        "The following union component is used when the MajorFunction field of the FLT_IO_PARAMETER_BLOCK structure for the operation is IRP_MJ_ACQUIRE_FOR_SECTION_SYNCHRONIZATION.",
+        "FLT_PARAMETERS for IRP_MJ_ACQUIRE_FOR_SECTION_SYNCHRONIZATION union",
+        "In this article",
+        "Syntax",
+        "Members",
+        "Remarks",
+        "Requirements",
+        "See also",
+        "Feedback",
+        "Additional resources"
+      ]
+    },
+    "src-042": {
+      "hash": "2a4d3683bbf826cdfbcb",
+      "lines": [
+        "MmGetSystemRoutineAddress function (wdm.h) - Windows drivers | Microsoft Learn",
+        "The MmGetSystemRoutineAddress routine returns a pointer to a function specified by SystemRoutineName.",
+        "MmGetSystemRoutineAddress function (wdm.h)",
+        "In this article",
+        "Syntax",
+        "Parameters",
+        "Return value",
+        "Remarks",
+        "Requirements",
+        "See also",
+        "Feedback",
+        "Additional resources"
+      ]
+    },
+    "src-044": {
+      "hash": "ba2346378b8037cafa5e",
+      "lines": [
+        "Protecting anti-malware services - Win32 apps | Microsoft Learn",
+        "Learn about protecting anti-malware (AM) user mode services and how you can opt to include this feature in your anti-malware service.",
+        "Protecting anti-malware services",
+        "In this article",
+        "Introduction",
+        "System-protected process",
+        "Requirements",
+        "Anti-malware service signing requirements",
+        "Primary signature (recommended)",
+        "Secondary signature (optional)",
+        "DLL signing requirements",
+        "Catalog signing",
+        "Resource file info",
+        "CertHash",
+        "Algorithm",
+        "EKU"
+      ]
+    },
+    "src-045": {
+      "hash": "dc52f1ca4fcf2cdfa3ee",
+      "lines": [
+        "Call of Duty® | RICOCHET™ Anti-Cheat",
+        "Experience Call of Duty’s best-in-class anti-cheat security system, built with TPM 2.0 and Secure Boot enforcement, a powerful PC kernel-level driver, and unique in-game mitigations and detections. This multi-layered pro",
+        "HOW IT WORKS",
+        "BEST-IN-CLASS SECURITY",
+        "PROTECTING YOUR PRIVACY",
+        "COMBATING UNFAIR PLAY",
+        "Frequently Asked Questions",
+        "WHAT IS RICOCHET ANTI-CHEAT?",
+        "HOW DOES THE PC KERNEL-LEVEL DRIVER WORK?",
+        "Choose your region"
+      ]
+    },
+    "src-046": {
+      "hash": "c4f63750872b0a6c106e",
+      "lines": [
+        "Trusted Platform Module (TPM) 2.0 and Secure Boot for Call of Duty",
+        "Information about enabling TPM 2.0 and Secure Boot on your PC to play Call of Duty",
+        "Awesome! You have priority access",
+        "Submit a ticket within Support Options, and our support experts will prioritize your case.",
+        "You have an open chat session in the queue",
+        "You have a chat session in progress",
+        "You have an open case.",
+        "Are you sure you want to close your case?",
+        "Your ticket has been closed.",
+        "We got your email!",
+        "Your case # is",
+        "Oops",
+        "ARTICLE HELPFUL?",
+        "THANKS FOR YOUR FEEDBACK"
+      ]
+    },
+    "src-048": {
+      "hash": "40c678ad3cb61d2a7b59",
+      "lines": [
+        "Deobfuscation and Analysis of Ring-1.io",
+        "As part of this research, we partially deobfuscated multiple Themida-protected binaries used by ring-1.io, including its UEFI bootloader implant. Several critical functions were recovered to enable static analysis of the",
+        "Table of Contents",
+        "Loader",
+        "Bootloader Implant",
+        "Injection Into Hyper-V",
+        "Guest Physical Memory Redirection",
+        "VMEXIT Hooks",
+        "Implant Communication",
+        "Process Injection - Overview",
+        "EPT Hooks",
+        "All Hooks",
+        "Possible Detections",
+        "Conclusion",
+        "Related Posts"
+      ]
+    },
+    "src-049": {
+      "hash": "0c3a5c45913bf3ae4201",
+      "lines": [
+        "GetRuntimeAttestationReport - Win32 apps | Microsoft Learn",
+        "Retrieve a signed runtime attestation report",
+        "GetRuntimeAttestationReport function (sysinfoapi.h)",
+        "In this article",
+        "Syntax",
+        "Parameters",
+        "Return value",
+        "Remarks",
+        "Security Requirements",
+        "Requirements",
+        "See also",
+        "Feedback",
+        "Additional resources"
+      ]
+    },
+    "src-051": {
+      "hash": "9462ac0199bcf3232582",
+      "lines": [
+        "What is Vanguard? - Riot Games Support",
+        "Riot Vanguard is Riot Games’ custom game security software, designed to uphold the highest levels of competitive integrity for our offerings. It consists of a…",
+        "What is Vanguard?",
+        "Related Articles",
+        "We&#x27;re here to help."
+      ]
+    },
+    "src-052": {
+      "hash": "8e470732dbb1ad99247c",
+      "lines": [
+        "Vanguard Pre-Check - Riot Games Support",
+        "Vanguard Pre-Check is an optional feature that gives you more control over when Vanguard runs on your system.Instead of starting automatically when Windows…",
+        "Vanguard Pre-Check",
+        "Vanguard Pre-Check Requirements",
+        "Vanguard Pre-Check Verification",
+        "Related Articles",
+        "We&#x27;re here to help."
+      ]
+    },
+    "src-053": {
+      "hash": "a944e59b0f341bd64151",
+      "lines": [
+        "BattlEye client emulation | secret club",
+        "The popular anti-cheat BattlEye is widely used by modern online games such as Escape from Tarkov and is considered an industry standard anti-cheat by many. In this article I will demonstrate a method I have been utilizin",
+        "BattlEye client emulation",
+        "BattlEye initialisation",
+        "Packet handling",
+        "INIT ( 00 )",
+        "START (‘02’)",
+        "REQUEST ( 04 ) / RESPONSE ( 05 )",
+        "HEARTBEAT ( 09 )",
+        "Emulation",
+        "BottlEye",
+        "Fortnite",
+        "Insurgency",
+        "Escape from Tarkov",
+        "Thanks to"
+      ]
+    },
+    "src-054": {
+      "hash": "2db28cc9992f131c2e87",
+      "lines": [
+        "Applied Reverse Engineering: Crude T E for Control-Flow Tracing - Reverse Engineering",
+        "The idea of inducing faults with sentinels by patching code sections at runtime predates most of us. Fault injection for code tracing goes back to early software emulation and debugging in the 80s and 90s. Single-steppin",
+        "Daax",
+        "R D @ Company, Inc.",
+        "Nick Peterson",
+        "Anti-Cheat Engineer @ Riot Games",
+        "Aidan Khoury",
+        "Applied Reverse Engineering: Crude T&#038;E for Control-Flow Tracing",
+        "The Need for CFT",
+        "Modern Landscape",
+        "T&E for Branch Tracing",
+        "Architecture",
+        "— Disassembly",
+        "— Catching Exceptions without VEH or SEH",
+        "— PE Parsing"
+      ]
+    },
+    "src-056": {
+      "hash": "e9021c014de62aaaf888",
+      "lines": [
+        "How anti-cheats detect system emulation | secret club",
+        "As our first article addressing the various methods of detecting the presence of VMMs, whether commercial or custom, we wanted to be thorough and associate it with our research on popular anti-cheat vendors. To kick off ",
+        "How anti-cheats detect system emulation",
+        "Hypervisor Prevalence",
+        "Standard Detection Methods",
+        "Garbage Write to unimplemented MSR",
+        "Debug Exception (#DB) w/ TF",
+        "XSETBV",
+        "LBR Virtualization",
+        "LBR Stack Checks",
+        "Synthetic MSRs",
+        "CRn Access Exiting",
+        "CRn Mask VMX Availability",
+        "CPUID Leaf Comparisons",
+        "Advanced Detection Methods",
+        "INVD/WBINVD"
+      ]
+    },
+    "src-057": {
+      "hash": "91fc9adc659849113cff",
+      "lines": [
+        "Static Devirtualization of Themida",
+        "This article demonstrates devirtualization of CodeVirtualizer/Themida protected code, however the techniques described here apply to pretty much every virtual machine based obfuscator. Only requiring some minor modificat",
+        "Introduction",
+        "Themida Architecture Analysis",
+        "Warning To The Wise",
+        "Guided Symbolic Evaluation",
+        "Optimizations",
+        "Lowering IR",
+        "Results",
+        "Preventing Symbolic Evaluation",
+        "Related Posts"
+      ]
+    },
+    "src-002": {
+      "hash": "5500567b6afe0ea99e4d",
+      "lines": [
+        "CVE-2024-22830",
+        "Anti-Cheat Expert's Windows kernel module \"ACE-BASE.sys\" version 1.0.2202.6217 does not perform proper access control when handling system resources. This allows a local attacker to escalate privileges from regular user "
+      ]
+    },
+    "src-018": {
+      "hash": "90be2c27272eb9b2a737",
+      "lines": [
+        "etag: \"1792154180\"",
+        "last-modified: Fri, 16 Oct 2026 12:36:20 GMT",
+        "content-length: 659316"
+      ]
+    },
+    "src-031": {
+      "hash": "7d0d38e64b899bc53b88",
+      "lines": [
+        "eac-linux-devirt/README.md at 10d67114e35c4504abee49915ab3940bc4e6987c · 19h/eac-linux-devirt · GitHub",
+        "Contribute to 19h/eac-linux-devirt development by creating an account on GitHub.",
+        "Navigation Menu",
+        "Repository navigation",
+        "Files Expand file tree",
+        "Breadcrumbs",
+        "README.md",
+        "Latest commit",
+        "History",
+        "File metadata and controls",
+        "EAC Linux Devirtualization Research ( plx )",
+        "[!] Independent Personal Project Hex-Rays Non-Liability Notice",
+        "[!] Strict Research-Only Scope Prohibition of Misuse",
+        "Current state and meaning"
+      ]
+    },
+    "src-034": {
+      "hash": "ad296a222f4930024f4f",
+      "lines": [
+        "eac-linux-devirt/README.md at dc5f947d7531cfac19f01f2b9c8da2b77fb58957 · 19h/eac-linux-devirt · GitHub",
+        "Contribute to 19h/eac-linux-devirt development by creating an account on GitHub.",
+        "Navigation Menu",
+        "Repository navigation",
+        "Files Expand file tree",
+        "Breadcrumbs",
+        "README.md",
+        "Latest commit",
+        "History",
+        "File metadata and controls",
+        "EAC Linux Devirtualization Research ( plx )",
+        "[!] Independent Personal Project Hex-Rays Non-Liability Notice",
+        "[!] Strict Research-Only Scope Prohibition of Misuse",
+        "Current state and meaning"
+      ]
+    }
+  },
+  "publications": {
+    "https://secret.club/2026/05/21/striga.html": {
+      "hash": "d73b8452a9ded21a7537",
+      "lines": [
+        "Striga: Lifting x86 to LLVM IR with Python",
+        "Background While discussing with eversinc33 about lifting BinaryShield to LLVM IR I decided it would be useful to write a basic lifter in Python that can lift x86_64 instructions to LLVM IR. He has since released his blog post: Writing a Naive LLVM-based Devirtualizer, which I highly recommend you check out! This post assumes familiarity with the b"
+      ]
+    },
+    "https://secret.club/2025/06/02/hypervisors-for-memory-introspection-and-reverse-engineering.html": {
+      "hash": "9ea1274857b3beffc66f",
+      "lines": [
+        "Hypervisors for Memory Introspection and Reverse Engineering",
+        "Introduction"
+      ]
+    },
+    "https://secret.club/2024/10/21/unnecessarily-exhaustice-rca.html": {
+      "hash": "3f27b329e5c0fe8f2634",
+      "lines": [
+        "‘Reflections on Trusting Trust’, but completely by accident this time",
+        "Compilers are complicated. You just won’t believe how vastly, hugely, mind-bogglingly complicated they are. I mean, you may think C build systems are painful, but they’re just peanuts to compilers. - Douglas Adams, probably This blog post assumes you have some knowledge of LLVM internals - I’ll try to fill in some of the lesser-known gaps but there"
+      ]
+    },
+    "https://secret.club/2024/08/23/ring-around-the-regex-2.html": {
+      "hash": "437668680bd7f1c985d6",
+      "lines": [
+        "Ring Around The Regex: Lessons learned from fuzzing regex libraries (Part 2)",
+        "I’m a little late (one whole month passed in a blink of an eye!). Let’s catch up."
+      ]
+    },
+    "https://secret.club/2024/06/30/ring-around-the-regex-1.html": {
+      "hash": "467d681a1ac3d715f91d",
+      "lines": [
+        "Ring Around The Regex: Lessons learned from fuzzing regex libraries (Part 1)",
+        "Okay, if you’re reading this, you probably know what fuzzing is. As an incredibly reductive summary: fuzzing is an automated, random testing process which tries to explore the state space (e.g., different interpretations of the input or behaviour) of a program under test (PUT; sometimes also SUT, DUT, etc.). Fuzzing is often celebrated as one of th"
+      ]
+    },
+    "https://secret.club/2023/12/24/riscy-business.html": {
+      "hash": "3af07ac69e71b372f903",
+      "lines": [
+        "RISC-Y Business: Raging against the reduced machine",
+        "Abstract In recent years the interest in obfuscation has increased, mainly because people want to protect their intellectual property. Unfortunately, most of what’s been written is focused on the theoretical aspects. In this article, we will discuss the practical engineering challenges of developing a low-footprint virtual machine interpreter. The"
+      ]
+    },
+    "https://secret.club/2023/06/05/spoof-pe-sections.html": {
+      "hash": "b2fde71da1e0f299c491",
+      "lines": [
+        "Abusing undocumented features to spoof PE section headers",
+        "Introduction Some time ago, I accidentally came across some interesting behaviour in PE files while debugging an unrelated project. I noticed that setting the SectionAlignment value in the NT header to a value lower than the page size (4096) resulted in significant differences in the way that the image is mapped into memory. Rather than following t"
+      ]
+    },
+    "https://secret.club/2022/08/29/bootkitting-windows-sandbox.html": {
+      "hash": "546fe7a0068bab75f0b9",
+      "lines": [
+        "Bootkitting Windows Sandbox",
+        "Introduction &amp; Motivation Windows Sandbox is a feature that Microsoft added to Windows back in May 2019. As Microsoft puts it: Windows Sandbox provides a lightweight desktop environment to safely run applications in isolation. Software installed inside the Windows Sandbox environment remains “sandboxed” and runs separately from the host machine"
+      ]
+    },
+    "https://secret.club/2022/08/08/eqsat-oracle-synthesis.html": {
+      "hash": "260e803e10dd15e950aa",
+      "lines": [
+        "Improving MBA Deobfuscation using Equality Saturation",
+        "This blog post will first give a brief overview of obfuscation based on Mixed-Boolean-Arithmetic (MBA), how it has historically been attacked and what are the known limitations. The main focus will then shift to an extension of the oracle-based synthesis approach, detailing how combining program synthesis with the equality saturation technique prod"
+      ]
+    },
+    "https://secret.club/2022/05/11/fuzzing-solana-2.html": {
+      "hash": "794d59a61208ebd037bc",
+      "lines": [
+        "Earn $200K by fuzzing for a weekend: Part 2",
+        "Below are the writeups for two vulnerabilities I discovered in Solana rBPF, a self-described “Rust virtual machine and JIT compiler for eBPF programs”. These vulnerabilities were responsibly disclosed according to Solana’s Security Policy and I have permission from the engineers and from the Solana Head of Business Development to publish these vuln"
+      ]
+    },
+    "https://aftermathlabs.net/blog/31/07/2026": {
+      "hash": "6d58ea85fbf9b00d96a4",
+      "lines": [
+        "Static Devirtualization of Tencent VM",
+        "Prerequisite Material https://k0mkc.hatenablog.com/entry/2026/07/29/042406 https://arxiv.org/abs/2603.18355 https://arxiv.org/abs/1909.01752 Legal Disclaimer This work constitutes reverse engineering, decompilation, and de-virtualization performed solely for the purpose of achieving interoperability with ACE-protected software on Linux and Proton e"
+      ]
+    },
+    "https://aftermathlabs.net/blog/09/05/2026": {
+      "hash": "aaa550353b72d9b0cb38",
+      "lines": [
+        "Static Devirtualization of Themida",
+        "/* Outer gist container */ .content .gist { max-height: 420px !important; overflow: auto !important; background: #0d1117 !important; color: #c9d1d9 !important; padding: 12px !important; border-radius: 6px !important; box-sizing: border-box !important; } /* Make all descendants inherit the container colors and avoid nested scrolls */ .content .gist"
+      ]
+    },
+    "https://aftermathlabs.net/blog/04/02/2026": {
+      "hash": "5f61f03de520ddeea41d",
+      "lines": [
+        "Deobfuscation and Analysis of Ring-1.io",
+        "/* Outer gist container */ .content .gist { max-height: 420px !important; overflow: auto !important; background: #0d1117 !important; color: #c9d1d9 !important; padding: 12px !important; border-radius: 6px !important; box-sizing: border-box !important; } /* Make all descendants inherit the container colors and avoid nested scrolls */ .content .gist"
+      ]
+    },
+    "https://aftermathlabs.net/blog/26/09/2022": {
+      "hash": "8d7efc66e157fa8810c4",
+      "lines": [
+        "Unauthorized Code Execution in FiveM / GTA V (Pwning the Game Client)",
+        "Exploiting a Computer Program 1. Introduction Computer programs take, often transform data, sometimes use it to transform themselves. Other times, the programmer at fault, they can be corrupted by data. If corrupted accidentally, the program may find an untimely end to its execution. But if the flaw is perceived by the skilled eye, the program may"
+      ]
+    },
+    "https://aftermathlabs.net/blog/04/08/2022": {
+      "hash": "84ad3e17416ad766e569",
+      "lines": [
+        "AMD-V Hypervisor Development - A Brief Explanation",
+        "KrakenSvm Project Table of Contents Preamble Purpose &amp; Intentions Support Terminology Overview - KrakenSvm Hypervisor Virtual Machine Control Block (VMCB) - Parts Control Area Save State Area Secure Virtual Machine (SVM) - Semantics Checking Lock/Support Bits Initializing VMCB Setting EFER.SVME Secure Virtual Machine (SVM) - Instruction Set Cre"
+      ]
+    },
+    "https://aftermathlabs.net/blog/06/05/2022": {
+      "hash": "d4f0089843beeac0aa6d",
+      "lines": [
+        "Theodosius - Jit linker, Symbol Mapper, and Obfuscator",
+        "Repository: https://git.back.engineering/_xeroxz/Theodosius/ Doxygen: https://docs.back.engineering/theo/ Table Of Contents Credits Introduction and Preamble LLVM IR Level Obfuscation Bin2Bin Obfuscation Linker Level Obfuscation Brief Overview Of Theodosius Decomposition Module Obfuscation Module Recomposition Module Theodosius Internals Recursive"
+      ]
+    },
+    "https://aftermathlabs.net/blog/13/04/2022": {
+      "hash": "0a062d468347f1a15744",
+      "lines": [
+        "Writing a Mutation Engine and breaking Aimware",
+        "Source PERSES&rsquo; source code can be found here ."
+      ]
+    },
+    "https://aftermathlabs.net/blog/20/01/2022": {
+      "hash": "10cf8366be4555b4cde3",
+      "lines": [
+        "EZVIZ BD-2402B1 Reverse Engineering and SNES9X Port",
+        "Table Of Contents Introduction Hardware Details Notable Components SoC - Hi3520DV300 TDE - Two Dimensional Engine UART - Universal asynchronous receiver-transmitter JTAG - Hardware Debugging Hisilicon Source Code Which can be found here, rehosted on my servers… Bricking The Device &amp; Bus Pirate Flashing SPI NOR Flash Chip (MX25L12835F) Custom UB"
+      ]
+    },
+    "https://aftermathlabs.net/blog/12/08/2021": {
+      "hash": "2b1093d815a5887500a4",
+      "lines": [
+        "EQU8 - Kernel Component Analysis",
+        "Disclaimer Please note that all the code posted from here on is simply heavily beautified pseudo-code. Sorry in advance for the styling inconsistencies you may find in it; I would like to add it represents in no way the original source code of the program. I do not condone using any of the information gathered from this blog post to produce/write/d"
+      ]
+    },
+    "https://aftermathlabs.net/blog/10/08/2021": {
+      "hash": "50275e9c81d755216907",
+      "lines": [
+        "EasyAntiCheat Exploit to inject unsigned code into protected processes",
+        "Source Link Disclaimer This is not an attack on EasyAntiCheat Oy. EasyAntiCheat has done an outstanding job protecting games and will continue to do so for years to come. I gathered this content through private research of EasyAntiCheat&rsquo;s modules and is not in any way tied to the work of public game hack publishers or other entities. I have n"
+      ]
+    },
+    "https://aftermathlabs.net/blog/21/06/2021": {
+      "hash": "8cb7f53298042afb5106",
+      "lines": [
+        "VMProtect 2 - Part Two, Complete Static Analysis",
+        "VMProtect 2 Project: github.com/backengineering/vmp2 Table Of Contents Purpose Intentions Definitions VMProtect 2 - Project&rsquo;s Overview VMHook - Overview VMHook - Example, um-hook VMProfiler - Overview VMProfiler - Virtual Machine Handler Profiling VMProfiler - Virtual Branch Detection Algorithm VMProfiler Qt - Overview VMProfiler CLI - Overvi"
+      ]
+    },
+    "https://aftermathlabs.net/blog/17/05/2021": {
+      "hash": "8b239049a82362bef1fc",
+      "lines": [
+        "VMProtect 2 - Detailed Analysis of the Virtual Machine Architecture",
+        "Download link: VMProtect 2 Reverse Engineering Table Of Contents Credit - Links to Existing Work Preamble - Intentions and Purpose Purpose Intentions Terminology Introduction Obfuscation - Deadstore, Opaque Branching Opaque Branching Obfuscation Example Deadstore Obfuscation Example Overview - VMProtect 2 Virtual Machine Rolling Decryption Native R"
+      ]
+    },
+    "https://aftermathlabs.net/blog/20/04/2021": {
+      "hash": "9d3fd84948ba7c429991",
+      "lines": [
+        "Voyager - A Hyper-V Hacking Framework",
+        "Download link: Voyager Table Of Contents Keywords Abstract Credit Introduction bootmgfw.efi winload.efi BlLdrLoadImage BlImgAllocateImageBuffer Hyper-V Intel - vm exit handler location and hooking Locating Vmexit Handler Hyper-V AMD - vm exit handler location and hooking Locating Vmexit Handler Locating VMCB Hyper-V Payload - Injection, vmexit hand"
+      ]
+    },
+    "https://aftermathlabs.net/blog/29/03/2021": {
+      "hash": "5bdf30570f22ff4ed141",
+      "lines": [
+        "Hyperspace - Hidden Address Spaces",
+        "Download link: Hyperspace Table Of Contents Introduction - Address Spaces Thread Scheduler - Trap Frames and Control Registers DKOM - Direct Kernel Object Manipulation Windows Memory Manager - MiStealPage Example - printf, malloc, etc Limitations - Crashes and Conclusions Introduction - Address Spaces An address space is defined as a region of memo"
+      ]
+    },
+    "https://aftermathlabs.net/blog/27/03/2021": {
+      "hash": "b4c00911ed34d4290f31",
+      "lines": [
+        "Reverse Injector - Merging Address Spaces",
+        "Download link: Reverse Injector Table Of Contents Introduction - Virtual Memory &amp; Page Tables TLB - Translation Lookaside Buffer Four Level Page Table Graph Reverse Injector - Merging Address Spaces Remapping PML4 Entries 32bit Processes - Support, Limitations, Information Remapping 32bit Processes VirtualProtect - Page Protections and WinAPI’s"
+      ]
+    },
+    "https://aftermathlabs.net/blog/22/03/2021": {
+      "hash": "968032fd4d76ef7474f8",
+      "lines": [
+        "MSREXEC - Elevate Arbitrary WRMSR to Kernel Execution",
+        "Download link: MSREXEC Table Of Contents Introduction MSREXEC Starter Code WRMSR - Write Model Specific Register MSR - Model Specific Registers KVA Shadowing &amp; KiSystemCall64 IA32_LSTAR With KVA Shadowing Disabled (KiSystemCall64) IA32_LSTAR With KVA Shadowing Enabled (KiSystemCall64Shadow) Thread Scheduler - Interrupts &amp; LSTAR Existing Ker"
+      ]
+    },
+    "https://aftermathlabs.net/blog/01/12/2020": {
+      "hash": "834d1912e5854f96c6b8",
+      "lines": [
+        "PTM - Page Table Manipulation From Usermode",
+        "Download PDF Version (Best Version) can be downloaded here: PDF Download . You can download the source from the open source repo here: PTM Repo ."
+      ]
+    },
+    "https://aftermathlabs.net/blog/01/11/2020": {
+      "hash": "961e2ae318b002ff63d0",
+      "lines": [
+        "VDM - Vulnerable Driver Manipulation",
+        "Download PDF Version (Best Version) can be downloaded here: PDF Download . You can download the open source repo here: VDM Repo ."
+      ]
+    },
+    "https://aftermathlabs.net/blog/25/08/2020": {
+      "hash": "a68d490a931eb81c7774",
+      "lines": [
+        "PSKP - Process-Context Specific Kernel Patch",
+        "Download link: PSKP (Process-Context Specific Kernel Patch) Introduction Applying knowledge obtained from the prior write up of paging tables, one can easily follow along with this write up, if you have not acquainted yourself with paging tables this write up will be nothing but squiggly lines. Refresh your mind of the meaning of the following term"
+      ]
+    },
+    "https://aftermathlabs.net/blog/23/08/2020": {
+      "hash": "972b6c88feeddd19279e",
+      "lines": [
+        "Virtual Memory - Intro to Paging Tables",
+        "Download link: PTM Introduction Virtual memory is probably one of the most interesting topics of modern computer science. Although virtual memory was originally designed back when physical memory was not an abundant resource to allow the use of disk space as ram, it has stuck with us, offering security, modularity, and flexibility. Unlike the rest"
+      ]
+    },
+    "https://aftermathlabs.net/blog/19/04/2020": {
+      "hash": "a457d31e7abf4d506946",
+      "lines": [
+        "Physmeme - Windows Unsigned Kernel Driver Mapper",
+        "Download link: physmeme Introduction Physmeme is a driver mapper that works with any form of read and write to physical memory. It is highly modular code that allows a reverse engineer to easily integrate their own vulnerable driver. If you are able to read and write to physical memory you can now map an unsigned driver into your kernel just by cod"
+      ]
+    },
+    "https://revers.engineering/applied-re-crude-te-for-control-flow-tracing": {
+      "hash": "14d888318095b31019a6",
+      "lines": [
+        "Applied Reverse Engineering: Crude T&#038;E for Control-Flow Tracing",
+        "The idea of inducing faults with sentinels by patching code sections at runtime predates most of us. Fault injection for code tracing goes back to early software emulation and debugging in the 80s and 90s. Single-stepping via the trap flag dates to the 8086 (1976) and leveraging it for tracing as well in an old [&#8230;] The post Applied Reverse En"
+      ]
+    },
+    "https://revers.engineering/beyond-process-and-object-callbacks-an-unconventional-method": {
+      "hash": "1c8ea6ccc32c837c9282",
+      "lines": [
+        "Experimenting with Object Initializers in Windows &#8211; See PG-compliance Disclaimer*",
+        "Overview In this article, I wanted to introduce a fun approach to performing functions similar to those enabled by Windows Object Callbacks but through an alternative means (experimentally). It’s well known that anti-malware, anti-cheat, and generic monitoring tools on Windows systems often use these callbacks. However, their usability is limited t"
+      ]
+    },
+    "https://revers.engineering/fun-with-pg-compliant-hook": {
+      "hash": "3659d53fe712599b7486",
+      "lines": [
+        "Fun with another PatchGuard-compliant Hook",
+        "Overview In this article, we’ll be covering a fun alternative to the treasured InfinityHook from Nick Peterson. This alternative method was discovered by Aidan Khoury following the release and subsequent patch of the EtwpGetCycleCount target by Microsoft without any acknowledgements to the original authors. This method has been tested from early Wi"
+      ]
+    },
+    "https://revers.engineering/evading-trivial-acpi-checks": {
+      "hash": "70e3182c7ea09d22c009",
+      "lines": [
+        "Evading ACPI checks in commercial virtualization platforms",
+        "Overview Dozens of virtual machine checks are scattered throughout various open-source projects. You’ll see a handful of the same checks in various applications, from commercial to fully fleshed-out malware. The checks typically involve looking for drivers, devices, processes, registry entries, custom vendor information, timing attacks, etc. Most o"
+      ]
+    },
+    "https://revers.engineering/mmu-virtualization-impl-p1": {
+      "hash": "1bcba8600a0dc8679ed4",
+      "lines": [
+        "MMU Virtualization via Intel EPT: Implementation &#8211; Part 1",
+        "Overview This article will cover the various requirements and features available for MMU virtualization via Intel Extended Page Tables. It’s going to be a relatively long article as I want to cover all of or most of the details concerning initialization and capability checking, MTRR setup, page splitting, and so on. We’ll start with checking [&#823"
+      ]
+    },
+    "https://revers.engineering/mmu-ept-technical-details": {
+      "hash": "d738126d77996613e0ec",
+      "lines": [
+        "MMU Virtualization via Intel EPT: Technical Details",
+        "Overview This article marks the first of 5 articles covering the virtualization of the memory management unit (MMU) using Intel EPT. This technology is used as additional support for the virtualization of physical memory and allows hypervisors to monitor memory activity. This article will address the motivation for extended page tables, the many pe"
+      ]
+    },
+    "https://revers.engineering/mmu-virtualization-via-intel-ept-index": {
+      "hash": "b899eb8ce088d48043be",
+      "lines": [
+        "MMU Virtualization via Intel EPT &#8211; Index",
+        "Overview After receiving an abundance of requests to complete the EPT series I’ve switched gears to write this 5 part series over MMU Virtualization using Intel EPT. This series is written to be able to be used in your own hypervisor project or in conjunction with the CPU virtualization series published a few months prior. [&#8230;] The post MMU Vi"
+      ]
+    },
+    "https://revers.engineering/patchguard-detection-of-hypervisor-based-instrospection-p2": {
+      "hash": "2b3427df2cc5296738b9",
+      "lines": [
+        "Patchguard: Detection of Hypervisor Based Introspection [P2]",
+        "No Errata For U! If you haven’t already, read Part 1 which outlines three neat tricks used by Patchguard. KiErrata420Present The LSTAR MSR can be intercepted using a hypervisor to trap on reads and writes. It is the most common and efficient way to hook syscalls in most modern x86 operating systems. However contrary to [&#8230;] The post Patchguard"
+      ]
+    },
+    "https://revers.engineering/patchguard-detection-of-hypervisor-based-instrospection-p1": {
+      "hash": "d885326acf6f6448b7fe",
+      "lines": [
+        "Patchguard: Detection of Hypervisor Based Introspection [P1]",
+        "Errata Or Nah? Over the last 2-3 years, Microsoft has inserted various methods of virtualization introspection detection (big brain words) into the workings of patchguard. It shouldn’t come as surprise that this has happened, as subverting kernel patch protection is a breeze when the attacker code is running at a higher privilege level. While Windo"
+      ]
+    },
+    "https://revers.engineering/applied-re-accelerated-assembly-p2": {
+      "hash": "97674789028133d7b4b5",
+      "lines": [
+        "Applied Reverse Engineering: Accelerated Assembly [P2]",
+        "Overview After reading feedback from the first part to the Accelerated Assembly guide, I’ve decided to take on a custom target, and call back to high-level languages when we encounter obscure or new pieces in the assembly. I realize that the level of detail in my last article may have been cumbersome to some readers, [&#8230;] The post Applied Reve"
+      ]
+    },
+    "https://github.com/19h/chernobog/releases/tag/v6.3.1": {
+      "hash": "cd776a2e079c97deba30",
+      "lines": [
+        "Release: v6.3.1",
+        "**Full Changelog**: https://github.com/19h/chernobog/compare/v6.3.0...v6.3.1"
+      ]
+    },
+    "https://github.com/19h/chernobog/releases/tag/v6.3.0": {
+      "hash": "801c44050aec14e9f7ef",
+      "lines": [
+        "Release: v6.3.0",
+        "## What's Changed * Fix catalog CI failures caused by the runtime proof deadline by @19h in https://github.com/19h/chernobog/pull/7 **Full Changelog**: https://github.com/19h/chernobog/compare/v6.2.0...v6.3.0 > [!NOTE] > **Chernobog 6.3** — new since 6.2.0: > > - **Per-flag x86 abstract interpretation** — models the six arithmetic status flags, par"
+      ]
+    },
+    "https://github.com/19h/chernobog/releases/tag/v6.2.0": {
+      "hash": "7890b2d4559dc6c0430f",
+      "lines": [
+        "Release: v6.2.0",
+        "**Full Changelog**: https://github.com/19h/chernobog/compare/v6.1.0...v6.2.0 > [!NOTE] > **Chernobog 6.2** — new since 6.1.0: > > - **Range-guarded recurrent-switch CFF recovery** — unflattens dispatchers with unsigned range-check self-loops and restored selector registers, using exact Z3 transition proofs while preserving dispatcher side effects >"
+      ]
+    },
+    "https://github.com/19h/chernobog/releases/tag/v6.0.3": {
+      "hash": "1f6c06a3ed231e43afee",
+      "lines": [
+        "Release: v6.0.3",
+        "**Full Changelog**: https://github.com/19h/chernobog/compare/v6.0.2...v6.0.3"
+      ]
+    },
+    "https://github.com/19h/chernobog/releases/tag/v6.0.2": {
+      "hash": "ea9a48a68fe9ca6a4bf6",
+      "lines": [
+        "Release: v6.0.2",
+        "**Chernobog 6** is a major release. New since 5.3.0: - **rax hybrid engine** — bounded, focused-function emulation that materializes runtime strings and projects decoder, branch, memory, and Z3 cross-check evidence into the IDB (see [`RAX_HYBRID.md`](RAX_HYBRID.md)) - **Native pre-lift analysis** — early native/Hex-Rays enrichment passes that repai"
+      ]
+    },
+    "https://github.com/19h/chernobog/releases/tag/v6.0.1": {
+      "hash": "1471c6bed718a695d9a1",
+      "lines": [
+        "Release: v6.0.1",
+        "> [!IMPORTANT] > Superseded by [6.0.2](https://github.com/19h/chernobog/releases/tag/v6.0.2). > > 6.0.1 was a bit too strict on the rax runs and the user constantly had to manually run rax exploratory emulation manually. > 6.0.2 does that automatically now. **Chernobog 6** is a major release. New since 5.3.0: - **rax hybrid engine** — bounded, focu"
+      ]
+    },
+    "https://github.com/19h/chernobog/releases/tag/v6.0.0": {
+      "hash": "48e88cb1bbf542f85435",
+      "lines": [
+        "Release: v6.0.0",
+        "Superseded by [6.0.1](https://github.com/19h/chernobog/releases/tag/v6.0.1). **Full Changelog**: https://github.com/19h/chernobog/compare/v5.3.0...v6.0.0"
+      ]
+    },
+    "https://github.com/19h/chernobog/releases/tag/v5.3.0": {
+      "hash": "3038b59c50d2807202d0",
+      "lines": [
+        "Release: v5.3.0",
+        "**Full Changelog**: https://github.com/19h/chernobog/compare/v5.2.0...v5.3.0"
+      ]
+    },
+    "https://github.com/19h/chernobog/releases/tag/v5.2.0": {
+      "hash": "b1df0ffcb76a3dca6ecc",
+      "lines": [
+        "Release: v5.2.0",
+        "**Full Changelog**: https://github.com/19h/chernobog/compare/v5.1.0...v5.2.0"
+      ]
+    },
+    "https://github.com/19h/chernobog/releases/tag/v5.1.0": {
+      "hash": "5a8bafdb90beb9e46a3d",
+      "lines": [
+        "Release: v5.1.0",
+        "**Full Changelog**: https://github.com/19h/chernobog/commits/v5.1.0"
+      ]
+    },
+    "https://github.com/19h/chernobog/issues/5": {
+      "hash": "d28c46c852059b37bd2d",
+      "lines": [
+        "Public issue: IDA can't load plugin dll in 6.0 and newer verison in Windows",
+        "IDA can't load plugin dll in 6.0 and newer verison, and record an error 'cannot find the file.' ``` LoadLibrary(E:\\Program Files\\IDA Pro 9.4\\plugins\\chernobog_windows-x86_64-clang.dll) error: cannot find the file. E:\\Program Files\\IDA Pro 9.4\\plugins\\chernobog_windows-x86_64-clang.dll: can't load file ``` <img width=\"1041\" height=\"768\" alt=\"Image\""
+      ]
+    },
+    "https://github.com/19h/chernobog/issues/3": {
+      "hash": "1a07d5bad593be2c0e71",
+      "lines": [
+        "Public issue: Not working with IDA Home",
+        "I have IDA Home for individual Version 9.3.260213.91fc47de macOS arm64 (64-bit address size), dylib is in plugins directory in ~/.idapro/plugins but i cant see this option in when right clicked in Pseudocode Window. Regards,"
+      ]
+    },
+    "https://github.com/19h/chernobog/issues/2": {
+      "hash": "0bcd660b9355527d2259",
+      "lines": [
+        "Public issue: Out of curiosity, how does this work with gooMBA?",
+        "Thanks for the great work! I did a quick skim of the code and couldn't help noticing that MBA-Simplifications are based on pattern recognition, which is trivial to bypass. Is there any plan (or not) to integrate the advanced more universal simplify method as pointed out by the GAMBA paper? The HexRay's implementation is broken as hell for complex c"
+      ]
+    },
+    "https://github.com/19h/chernobog/issues/1": {
+      "hash": "4d6aac3d57fc09acd786",
+      "lines": [
+        "Public issue: how build in windows",
+        "Z3 not found. Please install Z3 or set Z3_ROOT environment variable. I should install that version of Z3. Thanks."
+      ]
+    },
+    "https://github.com/19h/eac-linux-devirt/commit/93b053e51feb1937a191dcc56e887f3eb9939159": {
+      "hash": "9535d4d1171304b21e3b",
+      "lines": [
+        "Separate checked and candidate profiles and model conditional calls"
+      ]
+    },
+    "https://github.com/19h/eac-linux-devirt/commit/dc5f947d7531cfac19f01f2b9c8da2b77fb58957": {
+      "hash": "51a5527277a900efcc4a",
+      "lines": [
+        "Systematically recover VM CFGs and precise instruction semantics"
+      ]
+    },
+    "https://github.com/19h/eac-linux-devirt/commit/ee21da92660518583edbf6c42adaadb32eba742a": {
+      "hash": "d26da3b16f9e300a6307",
+      "lines": [
+        "Resolve native flag conditions and recover normal-entry function CFGs"
+      ]
+    },
+    "https://github.com/19h/eac-linux-devirt/commit/10d67114e35c4504abee49915ab3940bc4e6987c": {
+      "hash": "ce2d81797b43bb37753f",
+      "lines": [
+        "Repair VM stack-state tracking and recover constant regions"
+      ]
+    },
+    "https://github.com/19h/eac-linux-devirt/commit/2873f8552d18a1234c914feed2c0d3d5306ac9da": {
+      "hash": "8d3ed9003d3a2ec9e377",
+      "lines": [
+        "Recover VM continuations and eliminate unresolved path dependencies"
+      ]
+    },
+    "https://github.com/19h/eac-linux-devirt/commit/91c810dd5601466bb1b1da24db5c6f17943112ca": {
+      "hash": "7a76942242511f34f240",
+      "lines": [
+        "Update README with disclaimers and VM continuation audit artifacts"
+      ]
+    },
+    "https://github.com/19h/eac-linux-devirt/commit/c7f8a3ce1b39a362d944edbb6a76c26a624b32c4": {
+      "hash": "001e5ea1be29568fe496",
+      "lines": [
+        "Document devirtualization state, merged artifacts, and audit results"
+      ]
+    },
+    "https://github.com/19h/eac-linux-devirt/commit/c3a082a10c4f3bcce3f22c5c97fe1a0542c8ce19": {
+      "hash": "ae5dee970d22268b49d9",
+      "lines": [
+        "Resolve synthetic helper dependencies and recover RC4 KSA model"
+      ]
+    },
+    "https://github.com/19h/eac-linux-devirt/commit/f5284c9ed880a7496db32b2c3c96aa740b6d6f3e": {
+      "hash": "723773b78b291151b35b",
+      "lines": [
+        "Add tools to merge original and devirtualized ELFs for IDA analysis"
+      ]
+    },
+    "https://github.com/19h/eac-linux-devirt/commit/cbc62f53e2a0d9b017ca3d9570d6c121cc15079b": {
+      "hash": "1079dd3b1acdb73f6326",
+      "lines": [
+        "Add original function tracing tool to map compiled symbols to source ELF"
+      ]
+    },
+    "https://github.com/19h/eac-linux-devirt/commit/7581c90c0ad1bf8a29b82aa313c96b2bd3dd3fae": {
+      "hash": "ad3eb347c409326a42b1",
+      "lines": [
+        "Add devirtualization pipeline and analysis tooling for EAC Linux client"
+      ]
+    },
+    "https://github.com/hseoa/ironshield-analysis/commit/bdd1e531c3ede7190792c37d1dbfe1d320950729": {
+      "hash": "d1e7b68ffde13d3ccc05",
+      "lines": [
+        "초기 커밋"
+      ]
+    },
+    "https://github.com/aftermathlabs/ring-1.io/commit/fb919638772fc7b744af0ba45b3a493e5aba0152": {
+      "hash": "1a67aae0edc85d0f02e6",
+      "lines": [
+        "Modify Eggsy's role in contributor list"
+      ]
+    },
+    "https://github.com/aftermathlabs/ring-1.io/commit/bc797fbf9b418de8db01d9a658a2a4c4b165b56b": {
+      "hash": "08828b5003c95c496798",
+      "lines": [
+        "Simplify description of BLARE2 framework"
+      ]
+    },
+    "https://github.com/aftermathlabs/ring-1.io/commit/9fd8d7c15f9dcd731781072f55b201fd0b6b10f0": {
+      "hash": "92c6e4134eae0c4bf8d5",
+      "lines": [
+        "Expand overview with anti-cheat services details"
+      ]
+    },
+    "https://github.com/aftermathlabs/ring-1.io/commit/9e04308625d5fd357c1913d7dc02b2ead99aba9a": {
+      "hash": "685a91b0e96e4cb36a0f",
+      "lines": [
+        "update readme"
+      ]
+    },
+    "https://github.com/aftermathlabs/ring-1.io/commit/54e895f6361c11dd3a3c4cbcd3a2ba6d64b6ccba": {
+      "hash": "a55214545415064ac717",
+      "lines": [
+        "update readme."
+      ]
+    },
+    "https://github.com/aftermathlabs/ring-1.io/commit/ef6c342f503a61a8dcad83260c337a0dadee4994": {
+      "hash": "12bef801931b9f514fc0",
+      "lines": [
+        "Merge branch 'master' of https://github.com/backengineering/ring-1"
+      ]
+    },
+    "https://github.com/aftermathlabs/ring-1.io/commit/c85d93ebfca010f2723a16b99c2fb3fee0b1998b": {
+      "hash": "fd55995139c2204675d7",
+      "lines": [
+        "updated readme"
+      ]
+    },
+    "https://github.com/aftermathlabs/ring-1.io/commit/b69dfbbd0e3cf70aae2f599ee94d9643f39507cf": {
+      "hash": "51fd86286e5ede1b6226",
+      "lines": [
+        "Fix formatting issue in README.md"
+      ]
+    },
+    "https://github.com/aftermathlabs/ring-1.io/commit/2d7b3fb19a7265bae808dc568c2b1c2436f0ff07": {
+      "hash": "357e6aff2e629f5b43d3",
+      "lines": [
+        "rework readme."
+      ]
+    },
+    "https://github.com/aftermathlabs/ring-1.io/commit/5c16c140901a97848f27083e22c6723e9c9d8277": {
+      "hash": "a9557757f15de8a463f8",
+      "lines": [
+        "init commit"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/84308f8393723fe22ff090351b3d37c65a171434": {
+      "hash": "13edd3e38681eeef7fb5",
+      "lines": [
+        "fix: install newest plugin binary across output paths"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/2b45bb7d083b0bbd7884f36330e69fbb913858af": {
+      "hash": "64ba7dc56e6c1bab9447",
+      "lines": [
+        "feat: support IDA 9.4 and 9.5 Hex-Rays ABI from a single binary"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/5c84d712f6abd99cc964a73fb64df12a542788be": {
+      "hash": "8a163b3641d463e39307",
+      "lines": [
+        "feat: expand native abstract replay and strict MBA extent comparison"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/5756071e69c4626db2419bc0e45531bf21f5f2a2": {
+      "hash": "0a7e8ddf7d4d42b1b0fa",
+      "lines": [
+        "feat: extend MBA semantic miss audit to byte-count shifts"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/a52cbdf8b3b5345a79ac6f08a82cb5658c5aa9bd": {
+      "hash": "c67df5745be50239c68f",
+      "lines": [
+        "feat: extend MBA semantic miss audit to nested explicit reads"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/a068c9d8beb5db6aec3627fc7f2433af36c581c1": {
+      "hash": "7aaab0d6094c3e5588ab",
+      "lines": [
+        "feat: add expanded MBA matcher input sample limit"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/cc8d4633c63fb415e07230ddbed10ad2e1e31d66": {
+      "hash": "08ea7092a557c30daa08",
+      "lines": [
+        "feat: extend MBA semantic miss audit to bounded nested arithmetic"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/9126c651f043bcee944b921f8f400b29d9b8f7c2": {
+      "hash": "67e0b308d2e9f76345fa",
+      "lines": [
+        "feat: evaluate bounded REP LODS values on x86-64"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/6ae8a6d4abbcdabfb6fe608afb8a69b77f41d9ee": {
+      "hash": "6b66a4a20698ab0a29ed",
+      "lines": [
+        "feat: preserve abstract state across exact zero-count REP LODS"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/9b4138be5952e5a63a80dfc58952e54add681a68": {
+      "hash": "12353c23e003b9524a23",
+      "lines": [
+        "feat: add x86-64 runtime control for RET imm16 stack transfers"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/0bde4c952a23e7a42323d8635adbc50653b2b250": {
+      "hash": "ef8d6d9d636f7ab95c54",
+      "lines": [
+        "docs: update stack transfer baselines for RET imm16 checkpoint"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/5049c4601f1ffb6a28d0d4ee8dede1f1b355f036": {
+      "hash": "40d3abdc26cdca8c689f",
+      "lines": [
+        "feat: admit near RET imm16 stack transfers without publishing jump edges"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/96f17a88823bef9e5e54941ab151b5ec65e7b03d": {
+      "hash": "7f298649d7b97b7e7911",
+      "lines": [
+        "feat: verify exact bytes and proof sources for PUSH return targets"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/8c58d27d497fe7cc0f994dccf7bd4628e9031ef7": {
+      "hash": "62050246311770dc8881",
+      "lines": [
+        "feat: add QEMU syscall census for Morok keygen process tree"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/6cb80b72308bac61c82c96f86f6c576513fae0de": {
+      "hash": "9ea7f95d9db89428c19e",
+      "lines": [
+        "feat: add QEMU block-start census for Morok packed execution"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/e8bb809144b60d55e946d63fafc7e91d574f40e3": {
+      "hash": "9bd0a18c44dd969bf8ab",
+      "lines": [
+        "feat: compare supplied Morok keygen behavior against candidate source"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/cad1139b598bffe390cf6afd33dc2590c61b6bcd": {
+      "hash": "a9154ce4ff0a29bb77fd",
+      "lines": [
+        "feat: cache oversized x86 owned-function inventory rejections"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/53eb01a228ecd0a078a8ee6c8c4561dab62f6f34": {
+      "hash": "a985baab3aef9f62e5f3",
+      "lines": [
+        "feat: preserve partial facts across two-register logical operations"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/a9ae4176c2c7871a0f0d42a1e1edb0c853143124": {
+      "hash": "d241e42d66301be9ccbf",
+      "lines": [
+        "feat: derive status flags from partially known logical results"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/cccc87779c5474982a614072e03ed7900d0b8136": {
+      "hash": "0ebf0426609905eb0582",
+      "lines": [
+        "feat: support immediate OR and XOR on partially known x86 registers"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/c87e10d8380a352b86f5200aaf16fa4f1e0d5b09": {
+      "hash": "98054648136e128b8cd5",
+      "lines": [
+        "feat: verify historical 97-head ownerless root under 128-node bound"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/f29a93d1b2f3085b9d354ea371ff795e94458430": {
+      "hash": "552e98f643041b1de0a1",
+      "lines": [
+        "feat: add read-only condition diagnostics for owned functions"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/1517bc35bcf43490218af7fd053a592f32873dc2": {
+      "hash": "d9c4f091043eef6697dc",
+      "lines": [
+        "feat: replay bounded repeated comparisons for x86-64 dataflow"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/83a1f38b2bb66c91c03d9bcd69616fe05e71a1ae": {
+      "hash": "c2df8e4b98011df2f68a",
+      "lines": [
+        "feat: add first-comparison early stop for REPE and REPNE comparisons"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/071a92d8a0deb57d0ebb033d82c1c418c46aaed9": {
+      "hash": "9f548b786b4437fbafca",
+      "lines": [
+        "feat: accept empty model bindings in temporal VM trace APIs"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/52559dbf23d79626a697a4076f3f5ed13721327f": {
+      "hash": "78a7283dfe2da5ac09d2",
+      "lines": [
+        "feat: add temporal VM capture inspection view for IDA Qt"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/ebf95d2288a5b5d6d5bdea50e47198973f3020b1": {
+      "hash": "b0e6660b250b3c359c01",
+      "lines": [
+        "feat: add sampled temporal VM transition checks for native traces"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/6cbfd62cc8c0639b0264de866023f2ded62af10b": {
+      "hash": "5bef0b0cc76e63741b16",
+      "lines": [
+        "feat: add read-only VM candidate projection for entered native traces"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/b9bc479c282fb061e2e9f743a0d615e99428d5f0": {
+      "hash": "0161cdd018cf95f262e6",
+      "lines": [
+        "feat: charge only newly scheduled heads in native region extension"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/7a7a0effc85721cce7689ecb8e90267417ba9595": {
+      "hash": "762e62e6d7c9c1cfd58a",
+      "lines": [
+        "feat: add scalar legacy encoding gate for undefined-result slices"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/3e65b2bd8c2dfd20bd23d96c2c7a7e3fb37126df": {
+      "hash": "208be63932e969cc6ae1",
+      "lines": [
+        "feat: add closed dependence slices for undefined register results"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/db33e00fcdd2c26e5e8e364345b46e2eeedeb0b1": {
+      "hash": "4b45a6a61a16fa27cf6f",
+      "lines": [
+        "feat: add typed integer flag semantics and independent replay"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/e2ea24bf71bf3ae389d19eff5d782f1127f81c09": {
+      "hash": "5c92589a641e95340bbd",
+      "lines": [
+        "feat: add certified catalog subset replay and corpus refresh"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/b89d23fc1acd5761b05eadd318083a946a28505e": {
+      "hash": "853f70e1ec7ae4a789fc",
+      "lines": [
+        "feat: add typed predicate constant admission in live MBA traversal"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/0e9dbb49407ad9392352c3c8926d11054f03c97a": {
+      "hash": "d11e5801b9c60953974e",
+      "lines": [
+        "feat: add typed semantic checks for captured MBA matcher rejections"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/3b21e98c842ee4f179aa0b3d25e0ea7920fcea9b": {
+      "hash": "4dadc91d33835ddb3931",
+      "lines": [
+        "feat: add transient matcher input capture and independent replay"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/c9ebffbb4a1e79d8e02adedb23b7810506f3f2c5": {
+      "hash": "cdfa0c5f2d0d8c697a97",
+      "lines": [
+        "feat: add longest-prefix failure witnesses for catalog matching"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/b472013e16664bcfe2868850a1a4f6c3d6b409d0": {
+      "hash": "6fd2c11a94067d98e119",
+      "lines": [
+        "feat: add bounded SDK operand traversal for AST construction"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/8a1d4ee990c18b210a8983fd6b08efea7240b936": {
+      "hash": "9088c8f332e608fcb01e",
+      "lines": [
+        "feat: add bounded predecessor slices for owned native functions"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/b65415a8dacd5c6280249f150070813528c301c6": {
+      "hash": "2a00d27c37d834d1fa95",
+      "lines": [
+        "feat: add operand snapshot identity for AST caching and matching"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/f534cbdc2caa836f25b03fdb4399fe65332e696a": {
+      "hash": "5b484caec4d2ac8b4f23",
+      "lines": [
+        "feat: add bounded repeat index postconditions"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/266d59e999aa35e86bc4da5c01e3469c86eb1c59": {
+      "hash": "d7cb1b5aa6d424a5dd29",
+      "lines": [
+        "feat: add bounded constraint binding capture for rejected catalog rules"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/e19349f60147328a3de69a82e07560e8db450dc7": {
+      "hash": "f5c28bf3a35de2a6f73e",
+      "lines": [
+        "feat: add direction flag precision for repeated string memory"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/f7aaf59f9705773d5fd74fb5fac73133850a6419": {
+      "hash": "ff02f90f61ad99c25217",
+      "lines": [
+        "feat: add bounded matching diagnostics for catalog attempts"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/9c9bfbeac0454fcc1cf1fc739b0fc33153a3099d": {
+      "hash": "d423f06f8ad6a6996142",
+      "lines": [
+        "feat: add guarded flow reanalysis for direct jump targets"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/9f0e8576aecefb3046f8e5002a0ab89f0b01986b": {
+      "hash": "b19defa54056b1ea0ca2",
+      "lines": [
+        "feat: add explicit load effect preservation for typed rule verification"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/90e165ec9ff951d5ec6d06e0d654667065e33d9c": {
+      "hash": "8abd66170dbcfb7e8489",
+      "lines": [
+        "feat: add scoped revalidation for native function metadata updates"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/5b59849303e99be0c38387bb29658c18491df9b5": {
+      "hash": "9620fe2c583cfafa4be4",
+      "lines": [
+        "feat: add bounded rejection diagnostics for typed rule verification"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/423061be17f786cb020a575f178003093a4f4bbb": {
+      "hash": "c1faf3e007c24cb11691",
+      "lines": [
+        "feat: add bounded repeated string memory transfers"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/76f01f4c282ff2d65b056bdb105734a3aee45cdc": {
+      "hash": "ce6be5203331cd9abdb1",
+      "lines": [
+        "test: add native edge and destination cover benchmark v2"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/58183245cf292e668df0083590c7fc6bf17e87ae": {
+      "hash": "41c74031f97babd8fe16",
+      "lines": [
+        "test: add database lifecycle audit for compound conditions"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/9797ffd5c41c39c91277283a0b23a30b42a2bf8e": {
+      "hash": "14bf7ae8ca05da9630c1",
+      "lines": [
+        "feat: add compound condition facts across correlated alternatives"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/b55a0aa009526aa0e0e8f4a3ef60e729f22546a9": {
+      "hash": "ac1dfed3e69b378e8ada",
+      "lines": [
+        "feat: add universal branch filtering for native target recovery"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/1d81a5bc36342c4ee1817187e330f001e4a30814": {
+      "hash": "a15e25638976ee3fd52d",
+      "lines": [
+        "feat: add bounded destination sets for unresolved native transfers"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/d0276a73b203ff9d3ccb469116a21abc0c63c21c": {
+      "hash": "f44aa24183cfbb5764ad",
+      "lines": [
+        "feat: add bounded alternative states across correlated joins"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/5feed46b7c2a9d90dcd8fbe59dadbb632b588c61": {
+      "hash": "bae32789371c7eea45b5",
+      "lines": [
+        "feat: add exact multiplication transfers and status flag tracking"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/7f07a825d1f275f418bd22c8e8143b17dd68e876": {
+      "hash": "0e1b90babf093c860367",
+      "lines": [
+        "docs: remove trailing blank line in VMP_ROTATE_FLAGS.md"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/2128c2f94f0a14921b9018e77b58ef8946bdce76": {
+      "hash": "e9cc2d744e05a4e80347",
+      "lines": [
+        "feat: add exact rotate transfers and status flag tracking"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/343d7c8463e311980b169cab573fbb39d00bd120": {
+      "hash": "0383eac350725c9f3838",
+      "lines": [
+        "feat: add exact accumulator sign extension transfers"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/0880c4f5e4ef18d9fbd25b8739ab42e36b933837": {
+      "hash": "38fb76084901242f3962",
+      "lines": [
+        "feat: add bounded candidate shadow checkpoint replay at unloaded roots"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/1019ecc9ed300e8dfa63a95af5243d4b0aa17404": {
+      "hash": "3497315fd21d8bc8fd5a",
+      "lines": [
+        "test: allow bounded solver abstentions in native observation tests"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/e9cbe164cd20326c50b2ecdc7d00ccee7c1879bc": {
+      "hash": "6dad55b23f1f469ee4a0",
+      "lines": [
+        "feat: add exact LAHF and SAHF per-bit status transfers"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/968205e03ce6d1e3feca954c7a7c60671c5e6d5b": {
+      "hash": "db47bf9875647080f8b8",
+      "lines": [
+        "docs: clarify sibling morok checkout path in protected sample corpus"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/079610a2284ecc14bbc2d7787cfc0e50161f4115": {
+      "hash": "2fc419baec6bbe88f1ea",
+      "lines": [
+        "feat: add undefined-result BSWAP16 fallthrough and flag preservation"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/a08f51ae7056459ff70a3b907df27a41282f92ba": {
+      "hash": "05fc0b9c5cba1a530913",
+      "lines": [
+        "feat: require named model contracts and call transfers for region uses"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/bfd985656e33045cdab6c0846117a3ac329ad6cc": {
+      "hash": "ada3e30a22da7f679c95",
+      "lines": [
+        "feat: require named model contracts and call transfers for modeled uses"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/737d03383219cbaa9542245d33a672e14ef408b3": {
+      "hash": "7dc66327040b64fdc036",
+      "lines": [
+        "feat: add single-read corroboration and verification for heap strings"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/1184922eb92a7c7bee73d1c34fab46e70ec61269": {
+      "hash": "b6ab8be2898fa78c8fcf",
+      "lines": [
+        "feat: retain completed read prefix before incomplete spatial heap suffix"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/828a027301c3cbda2d07362d52a08b120ed95cc3": {
+      "hash": "b31613fed16f7f2ccbdc",
+      "lines": [
+        "feat: add stack write survival and verification for heap read streams"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/d6ffcb1b1600726247e382d421f03a5c5cd60467": {
+      "hash": "882943e1321e588abb6a",
+      "lines": [
+        "feat: add disjoint read string partitioning and verification"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/6d7f798a5b7798303e2331de9b963d3b075f9aa2": {
+      "hash": "8eb6209390f1108c1399",
+      "lines": [
+        "docs: add protected sample corpus identities and assumption register"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/7945927a0bf27481c09105831a9eb94a28361fae": {
+      "hash": "70b7e8949c7b1e10f662",
+      "lines": [
+        "feat: add owned call checkpoint replay and verification for Morok keygen"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/f71a3604b40e51794ffb0e6a4c527d7cdd00991b": {
+      "hash": "34e4c6c66889487d0948",
+      "lines": [
+        "feat: add branch continuation replay and verification for Morok keygen"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/c6c07227c492210284b44071554ec8a79f5cfefb": {
+      "hash": "cf9c13bffe5ea2199caa",
+      "lines": [
+        "feat: add observed entry replay and verification for VMP hello"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/c0285525cc2c98e563b927a52149719134f1b8a9": {
+      "hash": "052cf735b70aee629e09",
+      "lines": [
+        "feat: add branch checkpoint replay and verification for Morok keygen"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/937654cb391a352e913c4e5323d76bc37fb1a9c7": {
+      "hash": "12ff25e182a6276f00ef",
+      "lines": [
+        "feat: add second-input verification for Morok keygen"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/680db409ddc722c4b35e6b92fb152613cc7575a4": {
+      "hash": "d51b7e27012853bd85c8",
+      "lines": [
+        "feat: add known-count REPE/REPNE SCAS and CMPS modeling and verification"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/b3979343ee9e7cea6776e43ad11a22a27835dd5f": {
+      "hash": "a5189f60286355a43eeb",
+      "lines": [
+        "feat: add exact REP MOVS local memory modeling and verification"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/e0fa026afc43c7f1da3ed47166738f0a07d8ce22": {
+      "hash": "d00c319d5ec414ce769c",
+      "lines": [
+        "feat: add shadow call-use Qt view and verification for VMP hello"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/300acee8bf52b331ffec26b8251f805d0df5fa09": {
+      "hash": "1a4c5dc8c5624eeec14d",
+      "lines": [
+        "feat: add runtime-shadow call-use probe and verification for VMP hello"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/5a02881c69e5ee46e8bdc05f5e78d3c29e42305d": {
+      "hash": "76a2012171f3010722e2",
+      "lines": [
+        "feat: add runtime-shadow probe and verification for VMP hello"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/88bfe907b07a26f4b450ea133a37fb466c1fac27": {
+      "hash": "c9b68a7d168f64d86d5e",
+      "lines": [
+        "docs: add supplied Morok ELF artifact audit and evidence"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/66062adae2320d2d92f737d773cc15a51a0f7d87": {
+      "hash": "e041bb23411d3bdf42dd",
+      "lines": [
+        "feat: add defined-flag probe and verification for Morok keygen"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/6a9cfa5e6c8e70cfb27cdf4fb32a5f0b95b704bf": {
+      "hash": "8e705f642fe85423b861",
+      "lines": [
+        "feat: add observed-memory replay for Morok keygen"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/6be377d9536d65158d0e45ca669e40cb2911c5f3": {
+      "hash": "3307b7c51b41f966f7d1",
+      "lines": [
+        "feat: add boundary memory probe and verification for Morok keygen"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/17aa95b26ce33bb8dc3e9f2a98bd7e3cdb42f4f0": {
+      "hash": "690c8a693b2a4fb24514",
+      "lines": [
+        "feat: add runtime-shadow entry replay for Morok keygen"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/8a13a9079f9a2cba0d6dc2be8445791b9e7bef97": {
+      "hash": "8e8415a6508d2d8ffe3e",
+      "lines": [
+        "feat: add runtime-shadow instruction states for Morok keygen"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/069e70afadeb34c32651c2ac5c347faaea765613": {
+      "hash": "4bdad6ae77e2c220e276",
+      "lines": [
+        "feat: add runtime-shadow candidate trace for Morok keygen"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/e42b2d42db7e88dcea2756134dda8b48560a2f35": {
+      "hash": "9635af558d30bb262ae3",
+      "lines": [
+        "feat: add packed-code entry probe and verification for Morok keygen"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/c368eeb9f8389283d67010b72e5bcef2df11c4bb": {
+      "hash": "72e6903a93d73586ff05",
+      "lines": [
+        "feat: add QEMU runtime trace probe and verification for Morok keygen"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/7056e253fe915471721cf8749243b8e91479f6ac": {
+      "hash": "0a55090db0e6090c2aa6",
+      "lines": [
+        "feat: add synthetic native trace for executable data heads"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/6b34e609552e6a80d846bea5f5133be7dbb97620": {
+      "hash": "58341b5be0eb7586c8d2",
+      "lines": [
+        "feat: display candidate byte regions in the Qt evidence view"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/82d3c48e28a2a8feb4e86cf18a237b2af693a07a": {
+      "hash": "8966d3faa18260d6efb6",
+      "lines": [
+        "feat: add read-only candidate decoding for executable data heads"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/40f6eddc4e6177b07bc61016519ad3cdf233ad24": {
+      "hash": "429bb25d7404df42a2da",
+      "lines": [
+        "feat: track exact local memory loads across plain long-mode LODS"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/09796c693770f7a0a3baea1e226ee00112e8de7a": {
+      "hash": "a1c2d0876a5086a8affb",
+      "lines": [
+        "feat: track exact local memory copies across plain long-mode MOVS"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/193c35f57ec8cda02ea70037b90bb46ec616f87e": {
+      "hash": "11f054a51d806b07f7cc",
+      "lines": [
+        "feat: track exact local memory writes across plain long-mode STOS"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/6b513b96303ff7254936bcb3bc619f8fae51f357": {
+      "hash": "8eb18f24bd92240f6c5a",
+      "lines": [
+        "docs: clarify plugin and baseline differences in CMPS local flags doc"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/1945c55969e36fc6fa4d7a47c844f6cffe20e0a1": {
+      "hash": "fcfc831029eeb58d8baa",
+      "lines": [
+        "feat: track exact local comparison flags across plain long-mode CMPS"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/f744f68f20472413da4e62b96a77d87a156dc2cb": {
+      "hash": "71e10af52f050cb03746",
+      "lines": [
+        "feat: track exact local comparison flags across plain long-mode SCAS"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/abfff7c56fa400245c64f9fc122863f61640e3c9": {
+      "hash": "ad90d76dbf0df687498a",
+      "lines": [
+        "feat: track zero repeat count across natural-address-size REP STOS and LODS"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/e383c0d4be8576bddcb3f16c261919ed10a2ee66": {
+      "hash": "25d1154225550dc6f61d",
+      "lines": [
+        "feat: track exact full-word stores to stack top for stack transfers"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/f071baa4764cca358516f7dbe8bf59a8a64f4afc": {
+      "hash": "63d7eb9dca4aeec5ed6a",
+      "lines": [
+        "feat: track zero repeat count across natural-address-size REP MOVS"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/0b91fc548e915461790da1d7146cab812df65fcb": {
+      "hash": "04f32f29a317d274872f",
+      "lines": [
+        "test: add source-annotated native transfer edge benchmark"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/d0d5813ef22ac001f4b22f4732236d48215c8410": {
+      "hash": "698bb5b08b9ea640d159",
+      "lines": [
+        "feat: preserve status flags and unaffected state across STOS and LODS"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/912f24d436d998ce8524204fee0fedfe71535f37": {
+      "hash": "f568969de485ec88c00c",
+      "lines": [
+        "feat: preserve status flags and unaffected registers across MOVS"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/0be7d48393b97a39d3eb969e11667be9fefc2485": {
+      "hash": "b00da75fb0b5678ae826",
+      "lines": [
+        "feat: track writable-memory arithmetic for native transfers and flags"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/51cdc10f240b09d50eb7674c804c99ee70f0e7f0": {
+      "hash": "16b76ed664c7a2f3b855",
+      "lines": [
+        "docs: record IDA static-analysis boundary for Morok keygen pair"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/74f8a0418536f93b1a45a03fa76c94957ffbf27d": {
+      "hash": "8d5a59753f20d11d5331",
+      "lines": [
+        "test: add source-controlled Morok keygen ELF64 paired process control"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/b55b575665a55feb08de884d738967499338a107": {
+      "hash": "466b825e10417da2b77a",
+      "lines": [
+        "test: add source-controlled Morok ELF64 paired process control"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/b12261f5a25a705d7fbe75239ecb6bac27b8a9c9": {
+      "hash": "a00d1c08c3ea64a4abb2",
+      "lines": [
+        "feat: track writable-memory extension loads for native PUSH and RET"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/be6f78a8fd0ca661f5b08246b002046a74acfba9": {
+      "hash": "ccf0a85f32c65099dee9",
+      "lines": [
+        "feat: track writable-memory MOV loads for native PUSH and RET transfers"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/943d341eab43ae34a334f688147543b3ca4c801b": {
+      "hash": "b20992fda6d09365bd98",
+      "lines": [
+        "feat: track register-memory XCHG for native PUSH and RET transfers"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/2c1a7abcfd9fcf9047a82f7744e48c0f929a493b": {
+      "hash": "902bd7c0a4f964fb1fe2",
+      "lines": [
+        "test: add stack alias invalidation controls for writable memory"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/a816878364072705c18ce92d69552b676bd7e917": {
+      "hash": "1482c304d5c5fedf1109",
+      "lines": [
+        "feat: track partial-width writable memory for native PUSH and RET"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/9de87f272c635f2b9a07989238e9c4e66a5112c1": {
+      "hash": "21ad110514e5cc9035f4",
+      "lines": [
+        "docs: clarify writable-memory assumptions in x86 flags analysis"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/4467cfbedd43b93cc8898dfd29e2d148f4585ea1": {
+      "hash": "700ed7afacdb17cddf3d",
+      "lines": [
+        "feat: derive exact writable-memory targets for native PUSH and RET transfers"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/18fa9dfdd93414c218a363107225434f01cbaa14": {
+      "hash": "afe49121d76eda8da485",
+      "lines": [
+        "feat: derive exact stack-word targets for native PUSH and RET transfers"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/f224dd5141cb020161a3bb7b90635b4c41105d73": {
+      "hash": "2109bd73b35e1dd63dac",
+      "lines": [
+        "test: add saved-flags controls to ownerless dataflow probe"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/03eb554e5a365e8ab1dcf5075b7e46f5950ea131": {
+      "hash": "d0340a968e46cd60c9da",
+      "lines": [
+        "docs: record paired Hikari arm64 selected-entry inspection control"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/e36195072af8766abc541bd799725bdcbcc175ef": {
+      "hash": "95608ea011df2af66e38",
+      "lines": [
+        "feat: restore tracked status flags across PUSHF and POPF replay"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/57324532bf2a39837d9055a9c2e69b7dab3b58a1": {
+      "hash": "0c594e7e8234ac2a0a02",
+      "lines": [
+        "test: add direct child fallback for corpus runner process termination"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/a75e6687a47296c1cf547d8c87804eec60097840": {
+      "hash": "1ec4dab9d7ef854ecfbc",
+      "lines": [
+        "feat: preserve tracked status flags across CLD and STD instructions"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/965986db9160e14bbdbf0cc432237d747176e2f8": {
+      "hash": "e2929732c7b3ed276c2c",
+      "lines": [
+        "test: align ownerless corpus harness with 128-node inspection limit"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/bbe68b604ca65d223171d8097dbdd90635d3ff30": {
+      "hash": "c6b3937845408255e85f",
+      "lines": [
+        "feat: raise ownerless native region inspection limit to 128 nodes"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/89899192ad0b3ee1607ee872e102bd5c0ab0c8f2": {
+      "hash": "42a59c359795343e21ce",
+      "lines": [
+        "feat: maintain get-PC donor leases across re-inferred noreturn flags"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/d819402e7262e9f4c8b46138098f6d5496460000": {
+      "hash": "8ffee5543d166c7f0d04",
+      "lines": [
+        "feat: transfer closed automatic get-PC gadgets into caller functions"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/5b671de2fda9ef303a6058abbd2eef968d015d37": {
+      "hash": "9a40fafabc3e790de2bc",
+      "lines": [
+        "feat: repair stale inferred noreturn flags on proven get-PC functions"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/abb9c8165168b621225b7fdeabe4ea4bc60564c0": {
+      "hash": "eb6c176930fea6b148f8",
+      "lines": [
+        "docs: record Morok packed-entry control and evidence"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/61bfa95c024a43577c1d99af0944444c1c88d1ec": {
+      "hash": "57463dce044ba5a2c5b6",
+      "lines": [
+        "feat: reconstruct permuted heap read streams across multiple sites"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/dc6cc401189642d14a4ffef14376137bdcb3659b": {
+      "hash": "3dcbf455136a50b3e700",
+      "lines": [
+        "feat: reach consensus on permuted read streams across variable orders"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/aaf87571da60ab4b73f208c220e224bf6d648754": {
+      "hash": "6fe9327e2829eb589d04",
+      "lines": [
+        "docs: record ARM64 evidence for permuted heap read streams"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/e44e5bfe35889f6a2ea4833de1674b466f556feb": {
+      "hash": "5f0de0a6c4afa5ee7754",
+      "lines": [
+        "docs: record Morok provenance and candidate configs for Linux ELF samples"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/0f5ae647dab367f8961410ae4138732bd7e0aaad": {
+      "hash": "ef8d18bb3f014776f37f",
+      "lines": [
+        "feat: reconstruct permuted heap read streams covering contiguous spans"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/ed76549c664824ea284a3e12c9d8042de0a01a30": {
+      "hash": "a047c17e4fc20ef8d8ea",
+      "lines": [
+        "fix: retain read streams across writes outside completed byte spans"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/96b794a91741fc422328e83d6a0a06f7fdc1da95": {
+      "hash": "c5d97e145992237ea2e2",
+      "lines": [
+        "test: add ARM64 indirect-call display control"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/b408e26a14ed92da4b97eca491553086e66d7b1c": {
+      "hash": "cb4f251e8ce47af49926",
+      "lines": [
+        "feat: display modeled use strings at indirect call sites"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/ed41aac94315c1a049e321c02d2d582ca74bd9eb": {
+      "hash": "7804e1556a38ad7b53cd",
+      "lines": [
+        "fix: retain read streams across disjoint heap writes"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/47605590517024fb18825a5af5480be948ee4f7d": {
+      "hash": "c23a86da1c0bf00d035b",
+      "lines": [
+        "docs: inventory supplied samples and hello-world execution evidence"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/6eca6dfe2d07fd90d9548e1842843adee493efbb": {
+      "hash": "2d5faa211f51f634c524",
+      "lines": [
+        "test: add ELF32 stack-transfer rejection controls"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/ca87823a0deb060890ab21aff602bed920607171": {
+      "hash": "06718d64482010e97640",
+      "lines": [
+        "fix: preserve PUSH classification across IDA basic-block ends"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/82349186b6048da873e166315ce7a4d5f2dfcccd": {
+      "hash": "327b47656545e2acb648",
+      "lines": [
+        "test: add ELF32 get-PC execution control"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/00460e8fd0de093e1d7af5aa17b5f8d78a115515": {
+      "hash": "88184ddf66a0ed0795c2",
+      "lines": [
+        "docs: update README with Chernobog 6.3 release notes"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/f4d464f77353877cdc7a1a6f1f5148c378c6e9fe": {
+      "hash": "7d10c29848632f38b059",
+      "lines": [
+        "fix: forward declare insn_t and op_t as classes"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/fedbd7f03be520973a4e8e6a43e6380ee36262bf": {
+      "hash": "9ea0104e80b4d9687b19",
+      "lines": [
+        "fix: disambiguate bv_val call for numeric operands on LP64 targets"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/4883ef6265a37c9bb22de989330f582624585219": {
+      "hash": "be22a2ee5d2ecfca060c",
+      "lines": [
+        "fix: skip unconsumed register arguments before querying tracker"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/ac63c48c45fb23973823332704f562f10122ae7a": {
+      "hash": "325cb65438b5898a7c94",
+      "lines": [
+        "feat: propagate native facts across explicit-root ownerless graphs"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/15fc6724f746eda25ce2fd6f9cd8c1d9778ddbbf": {
+      "hash": "4af80ef0dfd2e28ffe36",
+      "lines": [
+        "feat: model immediate-push handlers and conditional stack checks"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/e726b9480ba8d4965facf23eb7baadc80640b26d": {
+      "hash": "2e2a0d6c57469193e5b0",
+      "lines": [
+        "fix: revoke native proofs on entry and function topology changes"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/870eacd393769bab026da416235c858973a0e64b": {
+      "hash": "67ab22fd7b4dfd7d8c52",
+      "lines": [
+        "feat: join register, flag, and stack facts across direct branches and loops"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/428e36c0f1d477c34f585218a8d50ee7038cea93": {
+      "hash": "ce99594b8dd4d41a1d51",
+      "lines": [
+        "feat: add temporal prefix string observations before region frontiers"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/3b48e5fa7da6adbcbcc11da458f2061f8c0721ad": {
+      "hash": "bcefbcda9349cce6c405",
+      "lines": [
+        "feat: track independent pending streams for interleaved native reads"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/74af2a689a8d69a5442779b3b0852e7a25a8a9ee": {
+      "hash": "04cf9d064b19842b61fd",
+      "lines": [
+        "test: check repeated native visit verdicts and add failure diagnostics"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/787a9c4624420fc6d13fe918f18b0de631313587": {
+      "hash": "20c6a5047f31501452be",
+      "lines": [
+        "fix: require opaque lease for native string freshness across restarts"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/cf560b1ab6bc9fcfe34e9bc3553d22662fc5324b": {
+      "hash": "c0969f68e08d4c6a023e",
+      "lines": [
+        "feat: add native region scalar and modeled string snapshots"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/547dffd1982f505ae711b5ee794f87501c2a3055": {
+      "hash": "76fb3eab3b3a0798f5de",
+      "lines": [
+        "style: format Python sources and tests with black"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/18855416e1ec89cc6ee77e9f010c6e51af10140e": {
+      "hash": "3588cbacf3655440d917",
+      "lines": [
+        "style: format C sources and test fixtures with clang-format"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/ef526351b205bf8ffa77ac4b3cf538bbd3eaf669": {
+      "hash": "5c917bdf40ddabd9b3f8",
+      "lines": [
+        "style: format C++ sources and headers with clang-format"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/7eeb8ef62abc23efd5a40847dc397d9fb21d80e2": {
+      "hash": "8373221be606c02e5306",
+      "lines": [
+        "docs: add agent formatting and commit workflow guidelines"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/45b912cad34a4a8571c801bb6704fdfc78107cfb": {
+      "hash": "74eb002b9791e942a267",
+      "lines": [
+        "feat: add native region string consensus, freshness lease, and Qt view"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/a114072aba7e51b3ec76af1c2814c7dab7e0b48f": {
+      "hash": "08a517b2e87dafbb0559",
+      "lines": [
+        "feat: add temporal native region tracing and ABI call models"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/787014ee635b9fb3f414fa06c430fce8644e64b2": {
+      "hash": "8ca7a9bdf58a6018c63e",
+      "lines": [
+        "test: add protected temporal string benchmark and evidence"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/ea2538041011d0b9c9b86b30d8b3cfecaa95d0fc": {
+      "hash": "317c3a2186ef799088dd",
+      "lines": [
+        "feat: add native region capture, condition codegen, and boundary audit"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/a82bfef4d91847bcd9e67c0d5a229d43f7744a47": {
+      "hash": "0daf2fc035edcc7d0b14",
+      "lines": [
+        "feat: add linked evidence views and VM region transition validation"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/17a920a6fc4af2d6c158268eac2270936693b7a0": {
+      "hash": "6a12319d73f20667729c",
+      "lines": [
+        "feat: add typed instance proofs and bottom-up MBA simplification"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/c4191bb998a8beb88a5e8d07cb70ea4650c21a1d": {
+      "hash": "6efb0eb6f687594801f2",
+      "lines": [
+        "feat: add temporal string capture, get-PC recovery, and rotating decrypt"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/d6db598335e3a6b211dd3d0ee4b5160670f167f9": {
+      "hash": "855a791bab3ffefdaddd",
+      "lines": [
+        "feat: add native proof receipts and lifecycle invalidation in IDA"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/7a6ba45d56b0171fdd88326098f26e259a045638": {
+      "hash": "98d50176e3f23581f72f",
+      "lines": [
+        "feat: add x86 flag and register analysis for native CFG recovery"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/c4440677e39f296e18bbd6f82eab50b878cebead": {
+      "hash": "967b9c9ef09bf3d8215d",
+      "lines": [
+        "docs: add Chernobog 6.2 release highlights to README"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/113f6e99c7df9782417023310c642b9269d2e8fd": {
+      "hash": "7dd946f19a5d9e14d003",
+      "lines": [
+        "test: separate catalog proof budget from runtime verifier deadline"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/dd726bd540d3aa1c558c80fd49b7024e778741d4": {
+      "hash": "e70c1fcc2ca51c9c9080",
+      "lines": [
+        "feat: support range-guarded recurrent switch unflattening"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/67415156a74291f2c4c0bb94cfae8d5964c5cad4": {
+      "hash": "67da8f4e7d37db330616",
+      "lines": [
+        "perf: check leading byte before redundant rep prefix decode"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/2b548201d5120ff360077c92c84c7979c8025d30": {
+      "hash": "2a04c62a78856027aa7a",
+      "lines": [
+        "perf: cache base-path feasibility and model witness in symbolic executor"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/85df51df5cabfe4f837e4a96c28e3b11808ad569": {
+      "hash": "f7e7dc604d9384ab21bc",
+      "lines": [
+        "feat: add full value invalidation and temporary feasibility queries"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/6bc986635deda0fbdf664131943ade94a04af04c": {
+      "hash": "34e1745350c087400f68",
+      "lines": [
+        "test: implement restricted mop erasure in redirected hexdsp entry"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/b3b5b03c81b52575b1b327991eddb1ce77436c57": {
+      "hash": "e6590f7cf9e4f01ac4fb",
+      "lines": [
+        "test: emulate SDK mop erasure in standalone catalog harness"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/5398d20ddb3aa8c1ffb486a95f4f6e80d371149a": {
+      "hash": "d64b41759702afca19f2",
+      "lines": [
+        "feat: add numeric CFString display and restrict writable constant reads"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/ea056144aba591379a0ab9e2f0f5111b02dec3e7": {
+      "hash": "b5413a230ad0b323cebe",
+      "lines": [
+        "test: forward toolchain flags to python shim runners in ctest"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/fbac246f936a5188a7bb3c551f3ac130e5e2369e": {
+      "hash": "a8dd8e9713dbe4c36495",
+      "lines": [
+        "feat: add bounded search summaries and UTF-8 runtime string recovery"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/971ce4ded50b81a53981a24bece133ec81d9b75c": {
+      "hash": "73794677d8207fd39b3c",
+      "lines": [
+        "fix: require microcode address proof for early constant reads"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/520ca369146c8f9fcb292768a88370bffa974e70": {
+      "hash": "86c588ee677f6c8dd4c7",
+      "lines": [
+        "perf: bound static analysis traversal to instruction budget"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/bc0e5e55fe4aa00a7d1107f19007896b354ae104": {
+      "hash": "77eb03690f2d5f42187e",
+      "lines": [
+        "test: record run reports and isolate environment in ida smoke runner"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/b2cf5ad675bf514bbcef2b7444f0aeac96f73d1d": {
+      "hash": "068dcaf76de5d3e3d1cb",
+      "lines": [
+        "feat: add loaded byte views for program image segments"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/2e4cbf88d1c678b2bf4bfca0501ed42601c252bf": {
+      "hash": "d6b9157f45842a809679",
+      "lines": [
+        "perf: bound chain search in split-block detection"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/43dd25a73ab2df6a120a56276e802193438c2996": {
+      "hash": "d15517a673c69fe2a106",
+      "lines": [
+        "perf: optimize program model hashing and segment traversal"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/d272b5dffbfbcaea479fb64e469577c2d8011c4c": {
+      "hash": "22371b6bf212ce9a5a3d",
+      "lines": [
+        "fix: stub HEXDSP in standalone tests to prevent crash on AST destruction"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/79f1488d3016a2c4a94540b87bec84a33f1557f0": {
+      "hash": "91f9fb971e74e711f0c8",
+      "lines": [
+        "ci: separate cache restore and save steps"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/34c4f54370e2a9624128a3fcb94d56e57c858032": {
+      "hash": "512f26dc4342b4c4da6f",
+      "lines": [
+        "feat: expose full capability surface through IDC interpreter"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/3abf0eb3e14e6b65a1c2ba45b014386cf2307dea": {
+      "hash": "c3daec151a59744ebeb0",
+      "lines": [
+        "feat: only run emulation and deobfuscation in auto mode or by request"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/72745a8b1f2e5473728bd4d3191deb76b0e903a5": {
+      "hash": "38eceb0093a0db783024",
+      "lines": [
+        "feat: preserve display lease across Hex-Rays prototype refinement"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/5ee7cda482b7b9122d06c5afe494010b66dc5217": {
+      "hash": "5631d0d2623aa19e443e",
+      "lines": [
+        "feat: explore all decompiled functions automatically with rax"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/7f0e986c753eb3f76e1da2a2c35fcb48819a8945": {
+      "hash": "4a0196c33b5687226ff5",
+      "lines": [
+        "ci: build Windows x86-64 releases with MSVC (#6)"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/5751d27749c2d567d8ee179e34816335a5af4811": {
+      "hash": "165011aa2e36fa5208eb",
+      "lines": [
+        "fix: reject SIMD and wide microcode values in simplifiers"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/31da6c3d66faf49085b941d32e55425d70e6d2ed": {
+      "hash": "a6e6118620dd3bc281b6",
+      "lines": [
+        "chore: update rax to a9757b274a3fde7ffb8f6654bb51c059e03d09f0"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/51791f1d9f7e3d3bfb8bf266c65b61d06fd70e0b": {
+      "hash": "a045c4f78ee420773af8",
+      "lines": [
+        "docs: update documentation for Chernobog 6 major release"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/05b5392a786b2072326d8728a9b6b11cbe1b1a7d": {
+      "hash": "85ac1f1966232b395c9a",
+      "lines": [
+        "ci: build Linux and Windows ARM64 artifacts"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/59212d5ceeee2ff60dd3fd0dabe5d9b7a560982b": {
+      "hash": "d0fe05de04e225cac112",
+      "lines": [
+        "feat: isolate native get-PC classifier and support multiple databases"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/1a27b514f6f94bb1473b4ebc2871af6fea28e65a": {
+      "hash": "d9761b05c68c5743ebbd",
+      "lines": [
+        "feat: simplify recurrent resolver expressions safely"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/b22bdeb4049b0b9c4ae2920d019e179c44bf8e66": {
+      "hash": "ab53afe70eabb43a8963",
+      "lines": [
+        "feat: rewrite recurrent switch dispatchers"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/991b4760d508c63b4ed61fc583453123e60672a5": {
+      "hash": "40c5b2e5236ec79fabf6",
+      "lines": [
+        "fix: align direct-index selector threshold"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/419445df2c785b2684c108b4cdbe8b3998e48d09": {
+      "hash": "2dd7ae4d6df21d8d5cf1",
+      "lines": [
+        "feat: classify recurrent switch CFF dispatchers"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/74faba084dfebc09dee108b26d57715606bb0c50": {
+      "hash": "dce6ad5a09998ee189b3",
+      "lines": [
+        "build: pin IDA SDK 9.4 release"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/7ac9a0136bf21606594557a7bfdf3d13c15d9ab9": {
+      "hash": "3d63096479ea6b43c1ff",
+      "lines": [
+        "fix: support stable IDA SDK in analysis passes"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/bedac9e4da1367c5a8127dfe1427a479797d704a": {
+      "hash": "ea40a9c712b8a9c3662c",
+      "lines": [
+        "feat: Enforce function boundaries and restrict automatic rax triggers"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/aac806c2411f05940547b5f5b8fcf0448703b6c0": {
+      "hash": "0a7e87f3338455248f27",
+      "lines": [
+        "fix: Resolve Hex-Rays 9.4 MERR_LOOP shift and CFString lvalue INTERR"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/88eb4b2daf474bd560d64d6c5742502a05e89bce": {
+      "hash": "95036e8707c1ea5f02e2",
+      "lines": [
+        "feat: Add early Hex-Rays enrichment passes and refine native analysis"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/909a42463149d13f46796b641662cc8918498d1b": {
+      "hash": "f0f3eb61e146152dc6f6",
+      "lines": [
+        "feat: Add native IDA analysis enrichment and rax evidence materialization"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/923613aa8feb074dd784e7bc4f2bc5561246277a": {
+      "hash": "9dfc817add7a055ff4e3",
+      "lines": [
+        "feat: Auto-explore current function with rax and materialize strings"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/b3a6239ff0d50686b8eec32a5314d9a43c67a9af": {
+      "hash": "eecf1a02ab9ee4c3baa2",
+      "lines": [
+        "docs: Sync documentation with recent feature additions"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/adf72d8eec6eeff5625438f427822fef7575c074": {
+      "hash": "fa2106001a10a561a009",
+      "lines": [
+        "chore: update vendored rax to rebased master"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/75b335c9b49cbd122f286d40e852900ab602d19b": {
+      "hash": "c0356adfaa1620f08d80",
+      "lines": [
+        "feat: harden current-function rax evidence"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/2d417d77b1f7e4fc83d861e1b79c91851bb8dde1": {
+      "hash": "38262f3ec6ca980f3fbf",
+      "lines": [
+        "feat: Add Objective-C ABI support and external boundary modeling"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/5d91a54b8146f2ba62b8fa53085436be7ec04e46": {
+      "hash": "0b63061dd7c30631b18a",
+      "lines": [
+        "refactor: Refine evidence identity comparison and add rejection logging"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/db194518b9d7bc903cb054c6e546f6409d929212": {
+      "hash": "6a9212f1032f3c0a3019",
+      "lines": [
+        "feat: Add rax-backed hybrid emulation and analysis engine"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/5c06a3af5d74c1e752f06e24404515d62965d6eb": {
+      "hash": "b7fd234d59df5fc2b8c5",
+      "lines": [
+        "build: Restore IDA SDK 9.3 flowchart compatibility"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/261201900220764b5193bf7c3a260bff67eccc37": {
+      "hash": "9b8567cd7f458884012a",
+      "lines": [
+        "feat: Add native opaque predicate resolution and branch evaluation"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/dba80fb265719f0fc3b67d913c8ee649396e84c1": {
+      "hash": "635228e2ec5ee31fa8e7",
+      "lines": [
+        "feat: Add Hikari CFG recovery, branch patching, and writable constants"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/0a430b795812a31bd3000dc63d2d4bee6de53f0f": {
+      "hash": "466bd663c8fa1ae30b08",
+      "lines": [
+        "feat: Add static XOR/NOT string initializer recovery"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/04cc8f2d25ae25e4ff7d6ea107334ff19d69a5d4": {
+      "hash": "17165d74955ae8196824",
+      "lines": [
+        "refactor: Refine select cascade handler heuristics"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/c9c224aa956ea564885b2ce39f5529fe076b82d3": {
+      "hash": "7dc72975e377b56fa088",
+      "lines": [
+        "feat: Add handler to collapse long select/cmov cascades"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/b042a31e8f2171e012178d93ae3a725a9fbe459c": {
+      "hash": "69738c25da676a44db07",
+      "lines": [
+        "feat: Add execution controls, fix block merge, remove redundant passes"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/8abc328b4547774ad6afba2d14ea78671883355b": {
+      "hash": "bf78fd65484c4685ec9b",
+      "lines": [
+        "refactor: Migrate to PLUGIN_MULTI for multi-database support"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/d3621be9af2a0f14f3e893086dad89729ced1266": {
+      "hash": "cd6bd814c201e2dc58d4",
+      "lines": [
+        "build: Fix GNU build errors with recursive inlining and missing limits"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/6859d9cb1fda0fb03a3ab2ab301d5162f6ee88fc": {
+      "hash": "2391a01e264bf8847000",
+      "lines": [
+        "build: Restrict -Wunused-private-field to Clang compilers"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/c9e3ddae48fb01ad96dd9cf96a72bddf02b4bf8a": {
+      "hash": "59404d3390d2247e7caf",
+      "lines": [
+        "feat: Add VM-family MBA recovery and exact-Z3 affine reconstruction"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/438d9a593a8dfcaed680656ab94bee6b508e9e78": {
+      "hash": "2cbe08419f080c24ef22",
+      "lines": [
+        "docs: Add proper credits and LICENSE for ida-cmake"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/80c1444a0e5525345a440be572a927f47fa60db2": {
+      "hash": "0666b14f16c095733c11",
+      "lines": [
+        "refactor: Harden analysis passes and semantically verify MBA rules"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/026946adcbceb0ac6af42eb4b446846742b01d34": {
+      "hash": "22fbd84fd55407df4a25",
+      "lines": [
+        "build: Migrate Windows builds to Linux cross-compilation via clang and xwin"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/de8719a03f89976dbece93796fb2c2a1e61ed30f": {
+      "hash": "a9756348d113f777d145",
+      "lines": [
+        "perf: Add ccache to CI workflows and use static MSVC runtime for Z3"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/2655ab0e2caf5d8b9ff9b9da453b154758300bb3": {
+      "hash": "19f3882265677a8bc0d0",
+      "lines": [
+        "build: Fetch and statically link Z3 from source via FetchContent"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/a670721ba8844539a1da4e04a82b933df03e1e29": {
+      "hash": "07558a6d54d1250b144c",
+      "lines": [
+        "chore: Update Z3 to 4.16.0 and remove IDA 9.3 beta builds"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/8e93257b624975ca8fedc9f91ad73eac2c58d180": {
+      "hash": "119d47cf1a9c3f6df5a0",
+      "lines": [
+        "fix: Prevent IDA crashes by validating calculated EAs in indirect call handler"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/e3c5e1a19ca69397e02e5343eb631a23a5a29eff": {
+      "hash": "27e3c3ce89609f9f5081",
+      "lines": [
+        "style: adopt HexRays codestyle guidelines"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/5d9b375ad12a12a52a097a1fd4b8748a97af5db7": {
+      "hash": "9899f63c4dc0a14413cc",
+      "lines": [
+        "perf: Accelerate AST pattern matching via SIMD and hash-based lookups"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/9ffb9ead6abd88394658dcb9f30c73fcd2efb163": {
+      "hash": "dbe14bd4236f7937d643",
+      "lines": [
+        "feat: Establish CI/CD pipeline for automated builds and releases"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/68aba263007588e09825d283745d162fde383249": {
+      "hash": "0ab46698ee127b5a20c1",
+      "lines": [
+        "feat: Enhance string decryption with AES-ECB, Base64, and expression evaluation"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/6000fe55f3847dddf978ec8e7994bcc8b6f419bb": {
+      "hash": "0876264cbc30375a0517",
+      "lines": [
+        "docs: Expand README with Z3 integration details and specific unflatteners"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/6848b8b6e9aaf22f75661def9823e3240810a5ae": {
+      "hash": "2fa4c1e48667400cd693",
+      "lines": [
+        "feat: Enhance string decryption with XOR key derivation and robust CFSTR handling"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/c3d8c78f3ba5207878d5b98a58571a6e9cd221a3": {
+      "hash": "8a4439d0da3d510bf06c",
+      "lines": [
+        "feat: Add support for CFSTR reference patterns in string decryption"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/1829f5e6b67ba69b10fad28922a738e81b3f470b": {
+      "hash": "2e8debb37d57e03ad3f3",
+      "lines": [
+        "fix: Prevent plugin unload crash by removing explicit RuleRegistry cleanup"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/1289cbbf6e91e4fa1cb7c2c180fee004b191816a": {
+      "hash": "f7a480760541478f3c3b",
+      "lines": [
+        "fix: Integrate char-stack and crypto results into string replacement"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/d1104a45343ec206db6ea8997f2a5e3f5ffb1c80": {
+      "hash": "98d6c4ad4fed084335a4",
+      "lines": [
+        "feat: Propagate decrypted CFStrings to IDB and decompilation view"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/11b8027aefc155428b18410590eb2da792d2cf42": {
+      "hash": "cdaf5b605c1472a2e275",
+      "lines": [
+        "fix: Expand string decryption pattern matching for helpers and pointers"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/eca824146dcaaa940c484e83976b79ffdc2034f1": {
+      "hash": "89199b56ae73d4aed05c",
+      "lines": [
+        "feat: Support pointer arithmetic assignments and fuzzy function matching"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/1ac86caadef0b785bfbe613e987faab2de83a275": {
+      "hash": "c07d92755e3abece3f5f",
+      "lines": [
+        "fix: Integrate ctree_string_decrypt_handler into hexrays callback"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/463e0025f9549cae8bdc501e3a60704d6fc11ef1": {
+      "hash": "db67404cba5e278e516a",
+      "lines": [
+        "chore: Ignore temporary test files and binaries"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/39b86117dbaab5033742b1887e227e86710e8565": {
+      "hash": "5511e0ff841d268c71b8",
+      "lines": [
+        "test: Add string obfuscation test program"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/768c14051dd77bf9cf66372b65c07661409d2f75": {
+      "hash": "6d2706dd42003008ce8a",
+      "lines": [
+        "feat: Add ctree-level string decryption handler with AES support"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/a35e406da1c22e064fcdfc892b41e68acbf55a2c": {
+      "hash": "48fce2834eb96336a439",
+      "lines": [
+        "fix: Correct m_icall to m_call conversion with proper mcallinfo handling"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/f9acbb084e17355aca1a6b39b832344d4bf54376": {
+      "hash": "dc6e2aa4775339bf8f2e",
+      "lines": [
+        "feat: Add Frameless Continuation analyzer and enhance Hikari resolution"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/9ef625abbd84d6c2dcb31b7555e38bc47815163a": {
+      "hash": "a8d6af1d49f4d007b4bd",
+      "lines": [
+        "feat: Implement chained dispatcher resolution for indirect calls"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/8ddd02dea2e33018c3f7845fd8f1d5a772bc4346": {
+      "hash": "669dc7e084596d3a847e",
+      "lines": [
+        "fix: Replace indirect call expressions with direct references in AST"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/1e51ae9d35ac89f52fbb58739b516d01b8e3b4c7": {
+      "hash": "3370184d218bb9da6811",
+      "lines": [
+        "feat: Add Hikari Indirect Call resolution and enhanced XOR-encrypted jump table analysis"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/7840f37f3c7748ac6bba37f893f796ecdecda804": {
+      "hash": "de34a71b3fac61a6ac4b",
+      "lines": [
+        "feat: Broaden state constant detection and add deflattening safeguards"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/05ea06b2895a41c7148ae89a17285726d22f3c96": {
+      "hash": "65b42bdbc7b4f0270695",
+      "lines": [
+        "feat: Introduce architecture abstraction layer to support ARM64 analysis"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/f69ba53b2dcad8905d8e322613d24193ae65ce0d": {
+      "hash": "a2e52b59346f1a33d99d",
+      "lines": [
+        "Update readme"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/0217938e48a18672e246684c2730b72b942e070c": {
+      "hash": "f35c1cf779a756f71e0c",
+      "lines": [
+        "feat: Add backward dataflow tracing to resolve indirect jumps in flattened code"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/1547112ec1bd4796c59f762a1e5b485fd8672083": {
+      "hash": "4c32965beba81ec52b70",
+      "lines": [
+        "feat: Implement constant switch folding and HIDWORD value tracking"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/3151b05048577749328af0c987ea49b08f6d8ebc": {
+      "hash": "9b64081248d4483e3768",
+      "lines": [
+        "feat: Add ctree switch analysis and support jump-table deflattening"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/a52f5827a87ce37bfb5548527e03c81fd44ea292": {
+      "hash": "0ba22c47f3b224507d63",
+      "lines": [
+        "fix: Fix unsafe ctree modification and re-enable constant folding handler"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/82016e825938be67a3d2e05a9f859018e141f462": {
+      "hash": "70b45ebf30df9b7a7762",
+      "lines": [
+        "fix: Prevent crashes during plugin unload and static destruction"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/d623a386b3cbca973942204ec3db83a68f910882": {
+      "hash": "f64c9c6a1a14384017b3",
+      "lines": [
+        "feat: Add global constant folding and CFString resolution"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/0c6b40451f6e046e0858a05f0d2f219742267ec3": {
+      "hash": "52c5d540cc627bd362bb",
+      "lines": [
+        "fix: Re-enable block optimizer and main deobfuscation entry points"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/af00d18f8906e25e40e030545cec25120c6fa926": {
+      "hash": "e7cd2d2dbab06bc8a289",
+      "lines": [
+        "refactor: Standardize AST binding keys for small integer constants"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/08364bf9f89a2340b396c7b9c4659775298932bc": {
+      "hash": "77970fc6ba1f478b2589",
+      "lines": [
+        "fix: Stabilize MBA deobfuscation by simplifying pattern storage and reducing fuzzing"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/84bb79da90632ba2244716dea61f1ac65151f71f": {
+      "hash": "72e555964aca76e62d4d",
+      "lines": [
+        "feat: Add unflatteners for opaque predicates, fake loops, and switch chains"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/3e4056348d96099c8e6cdc3ac1827cc48c7701a0": {
+      "hash": "89e10f9de4a43f36c685",
+      "lines": [
+        "feat: Replace legacy substitution with AST-based MBA simplification engine"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/2bfbedb9d9b0e08a2eecf88384ee906ea8a8a605": {
+      "hash": "142b47bd494802498a5c",
+      "lines": [
+        "feat: Refactor identity call resolution to two-phase analysis and improve state tracking"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/f6c80626f13e53bd867352a32895ef1a1413e9f0": {
+      "hash": "c62b85e7074cc3a2acc4",
+      "lines": [
+        "feat: Add support for index-based jump table flattening"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/b0531ae9e60c690d38eee8909046b2bd20e624f9": {
+      "hash": "92f7ecfe5951040a3c18",
+      "lines": [
+        "feat: Add CHERNOBOG_RESET mechanism to flush deobfuscation state"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/5276c6a67b7e9a80cd3e4fb8a6c511aef1ada444": {
+      "hash": "9ba7e2094541f6049220",
+      "lines": [
+        "fix: Reset deobfuscation state on view refresh to allow re-analysis"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/e0271d753ead02f261e6c69b515da5bbb606f531": {
+      "hash": "05ef1c663035cc5b9760",
+      "lines": [
+        "fix: Defer full deflattening analysis to maturity 3 for stable CFG reconstruction"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/2a20acf915e66d7b9032f72ad52231370be0b8fd": {
+      "hash": "e4c572ec2c714afacdff",
+      "lines": [
+        "feat: Integrate Z3 solver for symbolic deflattening and opaque predicate analysis"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/62b9c14f025839873c0378ddea5b40c9eaa62fa2": {
+      "hash": "6565db627978a9f400f1",
+      "lines": [
+        "fix broken ida-cmake symlink"
+      ]
+    },
+    "https://github.com/19h/chernobog/commit/f5c5b1bc86ca895a32d7a65f76b62c7df718d17c": {
+      "hash": "b223dbee8e654323ee69",
+      "lines": [
+        "feat: Add Chernobog, a Hikari LLVM deobfuscator plugin for IDA Pro"
+      ]
+    }
+  }
+}

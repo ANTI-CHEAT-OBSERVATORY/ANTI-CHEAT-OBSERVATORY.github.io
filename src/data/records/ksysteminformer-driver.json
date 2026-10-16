@@ -1,0 +1,68 @@
+{
+  "id": "ksysteminformer-driver",
+  "kind": "component",
+  "title": "KSystemInformer: verified-client driver model",
+  "summary": "The System Informer kernel component is a diagnostic tool with a published verified-client security model. Keep this source revision separate from older Process Hacker driver names, vulnerabilities and redistributed binaries.",
+  "vendor": "Winsider Seminars & Solutions / System Informer",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel"
+  ],
+  "historical": false,
+  "updated": "2026-10-16",
+  "tags": [
+    "dual-use-driver",
+    "platform-reference",
+    "driver source",
+    "client authentication"
+  ],
+  "relatedIds": [
+    "dbk-kernel-driver",
+    "x64dbg-debugger"
+  ],
+  "sourceIds": [
+    "src-ref-ksi-package",
+    "src-ref-ksi-trust",
+    "src-ref-ksi-handlers"
+  ],
+  "buildIds": [],
+  "mechanismIds": [],
+  "sections": [
+    {
+      "title": "Binary and architecture identity",
+      "claimIds": [
+        "claim-ref-ksysteminformer-driver-01"
+      ]
+    },
+    {
+      "title": "Verified client policy",
+      "claimIds": [
+        "claim-ref-ksysteminformer-driver-02"
+      ]
+    },
+    {
+      "title": "Tampering and historical scope",
+      "claimIds": [
+        "claim-ref-ksysteminformer-driver-03"
+      ]
+    },
+    {
+      "title": "Message-level capability and result contracts",
+      "claimIds": [
+        "claim-ref-ksysteminformer-driver-04",
+        "claim-ref-ksysteminformer-driver-05",
+        "claim-ref-ksysteminformer-driver-06"
+      ]
+    }
+  ],
+  "filenames": [
+    "systeminformer.sys",
+    "ksi.dll"
+  ],
+  "aliases": [
+    "KSystemInformer",
+    "KPH"
+  ]
+}

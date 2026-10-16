@@ -1,0 +1,50 @@
+{
+  "id": "mhyprot2-abuse",
+  "kind": "finding",
+  "title": "Historical abuse of mhyprot2.sys",
+  "summary": "Trend Micro documented a 2022 ransomware intrusion that used the signed Genshin Impact anti-cheat driver mhyprot2.sys to terminate endpoint-protection processes. The report supports a time-scoped BYOVD case, not a claim about current Genshin Impact installations, all copies of the driver or present certificate status.",
+  "vendor": "miHoYo (driver origin)",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel",
+    "Research"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "mhyprot2.sys",
+    "BYOVD",
+    "ransomware",
+    "historical incident",
+    "vulnerable-driver",
+    "public-disclosure"
+  ],
+  "relatedIds": [
+    "byovd",
+    "driver-attack-surface"
+  ],
+  "affectedVersions": "A driver sample described as built in August 2020 in Trend Micro's 2022 case; no complete affected-version range established by these sources.",
+  "remediation": "Treat the 2022 case as evidence for driver inventory, least-privilege access and vulnerable-driver policy review. No current vendor fix or certificate status is established here.",
+  "sections": [
+    {
+      "title": "What investigators observed",
+      "claimIds": [
+        "claim-mhyprot2-abuse-01"
+      ]
+    },
+    {
+      "title": "Privilege boundary and prerequisites",
+      "claimIds": [
+        "claim-mhyprot2-abuse-02"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-035",
+    "src-015"
+  ],
+  "historical": true,
+  "buildIds": [],
+  "mechanismIds": []
+}

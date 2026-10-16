@@ -1,0 +1,140 @@
+[
+  {
+    "id": "build-ironshield-165",
+    "label": "Ironshield tvk.sys 1.0.0.165 (author-described)",
+    "recordIds": [
+      "ironshield-tvk-driver",
+      "ironshield-tvk-ioctl-authorization"
+    ],
+    "systemIds": [
+      "ironshield"
+    ],
+    "platform": "Windows",
+    "version": "1.0.0.165",
+    "hashes": [],
+    "sourceIds": [
+      "src-023"
+    ],
+    "acquiredAt": null,
+    "limitations": [
+      "No sample was acquired or independently hashed by this catalog."
+    ]
+  },
+  {
+    "id": "build-ironshield-167",
+    "label": "Ironshield tvk.sys September 17 1.0.0.167 (author-described)",
+    "recordIds": [
+      "ironshield-tvk-driver",
+      "ironshield-tvk-ioctl-authorization"
+    ],
+    "systemIds": [
+      "ironshield"
+    ],
+    "platform": "Windows",
+    "version": "1.0.0.167",
+    "hashes": [],
+    "sourceIds": [
+      "src-023"
+    ],
+    "acquiredAt": null,
+    "limitations": [
+      "The analysis identifies a September 17 build; year and sample hash are not independently established."
+    ]
+  },
+  {
+    "id": "build-ace-base-2024",
+    "label": "ACE-BASE.sys affected version as stated by CVE",
+    "recordIds": [
+      "ace-base-vulnerability",
+      "ace-base-driver"
+    ],
+    "systemIds": [
+      "anti-cheat-expert"
+    ],
+    "platform": "Windows",
+    "version": "1.0.2202.6217",
+    "hashes": [],
+    "sourceIds": [
+      "src-002"
+    ],
+    "acquiredAt": null,
+    "limitations": [
+      "Historical CVE report only; no verified sample-to-version match or current affected-build claim."
+    ]
+  },
+  {
+    "id": "build-eac-plx-reviewed",
+    "label": "plx.elf analysis at README 10d67114e3",
+    "recordIds": [
+      "eac-linux-devirt"
+    ],
+    "systemIds": [
+      "easy-anti-cheat"
+    ],
+    "platform": "Linux x86-64",
+    "version": null,
+    "hashes": [
+      {
+        "algorithm": "sha256",
+        "value": "0b44ad59697129534189efdb75cde2b96245f831438e9f6a53cb7725f190d739",
+        "origin": "source-reported",
+        "sourceId": "src-031"
+      }
+    ],
+    "sourceIds": [
+      "src-031"
+    ],
+    "acquiredAt": null,
+    "limitations": [
+      "Repository analysis revision is not a binary version or sample hash; independently computed binary identity is unavailable.",
+      "README labels this source SHA-256; catalog has not fetched or hashed the binary."
+    ]
+  },
+  {
+    "id": "build-eac-plx-later",
+    "label": "plx.elf analysis at README dc5f947d75",
+    "recordIds": [
+      "eac-linux-devirt"
+    ],
+    "systemIds": [
+      "easy-anti-cheat"
+    ],
+    "platform": "Linux x86-64",
+    "version": null,
+    "hashes": [],
+    "sourceIds": [
+      "src-034"
+    ],
+    "acquiredAt": null,
+    "limitations": [
+      "Repository analysis revision is not a binary version or sample hash; independently computed binary identity is unavailable."
+    ]
+  },
+  {
+    "id": "build-eac-plx-extracted",
+    "label": "Author-reported extracted ELF extent from original plx capture",
+    "recordIds": [
+      "eac-linux-devirt"
+    ],
+    "systemIds": [
+      "easy-anti-cheat"
+    ],
+    "platform": "Linux x86-64",
+    "version": null,
+    "hashes": [
+      {
+        "algorithm": "sha256",
+        "value": "748e399a0623ceeb8117339e0c079efa794e03d810a78d394174ed3b09d03e53",
+        "origin": "source-reported",
+        "sourceId": "src-031"
+      }
+    ],
+    "sourceIds": [
+      "src-031"
+    ],
+    "acquiredAt": null,
+    "limitations": [
+      "This hash identifies the author-described extracted ELF extent, not a verified complete or decrypted image; catalog has not hashed it."
+    ]
+  }
+]

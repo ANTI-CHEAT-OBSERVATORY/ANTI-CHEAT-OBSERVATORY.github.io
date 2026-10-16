@@ -1,0 +1,44 @@
+{
+  "id": "league-2018-data-obfuscation",
+  "kind": "component",
+  "title": "League protected value relocation (2018)",
+  "summary": "Riot reports that selected League values were encrypted and moved between memory locations as they changed, frustrating simple value search. This is a game-client technique, not a kernel anti-cheat guarantee.",
+  "vendor": "Riot Games",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "User mode"
+  ],
+  "historical": false,
+  "updated": "2026-10-16",
+  "tags": [
+    "League of Legends",
+    "value protection",
+    "historical engineering"
+  ],
+  "relatedIds": [
+    "league-2018-code-bootstrap"
+  ],
+  "sourceIds": [
+    "src-exp-riot-league"
+  ],
+  "buildIds": [],
+  "mechanismIds": [],
+  "sections": [
+    {
+      "title": "Protecting our data",
+      "claimIds": [
+        "claim-exp-league-2018-data-obfuscation-01",
+        "claim-exp-league-2018-data-obfuscation-02",
+        "claim-exp-league-2018-data-obfuscation-03"
+      ]
+    },
+    {
+      "title": "Our path to mitigation",
+      "claimIds": [
+        "claim-exp-league-2018-data-obfuscation-04"
+      ]
+    }
+  ]
+}

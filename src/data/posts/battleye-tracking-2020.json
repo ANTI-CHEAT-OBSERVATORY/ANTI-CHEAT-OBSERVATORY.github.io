@@ -1,0 +1,60 @@
+{
+  "id": "battleye-tracking-2020",
+  "title": "A targeted BattlEye module in 2020: driver files, windows and memory",
+  "summary": "The March 2020 researcher-described module covered substantially more than a normal executable-memory report. The article’s host comparison suggests selective delivery, while the window-title pseudocode notably complicates the accompanying privacy prose.",
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "category": "Reverse engineering",
+  "author": "Observatory editorial",
+  "productIds": [
+    "battleye"
+  ],
+  "relatedIds": [
+    "battleye-2020-targeted-driver-scan",
+    "battleye-2020-window-telemetry",
+    "battleye-2020-memory-survey"
+  ],
+  "tags": [
+    "BattlEye",
+    "targeted module",
+    "privacy"
+  ],
+  "takeaways": [
+    "A negative observation on another machine does not reveal BattlEye’s targeting criterion or its rollout rate.",
+    "The decompiled driver upload branch is filename-pattern-limited; do not describe bulk uploading of all drivers.",
+    "The article’s own window loop masks title bytes before transmission, despite prose implying raw title transmission.",
+    "Collection and a send function do not disclose backend retention, decisions or appeal policy."
+  ],
+  "sourceIds": [
+    "src-exp-battleye-tracking"
+  ],
+  "sections": [
+    {
+      "title": "Why the researcher thought delivery was selective",
+      "claimIds": [
+        "claim-exp-battleye-2020-targeted-driver-scan-01",
+        "claim-exp-battleye-2020-targeted-driver-scan-02",
+        "claim-exp-battleye-2020-targeted-driver-scan-03",
+        "claim-exp-battleye-2020-targeted-driver-scan-04"
+      ]
+    },
+    {
+      "title": "The window-report discrepancy",
+      "claimIds": [
+        "claim-exp-battleye-2020-window-telemetry-01",
+        "claim-exp-battleye-2020-window-telemetry-02",
+        "claim-exp-battleye-2020-window-telemetry-03",
+        "claim-exp-battleye-2020-window-telemetry-04"
+      ]
+    },
+    {
+      "title": "Memory signals are not enforcement decisions",
+      "claimIds": [
+        "claim-exp-battleye-2020-memory-survey-01",
+        "claim-exp-battleye-2020-memory-survey-02",
+        "claim-exp-battleye-2020-memory-survey-03",
+        "claim-exp-battleye-2020-memory-survey-04"
+      ]
+    }
+  ]
+}

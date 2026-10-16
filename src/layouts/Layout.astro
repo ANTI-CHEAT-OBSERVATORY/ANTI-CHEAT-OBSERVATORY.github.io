@@ -1,0 +1,72 @@
+---
+import "../styles/global.css";
+import { withBase, repositoryUrl } from "../lib/paths";
+interface Props { title?: string; description?: string; active?: string }
+const { title, description = "A public-source reference to anti-cheat systems, research, evidence and open questions.", active = "catalog" } = Astro.props;
+const primary = [
+  { label: "Catalog", href: "/", id: "catalog" },
+  { label: "Systems", href: "/systems", id: "systems" },
+  { label: "Research", href: "/research", id: "research" },
+  { label: "Updates", href: "/updates", id: "updates" },
+  { label: "About", href: "/about", id: "about" },
+];
+const secondary = [
+  { label: "Coverage", href: "/coverage" }, { label: "Methodology", href: "/methodology" },
+  { label: "APIs & binaries", href: "/reference" }, { label: "About", href: "/about" },
+  { label: "Data & API", href: "/data" }, { label: "Publishing", href: "/publishing" },
+  { label: "Compare", href: "/compare" }, { label: "Relationships", href: "/relationships" },
+  { label: "Workspace", href: "/workspace" }, { label: "Library", href: "/library" },
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} /><meta name="theme-color" content="#13191d" />
+    <meta property="og:title" content={title ? `${title} — Anti-Cheat Observatory` : "Anti-Cheat Observatory"} />
+    <meta property="og:description" content={description} /><meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href={withBase("/favicon.svg")} />
+    <title>{title ? `${title} — Anti-Cheat Observatory` : "Anti-Cheat Observatory — Research reference"}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-pagefind-ignore>Skip to content</a>
+    <header class="site-header" data-pagefind-ignore>
+      <div class="page-container header-inner">
+        <a class="brand" href={withBase("/")} aria-label="Anti-Cheat Observatory home"><span class="brand-mark">A/O</span><span>ANTI-CHEAT<br /><strong>OBSERVATORY</strong></span></a>
+        <button id="mobile-menu" class="menu-toggle button" type="button" aria-controls="site-navigation" aria-expanded="false">Menu</button>
+        <nav class="site-navigation" id="site-navigation" aria-label="Main navigation">{primary.map(({ label, href, id }) => <a href={withBase(href)} aria-current={active === id ? "page" : undefined}>{label}</a>)}</nav>
+        <div class="header-tools"><form action={withBase("/")} method="get" role="search"><label class="sr-only" for="global-search">Search full-text reference</label><input id="global-search" name="q" type="search" placeholder="Search the reference" /></form></div>
+      </div>
+    </header>
+    <main id="main" tabindex="-1"><slot /></main>
+    <footer class="site-footer" data-pagefind-ignore><div class="page-container footer-inner"><p><strong>Anti-Cheat Observatory</strong><br />Public sources and scoped claims. Source inspection is not runtime verification.</p><nav aria-label="Reference links">{secondary.map(({ label, href }) => <a href={withBase(href)}>{label}</a>)}<a href={withBase("/projects")}>Projects</a><a href={withBase("/blog")}>Blog</a><a href={withBase("/feed")}>Source feed</a>{repositoryUrl && <a href={repositoryUrl} target="_blank" rel="noopener noreferrer">Repository ↗</a>}</nav></div></footer>
+    <script>
+      import "../scripts/library";
+      const menu = document.querySelector<HTMLButtonElement>("#mobile-menu")!;
+      const navigation = document.querySelector<HTMLElement>("#site-navigation")!;
+      const mobile = matchMedia("(max-width: 800px)");
+      for (const details of document.querySelectorAll<HTMLDetailsElement>("details[data-collapse-below]")) {
+        const narrow = matchMedia(`(max-width: ${details.dataset.collapseBelow}px)`);
+        const adapt = () => { details.open = !narrow.matches; };
+        adapt();
+        narrow.addEventListener("change", adapt);
+      }
+      function setOpen(open: boolean) {
+        menu.setAttribute("aria-expanded", String(open));
+        navigation.classList.toggle("open", open);
+        navigation.inert = mobile.matches && !open;
+      }
+      setOpen(false);
+      menu.addEventListener("click", () => setOpen(menu.getAttribute("aria-expanded") !== "true"));
+      mobile.addEventListener("change", () => setOpen(false));
+      navigation.addEventListener("click", (event) => { if ((event.target as HTMLElement).closest("a")) setOpen(false); });
+      document.addEventListener("keydown", (event) => {
+        const target = event.target;
+        if (event.key === "Escape" && menu.getAttribute("aria-expanded") === "true") { setOpen(false); menu.focus(); }
+        if (event.key === "/" && !event.ctrlKey && !event.metaKey && !event.altKey && !(target instanceof HTMLElement && (target.matches("input,textarea,select") || target.isContentEditable))) {
+          event.preventDefault(); document.querySelector<HTMLInputElement>("#global-search")?.focus();
+        }
+      });
+    </script>
+  </body>
+</html>

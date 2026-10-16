@@ -1,0 +1,154 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { records } from "../lib/catalog";
+import { claimsForRecord, sourcesForRecord } from "../lib/knowledge";
+import { trackedRepos } from "../lib/discovery";
+import { withBase } from "../lib/paths";
+
+const projects = records.filter((record) => record.kind === "project");
+const platforms = [...new Set(projects.flatMap((project) => project.platforms))].sort();
+const trackedCount = projects.filter((project) => trackedRepos.some((repo) => repo.recordId === project.id)).length;
+const movedCount = projects.filter((project) => trackedRepos.some((repo) => repo.recordId === project.id && repo.drift)).length;
+---
+
+<Layout title="Research projects" active="research" description="Public research projects with linked repository state, reviewed commits, normalized claims, and cited sources.">
+  <div class="page-container projects-page">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href={withBase("/")}>Observatory</a> / Research projects</nav>
+    <header class="page-header">
+      <p class="badge" data-pagefind-filter="type:project">Research / projects</p>
+      <h1 data-pagefind-meta="title">Research projects</h1>
+      <p data-pagefind-meta="description">Inspect public analyses and tooling alongside their evidence, reviewed commits, and upstream repository state. A passing test suite or a repository is not independent validation of recovered behavior.</p>
+    </header>
+    <div class="project-stats">
+      <span><strong>{projects.length}</strong> project records</span>
+      <span><strong>{trackedCount}</strong> tracked repositories</span>
+      <span><strong>{movedCount}</strong> upstream heads moved since review</span>
+      <a href={withBase("/feed")}>Review source changes →</a>
+    </div>
+    <section aria-label="Filter research projects" class="panel project-filters">
+      <label class="field">Search projects
+        <input id="project-search" type="search" placeholder="Title, summary, tags, repository" autocomplete="off" />
+      </label>
+      <label class="field">Platform
+        <select id="project-platform"><option value="">All platforms</option>{platforms.map((platform) => <option value={platform}>{platform}</option>)}</select>
+      </label>
+      <label class="field">Repository state
+        <select id="project-state">
+          <option value="">All states</option>
+          <option value="moved">Moved since review</option>
+          <option value="stale">Snapshot stale</option>
+          <option value="tracked">Other tracked</option>
+          <option value="untracked">Not tracked</option>
+        </select>
+      </label>
+      <div class="project-filter-actions">
+        <p id="project-count" role="status" aria-live="polite" aria-atomic="true">{projects.length} projects</p>
+        <button type="button" class="button" id="project-reset" hidden>Clear filters</button>
+      </div>
+    </section>
+    <section class="table-wrap" aria-label="Research project records" data-pagefind-body>
+      <table class="data-table project-table">
+        <thead><tr>
+          <th scope="col">Project / research focus</th><th scope="col">Platforms</th>
+          <th scope="col">Evidence</th><th scope="col">Repository review</th>
+        </tr></thead>
+        <tbody>
+          {projects.map((project) => {
+            const repo = trackedRepos.find((entry) => entry.recordId === project.id);
+            const claims = claimsForRecord(project.id);
+            const sources = sourcesForRecord(project.id);
+            const state = repo?.drift ? "moved" : repo?.stale ? "stale" : repo ? "tracked" : "untracked";
+            const search = [project.title, project.summary, project.vendor, project.repoUrl ?? "", ...project.tags, ...project.platforms, ...claims.map((claim) => claim.statement)].join(" ").normalize("NFKC").toLocaleLowerCase("en");
+            return <tr data-project data-search={search} data-platforms={JSON.stringify(project.platforms)} data-state={state}>
+              <th scope="row">
+                <a href={withBase(`/records/${project.id}`)}>{project.title}</a>
+                <p>{project.summary}</p>
+                {project.repoUrl && <a class="muted repo-link" href={project.repoUrl} target="_blank" rel="noopener noreferrer">Upstream repository ↗</a>}
+              </th>
+              <td>{project.platforms.join(", ")}</td>
+              <td><a href={withBase(`/records/${project.id}`)}>{claims.length} {claims.length === 1 ? "claim" : "claims"}</a> · {sources.length} {sources.length === 1 ? "source" : "sources"}</td>
+              <td>
+                <span class="badge">{state === "moved" ? "Upstream moved" : state === "stale" ? "Snapshot stale" : state === "tracked" ? "Tracked" : "Not tracked"}</span>
+                {project.reviewedCommit
+                  ? <span class="mono commit">Reviewed {project.reviewedCommit.slice(0, 12)}</span>
+                  : <span class="muted commit">No reviewed commit recorded</span>}
+                {repo?.headSha && <span class="mono commit">Upstream {repo.headSha.slice(0, 12)}</span>}
+              </td>
+            </tr>;
+          })}
+        </tbody>
+      </table>
+    </section>
+    <div class="panel" id="project-empty" hidden><h2>No projects match</h2><p>Try another term, platform, or repository state.</p></div>
+    <noscript><p>All projects are listed. Interactive filtering requires JavaScript.</p></noscript>
+    <p class="muted project-footnote">Repository movement is not a finding about the code. The reviewed commit and current upstream head are shown separately when recorded. See <a href={withBase("/methodology")}>the evidence methodology</a>.</p>
+  </div>
+  <script>
+    const search = document.querySelector<HTMLInputElement>("#project-search")!;
+    const platform = document.querySelector<HTMLSelectElement>("#project-platform")!;
+    const state = document.querySelector<HTMLSelectElement>("#project-state")!;
+    const rows = [...document.querySelectorAll<HTMLTableRowElement>("[data-project]")].map((element) => ({
+      element,
+      text: element.dataset.search ?? "",
+      platforms: JSON.parse(element.dataset.platforms ?? "[]") as string[],
+      state: element.dataset.state ?? "",
+    }));
+    const count = document.querySelector<HTMLElement>("#project-count")!;
+    const reset = document.querySelector<HTMLButtonElement>("#project-reset")!;
+    const empty = document.querySelector<HTMLElement>("#project-empty")!;
+    function update(writeUrl = true) {
+      const tokens = search.value.normalize("NFKC").toLocaleLowerCase("en").trim().split(/\s+/).filter(Boolean);
+      let visible = 0;
+      for (const row of rows) {
+        const matches = tokens.every((token) => row.text.includes(token)) &&
+          (!platform.value || row.platforms.includes(platform.value)) &&
+          (!state.value || row.state === state.value);
+        row.element.hidden = !matches;
+        if (matches) visible++;
+      }
+      count.textContent = `${visible} of ${rows.length} projects`;
+      empty.hidden = visible !== 0;
+      reset.hidden = !search.value && !platform.value && !state.value;
+      if (writeUrl) {
+        const query = new URLSearchParams();
+        if (search.value.trim()) query.set("q", search.value.trim());
+        if (platform.value) query.set("platform", platform.value);
+        if (state.value) query.set("state", state.value);
+        history.replaceState(null, "", `${location.pathname}${query.size ? `?${query}` : ""}${location.hash}`);
+      }
+    }
+    function load() {
+      const query = new URLSearchParams(location.search);
+      search.value = query.get("q") ?? "";
+      platform.value = query.get("platform") ?? "";
+      state.value = query.get("state") ?? "";
+      update(false);
+    }
+    for (const field of [search, platform, state]) field.addEventListener("input", () => update());
+    reset.addEventListener("click", () => { search.value = ""; platform.value = ""; state.value = ""; update(); search.focus(); });
+    window.addEventListener("popstate", load);
+    load();
+  </script>
+</Layout>
+
+<style>
+  .projects-page { padding-block: 2rem 5rem; }
+  .breadcrumbs { font-size: .8rem; opacity: .75; margin-bottom: 1.2rem; }
+  .page-header { display: block; max-width: 75ch; }
+  .project-stats { display: flex; gap: .75rem 1.5rem; flex-wrap: wrap; align-items: center; margin: 1.5rem 0; }
+  .project-stats strong { font-size: 1.35rem; }
+  .project-filters { display: grid; grid-template-columns: minmax(14rem, 2fr) repeat(2, minmax(10rem, 1fr)); gap: .8rem; align-items: end; }
+  .project-filters input, .project-filters select { width: 100%; min-width: 0; }
+  .project-filter-actions { display: flex; align-items: center; justify-content: space-between; gap: .7rem; grid-column: 1 / -1; }
+  .project-filter-actions p { margin: 0; }
+  .project-table { min-width: 46rem; }
+  .project-table th[scope="row"] { width: 40%; font-weight: normal; text-align: left; }
+  .project-table th[scope="row"] > a:first-child { font-weight: 650; }
+  .project-table th[scope="row"] p { margin: .4rem 0; font-size: .87rem; }
+  .project-table td { vertical-align: top; }
+  .repo-link { font-size: .8rem; }
+  .commit { display: block; margin-top: .45rem; font-size: .8rem; overflow-wrap: anywhere; }
+  .project-footnote { max-width: 75ch; margin-top: 1.5rem; }
+  [hidden] { display: none !important; }
+  @media (max-width: 760px) { .project-filters { grid-template-columns: 1fr; } }
+</style>

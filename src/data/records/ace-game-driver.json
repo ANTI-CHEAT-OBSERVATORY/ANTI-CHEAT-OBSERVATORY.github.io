@@ -1,0 +1,49 @@
+{
+  "id": "ace-game-driver",
+  "kind": "component",
+  "title": "ACE-GAME.sys — research artifact",
+  "summary": "ACE-GAME.sys is one of four ACE kernel-driver artifacts identified by Aftermath Labs in July 2026. The source reports recovery of 133 of 134 virtualized functions in that artifact; its exact product role and current version remain unestablished here.",
+  "vendor": "Tencent Cloud",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel",
+    "Research"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "ACE-GAME.sys",
+    "Tencent VM",
+    "devirtualization",
+    "anti-cheat-driver"
+  ],
+  "filenames": [
+    "ACE-GAME.sys"
+  ],
+  "affectedVersions": "Artifact studied in the July 31, 2026 article; no exact file version or verified sample hash is recorded here.",
+  "relatedIds": [
+    "anti-cheat-expert",
+    "code-devirtualization"
+  ],
+  "sections": [
+    {
+      "title": "Identity in the study",
+      "claimIds": [
+        "claim-ace-game-driver-01"
+      ]
+    },
+    {
+      "title": "What was measured",
+      "claimIds": [
+        "claim-ace-game-driver-02"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-001"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

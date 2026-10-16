@@ -1,0 +1,57 @@
+{
+  "id": "enforcement-and-appeals",
+  "kind": "technique",
+  "title": "Enforcement and privacy disclosures",
+  "summary": "Riot discloses a cheat-class enforcement breakdown; EA describes the information its anti-cheat may collect; Epic documents player reports, protected-session enforcement, and limits of offline/solo protection. Vendor statements and reported totals are not independently audited measurements.",
+  "vendor": "Cross-vendor",
+  "platforms": [
+    "Windows",
+    "Cross-platform"
+  ],
+  "layers": [
+    "Server",
+    "Research"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "enforcement",
+    "privacy",
+    "data collection",
+    "reporting"
+  ],
+  "relatedIds": [
+    "server-authority",
+    "vanguard",
+    "ea-javelin",
+    "easy-anti-cheat"
+  ],
+  "sections": [
+    {
+      "title": "Sanctions and their scope",
+      "claimIds": [
+        "claim-enforcement-and-appeals-01"
+      ]
+    },
+    {
+      "title": "What vendors say they collect",
+      "claimIds": [
+        "claim-enforcement-and-appeals-03"
+      ]
+    },
+    {
+      "title": "Reports, repeat offenders and server-side action",
+      "claimIds": [
+        "claim-enforcement-and-appeals-05",
+        "claim-enforcement-and-appeals-06"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-013",
+    "src-025",
+    "src-019"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

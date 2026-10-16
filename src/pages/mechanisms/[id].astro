@@ -1,0 +1,30 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ClaimEvidence from "../../components/ClaimEvidence.astro";
+import { mechanisms, builds, claimById, claimsByIds } from "../../lib/knowledge";
+import { records } from "../../lib/catalog";
+import { withBase } from "../../lib/paths";
+import { worksheetTopics } from "../../lib/knowledge-types";
+import type { Mechanism } from "../../lib/knowledge-types";
+export function getStaticPaths() { return mechanisms.map((mechanism) => ({ params: { id: mechanism.id }, props: { mechanism } })); }
+const { mechanism } = Astro.props as { mechanism: Mechanism };
+const worksheet = new Map(mechanism.worksheet.map((cell) => [cell.topic, cell]));
+const evidence = claimsByIds(mechanism.claimIds);
+---
+<Layout title={`Mechanism · ${mechanism.title}`} description={mechanism.summary}>
+  <div class="page-container mechanism-detail" data-pagefind-body><p><a href={withBase("/catalog")}>Catalog</a> / Mechanism <code>{mechanism.id}</code></p><header class="page-header"><h1>{mechanism.title}</h1><p>{mechanism.summary}</p><button type="button" data-bookmark-id={mechanism.id} data-bookmark-type="mechanism" data-bookmark-title={mechanism.title} data-bookmark-url={withBase(`/mechanisms/${mechanism.id}`)} aria-pressed="false">Save mechanism</button></header><p>Mechanism description is not proof that any particular system or unexamined build implements it.</p>
+    <section class="panel"><h2>Documented scope</h2><p>Systems: {mechanism.systemIds.length ? mechanism.systemIds.map((id) => <span>{records.find((record) => record.id === id)?.title ?? id} (<code>{id}</code>) </span>) : "Unknown"}</p><p>Builds: {mechanism.buildIds.length ? mechanism.buildIds.map((id) => <a href={withBase(`/builds/${id}`)}>{builds.find((build) => build.id === id)?.label ?? id}</a>) : "No identified build; do not infer current applicability."}</p><p>Records: {mechanism.recordIds.length ? mechanism.recordIds.map((id) => <a href={withBase(`/records/${id}`)}>{records.find((record) => record.id === id)?.title ?? id}</a>) : "Not linked"}</p></section>
+    <section class="panel"><h2>Technical worksheet</h2><p>Unknown means evidence is not documented; it is not evidence of absence. Topic references open the shared evidence below, so a claim has one stable anchor on this page.</p>
+      <div class="worksheet">{worksheetTopics.map((topic) => {
+        const cell = worksheet.get(topic);
+        return <section><h3>{topic.replaceAll("-", " ")}</h3>
+          {cell?.claimIds.length ? <ul>{cell.claimIds.map((id) => <li><a href={`#claim-${id}`}>{claimById(id)?.statement ?? id}</a></li>)}</ul> : <p>No documented claim.</p>}
+          {cell?.unknown && <p><strong>Unknown:</strong> {cell.unknown}</p>}
+        </section>;
+      })}</div>
+    </section>
+    <section class="panel"><h2>Linked evidence</h2>{evidence.length ? evidence.map((claim) => <ClaimEvidence claim={claim} />) : <p>No linked implementation claim.</p>}</section>
+    <section class="panel"><h2>Open questions</h2>{mechanism.unknowns.length ? <ul>{mechanism.unknowns.map((item) => <li>{item}</li>)}</ul> : <p>No further questions documented.</p>}</section>
+  </div>
+</Layout>
+<style>.mechanism-detail{padding-block:2rem 5rem}.mechanism-detail .panel{margin:1rem 0;padding:1rem 1.25rem}.mechanism-detail .panel a{margin-right:.8rem}.worksheet{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,21rem),1fr));gap:1rem}.worksheet section{padding:1rem;border:1px solid currentColor;border-radius:.35rem}.mechanism-detail li{margin:.6rem 0}</style>

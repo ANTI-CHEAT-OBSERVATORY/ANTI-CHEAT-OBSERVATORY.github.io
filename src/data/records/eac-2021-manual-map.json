@@ -1,0 +1,51 @@
+{
+  "id": "eac-2021-manual-map",
+  "kind": "component",
+  "title": "EAC 2021 driver-mediated game module mapping",
+  "summary": "In one 2021 research account, EasyAntiCheat.sys decrypts and manually maps the game-resident DLL, resolves image state and uses asynchronous procedure call delivery; these are source-reported historical internals.",
+  "vendor": "Easy Anti-Cheat",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel",
+    "User mode"
+  ],
+  "historical": false,
+  "updated": "2026-10-16",
+  "tags": [
+    "Easy Anti-Cheat",
+    "PE loading",
+    "manual mapping"
+  ],
+  "relatedIds": [
+    "eac-2021-module-delivery",
+    "easy-anti-cheat"
+  ],
+  "sourceIds": [
+    "src-exp-eac-mapper"
+  ],
+  "buildIds": [],
+  "mechanismIds": [],
+  "sections": [
+    {
+      "title": "EasyAntiCheat.sys",
+      "claimIds": [
+        "claim-exp-eac-2021-manual-map-01"
+      ]
+    },
+    {
+      "title": "Manual Mapping",
+      "claimIds": [
+        "claim-exp-eac-2021-manual-map-02",
+        "claim-exp-eac-2021-manual-map-03"
+      ]
+    },
+    {
+      "title": "Code Execution",
+      "claimIds": [
+        "claim-exp-eac-2021-manual-map-04"
+      ]
+    }
+  ]
+}

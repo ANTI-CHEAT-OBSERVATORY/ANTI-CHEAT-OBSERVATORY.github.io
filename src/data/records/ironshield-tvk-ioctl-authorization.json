@@ -1,0 +1,73 @@
+{
+  "id": "ironshield-tvk-ioctl-authorization",
+  "kind": "finding",
+  "title": "Ironshield tvk.sys IOCTL authorization weaknesses",
+  "summary": "A published static analysis reports that tvk.sys authorizes clients with a substring check on certificate strings rather than validating the PKCS structure, derives its LEA IOCTL key from code, and builds kernel reads from client-supplied symbol offsets. Documents the reported impact and scope; the vendor did not respond before publication.",
+  "vendor": "IRONMACE Co., Ltd.",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "IOCTL",
+    "authorization bypass",
+    "certificate validation",
+    "kernel read",
+    "LEA cipher"
+  ],
+  "affectedVersions": "Driver versions described as 1.0.0.165 and a September 17 build identified as 1.0.0.167; no other affected versions are established by the cited analysis.",
+  "remediation": "The analysis recommends validating PKCS blobs and certificate chains through code-integrity exports such as CiCheckSignedFile, CiValidateFileObject and CiGetCertPublisherName rather than substring matching, treating the transport key as a secret, bounding symbol-derived reads to the intended image, and constraining which process handles an unprivileged caller can obtain. It reports no vendor response, so fix status is unknown here.",
+  "relatedIds": [
+    "ironshield",
+    "ironshield-tvk-driver",
+    "ironshield-analysis",
+    "ioctl-authorization",
+    "driver-client-authentication",
+    "kernel-symbol-resolution",
+    "driver-transport-encryption"
+  ],
+  "sections": [
+    {
+      "title": "Reported authorization gap",
+      "claimIds": [
+        "claim-ironshield-tvk-ioctl-authorization-01",
+        "claim-iron-tvk-offset"
+      ]
+    },
+    {
+      "title": "Reported reach and impact",
+      "claimIds": [
+        "claim-ironshield-tvk-ioctl-authorization-03",
+        "claim-ironshield-tvk-ioctl-authorization-04"
+      ]
+    },
+    {
+      "title": "Why the symbol-offset path widens the surface",
+      "claimIds": [
+        "claim-ironshield-tvk-ioctl-authorization-05",
+        "claim-ironshield-tvk-ioctl-authorization-06"
+      ]
+    },
+    {
+      "title": "Status and limits of this record",
+      "claimIds": [
+        "claim-ironshield-tvk-ioctl-authorization-07"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-023",
+    "src-006"
+  ],
+  "historical": false,
+  "buildIds": [
+    "build-ironshield-165",
+    "build-ironshield-167"
+  ],
+  "mechanismIds": [
+    "ironshield-tvk-auth"
+  ]
+}

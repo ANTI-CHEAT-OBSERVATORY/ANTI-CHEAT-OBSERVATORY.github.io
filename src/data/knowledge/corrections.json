@@ -1,0 +1,26 @@
+[
+  {
+    "id": "correction-eac-237f0",
+    "date": "2026-10-16",
+    "title": "EAC Linux function-level output critique",
+    "summary": "External criticism of a recovered function does not invalidate all inventory work or establish a later repair.",
+    "recordIds": [
+      "eac-linux-devirt"
+    ],
+    "claimIds": [
+      "claim-eac-linux-devirt-01-s01",
+      "claim-eac-function-output-open"
+    ],
+    "sourceIds": [
+      "src-032",
+      "src-033",
+      "src-031",
+      "src-034"
+    ],
+    "kind": "dispute",
+    "before": "Unqualified endorsement of recovered output and mixed-revision measurements.",
+    "after": "Function 0x237F0 correctness is contested; reviewed and later README measurements remain separately scoped.",
+    "status": "open",
+    "resolutionEvidenceIds": []
+  }
+]

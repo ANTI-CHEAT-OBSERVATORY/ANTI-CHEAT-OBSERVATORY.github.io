@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { records } from "../lib/catalog";
+import { withBase } from "../lib/paths";
+const systems = records.filter((record) => record.kind === "product");
+---
+<Layout title="Compare documented systems" description="Compare evidence-bound mechanisms, claims and build-specific unknowns without security rankings.">
+  <div class="page-container comparison"><header class="page-header"><h1>Compare documented evidence</h1><p>Choose two systems and optional sample/build scopes. This is an evidence comparison, not a security-strength ranking or a claim about current deployed builds.</p></header>
+    <form id="compare-controls" class="panel"><div class="controls">{["a", "b"].map((side) => <fieldset><legend>{side === "a" ? "First" : "Second"} system</legend><label>System <select name={side} required>{systems.map((system) => <option value={system.id}>{system.title}</option>)}</select></label><label>Optional build scope <select name={`build${side.toUpperCase()}`}><option value="">No selected build (scope unknown unless specified)</option></select></label></fieldset>)}</div><button type="submit" class="button">Compare · update shareable URL</button></form>
+    <section aria-live="polite" id="comparison-results"><p>Select systems to inspect only documented evidence.</p></section>
+    <noscript><section class="panel"><h2>Without JavaScript</h2><p>Build-specific interactive comparison needs JavaScript. Browse the individual system and mechanism pages instead.</p><ul>{systems.map((system) => <li><a href={withBase(`/records/${system.id}`)}>{system.title}</a></li>)}</ul></section></noscript>
+  </div>
+  <script>import "../scripts/compare.ts";</script>
+</Layout>
+<style>.comparison{padding-block:2rem 5rem}.comparison .panel{padding:1rem;margin:1rem 0}.controls,.comparison :global(.comparison-grid){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.controls fieldset{min-width:0}.controls label{display:grid;gap:.4rem;margin:.7rem 0}.controls select{width:100%;max-width:100%;padding:.5rem;color:inherit;background:var(--surface,transparent);border:1px solid currentColor}.comparison button{margin-top:1rem}.comparison :global(.compare-claim){padding:.7rem 0;border-top:1px solid currentColor}.comparison :global(.compare-claim p){overflow-wrap:anywhere}@media(max-width:650px){.controls,.comparison :global(.comparison-grid){grid-template-columns:1fr}}</style>

@@ -1,0 +1,60 @@
+{
+  "id": "runtime-driver-attestation",
+  "kind": "technique",
+  "title": "Runtime driver attestation",
+  "summary": "Windows can produce a signed runtime attestation report listing loaded drivers together with code-integrity information, which a service validates on its backend. It gives an anti-cheat or security product visibility into driver loads that happened before it started, without polling the system itself.",
+  "vendor": "Microsoft",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel",
+    "Hardware"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "attestation",
+    "HVCI",
+    "TPM",
+    "driver inventory",
+    "on-demand anti-cheat"
+  ],
+  "relatedIds": [
+    "boot-trust",
+    "hypervisor-trust",
+    "byovd",
+    "vanguard",
+    "protected-process-light"
+  ],
+  "sections": [
+    {
+      "title": "The documented API and its content",
+      "claimIds": [
+        "claim-runtime-driver-attestation-01",
+        "claim-runtime-driver-attestation-02"
+      ]
+    },
+    {
+      "title": "Prerequisites are the point",
+      "claimIds": [
+        "claim-runtime-driver-attestation-03",
+        "claim-runtime-driver-attestation-04"
+      ]
+    },
+    {
+      "title": "How a product can use it",
+      "claimIds": [
+        "claim-runtime-driver-attestation-05",
+        "claim-runtime-driver-attestation-06"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-049",
+    "src-013",
+    "src-015"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

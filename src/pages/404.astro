@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { withBase } from "../lib/paths";
+---
+
+<Layout title="Page not found" active="none" description="The requested research page is not in this edition of the Observatory.">
+  <div class="page-container not-found">
+    <header class="page-header">
+      <p class="muted">404 / Not in this edition</p>
+      <h1>Page not found</h1>
+      <p>This address has no page in the current reference. A missing page does not imply a missing product, capability or finding.</p>
+    </header>
+    <div class="panel">
+      <p>Browse the <a href={withBase("/catalog")}>research index</a>, inspect <a href={withBase("/coverage")}>system dossier gaps</a>, or return to the <a href={withBase("/")}>observatory home</a>.</p>
+      <a class="button" href={withBase("/catalog")}>Open the research index</a>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .not-found { display: grid; gap: 1rem; }
+  .page-header { display: block; margin-bottom: 0; }
+</style>

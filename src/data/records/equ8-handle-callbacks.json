@@ -1,0 +1,50 @@
+{
+  "id": "equ8-handle-callbacks",
+  "kind": "component",
+  "title": "EQU8 protected-process handle callbacks",
+  "summary": "A 2021 researcher describes EQU8 registration of process/thread object callbacks and a protected-process list used to reduce access on selected handle operations. This is narrower than a claim of full kernel-threat detection.",
+  "vendor": "EQU8",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel"
+  ],
+  "historical": false,
+  "updated": "2026-10-16",
+  "tags": [
+    "EQU8",
+    "object callback",
+    "handle protection"
+  ],
+  "relatedIds": [
+    "equ8-helper-36",
+    "handle-access-filtering"
+  ],
+  "sourceIds": [
+    "src-exp-equ8-analysis"
+  ],
+  "buildIds": [],
+  "mechanismIds": [],
+  "sections": [
+    {
+      "title": "Setting up handle callbacks",
+      "claimIds": [
+        "claim-exp-equ8-handle-callbacks-01"
+      ]
+    },
+    {
+      "title": "Process creation routine",
+      "claimIds": [
+        "claim-exp-equ8-handle-callbacks-02"
+      ]
+    },
+    {
+      "title": "Pre-operation callback functions",
+      "claimIds": [
+        "claim-exp-equ8-handle-callbacks-03",
+        "claim-exp-equ8-handle-callbacks-04"
+      ]
+    }
+  ]
+}

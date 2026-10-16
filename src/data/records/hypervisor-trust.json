@@ -1,0 +1,56 @@
+{
+  "id": "hypervisor-trust",
+  "kind": "technique",
+  "title": "Hypervisor trust boundary",
+  "summary": "A hardware hypervisor mediates an operating system's access to underlying resources and may either protect security services or undermine in-guest observations if the hypervisor is untrusted. This is OS/hardware virtualization, not the software bytecode virtualization studied under code devirtualization.",
+  "vendor": "Cross-vendor",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Hypervisor",
+    "Kernel",
+    "Hardware"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "hypervisor",
+    "VBS",
+    "HVCI",
+    "virtual machine"
+  ],
+  "relatedIds": [
+    "code-devirtualization",
+    "boot-trust",
+    "vanguard",
+    "easy-anti-cheat"
+  ],
+  "sections": [
+    {
+      "title": "A layer outside the guest",
+      "claimIds": [
+        "claim-hypervisor-trust-01"
+      ]
+    },
+    {
+      "title": "Protective use of the same technology",
+      "claimIds": [
+        "claim-hypervisor-trust-02"
+      ]
+    },
+    {
+      "title": "Product-specific VM support",
+      "claimIds": [
+        "claim-hypervisor-trust-03"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-039",
+    "src-013",
+    "src-019"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}

@@ -1,0 +1,56 @@
+{
+  "id": "ironshield-analysis",
+  "kind": "project",
+  "title": "Ironshield kernel driver static analysis (tvk.sys)",
+  "summary": "An MIT-licensed, author-reported static analysis of Ironshield's tvk.sys covering VM-protected function recovery, IOCTL authorization, symbol offsets, policy decisions, handle filtering, minifilter behavior and encrypted logging. The author reports vendor notification and no response at publication. Recovery correctness and current deployment applicability have not been independently established by this catalog.",
+  "vendor": "Independent research (hseoa)",
+  "platforms": [
+    "Windows"
+  ],
+  "layers": [
+    "Kernel",
+    "Research"
+  ],
+  "updated": "2026-10-16",
+  "tags": [
+    "Ironshield",
+    "tvk.sys",
+    "IOCTL",
+    "devirtualization",
+    "kernel driver analysis"
+  ],
+  "relatedIds": [
+    "ironshield",
+    "ironshield-tvk-driver",
+    "ironshield-tvk-ioctl-authorization",
+    "code-devirtualization",
+    "driver-attack-surface",
+    "ioctl-authorization"
+  ],
+  "repoUrl": "https://github.com/hseoa/ironshield-analysis",
+  "repoLicense": "MIT",
+  "repoLanguage": "C",
+  "reviewedCommit": "bdd1e531c3ede7190792c37d1dbfe1d320950729",
+  "sections": [
+    {
+      "title": "Scope of the analysis",
+      "claimIds": [
+        "claim-ironshield-analysis-01",
+        "claim-ironshield-analysis-02"
+      ]
+    },
+    {
+      "title": "What the analysis documents",
+      "claimIds": [
+        "claim-ironshield-analysis-03",
+        "claim-ironshield-analysis-04"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "src-023"
+  ],
+  "historical": false,
+  "buildIds": [],
+  "mechanismIds": []
+}
