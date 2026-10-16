@@ -149,9 +149,23 @@ Editorial rules before committing:
 
 `.github/workflows/pages.yml` validates on every pull request and push, then builds and deploys only from the default branch (`workflow_dispatch` also deploys manually).
 
-1. Push this repository to GitHub.
-2. Repository → Settings → Pages → Source: **GitHub Actions**.
-3. Push to the default branch or run the workflow manually.
+This checkout is already an initialised Git repository (`main`, one commit). Create the remote and push:
+
+```sh
+# With the GitHub CLI, this creates the repository and pushes in one step:
+gh repo create anti-cheat-observatory --public --source=. --remote=origin --push
+
+# Without the CLI, create an empty repository in the GitHub UI, then:
+git remote add origin git@github.com:<owner>/anti-cheat-observatory.git
+git push -u origin main
+```
+
+Then:
+
+1. Repository → Settings → Pages → Source: **GitHub Actions**.
+2. Push to the default branch or run the workflow manually.
+
+Set the `PUBLIC_REPOSITORY` variable to `<owner>/anti-cheat-observatory` so edit links resolve.
 
 The workflow runs `actions/configure-pages` and passes its origin and base path into the build, so the same code serves a user site at `/`, a project site at `/repo/`, and a custom domain. Optional repository variables override them:
 
