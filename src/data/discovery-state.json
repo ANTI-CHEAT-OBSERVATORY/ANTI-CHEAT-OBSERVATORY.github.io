@@ -3016,6 +3016,20 @@
         "[Help] How do i regenerate body group mesh?",
         "I call this function in my skin changer Code: --------- hooks::Regerateweaponskins(); --------- But it doesn't regenerate weapon mesh how do i update that in realtime? I call this Code:"
       ]
+    },
+    "https://github.com/19h/chernobog/releases/tag/v6.5.0": {
+      "hash": "fecc7dc7b735b3e0582c",
+      "lines": [
+        "Release: v6.5.0",
+        "# Chernobog 6.5.0 Changes in [`v6.4.0...v6.5.0`](https://github.com/19h/chernobog/compare/v6.4.0...v6.5.0). The README retains the cumulative [changes since 6.2.0](https://github.com/19h/chernobog/blob/v6.5.0/README.md). - **CoBRA is the default MBA candidate generator** — algebraic simplification now uses CoBRA in builds that include it. Independe"
+      ]
+    },
+    "https://github.com/19h/chernobog/releases/tag/v6.4.0": {
+      "hash": "799cf34d237f86cd0121",
+      "lines": [
+        "Release: v6.4.0",
+        "# Chernobog 6.4.0 Changes in [`v6.3.1...v6.4.0`](https://github.com/19h/chernobog/compare/v6.3.1...v6.4.0). - **Semantic MBA synthesis beyond the rule catalog** — a bounded Z3-backed pass simplifies typed 8-, 16-, 32-, and 64-bit expressions across basic blocks, with explicit conversions, overlapping register views, byte-addressed memory, and prove"
+      ]
     }
   }
 }
