@@ -3030,6 +3030,216 @@
         "Release: v6.4.0",
         "# Chernobog 6.4.0 Changes in [`v6.3.1...v6.4.0`](https://github.com/19h/chernobog/compare/v6.3.1...v6.4.0). - **Semantic MBA synthesis beyond the rule catalog** — a bounded Z3-backed pass simplifies typed 8-, 16-, 32-, and 64-bit expressions across basic blocks, with explicit conversions, overlapping register views, byte-addressed memory, and prove"
       ]
+    },
+    "https://www.unknowncheats.me/forum/introductions/777945-hi-am-anoobme-new-post.html": {
+      "hash": "a548694024627faac22d",
+      "lines": [
+        "[Information] Hi I am ANoobMe",
+        "Though it is a bit late but here is my intro. Hi everyone, I am new to this community of unknowncheats. Hope I am well recieved. I am a web developer. I don't know first thing about reverse..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/counter-strike-2-a/777923-cs2-patato-graphic-new-post.html": {
+      "hash": "d36094f4e128553c0f90",
+      "lines": [
+        "[Request] cs2 patato graphic",
+        "How can I make the graphics look like potato graphics for cs2? Is there a CFG for this? I downloaded a config from this website 1�2 weeks ago, and it worked really well, but unfortunately, I lost the..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-fps-games/777911-clash-royale-overlay-new-post.html": {
+      "hash": "aa9755aa70fe83e747eb",
+      "lines": [
+        "[Request] Clash Royale Overlay?",
+        "Been playing the game lately using Deck Ai and noticed it has a playbook grid feature showing where to place troops for kiting and attacking. Anyway to have this as an in game overlay running..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/anti-cheat-research/777893-poc-easyanticheat-rollback-vulnerability-new-post.html": {
+      "hash": "d700f0e2b5c7aa2257fc",
+      "lines": [
+        "[Release] PoC for EasyAntiCheat Rollback Vulnerability",
+        "*EasyAntiCheat (EOS): Unprivileged Signed Driver Rollback via Writable Shared Memory* ---------------------------------------- *Summary* *EasyAntiCheat EOS* delivers its kernel driver to..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/escape-from-tarkov/777889-finding-internal-pickup-item-function-call-new-post.html": {
+      "hash": "a9f30eacc2ce79c68215",
+      "lines": [
+        "[Help] Finding the internal Pickup Item function/CALL",
+        "What is the exact function or call chain triggered when a player picks up a LootItem by pressing 'F'? Looking for the RVA/function name that handles the actual pickup logic (e.g., TryPickUpItem,..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/counter-strike-2-a/777887-cheats-linux-new-post.html": {
+      "hash": "ae71e73556321d56daa1",
+      "lines": [
+        "[Question] Anyone know cheats for linux",
+        "Anyone know some cheats for linux has of october 22th i don't know any whit legit hack and skinchanger ( skinchanger can be optional )"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/paladins/777883-ultimate-repeated-rapidly-new-post.html": {
+      "hash": "6b24221a9b25ad3c9dcf",
+      "lines": [
+        "[Question] Ultimate is repeated rapidly",
+        "I witnessed a scene where Ult was being repeated at high speed. Ult sound was blaring at full volume throughout the match. He used to do that with Khan and Inara...."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-games/777882-mans-sky-skies-internal-menu-new-post.html": {
+      "hash": "6c2918098c7e04ba96ca",
+      "lines": [
+        "[Release] No Man's Sky \"Open Skies\" Internal Menu",
+        "*Open Skies v0.6.0* Image: https://i.imgur.com/Cbj7YQC.png *Open Skies* is an internal, in-game mod menu for *No Man's Sky* (PC / Steam, GOG should work too). Press *F8* in-game to open or..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-mmorpg-and-strategy/777877-sillyca-silica-internal-menu-new-post.html": {
+      "hash": "11d74f2a8c7a3af3b18f",
+      "lines": [
+        "[Release] SILLYCA � Silica Internal Menu",
+        "*SILLYCA* Silica Internal Menu &#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473; *Information* *Game:* Silica *Game Version:* 0.9.47 *Public Build ID:* 25179420 *Type:* Internal Menu"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/dayz-sa/777875-dayz-dma-esp-radar-source-new-post.html": {
+      "hash": "afd18c8a784241b98bea",
+      "lines": [
+        "[Source] DayZ DMA ESP + Radar (source)",
+        "*Ickza 2.0 - DayZ DMA ESP + Radar :sadwavey:(source)* DayZ ESP and radar that reads the game over DMA. *DayZ 1.30*. Full source included. [IMGhttps://imgur.com/a/hIy7iGJ[/IMG] *Features* ..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/off-topic/777868-real-reason-called-maintenance-new-post.html": {
+      "hash": "38287dee82a613ab7027",
+      "lines": [
+        "[News] The real reason for the so called \"maintenance\"",
+        "Image: https://i.imgur.com/hw2Xs2Y.jpeg Sleepy nation operative infiltrated a FBI facility and returned this disturbing image. My god."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-fps-games/777867-pbmobile-hacks-new-post.html": {
+      "hash": "bb7ea715884cff90f59a",
+      "lines": [
+        "[Request] PBMobile Hacks",
+        "I'm looking for help make hacks in PBMobile.app, a browser-based FPS game that can be played on both smartphones and PCs. Anyone with experience in web game development, JavaScript, HTML5, WebGL,..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/world-of-warcraft/777858-wow-forever-speed-new-post.html": {
+      "hash": "775aa8b1afc4811511f0",
+      "lines": [
+        "[Release] wow forever speed-",
+        "Hi, can use cheat engine to 'toggle speed hack' 1.4 max. moves faster... but thats pretty much it.. I tried changing value of speed ( 7 when running) 0 when not... couldnt- instant crash... ..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-mmorpg-and-strategy/777857-superdefence-2-0-honor-script-new-post.html": {
+      "hash": "2746ff7a680d8ac92b66",
+      "lines": [
+        "[Release] SuperDefence 2.0 For Honor Script",
+        "should work for all characters, only tested bp and shinobi, rarely misses a deflect flips are good on attacks, bashes can be iffy."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/garry-s-mod/777856-garrysmod-folder-folder-game-new-post.html": {
+      "hash": "7738cb22800ae4a152a6",
+      "lines": [
+        "[Request] I need garrysmod folder in folder of the game.",
+        "Please i need it so much."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-single-player-games/777854-crystal-crisis-auto-play-external-new-post.html": {
+      "hash": "640faada6768ea408c03",
+      "lines": [
+        "[Release] Crystal Crisis Auto-Play External",
+        "*GHax Crystal Crisis Solver* Fully external ImGui overlay &#8212; reads the board, finds the best placement, and can play it for you against the CPU Version 1.0 *� About* *GHax* is a *fully..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/rainbow-six-siege/777852-corrupted-memory-client-responding-r6-kicks-new-post.html": {
+      "hash": "de5669c47a068ce830be",
+      "lines": [
+        "[Help] Corrupted memory/client not responding R6 KICKS",
+        "I keep on getting kicked in game from r6 shield guard for Corrupted memory/client not responding when i use my external, how do i avoid this? i do hook .text and stuff"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/wardogs/777850-wardogs-external-cheat-new-post.html": {
+      "hash": "d8d4d69d45f40599da8e",
+      "lines": [
+        "[Release] Wardogs external cheat",
+        "this cheat has Aimbot, esp, skeleton, radar and other features everything is adjustable. with aim and esp and can filter skeleton to f.ex everyone a100m from you is going to show skeleton ..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-games/777847-cpm2-steam-version-new-post.html": {
+      "hash": "a9dc92e2abcca8f91e69",
+      "lines": [
+        "[Request] CPM2 Steam Version",
+        "Yoo guys This game (Car Parking Multiplayer 2) released on steam, so is there any way to get money and coins? or maybe there is file like trainer or something like that?"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-fps-games/777839-bloodstrike-visuals-minimenu-new-post.html": {
+      "hash": "3339e294b960f7f2a85e",
+      "lines": [
+        "[Release] Bloodstrike Visuals-MiniMenu",
+        "Hey friends, i got you something. Here is my visuals only Mini Menu (External) with some features. I played many hours without a single ban. Hope you like it :) Download:..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-mmorpg-and-strategy/777837-wt-ops-wot-blitz-steam-cheat-new-post.html": {
+      "hash": "a41b006252faefd9d8b8",
+      "lines": [
+        "[Release] WT/OPS | WoT Blitz Steam cheat",
+        "WT/OPS: internal cheat for WoT Blitz (Steam, PC) Visuals - ESP: tank and player names, HP bar and numbers, distance, hull boxes, gun direction lines, separate colours for allies and enemies, max..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/rust/777826-internal-hypervisor-injection-new-post.html": {
+      "hash": "76a00a1d10bbffcad713",
+      "lines": [
+        "[Help] internal hypervisor injection",
+        "i found a gem ahh hypervisor source that isnt detected by eac when read+write, but i dont know how to do internal with it, what should i do?"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/red-dead-redemption-2-a/777822-redm-dma-new-post.html": {
+      "hash": "b8d1460b53f79247624c",
+      "lines": [
+        "[Source] RedM DMA",
+        "Software for Redmi - only players and an aimbot. I didn't add parsing for other entities since it wasn't necessary. Download:"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-fps-games/777821-duckoleon-internal-new-post.html": {
+      "hash": "6e8784dd6e046f0cf18b",
+      "lines": [
+        "[Release] Duckoleon Internal",
+        "*Duckoleon Internal* Hey , I've been working on an internal for Duckoleon just for fun and to waste some time on useless sh*t, so here I am. *Download..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/red-dead-redemption-2-a/777818-redm-dma-new-post.html": {
+      "hash": "2b15e3455c2356b0ba90",
+      "lines": [
+        "[Coding] RedM DMA",
+        "Software for Redmi - only players and an aimbot. I didn't add parsing for other entities since it wasn't necessary."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/off-topic/777815-pic-day-new-post.html": {
+      "hash": "9be1af3c27008ebb9b24",
+      "lines": [
+        "[Information] Pic of the Day",
+        "Image: https://i.imgur.com/mcUTyY3.png Image: https://i.imgur.com/1S5E1ZR.png"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/anti-cheat-research/777810-drvscan-enumerate-loaded-kernel-drivers-new-post.html": {
+      "hash": "3b66728007472a5159dc",
+      "lines": [
+        "[Release] drvscan � enumerate loaded kernel drivers",
+        "Attached is the .exe. Single .exe, user mode, no kernel component, no install. Enumerates every loaded kernel driver and runs six checks against each: - Authenticode via WinVerifyTrust..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-fps-games/777806-hunger-reversal-structs-offsets-new-post.html": {
+      "hash": "301b7716516042ab28fe",
+      "lines": [
+        "[Coding] Hunger Reversal, Structs and Offsets",
+        "Hunger-Win64-Shipping.exe ++RLH+Playtest-5.0-5.6.1-48920 - 4.22 Code: --------- &#8226; GNames 0xA3D52C0 &#8226; GObjects 0xA4B8E30 &#8226; GWorld 0xA646A08 &#8226; UObject_Class 0x10 &#8226; UObject_Name 0x18"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/android/777805-counterflame-cheats-new-post.html": {
+      "hash": "c54915eaed08e13400cd",
+      "lines": [
+        "[Discuss] CounterFlame Cheats",
+        "Looking for CounterFlame cheats. The fan made cs2 port for mobile. Preferably free. Any idea?"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/apex-legends/777797-internal-base-source-new-post.html": {
+      "hash": "c3d5c5aa65139ef74c2c",
+      "lines": [
+        "[Discuss] anyone have an internal base/source ?",
+        "just searching for a internal base or source if anyone would have one around, i don�t care if only has limited features or only visuals. anything works"
+      ]
     }
   }
 }
