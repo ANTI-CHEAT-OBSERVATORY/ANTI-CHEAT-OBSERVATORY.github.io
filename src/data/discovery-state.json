@@ -3660,6 +3660,216 @@
         "[Help] Lua executor freezes the client then hard crashes on ElectronAC servers",
         "Keeping this short and technical. I am not asking for a paste or for anyone to finish it for me, I want to know which layer is handing out the ban. Target: FiveM client, current build. Internal..."
       ]
+    },
+    "https://www.unknowncheats.me/forum/general-programming-and-reversing/779083-help-improve-new-post.html": {
+      "hash": "c0d77c82d58dda62dede",
+      "lines": [
+        "[Help] help me improve myself",
+        "I've been dealing with reverse engineering and cheat development for about 1 year, but I'm having a lot of problems analyzing a big program in IDA. Areas I am knowledgeable about_: C++, Assembly,..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/roblox/779064-headless-roblox-linux-sober-new-post.html": {
+      "hash": "c8f60489ba37ba792260",
+      "lines": [
+        "[Help] Headless Roblox on Linux (Sober)",
+        "I'm trying to run Roblox headlessly on Linux using Sober (org.vinegarhq.Sober flatpak) on a VPS (Ubuntu 22.04, no GPU, Xvfb for display). Goal: launch Roblox, authenticate with a known..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-fps-games/779063-project-echo-unban-new-post.html": {
+      "hash": "f16fdc346e270f631f29",
+      "lines": [
+        "[Detected] Project echo Unban",
+        "Okay, I know how to get unbanned from their project. You need two things: a HWID spoofer and a ClientId reset. How it works: When you get banned, the ban is not tied to your account alone. The..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/rust/779057-bypass-eac-etc-new-post.html": {
+      "hash": "598544e54f70ab863172",
+      "lines": [
+        "[Discuss] How to bypass EAC etc",
+        "So what i was thinking was. Step 1. How to bypass EAC? Well this is simple we use an external Step 2. External hook the OBS to the injector image Step 3. Gather player images through obbmax..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/arc-raiders/779042-arc-raiders-maps-models-audio-textures-exporter-new-post.html": {
+      "hash": "1f03614b2e67d3001453",
+      "lines": [
+        "[Release] ARC Raiders Maps, Models, Audio & Textures Exporter",
+        "*MapExporter &#8212; ARC Raiders Maps, Models, Audio & Textures Exporter* I've been building an open-source tool that reads *ARC Raiders game files offline* and exports maps, 3D models, animations,..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/deadlock/779040-external-overlays-new-post.html": {
+      "hash": "9aa8121dfc3310969697",
+      "lines": [
+        "[Question] External Overlays",
+        "What is a recommended way to render my ImGUI overlay? I've used NVidia hijacking to render but the performance is just lacking so I went back to rendering over the game with TOP_MOST. I know AC is..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-fps-games/779038-knivesout-offset-auto-update-new-post.html": {
+      "hash": "6f80aeeb2c1fdde6cd0d",
+      "lines": [
+        "[Source] KnivesOut Offset Auto Update",
+        "Knives Out Offset Auto Update Version: 750701 to Latest | Game/Topic: Knives Out | Status: Testing / Educational Preview Pic: Image: https://i.imgur.com/syEmqfZ.png Notes: We created this..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/counter-strike-2-a/779036-access-world-models-vmdl-new-post.html": {
+      "hash": "e5294d054fe07c17c8e9",
+      "lines": [
+        "[Help] How would i access all world models (.vmdl)",
+        "How would i access all world C_BaseModelEntites (.vmdl)? Basically i want to make feature that optimizes map (removes useless objects) What is the way to get all models from world?"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/arc-raiders/779028-proxy-middle-new-post.html": {
+      "hash": "1d414dcc60280c9de91b",
+      "lines": [
+        "[Discuss] proxy middle man",
+        "Hey guys, I'm working on a proxy middleman project right now. I�ve seen a few implementations floating around for live radar, inventory data, and state manipulation/duping. Reach out if you're..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/apex-legends/779013-driver-new-post.html": {
+      "hash": "88820602d3b76d952c10",
+      "lines": [
+        "[Question] driver",
+        "How do you connect your drive to a Windows system? Are you using a vulnerable drive? If so, which one?"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-fps-games/779006-correct-bone-chain-blank-id-new-post.html": {
+      "hash": "8ba2a74c8ff927a06af8",
+      "lines": [
+        "[Help] How to Find the Correct Bone Chain for Point Blank ID?",
+        "I'm reposting this because the image I attached to my previous post didn't show up. Does anyone know how to find the correct bone chain for Point Blank ID? My current bone chain seems to be..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/maple-story/779000-crc-coorperation-new-post.html": {
+      "hash": "ade7ad992124cac02432",
+      "lines": [
+        "[Coding] CRC coorperation needed",
+        "I got this far, but get disconnected from time to time - still very playable but would like to avoid the disconnects Image: https://i.imgur.com/463s4vz.mp4 MSCW 1.0.1 ..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/member-of-the-month/778999-vote-november-2026-month-new-post.html": {
+      "hash": "0e345a9d5ff13424e3cd",
+      "lines": [
+        "[VOTE] November 2026 Member of the Month",
+        "Time to vote for the *November 2026* Member of the Month. The following is a list of members that have been nominated for the award, along with a small reason for nomination: (Please note that..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/introductions/778996-perf-new-post.html": {
+      "hash": "c8673829a3227992359b",
+      "lines": [
+        "[Coding] My perf",
+        ":hump: hiiiiii, my name is hallow, im a new unknowcheater"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/all-points-bulletin/778993-halfway-thru-reading-game-mem-new-post.html": {
+      "hash": "1936c8e0f4fa8e499eb9",
+      "lines": [
+        "[Coding] halfway thru reading game mem",
+        "ladies and gentlemen, i've injected, read memory, avoided anticheat, found following things and offsets: 1. my pawn coords (example for social near Wilde is: X: 35623.3 | Y: 42655.9 | Z:..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/alternative-online-mods/778991-fxap-stream-dumper-fixer-decryptor-new-post.html": {
+      "hash": "b224fbe671124b5be888",
+      "lines": [
+        "FiveM [FXAP/stream] Dumper, Fixer & Decryptor",
+        "how do these decryptor dumpers actually get made can someone explain?"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/deadlock/778986-deadlock-internal-source-new-post.html": {
+      "hash": "d7c670d722fc0cf26862",
+      "lines": [
+        "[Source] Deadlock Internal Source",
+        "Andromeda Base ## Aimbot - pSilent and visible aimbot - Configurable aim key, FOV and aim smoothing - FOV circle - Configurable target bones, hit chance and headshot limits - Visibility..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/counter-strike-2-a/778974-subtick-strafer-feels-new-post.html": {
+      "hash": "cd5d0e9bf8eadeb64147",
+      "lines": [
+        "[Help] Subtick strafer feels off",
+        "hey :D my subtick strafer doesnt feel smooth at all and im constantly losing speed while strafing. not sure if im doing something wrong or if theres something off with the code anyone knows..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/rainbow-six-siege/778960-brand-r6-recoil-script-mouses-new-post.html": {
+      "hash": "6b452e90e19c5068a1d1",
+      "lines": [
+        "[Release] BRAND NEW R6 NO RECOIL SCRIPT - ALL MOUSES",
+        "*RAYLER CONTROL v1.0.0 - (IRAN) UNDETECTED AND AS SAFE AS A NORMAL SCRIPT * *AFTER AC HOTFIX :cool:* Precision recoil control + operator loadouts + rapid-fire automation, all in one..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/halo/778957-makcu-controller-firmware-new-post.html": {
+      "hash": "b558e6dc7029e119b71f",
+      "lines": [
+        "[Release] Makcu Controller Firmware",
+        "Released a Makcu Firmware Named IRIS, Controller. Native With Xbox > Controller , and P5 > PS5. Bridged with DMA and AIs that Properly Use The Makcu V4 APIS. this exe is for the desktop , havent been..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/pc-software/778955-driver-loader-new-post.html": {
+      "hash": "1ee956b3a1e9045720dc",
+      "lines": [
+        "[Release] Driver Loader",
+        "Driver Loader: a simple GUI for loading and unloading Windows kernel drivers Driver Loader is a small, portable Windows utility for loading and unloading .sys kernel-mode drivers without typing..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-hardware/778951-recovering-dead-dads-android-9-phone-new-post.html": {
+      "hash": "f3c5e05ec21a60285ea9",
+      "lines": [
+        "[Help] Recovering my dead dads android 9 phone",
+        "Hello UC. *(yeah i know xda is the correct place for this but theyre toxic asf)* *i apologize for [removed] formatting* My name is *avastantivirus *and *in 2018 my dad passed away*. 8..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/arc-raiders/778950-arc-raiders-sdk-dump-new-post.html": {
+      "hash": "280b52396045867e4ee1",
+      "lines": [
+        "[Source] Arc Raiders sdk dump",
+        "SDK dump for Arc Raiders waiting on approval"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/rainbow-six-siege/778948-help-ac-new-post.html": {
+      "hash": "803e99e6f5c9210a6919",
+      "lines": [
+        "[Coding] help with AC",
+        "So I'd say I'm still a beginner in c++ (I've been learning for maybe a year), and i want to get into making game cheats. I've used cheat engine to modify memory in AssaultCube, and I've also created..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-games/778946-worst-class-esp-v2-5-2-esp-radar-auto-dodge-worst-class-new-post.html": {
+      "hash": "50eba5b30f1faba7123b",
+      "lines": [
+        "[Release] [Worst Class ESP v2.5.2] ESP / Radar / Auto-dodge for \"Worst Class Ever\"",
+        "========================================================== Worst Class ESP v2.5.2 BepInEx 5 plugin for \"Worst Class Ever\" (Unity, il2cpp-free / Mono) Author: Aqalqal Languages: EN / &#20013;&#25991; /..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/rainbow-six-siege/778945-gadget-icons-weapons-new-post.html": {
+      "hash": "648a2ba9bc8d76c77db5",
+      "lines": [
+        "[Information] Gadget Icons and Weapons",
+        "here u go:439::D Download: https://www.unknowncheats.me/forum/downloads.php?do=file&amp;id=58982"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/rust/778938-guys-aim-prediction-new-post.html": {
+      "hash": "92f2c2d6b71c015da7ad",
+      "lines": [
+        "[Question] how did you guys make aim prediction?",
+        "how did you guys make aim prediction is there any prediction src that i can use"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/rust/778936-iceberg-new-post.html": {
+      "hash": "95c385c793d75c722879",
+      "lines": [
+        "[Help] Going down the Iceberg",
+        "I got into cheating 7 years ago starting with hardware cheats on console. Eventually rust on console came out and I used the same keyboard emulation device, I got tired of the bad graphics and..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/rainbow-six-siege/778935-anvil-files-new-post.html": {
+      "hash": "59b89d06616f57748127",
+      "lines": [
+        "[Question] Anvil files",
+        "I was researching on how to modify .anvil files. research told me that even if you were to mod the files its still going check if they are correct and it wont launch because they will be seen as..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/anti-cheat-research/778933-serials-eac-ban-new-post.html": {
+      "hash": "d5b5cffc22abe59dfda4",
+      "lines": [
+        "[Discuss] What serials does EAC ban?",
+        "Hello UC! I'm currently wondering what you truly need to spoof for you to be unbanned on Fortnite and any other EAC-protected games. Thank you!"
+      ]
     }
   }
 }
