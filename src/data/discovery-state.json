@@ -3870,6 +3870,216 @@
         "[Discuss] What serials does EAC ban?",
         "Hello UC! I'm currently wondering what you truly need to spoof for you to be unbanned on Fortnite and any other EAC-protected games. Thank you!"
       ]
+    },
+    "https://www.unknowncheats.me/forum/anti-cheat-research/779967-system32-eac_usermode-dll-new-post.html": {
+      "hash": "365dbd6d31615b826fd2",
+      "lines": [
+        "[Question] System32 Eac_Usermode.dll",
+        "Code: --------- // local variable allocation has failed, the output may be wrong! BOOL __stdcall DllEntryPoint(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpReserved) { __int64 v3; // r8 ..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/call-of-duty-black-ops-7-a/779966-dectected-arduino-mw4-new-post.html": {
+      "hash": "f6d370988062fff71c53",
+      "lines": [
+        "[Question] How dectected is arduino in MW4",
+        "Ive got a Leonardo 3 + host shield setup with Aimmy arduino on it. was wondering if anyone know if its insta detected or if its safe. guessing not"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/rust/779965-playertracker-new-post.html": {
+      "hash": "a71c75171cbab5c0b142",
+      "lines": [
+        "[Information] PlayerTracker",
+        "Sharing some info to help Rust developers dev a harmony mod on their servers called PlayerTracker. Facepunch servers and infrastructure have been breached many times, several groups are aware and..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/deadlock/779964-jordan123pal-externals-mod-framework-extension-streamproof-mod-offset-updater-new-post.html": {
+      "hash": "fd17f43d59f158e50eb8",
+      "lines": [
+        "[Release] jordan123pal External's Mod Framework Extension | Streamproof Mod | Offset Updater",
+        "Greetings. This is my second contribution to this community :) I&#8217;m happy to share a mod/add-on framework for jordan123pal&#8217;s Deadlock external. Huge thanks to jordan123pal for allowing me to..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/anti-cheat-research/779962-bypass-anti-cheats-vm-detection-new-post.html": {
+      "hash": "9c9ad91e21053ccd2c9c",
+      "lines": [
+        "[Question] Is there a way to bypass anti-cheats vm detection?",
+        "Im playing through a service called shadowpc since my laptop is very [removed] and im trying to play games like fortnite, valorant etc but i cant since the anti cheat detects that it is a vm and..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-fps-games/779959-rob-run-new-post.html": {
+      "hash": "9da40b20abd6c81099e2",
+      "lines": [
+        "[Coding] Rob Run",
+        "is this a new super cool game? il2cpp / EAC Code: --------- // Namespace: Game.Battle [DefaultMember(\"Item\")] public class BattleEntitiesModel : IBattleEntitiesModel,..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/alternative-online-mods/779958-injection-question-new-post.html": {
+      "hash": "7e8d40a1c702085aeefc",
+      "lines": [
+        "[Help] Injection question",
+        "Can FiveM detect DLLs injected through manual mapping at UM level, or does its anti-cheat mainly focus on traditional injection methods? Any insight would be appreciated Pd im using g translate"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-games/779956-peak-internal-trainer-esp-gui-cheats-item-spawner-new-post.html": {
+      "hash": "e1a46e2006be2d98dc23",
+      "lines": [
+        "[Release] PEAK Internal Trainer + ESP (GUI, Cheats, Item Spawner)",
+        "*PEAK Trainer & ESP* Internal BepInEx Mod � Single Player & Co-op &#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#94"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/general-programming-and-reversing/779953-ida-6-flair-tools-new-post.html": {
+      "hash": "416538b8f61fce80584a",
+      "lines": [
+        "[Question] Old IDA 6.x FLAIR Tools",
+        "Hi, everyone uses idb2pat.py to create PAT files these days, but there used to be an executable version (pft.exe). (PDB File Tool) I'm looking for that exact executable for an automation..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-mmorpg-and-strategy/779941-helldivers-2-friendcode-method-new-post.html": {
+      "hash": "310803c17ccc82bcc930",
+      "lines": [
+        "[Request] helldivers 2 friendcode method?",
+        "looking for the friendcode method, its still working as I bought sc from a chinese seller today. Wondering if anyone here has any ideas as to how it works."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-games/779940-texas-chain-massacre-tcm-cheat-new-post.html": {
+      "hash": "e43d71ace0bc6781d676",
+      "lines": [
+        "[Release] The Texas Chain Saw Massacre (TCM) Cheat",
+        "*The Texas Chain Saw Massacre (TCM)* *Internal DX12 Hook | ESP + Aimbot* Clean. Smooth. Fully Featured. *&#10024; FEATURES* * *Advanced ESP:* Custom 4-Corner Boxes, 3D Boxes, Name, Distance, and..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/rust/779939-rust-ban-question-new-post.html": {
+      "hash": "bea744ea5d52f69e3ce3",
+      "lines": [
+        "[Help] Rust Ban Question",
+        "About yr ago I was playing rust ended out using some p2c Got banned, then I bought like probably 5 more rust accounts and they were getting banned in like 10 min of being on Now a yr later im..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/roblox/779937-sober-exploit-new-post.html": {
+      "hash": "2e07259ee12502801a65",
+      "lines": [
+        "[Request] Sober Exploit",
+        "Hello, I'm a Sober user, and I was looking for an exploit whilst reminiscing. If anyone has instruction or advice, please, do not hesitate to contact me. Thank you."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-games/779936-yunyun-yunyun-syndrome-rhythm-psychosis-external-version-1-3-1-a-new-post.html": {
+      "hash": "4b07eb1084bf30b8ffe7",
+      "lines": [
+        "[Release] YunYun � Yunyun Syndrome!? Rhythm Psychosis External [Version 1.3.1]",
+        "&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473; *YunYun* *Yunyun Syndrome!? Rhythm Psychosis [External Autoplayer]* A separate Windows app with external keyboard-based AutoPlay, a live overlay, session"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/team-fortress-2-a/779935-30th-october-updated-offsets-new-post.html": {
+      "hash": "ef1a58e8db76d4e5a2f5",
+      "lines": [
+        "[Request] 30th October Updated Offsets",
+        ":deal:"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/counter-strike-2-a/779934-start-searching-function-create-hams-new-post.html": {
+      "hash": "c7438df19a8c3b384c62",
+      "lines": [
+        "[Help] How to start searching for a function to create &#1089;hams",
+        "How can I locate the texture-rendering function in a game in order to implement chams using Ghidra and x64dbg? I�m struggling to isolate the specific function I need from the vast number of others,..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-fps-games/779933-thehunter-cotw-organ-positions-via-skin-weights-zero-table-ballistics-new-post.html": {
+      "hash": "987acbe8313e9e28d89d",
+      "lines": [
+        "[Tutorial] theHunter COTW - Organ positions via skin weights & zero-table ballistics",
+        "*theHunter: Call of the Wild* Organ positions via mesh skin weights & zero-table ballistics *TL;DR* * Per-species hardcoded organ offsets don't hold up &#8212; skeletons differ too much between..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-fps-games/779932-bloodstrike-global-version-internal-new-post.html": {
+      "hash": "242615b06f4d3391d2a0",
+      "lines": [
+        "[Source] BloodStrike global version internal",
+        "I'm sharing my first internal. This is a pasted product made by Claude and Codex. It has every basic functions of an internal should have + ESP (box, line, hp, armor, name, distance, weapon, 2d..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-fps-games/779927-l4d2-isreali-hack-new-post.html": {
+      "hash": "0650643393a7f4cf185b",
+      "lines": [
+        "[Source] L4D2 Isreali hack",
+        "My own L4D2 cheat i heavily pasted. It should be cleaned up and nice good luck pasting off of it. Combat: Silent Aim Combat mods: No recoil, no spread, force automatic Combat visuals: Bullet..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/introductions/779917-hi-im-new-post.html": {
+      "hash": "8043f28eb8229557d47e",
+      "lines": [
+        "[Coding] Hi im the new",
+        ":hump::hump:"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/garry-s-mod/779916-bytecode-inspector-new-post.html": {
+      "hash": "6718dcdb57c0c0bf8e86",
+      "lines": [
+        "[Release] Bytecode Inspector",
+        "reads all global functions, reads the bytecode, and generates pseudocode. Image: https://i.imgur.com/FZdpDhe.png Code: --------- surface.CreateFont(\"BytecodeMonoFont\", {font = \"Consolas\", size..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/anti-cheat-research/779915-autopsy-dead-anti-cheat-15-modules-rebuilt-bit-bit-20-a-new-post.html": {
+      "hash": "1fca87596b5b54e45f7d",
+      "lines": [
+        "[Release] Autopsy of a dead anti-cheat: 15 modules rebuilt bit-for-bit in C++20",
+        "Hey everyone, back with another writeup that two and a half people will actually read. When the Steam client finally moved to x64, Valve practically buried their classic 32-bit VAC. Out of the old..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/overwatch/779913-hardware-controller-emulator-new-post.html": {
+      "hash": "a1d9f290a8d9e68a47e5",
+      "lines": [
+        "[Question] Hardware controller emulator",
+        "I've seen in a past a box allowing you to connect m+kb and the game thought you connected xinput. This resulted in you having controller aimassist while using your mouse. I can't find it anymore, can..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/c-and-c-/779912-performance-findpattern-new-post.html": {
+      "hash": "16bd35f4afadb65b099b",
+      "lines": [
+        "[Release] High-Performance FindPattern",
+        "High-Performance Pattern Matching Library SearchPattern: Baseline implementation (byte-by-byte scanning) SearchPatternSSE2: SSE2-optimized (16-byte SIMD blocks) SearchPatternAVX2: AVX2-optimized..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/c-and-c-/779911-nocrt-reimplementation-new-post.html": {
+      "hash": "60f36b6069bfbb15b4ef",
+      "lines": [
+        "[Source] NOCRT REIMPLEMENTATION",
+        "[ cat ] CRT REIMPL *What's included:* - *Strings*: `__strlen`, `wcsicmp`, and `contains` - *Memory*: `memset` (extern \"C\" for linkage), `memcpy` - *Printing*: a custom `putchar` via..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/member-of-the-month/779909-month-november-2026-a-new-post.html": {
+      "hash": "8160ca628cfae85f2973",
+      "lines": [
+        "Member of the Month - November 2026",
+        "It is my pleasure to announce the new MotM for *November*, as voted by the UnKnoWnCheaTs community: ***rqhz** (https://www.unknowncheats.me/forum/members/2918010.html)* *rqhz was nominated for..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-games/779908-brawlhalla-brawlsense-new-post.html": {
+      "hash": "8bf55fbb977d19280f20",
+      "lines": [
+        "[Discuss] Brawlhalla Brawlsense",
+        "someone in thread giveaway his hack about brawlhalla, and now deleted and my 2 account get banned. Im not asking why i banned but why his thread deleted and why file removed. i downloaded some file..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/alternative-online-mods/779905-steam-overlay-hook-new-post.html": {
+      "hash": "ae9929754233c6faf3c8",
+      "lines": [
+        "[Information] steam overlay hook",
+        "an update was released yesterday, GameOverlayRenderer64.dll isnt loaded automatically in fivem anymore. you need to add fivem as a non-Steam game and start it from Steam if u want to keep using the..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/h1z1/779903-zemu-offsets-new-post.html": {
+      "hash": "97b9e4b9bf23363ea1c3",
+      "lines": [
+        "[Question] zEMU Offsets",
+        "Hey guys anybody got Zemu offsets? i am trying to build simple ESP but i am missing Position offsets"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-games/779882-rocket-league-external-new-post.html": {
+      "hash": "62b95f27515c56ee1064",
+      "lines": [
+        "[Source] Old Rocket league external",
+        "Yo guys, Found this old messy source when I was cleaning up my pc and decided to share it here as I see some people that want to start creating cheats or develop stuff for Rocket League. So here u..."
+      ]
     }
   }
 }
