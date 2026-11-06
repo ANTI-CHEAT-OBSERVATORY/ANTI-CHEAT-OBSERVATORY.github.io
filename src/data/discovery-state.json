@@ -421,7 +421,7 @@
       ]
     },
     "src-045": {
-      "hash": "dc52f1ca4fcf2cdfa3ee",
+      "hash": "da9e6c67d878fba5b701",
       "lines": [
         "Call of Duty® | RICOCHET™ Anti-Cheat",
         "Experience Call of Duty’s best-in-class anti-cheat security system, built with TPM 2.0 and Secure Boot enforcement, a powerful PC kernel-level driver, and unique in-game mitigations and detections. This multi-layered pro",
@@ -429,6 +429,9 @@
         "BEST-IN-CLASS SECURITY",
         "PROTECTING YOUR PRIVACY",
         "COMBATING UNFAIR PLAY",
+        "NEW PROTECTIONS AND DEFENSES",
+        "DMA DETECTION",
+        "SERVER CULLING",
         "Frequently Asked Questions",
         "WHAT IS RICOCHET ANTI-CHEAT?",
         "HOW DOES THE PC KERNEL-LEVEL DRIVER WORK?",
