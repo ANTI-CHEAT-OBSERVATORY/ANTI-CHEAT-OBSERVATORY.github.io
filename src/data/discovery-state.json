@@ -4293,6 +4293,216 @@
         "[Release] ETERSPIRE Toolkit",
         "This is personal use, I mainly created this because a friend of mine was playing this game and ask for help. Now just to add, I am very bad at coding, I'm not the best, but I somewhat have a tiny..."
       ]
+    },
+    "https://www.unknowncheats.me/forum/among-us/780626-amongvision-external-overlay-radar-new-post.html": {
+      "hash": "2ba53c4554a92b8ff2cd",
+      "lines": [
+        "[Release] AmongVision - Among Us External Overlay & Radar",
+        "*A M O N G V I S I O N* Among Us External Direct2D Overlay & Companion Radar Windows 10 / 11 � Steam & Epic Games � 100% Read-Only . . . . . . . . . . . . . . . . . . . . . . . . . A..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/rust/780625-rust-eac-byovd-vulnerable-drivers-new-post.html": {
+      "hash": "b25f6b3d0224fb8745c6",
+      "lines": [
+        "[Discuss] Rust - EAC - BYOVD Vulnerable Drivers",
+        "Getting deeper into BYOVD, my current approach is to unpack OEM utility packages load .sys in a test-signing VM, log IOCTLs with a filter driver, then static-reverse the dispatch table in IDA. The..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/rust/780615-testers-rust-new-post.html": {
+      "hash": "b3bb34a6e9a27099aae4",
+      "lines": [
+        "[Question] testers for rust",
+        "Hi, do you happen to know where I could find testers for a cheat? Or would anyone here like to join the testing process? Russian speakers are preferred, of course, but English speakers are also..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/counter-strike-2-a/780609-anti-aim-new-post.html": {
+      "hash": "1ba48f9c6f46b419d8e5",
+      "lines": [
+        "[Help] anti aim",
+        "after some update my aa pitch started flickering, im doing usermd->base->angles, camera works good, yaw applies good, but not pitch camera restore: Code: --------- ..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/apex-legends/780608-javelin-hwid-bans-permanent-new-post.html": {
+      "hash": "70676d8acad1260c57bf",
+      "lines": [
+        "[Discuss] Are Javelin HWID bans Permanent?",
+        "I got banned 3 months ago on eac, hwid. After they introduced javelin, I made a new account just for it to get banned. Does it ever go away? If not, does anyone know any reputable perm spoofers for..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/introductions/780605-spoofing-valorant-new-post.html": {
+      "hash": "1511c58d1617363228f8",
+      "lines": [
+        "[Question] spoofing in valorant",
+        "i have van 152 rn i am working on my own spoofer im new at this things i spoofed my system serial, base serial, system uuid, volumeid, mac id, what else do I need to spoof for playing this game..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-mmorpg-and-strategy/780601-shinoko-hi3rd-honkai-impact-3rd-cheat-new-post.html": {
+      "hash": "68bfe5887a8502a0b6f3",
+      "lines": [
+        "[Release] Shinoko-Hi3rd [Honkai Impact 3rd cheat]",
+        "Game version: 9.1 Global Cheat version: 0.1.0 Usage: Unzip the archive into one folder. Run `injector.exe` with administator. Open game! Changelog v0.1.0:"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/grand-theft-auto-v/780596-stuck-missions-lobby-loading-using-mod-menu-gta-enhanced-fsl-new-post.html": {
+      "hash": "987b9c16c2a11bcd9c08",
+      "lines": [
+        "[Help] Stuck in missions lobby loading when using a mod menu in GTA:O Enhanced (No FSL)",
+        "Hi everyone ! Everything is in the title ! I have the Explosive menu since 1 year now, working very well, not ban, even without FSL, but I have a big issue when using it when I want to do some..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-games/780594-satisfactory-steam-internal-trainer-new-post.html": {
+      "hash": "13ddb337454a90d5dbaa",
+      "lines": [
+        "[Release] Satisfactory (Steam) � Internal Trainer",
+        "*Satisfactory (Steam) &#8212; Internal Trainer / ESP* Image: https://i.imgur.com/EboSgv9.jpeg Made this playing Satisfactory and figured I'd share. It's an internal overlay (DX12) loaded by a small..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/introductions/780590-intro-new-post.html": {
+      "hash": "c224b4ce83340e62be31",
+      "lines": [
+        "[Discuss] intro",
+        "Yo, what's good everyone? I'm Alex, but most people just call me Vex. I'm into gaming, messing around, meeting new people, and having a good laugh. Usually pretty chill, but I can get competitive..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/introductions/780588-intro-new-post.html": {
+      "hash": "7f4ce9235548bec577ac",
+      "lines": [
+        "[Information] My Intro",
+        "just a retired gamer"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-fps-games/780581-abiotic-factor-cheat-new-post.html": {
+      "hash": "b15a99618baeb7575b9e",
+      "lines": [
+        "[Release] abiotic factor cheat",
+        "This is a sht put together cheat for abiotic factor ai slop made 2 admins please remove this made 2 admins please remove this"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/forum-general/780580-cheating-2-pcs-dma-new-post.html": {
+      "hash": "04686cad20d13f20eb0a",
+      "lines": [
+        "[Information] Cheating with 2 pcs WITHOUT dma",
+        "So ive been investigating for some days now on a way to replicate dma cheating WITHOUT dma card, ive found a way to basically get pc2 (secondary pc) to read memory from a process running in pc1..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-games/780576-subnautica-2-steam-internal-trainer-new-post.html": {
+      "hash": "543664618d820e4abc16",
+      "lines": [
+        "[Release] Subnautica 2 (Steam) � Internal Trainer",
+        "*Subnautica 2 (Steam) &#8212; Internal Trainer / ESP* Image: https://i.imgur.com/SgP1Eon.jpeg Made this playing Subnautica 2 and figured I'd share. It's an internal overlay (DX12) loaded by a small..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-games/780572-request-pokebonk-new-post.html": {
+      "hash": "105a0a3499fd56307087",
+      "lines": [
+        "[Request] request PokeBonk",
+        "anyone have a hack for this game? https://pokebonk.com"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-mmorpg-and-strategy/780569-starcraft-ii-dma-radar-new-post.html": {
+      "hash": "9454a7da1e8daa4269cc",
+      "lines": [
+        "[Source] StarCraft II DMA Radar",
+        "DMA ONLY DMA ONLY DMA ONLY SC2 DMA Radar A StarCraft II radar that reads game memory over a DMA (FPGA) card from a second PC. Draws every unit, building and resource on the map with widgets..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/rainbow-six-siege/780565-help-finding-skeles-new-post.html": {
+      "hash": "ccc1bb4a43498778d23b",
+      "lines": [
+        "[Help] Help finding Skeles",
+        "working on an external for current siege, boxes and player positions are fine, stuck on skeletons. entity vtable base+0x0FEF9B20, comp = entity-0xA8, pos at entity+0x9C8, model matrix at..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/age-of-empires/780561-showcase-ultimate-cheat-new-post.html": {
+      "hash": "a2040d00368fa0a49ede",
+      "lines": [
+        "[News] Showcase - The ultimate cheat",
+        "Something like this will destroy the game forever.. *NOTE: this is just showcase* Anything server-side cannot be bypassed. However, anything outside of server-side restrictions is technically..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/anti-cheat-research/780553-free-uni-eac-bypass-new-post.html": {
+      "hash": "ff1ee31f7f5b76a5ce11",
+      "lines": [
+        "[Question] any free uni eac bypass?",
+        "any free univerisal eac bypass for game like rob run i would be happy if someone would share"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-games/780547-thicket-sons-forest-external-overlay-trainer-new-post.html": {
+      "hash": "225301b406caba916066",
+      "lines": [
+        "[Release] Thicket - Sons of the Forest External Overlay & Trainer",
+        "*T H I C K E T* Sons of the Forest External Direct2D Overlay & Trainer Windows 10 / 11 � Steam & Co-op (Build 03102025) � No Injection Required . . . . . . . . . . . . . . . . . . . . . ...."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/other-fps-games/780543-isle-internal-esp-src-new-post.html": {
+      "hash": "77e48b1502b200c3befa",
+      "lines": [
+        "[Release] the isle - internal esp src",
+        "internal esp cheat for the isle made by opus 4.6 i dont know how to code at all so im sure its [removed] code, all i did was prompt. blame anthropic for any inconsistencies. it has some..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/counter-strike-2-a/780542-movement-correction-reason-new-post.html": {
+      "hash": "2078a110f6bccaca2f32",
+      "lines": [
+        "[Help] movement correction not working well for some reason",
+        "so i have been debugging this for days and idk what is wrong, basically when my pitch and yaw are set to 0 i cant move foward or back. only left and right. but when i set my pitch to either -90 or..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/counter-strike-2-a/780541-external-cs2-skin-knife-glove-agent-changer-new-post.html": {
+      "hash": "c858a4be69bee47b3187",
+      "lines": [
+        "[Discuss] External CS2 Skin, Knife, Glove & Agent Changer",
+        "Progress log � stability & performance &#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473; Hey UC, I don�t usually make progress threads, but I�ve been working on an external CS2 project for"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/introductions/780540-new-new-post.html": {
+      "hash": "0b08c7287356c1c251b0",
+      "lines": [
+        "[Information] NEW",
+        "HEY EVERYONE! :) IM HAPPY TO BE HERE AND LOOKING FORWARD TO GETTING TO KNOW YOU ALL. ALWAYS UP FOR A CHAT, MAKING NEW FRIENDS AND HAVING SOME FUN. HOPE YOUR ALL HAVING A LOVELY DAY!"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/alternative-online-mods/780538-add-weapon-bypass-new-post.html": {
+      "hash": "999e3cefe99c37f95f1d",
+      "lines": [
+        "[Help] Add Weapon Bypass",
+        "So, I keep getting kicked from this HellStar Server whenever I make a call to add weapon via shellcode. Here: Code: --------- inline bool add_weapon(std::uintptr_t ped_inventory_address,..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/anti-cheat-research/780534-help-signing-custom-kernel-driver-new-post.html": {
+      "hash": "3240f8b59a2c2cd45cb2",
+      "lines": [
+        "[Question] Need Help Signing a Custom Kernel Driver",
+        "I already have my own driver. How do I get it signed? Any recommendations on where to get it signed?"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/deadlock/780533-orb-aimbot-whats-orbs-adress-schema-new-post.html": {
+      "hash": "c5e807c2d471c234eae8",
+      "lines": [
+        "[Help] Orb aimbot whats orbs adress or schema ?",
+        "need to fix orb aimbot need help anyone have any info on the orbs or soul orbs"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/call-of-duty-black-ops-7-a/780530-im-banned-bo7-new-post.html": {
+      "hash": "d9e11b202054fe5ac3ad",
+      "lines": [
+        "[Question] im banned from bo7",
+        "Hello everyone im trying since 6 months getting unbanned from bo7 but i cant i dont have any perm TPM Spoofer im trying to find one for free but its harder than i tought it will be so idk what to do..."
+      ]
+    },
+    "https://www.unknowncheats.me/forum/apex-legends/780526-apex-sendinput-control-mouse-new-post.html": {
+      "hash": "90c6101301551a7ea15f",
+      "lines": [
+        "[Discuss] Apex can even use SendInput to control the mouse",
+        "What other methods are there? I mean using it for YOLO aim cheating"
+      ]
+    },
+    "https://www.unknowncheats.me/forum/introductions/780519-variety-life-gamer-looking-meet-games-new-post.html": {
+      "hash": "2960eaf0f068b3056686",
+      "lines": [
+        "[Information] Variety no-life gamer, looking to meet others and get more out of our games.",
+        "Play all sorts of games and have been deep into plenty of online ones. Looking to find others who are just as eager to pick apart and get the most out of these experiences. Not familiar with..."
+      ]
     }
   }
 }

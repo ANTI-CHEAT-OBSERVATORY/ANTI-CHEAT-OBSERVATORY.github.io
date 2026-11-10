@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2.0.0",
-  "syncedAt": "2026-11-09T17:30:50.527Z",
+  "syncedAt": "2026-11-10T14:59:28.933Z",
   "sources": [
     {
       "id": "secret-club",
@@ -126,8 +126,8 @@
       "name": "UnknownCheats anti-cheat forum",
       "url": "https://www.unknowncheats.me/forum/anti-cheat-bypass/",
       "state": "ok",
-      "lastAttempt": "2026-11-08T13:35:08.575Z",
-      "lastSuccess": "2026-11-08T13:35:08.575Z",
+      "lastAttempt": "2026-11-10T14:59:28.933Z",
+      "lastSuccess": "2026-11-10T14:59:28.933Z",
       "httpStatus": 200,
       "error": null,
       "itemCount": 30,
@@ -143,7 +143,7 @@
       "name": "GuidedHacking anti-cheat forum",
       "url": "https://guidedhacking.com/forums/anti-cheat-bypass.61/",
       "state": "blocked",
-      "lastAttempt": "2026-11-08T13:35:08.575Z",
+      "lastAttempt": "2026-11-10T14:59:28.933Z",
       "lastSuccess": null,
       "httpStatus": 403,
       "error": "HTTP 403",
@@ -1007,6 +1007,678 @@
     }
   ],
   "items": [
+    {
+      "id": "item-04571c79a8833aa52d8f",
+      "url": "https://www.unknowncheats.me/forum/other-games/780594-satisfactory-steam-internal-trainer-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/other-games/780594-satisfactory-steam-internal-trainer-new-post.html",
+      "title": "[Release] Satisfactory (Steam) � Internal Trainer",
+      "summary": "*Satisfactory (Steam) &#8212; Internal Trainer / ESP* Image: https://i.imgur.com/EboSgv9.jpeg Made this playing Satisfactory and figured I'd share. It's an internal overlay (DX12) loaded by a small...",
+      "sourceId": "unknowncheats",
+      "originId": "item-04571c79a8833aa52d8f",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-10",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "background",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-09108d06a021fe5115d3",
+      "url": "https://www.unknowncheats.me/forum/rust/780615-testers-rust-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/rust/780615-testers-rust-new-post.html",
+      "title": "[Question] testers for rust",
+      "summary": "Hi, do you happen to know where I could find testers for a cheat? Or would anyone here like to join the testing process? Russian speakers are preferred, of course, but English speakers are also...",
+      "sourceId": "unknowncheats",
+      "originId": "item-09108d06a021fe5115d3",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-10",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "background",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-0e22ed2204834f8353c1",
+      "url": "https://www.unknowncheats.me/forum/among-us/780626-amongvision-external-overlay-radar-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/among-us/780626-amongvision-external-overlay-radar-new-post.html",
+      "title": "[Release] AmongVision - Among Us External Overlay & Radar",
+      "summary": "*A M O N G V I S I O N* Among Us External Direct2D Overlay & Companion Radar Windows 10 / 11 � Steam & Epic Games � 100% Read-Only . . . . . . . . . . . . . . . . . . . . . . . . . A...",
+      "sourceId": "unknowncheats",
+      "originId": "item-0e22ed2204834f8353c1",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-10",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "background",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-106275e48826ebfa1e72",
+      "url": "https://www.unknowncheats.me/forum/rust/780625-rust-eac-byovd-vulnerable-drivers-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/rust/780625-rust-eac-byovd-vulnerable-drivers-new-post.html",
+      "title": "[Discuss] Rust - EAC - BYOVD Vulnerable Drivers",
+      "summary": "Getting deeper into BYOVD, my current approach is to unpack OEM utility packages load .sys in a test-signing VM, log IOCTLs with a filter driver, then static-reverse the dispatch table in IDA. The...",
+      "sourceId": "unknowncheats",
+      "originId": "item-106275e48826ebfa1e72",
+      "systemIds": [
+        "easy-anti-cheat"
+      ],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-10",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "research",
+      "recordIds": [
+        "easy-anti-cheat"
+      ],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-11d4bed0a79d98837e31",
+      "url": "https://www.unknowncheats.me/forum/forum-general/780580-cheating-2-pcs-dma-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/forum-general/780580-cheating-2-pcs-dma-new-post.html",
+      "title": "[Information] Cheating with 2 pcs WITHOUT dma",
+      "summary": "So ive been investigating for some days now on a way to replicate dma cheating WITHOUT dma card, ive found a way to basically get pc2 (secondary pc) to read memory from a process running in pc1...",
+      "sourceId": "unknowncheats",
+      "originId": "item-11d4bed0a79d98837e31",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-10",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "background",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-2cc8a26e9fd35f790315",
+      "url": "https://www.unknowncheats.me/forum/grand-theft-auto-v/780596-stuck-missions-lobby-loading-using-mod-menu-gta-enhanced-fsl-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/grand-theft-auto-v/780596-stuck-missions-lobby-loading-using-mod-menu-gta-enhanced-fsl-new-post.html",
+      "title": "[Help] Stuck in missions lobby loading when using a mod menu in GTA:O Enhanced (No FSL)",
+      "summary": "Hi everyone ! Everything is in the title ! I have the Explosive menu since 1 year now, working very well, not ban, even without FSL, but I have a big issue when using it when I want to do some...",
+      "sourceId": "unknowncheats",
+      "originId": "item-2cc8a26e9fd35f790315",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-10",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "background",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-30b85327e3d2a8f9a710",
+      "url": "https://www.unknowncheats.me/forum/other-fps-games/780581-abiotic-factor-cheat-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/other-fps-games/780581-abiotic-factor-cheat-new-post.html",
+      "title": "[Release] abiotic factor cheat",
+      "summary": "This is a sht put together cheat for abiotic factor ai slop made 2 admins please remove this made 2 admins please remove this",
+      "sourceId": "unknowncheats",
+      "originId": "item-30b85327e3d2a8f9a710",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-10",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "background",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-382def61f9339693d97c",
+      "url": "https://www.unknowncheats.me/forum/other-games/780576-subnautica-2-steam-internal-trainer-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/other-games/780576-subnautica-2-steam-internal-trainer-new-post.html",
+      "title": "[Release] Subnautica 2 (Steam) � Internal Trainer",
+      "summary": "*Subnautica 2 (Steam) &#8212; Internal Trainer / ESP* Image: https://i.imgur.com/SgP1Eon.jpeg Made this playing Subnautica 2 and figured I'd share. It's an internal overlay (DX12) loaded by a small...",
+      "sourceId": "unknowncheats",
+      "originId": "item-382def61f9339693d97c",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-10",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "background",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-575fb0bbd9d19ced8ce5",
+      "url": "https://www.unknowncheats.me/forum/introductions/780588-intro-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/introductions/780588-intro-new-post.html",
+      "title": "[Information] My Intro",
+      "summary": "just a retired gamer",
+      "sourceId": "unknowncheats",
+      "originId": "item-575fb0bbd9d19ced8ce5",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-10",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "background",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-76881a4998a25df82702",
+      "url": "https://www.unknowncheats.me/forum/counter-strike-2-a/780609-anti-aim-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/counter-strike-2-a/780609-anti-aim-new-post.html",
+      "title": "[Help] anti aim",
+      "summary": "after some update my aa pitch started flickering, im doing usermd->base->angles, camera works good, yaw applies good, but not pitch camera restore: Code: --------- ...",
+      "sourceId": "unknowncheats",
+      "originId": "item-76881a4998a25df82702",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-10",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "background",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-80e8ca4d7bd836a8a96e",
+      "url": "https://www.unknowncheats.me/forum/other-mmorpg-and-strategy/780601-shinoko-hi3rd-honkai-impact-3rd-cheat-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/other-mmorpg-and-strategy/780601-shinoko-hi3rd-honkai-impact-3rd-cheat-new-post.html",
+      "title": "[Release] Shinoko-Hi3rd [Honkai Impact 3rd cheat]",
+      "summary": "Game version: 9.1 Global Cheat version: 0.1.0 Usage: Unzip the archive into one folder. Run `injector.exe` with administator. Open game! Changelog v0.1.0:",
+      "sourceId": "unknowncheats",
+      "originId": "item-80e8ca4d7bd836a8a96e",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-10",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "background",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-90f56158f46eb7f924fa",
+      "url": "https://www.unknowncheats.me/forum/introductions/780590-intro-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/introductions/780590-intro-new-post.html",
+      "title": "[Discuss] intro",
+      "summary": "Yo, what's good everyone? I'm Alex, but most people just call me Vex. I'm into gaming, messing around, meeting new people, and having a good laugh. Usually pretty chill, but I can get competitive...",
+      "sourceId": "unknowncheats",
+      "originId": "item-90f56158f46eb7f924fa",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-10",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "background",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-9f23367228e85f4ae3b7",
+      "url": "https://www.unknowncheats.me/forum/apex-legends/780608-javelin-hwid-bans-permanent-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/apex-legends/780608-javelin-hwid-bans-permanent-new-post.html",
+      "title": "[Discuss] Are Javelin HWID bans Permanent?",
+      "summary": "I got banned 3 months ago on eac, hwid. After they introduced javelin, I made a new account just for it to get banned. Does it ever go away? If not, does anyone know any reputable perm spoofers for...",
+      "sourceId": "unknowncheats",
+      "originId": "item-9f23367228e85f4ae3b7",
+      "systemIds": [
+        "easy-anti-cheat"
+      ],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-10",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "research",
+      "recordIds": [
+        "easy-anti-cheat"
+      ],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-af86802a651bff2ecee1",
+      "url": "https://www.unknowncheats.me/forum/other-games/780572-request-pokebonk-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/other-games/780572-request-pokebonk-new-post.html",
+      "title": "[Request] request PokeBonk",
+      "summary": "anyone have a hack for this game? https://pokebonk.com",
+      "sourceId": "unknowncheats",
+      "originId": "item-af86802a651bff2ecee1",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-10",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "background",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-d053da7f353929cdf449",
+      "url": "https://www.unknowncheats.me/forum/other-mmorpg-and-strategy/780569-starcraft-ii-dma-radar-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/other-mmorpg-and-strategy/780569-starcraft-ii-dma-radar-new-post.html",
+      "title": "[Source] StarCraft II DMA Radar",
+      "summary": "DMA ONLY DMA ONLY DMA ONLY SC2 DMA Radar A StarCraft II radar that reads game memory over a DMA (FPGA) card from a second PC. Draws every unit, building and resource on the map with widgets...",
+      "sourceId": "unknowncheats",
+      "originId": "item-d053da7f353929cdf449",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-10",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "background",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-ec0d448285fe5324b837",
+      "url": "https://www.unknowncheats.me/forum/introductions/780605-spoofing-valorant-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/introductions/780605-spoofing-valorant-new-post.html",
+      "title": "[Question] spoofing in valorant",
+      "summary": "i have van 152 rn i am working on my own spoofer im new at this things i spoofed my system serial, base serial, system uuid, volumeid, mac id, what else do I need to spoof for playing this game...",
+      "sourceId": "unknowncheats",
+      "originId": "item-ec0d448285fe5324b837",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-10",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "background",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-01034cc68df07f6cc788",
+      "url": "https://www.unknowncheats.me/forum/alternative-online-mods/780538-add-weapon-bypass-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/alternative-online-mods/780538-add-weapon-bypass-new-post.html",
+      "title": "[Help] Add Weapon Bypass",
+      "summary": "So, I keep getting kicked from this HellStar Server whenever I make a call to add weapon via shellcode. Here: Code: --------- inline bool add_weapon(std::uintptr_t ped_inventory_address,...",
+      "sourceId": "unknowncheats",
+      "originId": "item-01034cc68df07f6cc788",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-09",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "background",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-0af2b92d6f66213525af",
+      "url": "https://www.unknowncheats.me/forum/age-of-empires/780561-showcase-ultimate-cheat-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/age-of-empires/780561-showcase-ultimate-cheat-new-post.html",
+      "title": "[News] Showcase - The ultimate cheat",
+      "summary": "Something like this will destroy the game forever.. *NOTE: this is just showcase* Anything server-side cannot be bypassed. However, anything outside of server-side restrictions is technically...",
+      "sourceId": "unknowncheats",
+      "originId": "item-0af2b92d6f66213525af",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-09",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "background",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-4a3ddf274735b3b0a0a0",
+      "url": "https://www.unknowncheats.me/forum/anti-cheat-research/780553-free-uni-eac-bypass-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/anti-cheat-research/780553-free-uni-eac-bypass-new-post.html",
+      "title": "[Question] any free uni eac bypass?",
+      "summary": "any free univerisal eac bypass for game like rob run i would be happy if someone would share",
+      "sourceId": "unknowncheats",
+      "originId": "item-4a3ddf274735b3b0a0a0",
+      "systemIds": [
+        "easy-anti-cheat"
+      ],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-09",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "research",
+      "recordIds": [
+        "easy-anti-cheat"
+      ],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-4d8e52cff0d1c186e115",
+      "url": "https://www.unknowncheats.me/forum/counter-strike-2-a/780541-external-cs2-skin-knife-glove-agent-changer-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/counter-strike-2-a/780541-external-cs2-skin-knife-glove-agent-changer-new-post.html",
+      "title": "[Discuss] External CS2 Skin, Knife, Glove & Agent Changer",
+      "summary": "Progress log � stability & performance &#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473;&#9473; Hey UC, I don�t usually make progress threads, but I�ve been working on an external CS2 project for",
+      "sourceId": "unknowncheats",
+      "originId": "item-4d8e52cff0d1c186e115",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-09",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "background",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-68d2aa732ca06200ddba",
+      "url": "https://www.unknowncheats.me/forum/rainbow-six-siege/780565-help-finding-skeles-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/rainbow-six-siege/780565-help-finding-skeles-new-post.html",
+      "title": "[Help] Help finding Skeles",
+      "summary": "working on an external for current siege, boxes and player positions are fine, stuck on skeletons. entity vtable base+0x0FEF9B20, comp = entity-0xA8, pos at entity+0x9C8, model matrix at...",
+      "sourceId": "unknowncheats",
+      "originId": "item-68d2aa732ca06200ddba",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-09",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "background",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-77ba883efe1cec01fa76",
+      "url": "https://www.unknowncheats.me/forum/counter-strike-2-a/780542-movement-correction-reason-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/counter-strike-2-a/780542-movement-correction-reason-new-post.html",
+      "title": "[Help] movement correction not working well for some reason",
+      "summary": "so i have been debugging this for days and idk what is wrong, basically when my pitch and yaw are set to 0 i cant move foward or back. only left and right. but when i set my pitch to either -90 or...",
+      "sourceId": "unknowncheats",
+      "originId": "item-77ba883efe1cec01fa76",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-09",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "correction",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-83584676e242c47127de",
+      "url": "https://www.unknowncheats.me/forum/introductions/780540-new-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/introductions/780540-new-new-post.html",
+      "title": "[Information] NEW",
+      "summary": "HEY EVERYONE! :) IM HAPPY TO BE HERE AND LOOKING FORWARD TO GETTING TO KNOW YOU ALL. ALWAYS UP FOR A CHAT, MAKING NEW FRIENDS AND HAVING SOME FUN. HOPE YOUR ALL HAVING A LOVELY DAY!",
+      "sourceId": "unknowncheats",
+      "originId": "item-83584676e242c47127de",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-09",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "background",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-9b8802b8c3b2d1557aea",
+      "url": "https://www.unknowncheats.me/forum/apex-legends/780526-apex-sendinput-control-mouse-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/apex-legends/780526-apex-sendinput-control-mouse-new-post.html",
+      "title": "[Discuss] Apex can even use SendInput to control the mouse",
+      "summary": "What other methods are there? I mean using it for YOLO aim cheating",
+      "sourceId": "unknowncheats",
+      "originId": "item-9b8802b8c3b2d1557aea",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-09",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "background",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-9d568d089ff8ed9a63ad",
+      "url": "https://www.unknowncheats.me/forum/introductions/780519-variety-life-gamer-looking-meet-games-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/introductions/780519-variety-life-gamer-looking-meet-games-new-post.html",
+      "title": "[Information] Variety no-life gamer, looking to meet others and get more out of our games.",
+      "summary": "Play all sorts of games and have been deep into plenty of online ones. Looking to find others who are just as eager to pick apart and get the most out of these experiences. Not familiar with...",
+      "sourceId": "unknowncheats",
+      "originId": "item-9d568d089ff8ed9a63ad",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-09",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "background",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-b03a2a2e3c1f665f3584",
+      "url": "https://www.unknowncheats.me/forum/other-games/780547-thicket-sons-forest-external-overlay-trainer-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/other-games/780547-thicket-sons-forest-external-overlay-trainer-new-post.html",
+      "title": "[Release] Thicket - Sons of the Forest External Overlay & Trainer",
+      "summary": "*T H I C K E T* Sons of the Forest External Direct2D Overlay & Trainer Windows 10 / 11 � Steam & Co-op (Build 03102025) � No Injection Required . . . . . . . . . . . . . . . . . . . . . ....",
+      "sourceId": "unknowncheats",
+      "originId": "item-b03a2a2e3c1f665f3584",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-09",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "background",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-b0572b467196c9663dce",
+      "url": "https://www.unknowncheats.me/forum/other-fps-games/780543-isle-internal-esp-src-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/other-fps-games/780543-isle-internal-esp-src-new-post.html",
+      "title": "[Release] the isle - internal esp src",
+      "summary": "internal esp cheat for the isle made by opus 4.6 i dont know how to code at all so im sure its [removed] code, all i did was prompt. blame anthropic for any inconsistencies. it has some...",
+      "sourceId": "unknowncheats",
+      "originId": "item-b0572b467196c9663dce",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-09",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "background",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-d9bc4d4ef167dae988ad",
+      "url": "https://www.unknowncheats.me/forum/deadlock/780533-orb-aimbot-whats-orbs-adress-schema-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/deadlock/780533-orb-aimbot-whats-orbs-adress-schema-new-post.html",
+      "title": "[Help] Orb aimbot whats orbs adress or schema ?",
+      "summary": "need to fix orb aimbot need help anyone have any info on the orbs or soul orbs",
+      "sourceId": "unknowncheats",
+      "originId": "item-d9bc4d4ef167dae988ad",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-09",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "fix",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-e066e39fe461e10e4747",
+      "url": "https://www.unknowncheats.me/forum/anti-cheat-research/780534-help-signing-custom-kernel-driver-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/anti-cheat-research/780534-help-signing-custom-kernel-driver-new-post.html",
+      "title": "[Question] Need Help Signing a Custom Kernel Driver",
+      "summary": "I already have my own driver. How do I get it signed? Any recommendations on where to get it signed?",
+      "sourceId": "unknowncheats",
+      "originId": "item-e066e39fe461e10e4747",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-09",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "research",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
+    {
+      "id": "item-e165fccd79b0a54b9f7d",
+      "url": "https://www.unknowncheats.me/forum/call-of-duty-black-ops-7-a/780530-im-banned-bo7-new-post.html",
+      "canonicalUrl": "https://www.unknowncheats.me/forum/call-of-duty-black-ops-7-a/780530-im-banned-bo7-new-post.html",
+      "title": "[Question] im banned from bo7",
+      "summary": "Hello everyone im trying since 6 months getting unbanned from bo7 but i cant i dont have any perm TPM Spoofer im trying to find one for free but its harder than i tought it will be so idk what to do...",
+      "sourceId": "unknowncheats",
+      "originId": "item-e165fccd79b0a54b9f7d",
+      "systemIds": [],
+      "topics": [
+        "anti-cheat",
+        "community"
+      ],
+      "published": "2026-11-09",
+      "firstSeen": "2026-11-10T14:59:28.933Z",
+      "lastSeen": "2026-11-10T14:59:28.933Z",
+      "review": "unreviewed",
+      "priority": "background",
+      "recordIds": [],
+      "claimIds": [],
+      "mirrors": []
+    },
     {
       "id": "item-17391060a83022e6a14d",
       "url": "https://www.unknowncheats.me/forum/other-games/780354-repo-shade-internal-new-post.html",
