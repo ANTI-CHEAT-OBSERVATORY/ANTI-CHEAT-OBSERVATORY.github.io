@@ -144,7 +144,7 @@
       ]
     },
     "src-012": {
-      "hash": "11cf621402bebc4a9b75",
+      "hash": "c3262dacb6e94778ac19",
       "lines": [
         "Secure the Windows boot process | Microsoft Learn",
         "This article describes how Windows security features help protect your PC from malware, including rootkits and other applications.",
@@ -152,7 +152,7 @@
         "In this article",
         "The threat: rootkits",
         "The countermeasures",
-        "Secure Boot",
+        "Secure boot",
         "Trusted Boot",
         "Early Launch anti-malware",
         "Measured Boot",
