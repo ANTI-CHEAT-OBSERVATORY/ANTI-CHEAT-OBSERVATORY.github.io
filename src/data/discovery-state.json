@@ -256,15 +256,11 @@
       ]
     },
     "src-025": {
-      "hash": "f7bbe4fc769f127ff005",
+      "hash": "de1ec88485b5f99612b3",
       "lines": [
         "A Deep Dive on EA anticheat for PC",
         "EA anticheat protects the integrity of PC gameplay by detecting and preventing cheats. Check out our technical FAQ to learn more!",
-        "FAQ",
-        "Related News",
-        "Fighting for Fairness: Anti-Cheat Progress Report",
-        "EA Security - Keeping Your EA Account Safe",
-        "EA anticheat is leveling the playing field"
+        "FAQ"
       ]
     },
     "src-026": {
