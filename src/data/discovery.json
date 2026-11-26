@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2.0.0",
-  "syncedAt": "2026-11-25T17:21:06.153Z",
+  "syncedAt": "2026-11-26T17:01:21.733Z",
   "sources": [
     {
       "id": "secret-club",
@@ -125,11 +125,11 @@
       "id": "unknowncheats",
       "name": "UnknownCheats anti-cheat forum",
       "url": "https://www.unknowncheats.me/forum/anti-cheat-bypass/",
-      "state": "blocked",
-      "lastAttempt": "2026-11-23T18:22:55.440Z",
+      "state": "error",
+      "lastAttempt": "2026-11-26T17:01:21.733Z",
       "lastSuccess": "2026-11-17T16:10:12.189Z",
-      "httpStatus": 403,
-      "error": "HTTP 403",
+      "httpStatus": null,
+      "error": "Response is not RSS or Atom",
       "itemCount": 30,
       "backfill": {
         "state": "blocked",
@@ -143,7 +143,7 @@
       "name": "GuidedHacking anti-cheat forum",
       "url": "https://guidedhacking.com/forums/anti-cheat-bypass.61/",
       "state": "blocked",
-      "lastAttempt": "2026-11-23T18:22:55.440Z",
+      "lastAttempt": "2026-11-26T17:01:21.733Z",
       "lastSuccess": null,
       "httpStatus": 403,
       "error": "HTTP 403",
@@ -16825,6 +16825,27 @@
     }
   ],
   "changes": [
+    {
+      "id": "change-f1ea01f570cddf8c9598",
+      "sourceId": "unknowncheats",
+      "date": "2026-11-26T17:01:21.733Z",
+      "kind": "availability",
+      "before": "blocked",
+      "after": "error",
+      "summary": "Source access changed from blocked to error; previously retained material remains subject to re-review.",
+      "recordIds": [],
+      "claimIds": [],
+      "review": "pending",
+      "sourceUrl": "https://www.unknowncheats.me/forum/anti-cheat-bypass/",
+      "diff": {
+        "added": [
+          "error: Response is not RSS or Atom"
+        ],
+        "removed": [
+          "blocked"
+        ]
+      }
+    },
     {
       "id": "change-2c805ab64fb7645d6ac2",
       "sourceId": "src-025",
