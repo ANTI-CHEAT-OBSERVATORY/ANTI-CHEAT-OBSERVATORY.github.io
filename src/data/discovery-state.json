@@ -236,23 +236,23 @@
       ]
     },
     "src-024": {
-      "hash": "9a76d3e3adfca95171c4",
+      "hash": "6450b4af7413647ff691",
       "lines": [
         "How to install and troubleshoot EA Javelin anticheat on PC",
         "Learn how to download, uninstall, and troubleshoot EA Javelin anticheat on PC and find solutions for common error codes.",
-        "How do I install and troubleshoot EA Javelin anticheat on PC?",
+        "How do I install, update, and fix EA Javelin anticheat on PC?",
         "Overview",
         "Table of Contents",
         "How do I install EA Javelin anticheat?",
         "What&#x27;s EA Javelin anticheat?",
         "Which games use EA Javelin anticheat?",
+        "Why does EA Javelin anticheat say I need an update?",
+        "Update and repair your game in the EA app or Steam",
         "How do I uninstall EA Javelin anticheat?",
         "How do I fix common errors with EA Javelin anticheat?",
         "EA Javelin Anticheat Installer Error #41",
-        "EA Javelin Anticheat Installer Error #701",
-        "EA Javelin Anticheat has detected incompatible software. Please update or disable [software.name] and restart.",
-        "EA Javelin Anticheat has detected an incompatible driver. Please update or disable [driver.name] and restart. Error #119",
-        "Failure during update process"
+        "EA Javelin Anticheat Installer Error #115",
+        "How do I fix EA Javelin anticheat Error #136?"
       ]
     },
     "src-025": {
@@ -534,23 +534,9 @@
       ]
     },
     "src-054": {
-      "hash": "2db28cc9992f131c2e87",
+      "hash": "d42e9b3980230856fa59",
       "lines": [
-        "Applied Reverse Engineering: Crude T E for Control-Flow Tracing - Reverse Engineering",
-        "The idea of inducing faults with sentinels by patching code sections at runtime predates most of us. Fault injection for code tracing goes back to early software emulation and debugging in the 80s and 90s. Single-steppin",
-        "Daax",
-        "R D @ Company, Inc.",
-        "Nick Peterson",
-        "Anti-Cheat Engineer @ Riot Games",
-        "Aidan Khoury",
-        "Applied Reverse Engineering: Crude T&#038;E for Control-Flow Tracing",
-        "The Need for CFT",
-        "Modern Landscape",
-        "T&E for Branch Tracing",
-        "Architecture",
-        "— Disassembly",
-        "— Catching Exceptions without VEH or SEH",
-        "— PE Parsing"
+        "One moment, please..."
       ]
     },
     "src-056": {
