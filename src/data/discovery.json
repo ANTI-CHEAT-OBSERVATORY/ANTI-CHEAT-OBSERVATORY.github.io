@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2.0.0",
-  "syncedAt": "2026-11-27T16:46:16.850Z",
+  "syncedAt": "2026-11-28T15:38:55.065Z",
   "sources": [
     {
       "id": "secret-club",
@@ -925,8 +925,8 @@
       "name": "CVE-2024-22830 record",
       "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2024/22xxx/CVE-2024-22830.json",
       "state": "ok",
-      "lastAttempt": "2026-11-21T14:45:06.183Z",
-      "lastSuccess": "2026-11-21T14:45:06.183Z",
+      "lastAttempt": "2026-11-28T15:38:55.065Z",
+      "lastSuccess": "2026-11-28T15:38:55.065Z",
       "httpStatus": 200,
       "error": null,
       "itemCount": 0,
@@ -942,7 +942,7 @@
       "name": "Report CVE-2024-22830 (original advisory URL cited by CVE Program)",
       "url": "https://www.defencetech.it/wp-content/uploads/2024/04/Report-CVE-2024-22830.pdf",
       "state": "error",
-      "lastAttempt": "2026-11-21T14:45:06.183Z",
+      "lastAttempt": "2026-11-28T15:38:55.065Z",
       "lastSuccess": null,
       "httpStatus": null,
       "error": "Endpoint outside configured public host: https://www.tinextadefence.it/wp-content/uploads/2024/04/Report-CVE-2024-22830.pdf",
@@ -959,8 +959,8 @@
       "name": "Loki: Hardening Code Obfuscation Against Automated Attacks (full paper)",
       "url": "https://www.usenix.org/system/files/sec22-schloegel.pdf",
       "state": "ok",
-      "lastAttempt": "2026-11-21T14:45:06.183Z",
-      "lastSuccess": "2026-11-21T14:45:06.183Z",
+      "lastAttempt": "2026-11-28T15:38:55.065Z",
+      "lastSuccess": "2026-11-28T15:38:55.065Z",
       "httpStatus": 200,
       "error": null,
       "itemCount": 0,
@@ -976,7 +976,7 @@
       "name": "EAC Linux research README at reviewed revision 10d67114e3",
       "url": "https://github.com/19h/eac-linux-devirt/blob/10d67114e35c4504abee49915ab3940bc4e6987c/README.md",
       "state": "error",
-      "lastAttempt": "2026-11-21T14:45:06.183Z",
+      "lastAttempt": "2026-11-28T15:38:55.065Z",
       "lastSuccess": "2026-10-16T12:35:29.935Z",
       "httpStatus": 404,
       "error": "HTTP 404",
@@ -993,7 +993,7 @@
       "name": "EAC Linux README at later upstream revision dc5f947d75",
       "url": "https://github.com/19h/eac-linux-devirt/blob/dc5f947d7531cfac19f01f2b9c8da2b77fb58957/README.md",
       "state": "error",
-      "lastAttempt": "2026-11-21T14:45:06.183Z",
+      "lastAttempt": "2026-11-28T15:38:55.065Z",
       "lastSuccess": "2026-10-16T12:35:29.935Z",
       "httpStatus": 404,
       "error": "HTTP 404",
@@ -16825,6 +16825,33 @@
     }
   ],
   "changes": [
+    {
+      "id": "change-dc460f7d214cdc2e6b1f",
+      "sourceId": "src-018",
+      "date": "2026-11-28T15:38:55.065Z",
+      "kind": "content",
+      "before": "11f9f95328869c68bb57",
+      "after": "93a466417b373429059d",
+      "summary": "Document HTTP version headers changed; binary was not downloaded or examined.",
+      "recordIds": [
+        "code-devirtualization"
+      ],
+      "claimIds": [
+        "claim-code-devirtualization-01"
+      ],
+      "review": "pending",
+      "sourceUrl": "https://www.usenix.org/system/files/sec22-schloegel.pdf",
+      "diff": {
+        "added": [
+          "etag: \"1795880336\"",
+          "last-modified: Sat, 28 Nov 2026 15:38:56 GMT"
+        ],
+        "removed": [
+          "etag: \"1795272312\"",
+          "last-modified: Sat, 21 Nov 2026 14:45:12 GMT"
+        ]
+      }
+    },
     {
       "id": "change-22143df91b7805794860",
       "sourceId": "src-024",
